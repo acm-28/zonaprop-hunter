@@ -1,6 +1,6 @@
 """
 Módulo de Scraping para Mercado Libre Inmuebles Argentina.
-Descarga y procesa páginas de departamentos y PHs en venta en Capital Federal.
+Descarga y procesa páginas de departamentos y PHs publicados HOY en Capital Federal.
 """
 
 import time
@@ -34,13 +34,13 @@ class MercadoLibreScraper:
         }
 
     def build_urls(self, page: int = 1) -> List[str]:
-        """Construye las URLs de búsqueda en Mercado Libre para departamentos y PHs."""
+        """Construye las URLs con filtro estricto de publicados hoy para departamentos y PHs."""
         min_price = self.search_cfg.get("min_price_usd", 18000)
         max_price = self.search_cfg.get("max_price_usd", 80000)
-        only_today = self.search_cfg.get("only_published_today", False)
+        only_today = self.search_cfg.get("only_published_today", True)
 
         today_slug = "_PublishedToday_YES" if only_today else ""
-        filter_slug = f"_PriceRange_{min_price}USD-{max_price}USD{today_slug}_OrderId_BEGINS*DESC"
+        filter_slug = f"_PriceRange_{min_price}USD-{max_price}USD{today_slug}"
 
         urls = []
         # 1. Departamentos
@@ -51,7 +51,7 @@ class MercadoLibreScraper:
         else:
             urls.append(f"{base_deptos}{filter_slug}")
 
-        # 2. PHs (Propiedad Horizontal - Oportunidades directas)
+        # 2. PHs (Propiedad Horizontal)
         base_ph = "https://inmuebles.mercadolibre.com.ar/ph/venta/capital-federal/"
         if page > 1:
             offset = (page - 1) * 48 + 1
@@ -100,8 +100,6 @@ class MercadoLibreScraper:
             id_match = re.search(r'(MLA-?\d+)', clean_link)
             posting_id = f"MELI-{id_match.group(1).replace('-', '')}" if id_match else f"MELI-{abs(hash(clean_link)) % 100000000}"
 
-            card_full_text = card.get_text().lower()
-
             # 2. Precio y Moneda
             price_el = (
                 card.select_one('.andes-money-amount__fraction')
@@ -136,7 +134,6 @@ class MercadoLibreScraper:
             features_raw = " | ".join(attr_texts) if attr_texts else card.get_text(separator=" | ", strip=True)
 
             m2_tot = None
-            # Evitar rangos de pozo "19 - 27 m²" y capturar m² concretos
             if " - " in features_raw and "m²" in features_raw:
                 m2_match = re.search(r'(\d+)\s*m[²2]', features_raw)
             else:
@@ -166,18 +163,14 @@ class MercadoLibreScraper:
             if img_el:
                 img_src = img_el.get('src') or img_el.get('data-src') or img_el.get('data-lazy') or ""
 
-            # 6. Fecha / Antigüedad
-            antiquity_text = "Reciente"
-            if "hoy" in card_full_text:
-                antiquity_text = "Publicado hoy"
-
             return {
                 "id": posting_id,
                 "title": title or f"Propiedad {ambientes or ''} amb en {location_raw}".strip(),
                 "description": title,
                 "source": "Mercado Libre",
                 "source_badge": "🟡 Mercado Libre",
-                "publication_date_text": antiquity_text,
+                "publication_date_text": "Publicado hoy",
+                "is_new": True,
                 "price_raw": f"USD {price_raw}" if currency == "USD" else f"$ {price_raw}",
                 "price_val": price_val,
                 "currency": currency,
@@ -199,20 +192,18 @@ class MercadoLibreScraper:
             return None
 
     def scrape(self, max_pages: Optional[int] = None) -> List[Dict[str, Any]]:
-        """Ejecuta el rastreo de Mercado Libre Inmuebles en CABA."""
-        pages = max_pages or self.search_cfg.get("pages_to_scrape", 4)
+        """Ejecuta el rastreo estricto de publicaciones de HOY en Mercado Libre."""
+        pages = max_pages or self.search_cfg.get("pages_to_scrape", 3)
         all_raw_properties = []
         seen_ids = set()
 
-        print(f"\n[Scraper MercadoLibre] Iniciando rastreo en CABA (Deptos y PHs)...")
-        print(f"[Scraper MercadoLibre] Páginas por categoría: {pages} | Precio Máx: USD {self.search_cfg.get('max_price_usd', 80000):,}")
+        print(f"\n[Scraper MercadoLibre] Iniciando rastreo de publicaciones de HOY en CABA...")
+        print(f"[Scraper MercadoLibre] Filtro: Publicados Hoy | Precio Máx: USD {self.search_cfg.get('max_price_usd', 80000):,}")
 
         for page in range(1, pages + 1):
             urls = self.build_urls(page=page)
             for url in urls:
                 cat_name = "Deptos" if "/departamentos/" in url else "PHs"
-                print(f" -> [MercadoLibre] Consultando {cat_name} (Página {page}/{pages})...")
-                
                 html = self.fetch_page(url)
                 if not html:
                     continue
@@ -228,7 +219,7 @@ class MercadoLibreScraper:
                         all_raw_properties.append(prop)
                         page_count += 1
 
-                print(f"    [MercadoLibre] {cat_name} Pág {page}: {len(cards)} avisos ({page_count} nuevos procesados)")
+                print(f"    [MercadoLibre] {cat_name} Pág {page}: {len(cards)} avisos de hoy ({page_count} procesados)")
 
-        print(f"[Scraper MercadoLibre] Finalizado. Total de avisos extraídos: {len(all_raw_properties)}")
+        print(f"[Scraper MercadoLibre] Finalizado. Total de avisos de HOY: {len(all_raw_properties)}")
         return all_raw_properties

@@ -8,7 +8,7 @@
     "max_usd_m2": 2200,
     "sort_by": "orden-publicado-descendente",
     "pages_to_scrape": 4,
-    "only_published_today": false,
+    "only_published_today": true,
     "include_developments": false,
     "filter_barrios": [],
     "enabled_sources": ["zonaprop", "mercadolibre"]

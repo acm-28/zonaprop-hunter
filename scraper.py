@@ -1,6 +1,6 @@
 """
 Módulo de Scraping para Zonaprop Argentina.
-Descarga y procesa páginas de listados de propiedades en venta en CABA.
+Descarga y procesa páginas de listados de propiedades en venta en CABA publicadas HOY.
 """
 
 import time
@@ -65,12 +65,8 @@ class ZonapropScraper:
                 if response.status_code == 200:
                     return response.text
                 elif response.status_code == 404:
-                    print(f"  [404] No hay mas paginas en {url}")
                     return None
-                else:
-                    print(f"  [Intento {attempt}] Codigo {response.status_code} en {url}")
             except Exception as e:
-                print(f"  [Intento {attempt}] Error al conectar con {url}: {e}")
                 time.sleep(attempt * 2)
         return None
 
@@ -208,7 +204,8 @@ class ZonapropScraper:
                 "description": title,
                 "source": "Zonaprop",
                 "source_badge": "🔵 Zonaprop",
-                "publication_date_text": antiquity_text or "Reciente",
+                "publication_date_text": antiquity_text or "Publicado hoy",
+                "is_new": True,
                 "price_raw": price_raw,
                 "price_val": price_val,
                 "currency": currency,
@@ -231,28 +228,21 @@ class ZonapropScraper:
 
     def scrape(self, max_pages: Optional[int] = None) -> List[Dict[str, Any]]:
         """
-        Ejecuta el rastreo de Zonaprop según la configuración.
-        Soporta parada anticipada cuando se activa `only_published_today`.
+        Ejecuta el rastreo de Zonaprop de avisos publicados HOY.
         """
         pages = max_pages or self.search_cfg.get("pages_to_scrape", 5)
         location = self.search_cfg.get("location", "capital-federal")
-        only_today = self.search_cfg.get("only_published_today", False)
+        only_today = self.search_cfg.get("only_published_today", True)
         
         all_raw_properties = []
         seen_ids = set()
 
-        print(f"\n[Scraper Zonaprop] Iniciando rastreo para: {location.upper()}")
-        print(f"[Scraper Zonaprop] Páginas a consultar: {pages} | Precio Máx: USD {self.search_cfg.get('max_price_usd', 80000):,}")
-        if only_today:
-            print("[Scraper Zonaprop] Modo estricto activado: Filtrando SOLO publicaciones de hoy.")
+        print(f"\n[Scraper Zonaprop] Iniciando rastreo para: {location.upper()} (Publicados HOY)...")
 
         for page in range(1, pages + 1):
             url = self.build_url(location=location, page=page)
-            print(f" -> [Zonaprop] Consultando página {page}/{pages}...")
-            
             html = self.fetch_page(url)
             if not html:
-                print(f"    No se pudo obtener contenido para la página {page}.")
                 break
 
             soup = BeautifulSoup(html, "html.parser")
@@ -274,18 +264,19 @@ class ZonapropScraper:
                 pub_text = prop.get("publication_date_text", "").lower()
                 is_today = "hoy" in pub_text or "hora" in pub_text or "minuto" in pub_text or "segundo" in pub_text
                 
-                if only_today and not is_today and pub_text and "reciente" not in pub_text:
+                # Filtro estricto: descartar si no es de hoy
+                if only_today and not is_today:
                     reached_older_ads = True
                     continue
 
                 all_raw_properties.append(prop)
                 page_count += 1
 
-            print(f"    [Zonaprop] Página {page}: {len(cards)} avisos en página ({page_count} procesados)")
+            print(f"    [Zonaprop] Página {page}: {len(cards)} avisos ({page_count} publicados hoy)")
 
             if only_today and reached_older_ads and page_count == 0:
-                print("    [Info] Se alcanzaron publicaciones de días anteriores en Zonaprop. Finalizando rastreo.")
+                print("    [Info] Fin de las publicaciones de hoy en Zonaprop.")
                 break
 
-        print(f"[Scraper Zonaprop] Finalizado. Total de avisos extraídos: {len(all_raw_properties)}")
+        print(f"[Scraper Zonaprop] Finalizado. Total de avisos de HOY: {len(all_raw_properties)}")
         return all_raw_properties
