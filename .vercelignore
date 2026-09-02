@@ -1,0 +1,5 @@
+*.py
+requirements.txt
+setup_daily_task.ps1
+run_daily.bat
+.github/
