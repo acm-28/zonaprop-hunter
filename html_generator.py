@@ -1,6 +1,6 @@
 """
 Generador de Dashboard HTML interactivo para Oportunidades Inmobiliarias y Market Intelligence en CABA.
-Crea un archivo HTML autónomo, moderno, responsivo, con gráficos interactivos y análisis de mercado.
+Crea un archivo HTML autónomo, moderno, responsivo, con gráficos interactivos y análisis de mercado multi-portal.
 """
 
 import json
@@ -13,7 +13,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zonaprop Hunter | Oportunidades & Market Intelligence CABA</title>
+    <title>InmoHunter CABA | Oportunidades & Market Intelligence</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -33,6 +33,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             --accent-flame: #f97316;
             --accent-purple: #a855f7;
             --accent-indigo: #6366f1;
+            --accent-yellow: #eab308;
             --border-color: #334155;
             --radius-md: 12px;
             --radius-lg: 16px;
@@ -200,7 +201,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         .filters-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             gap: 14px;
             align-items: end;
         }
@@ -427,6 +428,16 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             background: rgba(15, 23, 42, 0.85);
             border: 1px solid rgba(255, 255, 255, 0.2);
             color: #38bdf8;
+        }
+
+        .badge-portal-meli {
+            background: rgba(234, 179, 8, 0.9);
+            color: #0f172a;
+        }
+
+        .badge-portal-zprop {
+            background: rgba(2, 132, 199, 0.9);
+            color: #fff;
         }
 
         .score-pill {
@@ -782,10 +793,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <header>
             <div>
                 <div class="brand-title">
-                    <span>🏢 Zonaprop Hunter</span>
-                    <span class="brand-badge">Market Intelligence CABA</span>
+                    <span>🏢 InmoHunter CABA</span>
+                    <span class="brand-badge">Zonaprop + Mercado Libre</span>
                 </div>
-                <div class="header-meta" id="headerMeta">Monitor Diario del Mercado Inmobiliario y Oportunidades en CABA</div>
+                <div class="header-meta" id="headerMeta">Monitor Multi-Portal del Mercado Inmobiliario y Oportunidades en CABA</div>
             </div>
             <div class="action-buttons">
                 <button class="btn" onclick="exportToCSV()">📥 Exportar CSV</button>
@@ -835,6 +846,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     <div class="filter-group">
                         <label>Buscar (Palabra clave / Calle)</label>
                         <input type="text" id="filterSearch" class="input-control" placeholder="Ej: Palermo, Balcón, Reciclado...">
+                    </div>
+                    <div class="filter-group">
+                        <label>Portal / Fuente</label>
+                        <select id="filterPortal" class="input-control">
+                            <option value="ALL">Todos los portales</option>
+                            <option value="Zonaprop">🔵 Zonaprop</option>
+                            <option value="Mercado Libre">🟡 Mercado Libre</option>
+                        </select>
                     </div>
                     <div class="filter-group">
                         <label>Barrio</label>
@@ -915,6 +934,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     <thead>
                         <tr>
                             <th>Foto</th>
+                            <th>Portal</th>
                             <th>Barrio / Ubicación</th>
                             <th>Precio</th>
                             <th>USD / m²</th>
@@ -967,7 +987,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             <!-- EXPERT INSIGHTS RADAR -->
             <h2 style="font-size: 20px; font-weight: 800; margin-bottom: 16px; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
                 <span>🎯 Radar del Experto Inmobiliario</span>
-                <span class="brand-badge">Live Market Insights</span>
+                <span class="brand-badge">Multi-Portal Insights</span>
             </h2>
             <div id="insightsList" class="insights-list"></div>
 
@@ -1024,7 +1044,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         </div>
 
         <footer>
-            <p>Zonaprop Hunter & Market Intelligence CABA &bull; Generado el <span id="footerDate"></span></p>
+            <p>InmoHunter CABA &bull; Zonaprop & Mercado Libre &bull; Generado el <span id="footerDate"></span></p>
         </footer>
     </div>
 
@@ -1040,7 +1060,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         let chartsInitialized = false;
 
         function init() {
-            document.getElementById('headerMeta').innerText = `Actualizado el ${new Date(GENERATION_TIME).toLocaleString('es-AR')} • ${RAW_DATA.length} avisos evaluados`;
+            document.getElementById('headerMeta').innerText = `Actualizado el ${new Date(GENERATION_TIME).toLocaleString('es-AR')} • ${RAW_DATA.length} avisos evaluados (Zonaprop + Mercado Libre)`;
             document.getElementById('footerDate').innerText = new Date(GENERATION_TIME).toLocaleString('es-AR');
             document.getElementById('tabCount').innerText = RAW_DATA.length;
 
@@ -1056,7 +1076,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             });
 
             // Event Listeners
-            ['filterSearch', 'filterBarrio', 'filterMaxPrice', 'filterMaxSqm', 'filterAmbientes', 'filterDate', 'sortBy', 'chkOnlySuper', 'chkOnlyNew', 'chkOnlyFavs'].forEach(id => {
+            ['filterSearch', 'filterPortal', 'filterBarrio', 'filterMaxPrice', 'filterMaxSqm', 'filterAmbientes', 'filterDate', 'sortBy', 'chkOnlySuper', 'chkOnlyNew', 'chkOnlyFavs'].forEach(id => {
                 document.getElementById(id).addEventListener('input', render);
                 document.getElementById(id).addEventListener('change', render);
             });
@@ -1100,6 +1120,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         function resetFilters() {
             document.getElementById('filterSearch').value = '';
+            document.getElementById('filterPortal').value = 'ALL';
             document.getElementById('filterBarrio').value = 'ALL';
             document.getElementById('filterMaxPrice').value = '';
             document.getElementById('filterMaxSqm').value = '';
@@ -1114,6 +1135,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         function filterData() {
             const query = document.getElementById('filterSearch').value.toLowerCase().trim();
+            const portal = document.getElementById('filterPortal').value;
             const barrio = document.getElementById('filterBarrio').value;
             const maxPrice = parseFloat(document.getElementById('filterMaxPrice').value) || Infinity;
             const maxSqm = parseFloat(document.getElementById('filterMaxSqm').value) || Infinity;
@@ -1126,6 +1148,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
             return RAW_DATA.filter(p => {
                 if (query && !`${p.title} ${p.location} ${p.barrio} ${p.address} ${p.features_raw}`.toLowerCase().includes(query)) return false;
+                if (portal !== 'ALL' && p.source !== portal) return false;
                 if (barrio !== 'ALL' && p.barrio !== barrio) return false;
                 if (p.price_val > maxPrice) return false;
                 if (p.usd_m2 > maxSqm) return false;
@@ -1179,6 +1202,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 const defaultImg = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&auto=format&fit=crop&q=60";
                 const imgUrl = p.image || defaultImg;
                 const pubDate = p.publication_date_text || 'Reciente';
+                const isMeli = p.source === 'Mercado Libre';
+                const portalClass = isMeli ? 'badge-portal-meli' : 'badge-portal-zprop';
+                const portalLabel = isMeli ? '🟡 Mercado Libre' : '🔵 Zonaprop';
+                const btnLabel = isMeli ? 'Ver en Mercado Libre ↗' : 'Ver en Zonaprop ↗';
                 
                 return `
                 <div class="property-card">
@@ -1186,6 +1213,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         <img src="${imgUrl}" alt="Foto propiedad" class="card-img" onerror="this.src='${defaultImg}'" loading="lazy">
                         <div class="badge-container">
                             <span class="badge ${p.badge_class}">${p.badge_text}</span>
+                            <span class="badge ${portalClass}">${portalLabel}</span>
                             <span class="badge badge-date">🕒 ${pubDate}</span>
                             ${p.is_new ? '<span class="badge badge-new">✨ Nueva Hoy</span>' : ''}
                         </div>
@@ -1212,7 +1240,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         </div>
 
                         <div class="card-actions">
-                            <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="card-btn card-btn-view">Ver en Zonaprop ↗</a>
+                            <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="card-btn card-btn-view">${btnLabel}</a>
                             <button class="fav-btn ${isFav ? 'active' : ''}" onclick="toggleFavorite('${p.id}', event)" title="Guardar en favoritos">${isFav ? '★' : '☆'}</button>
                         </div>
                     </div>
@@ -1226,10 +1254,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 const isFav = favorites.includes(p.id);
                 const defaultImg = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=100&auto=format&fit=crop&q=60";
                 const imgUrl = p.image || defaultImg;
+                const isMeli = p.source === 'Mercado Libre';
+                const portalClass = isMeli ? 'badge-portal-meli' : 'badge-portal-zprop';
+                const portalLabel = isMeli ? 'Mercado Libre' : 'Zonaprop';
 
                 return `
                 <tr>
                     <td><img src="${imgUrl}" class="table-thumb" onerror="this.src='${defaultImg}'"></td>
+                    <td><span class="badge ${portalClass}">${portalLabel}</span></td>
                     <td>
                         <strong>${p.barrio}</strong><br>
                         <small style="color:var(--text-muted)">${p.address || p.location}</small>
@@ -1409,9 +1441,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const data = filterData();
             if (data.length === 0) return alert('No hay datos para exportar.');
 
-            const headers = ['ID', 'Barrio', 'Direccion', 'Precio_USD', 'USD_m2', 'M2_Tot', 'Ambientes', 'Dormitorios', 'Publicacion', 'Score_Oportunidad', 'Descuento_Pct', 'Link'];
+            const headers = ['ID', 'Portal', 'Barrio', 'Direccion', 'Precio_USD', 'USD_m2', 'M2_Tot', 'Ambientes', 'Dormitorios', 'Publicacion', 'Score_Oportunidad', 'Descuento_Pct', 'Link'];
             const rows = data.map(p => [
                 p.id,
+                `"${p.source || 'Zonaprop'}"`,
                 `"${p.barrio}"`,
                 `"${(p.address || '').replace(/"/g, '""')}"`,
                 p.price_val,
@@ -1429,7 +1462,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const encodedUri = encodeURI(csvContent);
             const link = document.createElement('a');
             link.setAttribute('href', encodedUri);
-            link.setAttribute('download', `zonaprop_oportunidades_${new Date().toISOString().slice(0,10)}.csv`);
+            link.setAttribute('download', `inmo_oportunidades_${new Date().toISOString().slice(0,10)}.csv`);
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -1440,7 +1473,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data, null, 2));
             const link = document.createElement('a');
             link.setAttribute('href', dataStr);
-            link.setAttribute('download', `zonaprop_oportunidades_${new Date().toISOString().slice(0,10)}.json`);
+            link.setAttribute('download', `inmo_oportunidades_${new Date().toISOString().slice(0,10)}.json`);
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);

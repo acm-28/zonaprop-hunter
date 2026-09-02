@@ -40,21 +40,15 @@ class ZonapropScraper:
         max_price = self.search_cfg.get("max_price_usd", 80000)
         sort_by = self.search_cfg.get("sort_by", "orden-publicado-descendente")
 
-        # Limpiar y formatear slug de ubicación
         loc_slug = location.strip().lower().replace(" ", "-")
-        
-        # Base: ej 'departamentos-venta-capital-federal'
         slug_parts = [prop_type, "venta", loc_slug]
         
-        # Filtro de precio máximo: ej 'menos-80000-dolar'
         if max_price and max_price > 0:
             slug_parts.append(f"menos-{max_price}-dolar")
             
-        # Orden: ej 'orden-publicado-descendente'
         if sort_by:
             slug_parts.append(sort_by)
             
-        # Paginación: ej 'pagina-2'
         if page > 1:
             slug_parts.append(f"pagina-{page}")
             
@@ -101,14 +95,12 @@ class ZonapropScraper:
             is_development = "emprendimiento" in link.lower()
 
             # 1. Antigüedad / Fecha de publicación
-            # Zonaprop incluye clases como postingCard-module__posting-antiquity-date o similar
             antiquity_el = (
                 card.select_one('[class*="posting-antiquity-date"], [class*="antiquity"], [class*="publication-date"]')
                 or card.find(attrs={"data-qa": lambda x: x and ("antiquity" in x.lower() or "date" in x.lower())})
             )
             antiquity_text = antiquity_el.get_text(strip=True) if antiquity_el else ""
 
-            # Si no se encontró en el selector directo, buscar en los divs
             if not antiquity_text:
                 for div in card.find_all(['div', 'span']):
                     t = div.get_text(strip=True)
@@ -123,12 +115,10 @@ class ZonapropScraper:
             )
             price_raw = price_el.get_text(strip=True) if price_el else ""
 
-            # Determinar moneda
             currency = "USD"
             if "ARS" in price_raw or ("$" in price_raw and "USD" not in price_raw and "U$S" not in price_raw):
                 currency = "ARS"
 
-            # Parsear valor numérico de precio
             price_val = None
             nums = re.findall(r'[\d\.]+', price_raw)
             if nums:
@@ -152,37 +142,31 @@ class ZonapropScraper:
             )
             features_raw = features_el.get_text(separator=" | ", strip=True) if features_el else ""
 
-            # Extracción de m2 totales
             m2_tot = None
             m2_match = re.search(r'(\d+)\s*m[²2]\s*tot', features_raw, re.IGNORECASE) or re.search(r'(\d+)\s*m[²2]', features_raw, re.IGNORECASE)
             if m2_match:
                 m2_tot = int(m2_match.group(1))
 
-            # Extracción de m2 cubiertos
             m2_cub = None
             cub_match = re.search(r'(\d+)\s*m[²2]\s*cub', features_raw, re.IGNORECASE)
             if cub_match:
                 m2_cub = int(cub_match.group(1))
 
-            # Ambientes
             ambientes = None
             amb_match = re.search(r'(\d+)\s*amb', features_raw, re.IGNORECASE)
             if amb_match:
                 ambientes = int(amb_match.group(1))
 
-            # Dormitorios
             dormitorios = None
             dorm_match = re.search(r'(\d+)\s*dorm', features_raw, re.IGNORECASE)
             if dorm_match:
                 dormitorios = int(dorm_match.group(1))
 
-            # Baños
             banos = None
             ban_match = re.search(r'(\d+)\s*bañ', features_raw, re.IGNORECASE)
             if ban_match:
                 banos = int(ban_match.group(1))
 
-            # Cocheras
             cocheras = None
             coch_match = re.search(r'(\d+)\s*coch', features_raw, re.IGNORECASE)
             if coch_match:
@@ -219,9 +203,11 @@ class ZonapropScraper:
                 title = f"Departamento {ambientes or ''} amb en {location_raw}".strip()
 
             return {
-                "id": posting_id,
+                "id": f"ZPROP-{posting_id}",
                 "title": title,
                 "description": title,
+                "source": "Zonaprop",
+                "source_badge": "🔵 Zonaprop",
                 "publication_date_text": antiquity_text or "Reciente",
                 "price_raw": price_raw,
                 "price_val": price_val,
@@ -255,18 +241,18 @@ class ZonapropScraper:
         all_raw_properties = []
         seen_ids = set()
 
-        print(f"\n[Scraper] Iniciando rastreo en Zonaprop para: {location.upper()}")
-        print(f"[Scraper] Paginas a consultar: {pages} | Precio Max: USD {self.search_cfg.get('max_price_usd', 80000):,}")
+        print(f"\n[Scraper Zonaprop] Iniciando rastreo para: {location.upper()}")
+        print(f"[Scraper Zonaprop] Páginas a consultar: {pages} | Precio Máx: USD {self.search_cfg.get('max_price_usd', 80000):,}")
         if only_today:
-            print("[Scraper] Modo estricto activado: Filtrando SOLO publicaciones de hoy.")
+            print("[Scraper Zonaprop] Modo estricto activado: Filtrando SOLO publicaciones de hoy.")
 
         for page in range(1, pages + 1):
             url = self.build_url(location=location, page=page)
-            print(f" -> Consultando pagina {page}/{pages}...")
+            print(f" -> [Zonaprop] Consultando página {page}/{pages}...")
             
             html = self.fetch_page(url)
             if not html:
-                print(f"    No se pudo obtener contenido para la pagina {page}.")
+                print(f"    No se pudo obtener contenido para la página {page}.")
                 break
 
             soup = BeautifulSoup(html, "html.parser")
@@ -285,24 +271,21 @@ class ZonapropScraper:
 
                 seen_ids.add(prop["id"])
                 
-                # Si el usuario quiere SOLO anuncios de hoy
                 pub_text = prop.get("publication_date_text", "").lower()
                 is_today = "hoy" in pub_text or "hora" in pub_text or "minuto" in pub_text or "segundo" in pub_text
                 
                 if only_today and not is_today and pub_text and "reciente" not in pub_text:
-                    # Avisos de ayer o más antiguos encontrados
                     reached_older_ads = True
                     continue
 
                 all_raw_properties.append(prop)
                 page_count += 1
 
-            print(f"    Pagina {page}: {len(cards)} avisos en pagina ({page_count} procesados)")
+            print(f"    [Zonaprop] Página {page}: {len(cards)} avisos en página ({page_count} procesados)")
 
-            # Si estamos en modo "solo hoy" y ya alcanzamos avisos de ayer/días anteriores, no tiene sentido seguir bajando páginas
             if only_today and reached_older_ads and page_count == 0:
-                print("    [Info] Se alcanzaron publicaciones de días anteriores. Finalizando rastreo.")
+                print("    [Info] Se alcanzaron publicaciones de días anteriores en Zonaprop. Finalizando rastreo.")
                 break
 
-        print(f"[Scraper] Finalizado. Total de avisos extraidos: {len(all_raw_properties)}")
+        print(f"[Scraper Zonaprop] Finalizado. Total de avisos extraídos: {len(all_raw_properties)}")
         return all_raw_properties

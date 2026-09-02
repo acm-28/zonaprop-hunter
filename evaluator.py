@@ -54,12 +54,12 @@ def evaluate_property(raw_prop: Dict[str, Any], config: Dict[str, Any]) -> Optio
     max_price = search_cfg.get("max_price_usd", 80000)
     min_m2 = search_cfg.get("min_m2", 18)
     max_usd_m2_limit = search_cfg.get("max_usd_m2", 2200)
-    include_devs = search_cfg.get("include_developments", False)
+    include_devs = search_cfg.get("include_developments", True)
     filter_barrios = [normalize_text(b) for b in search_cfg.get("filter_barrios", []) if b]
 
-    # Descartar emprendimientos si no están habilitados
-    is_development = raw_prop.get("is_development", False) or "desde" in str(raw_prop.get("price_raw", "")).lower()
-    if is_development and not include_devs:
+    # Descartar solo proyectos masivos sin superficie definida si no se desean emprendimientos
+    is_development = raw_prop.get("is_development", False)
+    if is_development and not include_devs and not raw_prop.get("m2_tot"):
         return None
 
     # Normalizar precio
@@ -97,7 +97,7 @@ def evaluate_property(raw_prop: Dict[str, Any], config: Dict[str, Any]) -> Optio
 
     # Calcular USD / m2
     usd_m2 = round(price_val / m2_tot)
-    if usd_m2 > max_usd_m2_limit or usd_m2 < 300: # < 300 suele ser error o aviso falso
+    if usd_m2 > max_usd_m2_limit or usd_m2 < 300:
         return None
 
     # Calcular descuento porcentual respecto al benchmark del barrio
@@ -125,7 +125,9 @@ def evaluate_property(raw_prop: Dict[str, Any], config: Dict[str, Any]) -> Optio
         badge_text = "📊 Precio Normal"
         badge_class = "badge-fair"
 
-    # Enriquecer objeto
+    source = raw_prop.get("source", "Zonaprop")
+    source_badge = raw_prop.get("source_badge", f"🔵 {source}")
+
     enriched = dict(raw_prop)
     enriched.update({
         "barrio": barrio_name,
@@ -135,6 +137,8 @@ def evaluate_property(raw_prop: Dict[str, Any], config: Dict[str, Any]) -> Optio
         "opportunity_score": opportunity_score,
         "badge_text": badge_text,
         "badge_class": badge_class,
+        "source": source,
+        "source_badge": source_badge,
         "price_usd_formatted": f"USD {price_val:,.0f}".replace(",", "."),
         "usd_m2_formatted": f"USD {usd_m2:,.0f}/m²".replace(",", "."),
         "benchmark_formatted": f"USD {int(barrio_benchmark):,.0f}/m²".replace(",", "."),
