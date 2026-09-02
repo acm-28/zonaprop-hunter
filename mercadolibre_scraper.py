@@ -1,6 +1,6 @@
 """
 Módulo de Scraping para Mercado Libre Inmuebles Argentina.
-Descarga y procesa páginas de departamentos en venta en Capital Federal.
+Descarga y procesa páginas de departamentos y PHs en venta en Capital Federal.
 """
 
 import time
@@ -33,40 +33,47 @@ class MercadoLibreScraper:
             "Sec-Ch-Ua-Platform": '"Windows"',
         }
 
-    def build_url(self, page: int = 1) -> str:
-        """Construye la URL con filtros optimizados para Mercado Libre Inmuebles."""
-        prop_type = self.search_cfg.get("property_type", "departamentos")
+    def build_urls(self, page: int = 1) -> List[str]:
+        """Construye las URLs de búsqueda en Mercado Libre para departamentos y PHs."""
         min_price = self.search_cfg.get("min_price_usd", 18000)
         max_price = self.search_cfg.get("max_price_usd", 80000)
+        only_today = self.search_cfg.get("only_published_today", False)
 
-        base_url = f"https://inmuebles.mercadolibre.com.ar/{prop_type}/venta/capital-federal/"
-        filter_slug = f"_PriceRange_{min_price}USD-{max_price}USD_OrderId_BEGINS*DESC"
+        today_slug = "_PublishedToday_YES" if only_today else ""
+        filter_slug = f"_PriceRange_{min_price}USD-{max_price}USD{today_slug}_OrderId_BEGINS*DESC"
 
+        urls = []
+        # 1. Departamentos
+        base_deptos = "https://inmuebles.mercadolibre.com.ar/departamentos/venta/capital-federal/"
         if page > 1:
             offset = (page - 1) * 48 + 1
-            url = f"{base_url}_Desde_{offset}{filter_slug}"
+            urls.append(f"{base_deptos}_Desde_{offset}{filter_slug}")
         else:
-            url = f"{base_url}{filter_slug}"
+            urls.append(f"{base_deptos}{filter_slug}")
 
-        return url
+        # 2. PHs (Propiedad Horizontal - Oportunidades directas)
+        base_ph = "https://inmuebles.mercadolibre.com.ar/ph/venta/capital-federal/"
+        if page > 1:
+            offset = (page - 1) * 48 + 1
+            urls.append(f"{base_ph}_Desde_{offset}{filter_slug}")
+        else:
+            urls.append(f"{base_ph}{filter_slug}")
+
+        return urls
 
     def fetch_page(self, url: str) -> Optional[str]:
         """Realiza la petición HTTP con reintentos y delay de cortesía."""
         headers = self._get_headers()
         for attempt in range(1, 4):
             try:
-                time.sleep(random.uniform(1.2, 2.0))
+                time.sleep(random.uniform(1.0, 1.8))
                 response = self.session.get(url, headers=headers, timeout=15)
                 if response.status_code == 200:
                     return response.text
                 elif response.status_code == 404:
-                    print(f"  [MercadoLibre 404] No hay más páginas en {url}")
                     return None
-                else:
-                    print(f"  [MercadoLibre Intento {attempt}] Código {response.status_code} en {url}")
             except Exception as e:
-                print(f"  [MercadoLibre Intento {attempt}] Error de conexión: {e}")
-                time.sleep(attempt * 2)
+                time.sleep(attempt * 1.5)
         return None
 
     def parse_card(self, card) -> Optional[Dict[str, Any]]:
@@ -94,7 +101,6 @@ class MercadoLibreScraper:
             posting_id = f"MELI-{id_match.group(1).replace('-', '')}" if id_match else f"MELI-{abs(hash(clean_link)) % 100000000}"
 
             card_full_text = card.get_text().lower()
-            is_development = "unidades disponibles" in card_full_text and "desde" in card_full_text
 
             # 2. Precio y Moneda
             price_el = (
@@ -130,12 +136,17 @@ class MercadoLibreScraper:
             features_raw = " | ".join(attr_texts) if attr_texts else card.get_text(separator=" | ", strip=True)
 
             m2_tot = None
-            m2_match = re.search(r'(\d+)(?:\s*-\s*\d+)?\s*m[²2]', features_raw, re.IGNORECASE)
+            # Evitar rangos de pozo "19 - 27 m²" y capturar m² concretos
+            if " - " in features_raw and "m²" in features_raw:
+                m2_match = re.search(r'(\d+)\s*m[²2]', features_raw)
+            else:
+                m2_match = re.search(r'(\d+)\s*m[²2]', features_raw, re.IGNORECASE)
+                
             if m2_match:
                 m2_tot = int(m2_match.group(1))
 
             ambientes = None
-            amb_match = re.search(r'(\d+)(?:\s*a\s*\d+)?\s*amb', features_raw, re.IGNORECASE)
+            amb_match = re.search(r'(\d+)\s*amb', features_raw, re.IGNORECASE)
             if amb_match:
                 ambientes = int(amb_match.group(1))
 
@@ -162,7 +173,7 @@ class MercadoLibreScraper:
 
             return {
                 "id": posting_id,
-                "title": title or f"Departamento {ambientes or ''} amb en {location_raw}".strip(),
+                "title": title or f"Propiedad {ambientes or ''} amb en {location_raw}".strip(),
                 "description": title,
                 "source": "Mercado Libre",
                 "source_badge": "🟡 Mercado Libre",
@@ -182,40 +193,42 @@ class MercadoLibreScraper:
                 "address": location_raw.split(",")[0] if "," in location_raw else "",
                 "image": img_src,
                 "link": clean_link,
-                "is_development": is_development,
+                "is_development": False,
             }
         except Exception:
             return None
 
     def scrape(self, max_pages: Optional[int] = None) -> List[Dict[str, Any]]:
-        """Ejecuta el rastreo de Mercado Libre Inmuebles."""
-        pages = max_pages or self.search_cfg.get("pages_to_scrape", 3)
+        """Ejecuta el rastreo de Mercado Libre Inmuebles en CABA."""
+        pages = max_pages or self.search_cfg.get("pages_to_scrape", 4)
         all_raw_properties = []
         seen_ids = set()
 
-        print(f"\n[Scraper MercadoLibre] Iniciando rastreo en CABA...")
-        print(f"[Scraper MercadoLibre] Páginas a consultar: {pages} | Precio Máx: USD {self.search_cfg.get('max_price_usd', 80000):,}")
+        print(f"\n[Scraper MercadoLibre] Iniciando rastreo en CABA (Deptos y PHs)...")
+        print(f"[Scraper MercadoLibre] Páginas por categoría: {pages} | Precio Máx: USD {self.search_cfg.get('max_price_usd', 80000):,}")
 
         for page in range(1, pages + 1):
-            url = self.build_url(page=page)
-            print(f" -> [MercadoLibre] Consultando página {page}/{pages}...")
-            
-            html = self.fetch_page(url)
-            if not html:
-                break
+            urls = self.build_urls(page=page)
+            for url in urls:
+                cat_name = "Deptos" if "/departamentos/" in url else "PHs"
+                print(f" -> [MercadoLibre] Consultando {cat_name} (Página {page}/{pages})...")
+                
+                html = self.fetch_page(url)
+                if not html:
+                    continue
 
-            soup = BeautifulSoup(html, "html.parser")
-            cards = soup.select('li.ui-search-layout__item, div.ui-search-result__wrapper, div.poly-card')
+                soup = BeautifulSoup(html, "html.parser")
+                cards = soup.select('li.ui-search-layout__item, div.ui-search-result__wrapper, div.poly-card')
 
-            page_count = 0
-            for card in cards:
-                prop = self.parse_card(card)
-                if prop and prop["id"] not in seen_ids:
-                    seen_ids.add(prop["id"])
-                    all_raw_properties.append(prop)
-                    page_count += 1
+                page_count = 0
+                for card in cards:
+                    prop = self.parse_card(card)
+                    if prop and prop["id"] not in seen_ids:
+                        seen_ids.add(prop["id"])
+                        all_raw_properties.append(prop)
+                        page_count += 1
 
-            print(f"    [MercadoLibre] Página {page}: {len(cards)} avisos encontrados ({page_count} procesados)")
+                print(f"    [MercadoLibre] {cat_name} Pág {page}: {len(cards)} avisos ({page_count} nuevos procesados)")
 
         print(f"[Scraper MercadoLibre] Finalizado. Total de avisos extraídos: {len(all_raw_properties)}")
         return all_raw_properties
