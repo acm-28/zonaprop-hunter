@@ -1,6 +1,6 @@
 """
 Generador de Dashboard HTML interactivo para Oportunidades Inmobiliarias y Market Intelligence en CABA.
-Crea un archivo HTML autónomo, moderno, responsivo, con gráficos interactivos y análisis de mercado multi-portal.
+Crea un archivo HTML autónomo, moderno, responsivo, con gráficos interactivos y análisis de mercado para Zonaprop.
 """
 
 import json
@@ -13,7 +13,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InmoHunter CABA | Oportunidades & Market Intelligence</title>
+    <title>Zonaprop Hunter CABA | Oportunidades & Market Intelligence</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -201,7 +201,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         .filters-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
             gap: 14px;
             align-items: end;
         }
@@ -428,16 +428,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             background: rgba(15, 23, 42, 0.85);
             border: 1px solid rgba(255, 255, 255, 0.2);
             color: #38bdf8;
-        }
-
-        .badge-portal-meli {
-            background: rgba(234, 179, 8, 0.9);
-            color: #0f172a;
-        }
-
-        .badge-portal-zprop {
-            background: rgba(2, 132, 199, 0.9);
-            color: #fff;
         }
 
         .score-pill {
@@ -793,10 +783,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <header>
             <div>
                 <div class="brand-title">
-                    <span>🏢 InmoHunter CABA</span>
-                    <span class="brand-badge">Zonaprop + Mercado Libre</span>
+                    <span>🏢 Zonaprop Hunter CABA</span>
+                    <span class="brand-badge">Publicaciones de Hoy</span>
                 </div>
-                <div class="header-meta" id="headerMeta">Monitor Multi-Portal del Mercado Inmobiliario y Oportunidades en CABA</div>
+                <div class="header-meta" id="headerMeta">Monitor Diario de Oportunidades Reales y Market Intelligence en CABA</div>
             </div>
             <div class="action-buttons">
                 <button class="btn" onclick="exportToCSV()">📥 Exportar CSV</button>
@@ -807,7 +797,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <!-- NAVIGATION TABS -->
         <div class="nav-tabs">
             <button class="nav-tab active" id="tabOpportunities" onclick="switchMainTab('opportunities')">
-                🔥 Oportunidades & Avisos (<span id="tabCount">0</span>)
+                🔥 Oportunidades Zonaprop (<span id="tabCount">0</span>)
             </button>
             <button class="nav-tab" id="tabAnalytics" onclick="switchMainTab('analytics')">
                 📈 Mercado & Analytics CABA
@@ -819,9 +809,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             <!-- KPI METRICS -->
             <div class="kpi-grid">
                 <div class="kpi-card">
-                    <div class="kpi-label">Propiedades Evaluadas</div>
+                    <div class="kpi-label">Avisos Hoy en Zonaprop</div>
                     <div class="kpi-value" id="kpiTotal">0</div>
-                    <div class="kpi-sub" id="kpiNewSub">0 nuevas hoy</div>
+                    <div class="kpi-sub" id="kpiNewSub">Publicadas hoy</div>
                 </div>
                 <div class="kpi-card flame">
                     <div class="kpi-label">Super Oportunidades</div>
@@ -831,12 +821,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 <div class="kpi-card green">
                     <div class="kpi-label">Precio Mínimo</div>
                     <div class="kpi-value" id="kpiMinPrice">-</div>
-                    <div class="kpi-sub">Encontrado en CABA</div>
+                    <div class="kpi-sub">Encontrado hoy</div>
                 </div>
                 <div class="kpi-card purple">
                     <div class="kpi-label">Promedio USD / m²</div>
                     <div class="kpi-value" id="kpiAvgSqm">-</div>
-                    <div class="kpi-sub">En oportunidades filtradas</div>
+                    <div class="kpi-sub">En avisos filtrados</div>
                 </div>
             </div>
 
@@ -846,14 +836,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     <div class="filter-group">
                         <label>Buscar (Palabra clave / Calle)</label>
                         <input type="text" id="filterSearch" class="input-control" placeholder="Ej: Palermo, Balcón, Reciclado...">
-                    </div>
-                    <div class="filter-group">
-                        <label>Portal / Fuente</label>
-                        <select id="filterPortal" class="input-control">
-                            <option value="ALL">Todos los portales</option>
-                            <option value="Zonaprop">🔵 Zonaprop</option>
-                            <option value="Mercado Libre">🟡 Mercado Libre</option>
-                        </select>
                     </div>
                     <div class="filter-group">
                         <label>Barrio</label>
@@ -879,14 +861,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         </select>
                     </div>
                     <div class="filter-group">
-                        <label>Publicado</label>
-                        <select id="filterDate" class="input-control">
-                            <option value="ALL">Cualquier fecha</option>
-                            <option value="TODAY">🕒 Sólo Publicados Hoy</option>
-                            <option value="48H">🕒 Últimas 48 horas</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
                         <label>Ordenar Por</label>
                         <select id="sortBy" class="input-control">
                             <option value="score_desc">🏆 Mayor Oportunidad (Score)</option>
@@ -902,9 +876,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     <div style="display: flex; gap: 20px; flex-wrap: wrap;">
                         <label class="checkbox-label">
                             <input type="checkbox" id="chkOnlySuper"> 🔥 Sólo Super Oportunidades
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" id="chkOnlyNew"> ✨ Sólo Nuevas de Hoy
                         </label>
                         <label class="checkbox-label">
                             <input type="checkbox" id="chkOnlyFavs"> ⭐ Sólo Favoritos
@@ -934,7 +905,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     <thead>
                         <tr>
                             <th>Foto</th>
-                            <th>Portal</th>
                             <th>Barrio / Ubicación</th>
                             <th>Precio</th>
                             <th>USD / m²</th>
@@ -987,7 +957,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             <!-- EXPERT INSIGHTS RADAR -->
             <h2 style="font-size: 20px; font-weight: 800; margin-bottom: 16px; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
                 <span>🎯 Radar del Experto Inmobiliario</span>
-                <span class="brand-badge">Multi-Portal Insights</span>
+                <span class="brand-badge">Zonaprop Market Insights</span>
             </h2>
             <div id="insightsList" class="insights-list"></div>
 
@@ -1044,7 +1014,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         </div>
 
         <footer>
-            <p>InmoHunter CABA &bull; Zonaprop & Mercado Libre &bull; Generado el <span id="footerDate"></span></p>
+            <p>Zonaprop Hunter CABA &bull; Monitor Diario &bull; Generado el <span id="footerDate"></span></p>
         </footer>
     </div>
 
@@ -1060,7 +1030,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         let chartsInitialized = false;
 
         function init() {
-            document.getElementById('headerMeta').innerText = `Actualizado el ${new Date(GENERATION_TIME).toLocaleString('es-AR')} • ${RAW_DATA.length} avisos evaluados (Zonaprop + Mercado Libre)`;
+            document.getElementById('headerMeta').innerText = `Actualizado el ${new Date(GENERATION_TIME).toLocaleString('es-AR')} • ${RAW_DATA.length} avisos publicados hoy en Zonaprop CABA`;
             document.getElementById('footerDate').innerText = new Date(GENERATION_TIME).toLocaleString('es-AR');
             document.getElementById('tabCount').innerText = RAW_DATA.length;
 
@@ -1076,7 +1046,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             });
 
             // Event Listeners
-            ['filterSearch', 'filterPortal', 'filterBarrio', 'filterMaxPrice', 'filterMaxSqm', 'filterAmbientes', 'filterDate', 'sortBy', 'chkOnlySuper', 'chkOnlyNew', 'chkOnlyFavs'].forEach(id => {
+            ['filterSearch', 'filterBarrio', 'filterMaxPrice', 'filterMaxSqm', 'filterAmbientes', 'sortBy', 'chkOnlySuper', 'chkOnlyFavs'].forEach(id => {
                 document.getElementById(id).addEventListener('input', render);
                 document.getElementById(id).addEventListener('change', render);
             });
@@ -1120,46 +1090,33 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         function resetFilters() {
             document.getElementById('filterSearch').value = '';
-            document.getElementById('filterPortal').value = 'ALL';
             document.getElementById('filterBarrio').value = 'ALL';
             document.getElementById('filterMaxPrice').value = '';
             document.getElementById('filterMaxSqm').value = '';
             document.getElementById('filterAmbientes').value = '0';
-            document.getElementById('filterDate').value = 'ALL';
             document.getElementById('sortBy').value = 'score_desc';
             document.getElementById('chkOnlySuper').checked = false;
-            document.getElementById('chkOnlyNew').checked = false;
             document.getElementById('chkOnlyFavs').checked = false;
             render();
         }
 
         function filterData() {
             const query = document.getElementById('filterSearch').value.toLowerCase().trim();
-            const portal = document.getElementById('filterPortal').value;
             const barrio = document.getElementById('filterBarrio').value;
             const maxPrice = parseFloat(document.getElementById('filterMaxPrice').value) || Infinity;
             const maxSqm = parseFloat(document.getElementById('filterMaxSqm').value) || Infinity;
             const minAmb = parseInt(document.getElementById('filterAmbientes').value) || 0;
-            const filterDate = document.getElementById('filterDate').value;
             const onlySuper = document.getElementById('chkOnlySuper').checked;
-            const onlyNew = document.getElementById('chkOnlyNew').checked;
             const onlyFavs = document.getElementById('chkOnlyFavs').checked;
             const sortBy = document.getElementById('sortBy').value;
 
             return RAW_DATA.filter(p => {
                 if (query && !`${p.title} ${p.location} ${p.barrio} ${p.address} ${p.features_raw}`.toLowerCase().includes(query)) return false;
-                if (portal !== 'ALL' && p.source !== portal) return false;
                 if (barrio !== 'ALL' && p.barrio !== barrio) return false;
                 if (p.price_val > maxPrice) return false;
                 if (p.usd_m2 > maxSqm) return false;
                 if (minAmb > 0 && (p.ambientes || 0) < minAmb) return false;
-                
-                const pubText = (p.publication_date_text || '').toLowerCase();
-                if (filterDate === 'TODAY' && !(pubText.includes('hoy') || pubText.includes('hora') || pubText.includes('minuto') || p.is_new)) return false;
-                if (filterDate === '48H' && !(pubText.includes('hoy') || pubText.includes('ayer') || pubText.includes('hora') || pubText.includes('minuto') || p.is_new)) return false;
-
                 if (onlySuper && p.opportunity_score < 75 && !p.badge_text.includes('Super')) return false;
-                if (onlyNew && !p.is_new) return false;
                 if (onlyFavs && !favorites.includes(p.id)) return false;
                 return true;
             }).sort((a, b) => {
@@ -1177,8 +1134,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
             // Update KPIs
             document.getElementById('kpiTotal').innerText = data.length;
-            const newCount = data.filter(p => p.is_new || (p.publication_date_text || '').toLowerCase().includes('hoy')).length;
-            document.getElementById('kpiNewSub').innerText = `${newCount} publicadas hoy`;
+            document.getElementById('kpiNewSub').innerText = `${data.length} de hoy`;
             const superCount = data.filter(p => p.opportunity_score >= 75 || p.badge_text.includes('Super')).length;
             document.getElementById('kpiSuper').innerText = superCount;
 
@@ -1192,7 +1148,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 document.getElementById('kpiAvgSqm').innerText = '-';
             }
 
-            document.getElementById('resultsCount').innerText = `Mostrando ${data.length} de ${RAW_DATA.length} propiedades`;
+            document.getElementById('resultsCount').innerText = `Mostrando ${data.length} de ${RAW_DATA.length} propiedades de hoy`;
             document.getElementById('emptyState').style.display = data.length === 0 ? 'block' : 'none';
 
             // Render Cards
@@ -1201,11 +1157,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 const isFav = favorites.includes(p.id);
                 const defaultImg = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&auto=format&fit=crop&q=60";
                 const imgUrl = p.image || defaultImg;
-                const pubDate = p.publication_date_text || 'Reciente';
-                const isMeli = p.source === 'Mercado Libre';
-                const portalClass = isMeli ? 'badge-portal-meli' : 'badge-portal-zprop';
-                const portalLabel = isMeli ? '🟡 Mercado Libre' : '🔵 Zonaprop';
-                const btnLabel = isMeli ? 'Ver en Mercado Libre ↗' : 'Ver en Zonaprop ↗';
+                const pubDate = p.publication_date_text || 'Publicado hoy';
                 
                 return `
                 <div class="property-card">
@@ -1213,9 +1165,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         <img src="${imgUrl}" alt="Foto propiedad" class="card-img" onerror="this.src='${defaultImg}'" loading="lazy">
                         <div class="badge-container">
                             <span class="badge ${p.badge_class}">${p.badge_text}</span>
-                            <span class="badge ${portalClass}">${portalLabel}</span>
                             <span class="badge badge-date">🕒 ${pubDate}</span>
-                            ${p.is_new ? '<span class="badge badge-new">✨ Nueva Hoy</span>' : ''}
+                            <span class="badge badge-new">✨ Nueva Hoy</span>
                         </div>
                         <div class="score-pill">Score: ${p.opportunity_score}/100</div>
                     </div>
@@ -1240,7 +1191,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         </div>
 
                         <div class="card-actions">
-                            <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="card-btn card-btn-view">${btnLabel}</a>
+                            <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="card-btn card-btn-view">Ver en Zonaprop ↗</a>
                             <button class="fav-btn ${isFav ? 'active' : ''}" onclick="toggleFavorite('${p.id}', event)" title="Guardar en favoritos">${isFav ? '★' : '☆'}</button>
                         </div>
                     </div>
@@ -1254,14 +1205,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 const isFav = favorites.includes(p.id);
                 const defaultImg = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=100&auto=format&fit=crop&q=60";
                 const imgUrl = p.image || defaultImg;
-                const isMeli = p.source === 'Mercado Libre';
-                const portalClass = isMeli ? 'badge-portal-meli' : 'badge-portal-zprop';
-                const portalLabel = isMeli ? 'Mercado Libre' : 'Zonaprop';
 
                 return `
                 <tr>
                     <td><img src="${imgUrl}" class="table-thumb" onerror="this.src='${defaultImg}'"></td>
-                    <td><span class="badge ${portalClass}">${portalLabel}</span></td>
                     <td>
                         <strong>${p.barrio}</strong><br>
                         <small style="color:var(--text-muted)">${p.address || p.location}</small>
@@ -1270,7 +1217,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     <td style="color:var(--accent-green)"><strong>${p.usd_m2_formatted}</strong></td>
                     <td>${p.m2_tot || '-'} m²</td>
                     <td>${p.ambientes || '-'} amb</td>
-                    <td><small style="color:var(--accent-primary); font-weight:600;">${p.publication_date_text || 'Reciente'}</small></td>
+                    <td><small style="color:var(--accent-primary); font-weight:600;">${p.publication_date_text || 'Publicado hoy'}</small></td>
                     <td>
                         <span style="color:${p.discount_pct > 0 ? 'var(--accent-green)' : 'var(--text-muted)'}">
                             ${p.discount_pct > 0 ? '+' : ''}${p.discount_pct}%
@@ -1441,10 +1388,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const data = filterData();
             if (data.length === 0) return alert('No hay datos para exportar.');
 
-            const headers = ['ID', 'Portal', 'Barrio', 'Direccion', 'Precio_USD', 'USD_m2', 'M2_Tot', 'Ambientes', 'Dormitorios', 'Publicacion', 'Score_Oportunidad', 'Descuento_Pct', 'Link'];
+            const headers = ['ID', 'Barrio', 'Direccion', 'Precio_USD', 'USD_m2', 'M2_Tot', 'Ambientes', 'Dormitorios', 'Publicacion', 'Score_Oportunidad', 'Descuento_Pct', 'Link'];
             const rows = data.map(p => [
                 p.id,
-                `"${p.source || 'Zonaprop'}"`,
                 `"${p.barrio}"`,
                 `"${(p.address || '').replace(/"/g, '""')}"`,
                 p.price_val,
@@ -1462,7 +1408,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const encodedUri = encodeURI(csvContent);
             const link = document.createElement('a');
             link.setAttribute('href', encodedUri);
-            link.setAttribute('download', `inmo_oportunidades_${new Date().toISOString().slice(0,10)}.csv`);
+            link.setAttribute('download', `zonaprop_oportunidades_${new Date().toISOString().slice(0,10)}.csv`);
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -1473,7 +1419,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data, null, 2));
             const link = document.createElement('a');
             link.setAttribute('href', dataStr);
-            link.setAttribute('download', `inmo_oportunidades_${new Date().toISOString().slice(0,10)}.json`);
+            link.setAttribute('download', `zonaprop_oportunidades_${new Date().toISOString().slice(0,10)}.json`);
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -1487,7 +1433,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
 def generate_html_report(properties: List[Dict[str, Any]], market_analytics: Dict[str, Any], output_path: str) -> str:
     """
-    Genera el archivo HTML inyectando la lista de propiedades evaluadas y los analytics de mercado.
+    Genera el archivo HTML inyectando la lista de propiedades evaluadas y los analytics de mercado de Zonaprop.
     Retorna la ruta absoluta del archivo generado.
     """
     os.makedirs(os.path.dirname(output_path), exist_ok=True)

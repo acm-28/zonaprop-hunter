@@ -7,11 +7,11 @@
     "min_m2": 18,
     "max_usd_m2": 2200,
     "sort_by": "orden-publicado-descendente",
-    "pages_to_scrape": 4,
+    "pages_to_scrape": 5,
     "only_published_today": true,
     "include_developments": false,
     "filter_barrios": [],
-    "enabled_sources": ["zonaprop", "mercadolibre"]
+    "enabled_sources": ["zonaprop"]
   },
   "neighborhood_benchmarks_usd_m2": {
     "Puerto Madero": 5400,
