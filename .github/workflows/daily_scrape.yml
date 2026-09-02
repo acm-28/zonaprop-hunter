@@ -2,8 +2,8 @@ name: Daily Real Estate Scraper & Market Analytics
 
 on:
   schedule:
-    # Se ejecuta todos los días a las 08:30 AM hora Argentina (11:30 UTC)
-    - cron: '30 11 * * *'
+    # Se ejecuta todos los días a las 23:59 hora Argentina (ART / UTC-3 = 02:59 UTC)
+    - cron: '59 2 * * *'
   workflow_dispatch: # Permite ejecutar manualmente desde el botón "Run workflow" en GitHub
 
 jobs:
@@ -27,9 +27,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Zonaprop Hunter & Market Analytics
+      - name: Run Zonaprop Hunter & Market Analytics (Publicaciones del día)
         run: |
-          python main.py --no-browser
+          python main.py --no-browser --only-today
 
       - name: Commit and push updated dashboard & history
         run: |
