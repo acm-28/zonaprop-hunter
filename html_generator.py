@@ -1,6 +1,6 @@
 """
 Generador de Dashboard HTML interactivo para Oportunidades Inmobiliarias y Market Intelligence en CABA.
-Crea un archivo HTML autónomo, moderno, responsivo, con gráficos interactivos y análisis de mercado para Zonaprop.
+Crea un archivo HTML autónomo, moderno, responsivo, con gráficos interactivos, favoritos y tracking de propiedades contactadas.
 """
 
 import json
@@ -359,6 +359,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             box-shadow: var(--shadow);
         }
 
+        .property-card.is-contacted {
+            border-color: rgba(16, 185, 129, 0.4);
+            background: linear-gradient(180deg, rgba(16, 185, 129, 0.04) 0%, var(--bg-card) 100%);
+        }
+
         .card-img-wrapper {
             position: relative;
             height: 190px;
@@ -428,6 +433,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             background: rgba(15, 23, 42, 0.85);
             border: 1px solid rgba(255, 255, 255, 0.2);
             color: #38bdf8;
+        }
+
+        .badge-contacted {
+            background: rgba(16, 185, 129, 0.95);
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
         }
 
         .score-pill {
@@ -516,6 +527,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             margin-top: auto;
             display: flex;
             gap: 8px;
+            align-items: center;
         }
 
         .card-btn {
@@ -538,11 +550,39 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             opacity: 0.9;
         }
 
+        .contact-btn {
+            background: #0f172a;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 10px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .contact-btn:hover {
+            background: var(--border-color);
+            color: #fff;
+        }
+
+        .contact-btn.active {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: var(--accent-green);
+            color: var(--accent-green);
+        }
+
         .fav-btn {
             background: #0f172a;
             border: 1px solid var(--border-color);
             color: var(--text-secondary);
             width: 40px;
+            height: 38px;
             border-radius: 8px;
             cursor: pointer;
             font-size: 16px;
@@ -550,6 +590,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             align-items: center;
             justify-content: center;
             transition: all 0.2s;
+            flex-shrink: 0;
         }
 
         .fav-btn.active {
@@ -592,6 +633,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         tr:hover td {
             background: var(--bg-card-hover);
+        }
+
+        tr.is-contacted td {
+            background: rgba(16, 185, 129, 0.05);
         }
 
         .table-thumb {
@@ -811,7 +856,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 <div class="kpi-card">
                     <div class="kpi-label">Avisos Hoy en Zonaprop</div>
                     <div class="kpi-value" id="kpiTotal">0</div>
-                    <div class="kpi-sub" id="kpiNewSub">Publicadas hoy</div>
+                    <div class="kpi-sub" id="kpiContactedSub">0 contactadas</div>
                 </div>
                 <div class="kpi-card flame">
                     <div class="kpi-label">Super Oportunidades</div>
@@ -878,6 +923,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                             <input type="checkbox" id="chkOnlySuper"> 🔥 Sólo Super Oportunidades
                         </label>
                         <label class="checkbox-label">
+                            <input type="checkbox" id="chkHideContacted"> 🙈 Ocultar ya contactadas
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="chkOnlyContacted"> ✅ Sólo ya contactadas
+                        </label>
+                        <label class="checkbox-label">
                             <input type="checkbox" id="chkOnlyFavs"> ⭐ Sólo Favoritos
                         </label>
                     </div>
@@ -905,6 +956,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     <thead>
                         <tr>
                             <th>Foto</th>
+                            <th>Estado</th>
                             <th>Barrio / Ubicación</th>
                             <th>Precio</th>
                             <th>USD / m²</th>
@@ -1027,6 +1079,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         let currentView = 'cards';
         let currentTab = 'opportunities';
         let favorites = JSON.parse(localStorage.getItem('zonaprop_favs') || '[]');
+        let contacted = JSON.parse(localStorage.getItem('zonaprop_contacted') || '[]');
         let chartsInitialized = false;
 
         function init() {
@@ -1046,9 +1099,17 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             });
 
             // Event Listeners
-            ['filterSearch', 'filterBarrio', 'filterMaxPrice', 'filterMaxSqm', 'filterAmbientes', 'sortBy', 'chkOnlySuper', 'chkOnlyFavs'].forEach(id => {
+            ['filterSearch', 'filterBarrio', 'filterMaxPrice', 'filterMaxSqm', 'filterAmbientes', 'sortBy', 'chkOnlySuper', 'chkHideContacted', 'chkOnlyContacted', 'chkOnlyFavs'].forEach(id => {
                 document.getElementById(id).addEventListener('input', render);
                 document.getElementById(id).addEventListener('change', render);
+            });
+
+            // Mutual exclusion for contacted filters
+            document.getElementById('chkHideContacted').addEventListener('change', function() {
+                if (this.checked) document.getElementById('chkOnlyContacted').checked = false;
+            });
+            document.getElementById('chkOnlyContacted').addEventListener('change', function() {
+                if (this.checked) document.getElementById('chkHideContacted').checked = false;
             });
 
             render();
@@ -1080,6 +1141,18 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             render();
         }
 
+        function toggleContacted(id, e) {
+            if (e) e.stopPropagation();
+            const idx = contacted.indexOf(id);
+            if (idx > -1) {
+                contacted.splice(idx, 1);
+            } else {
+                contacted.push(id);
+            }
+            localStorage.setItem('zonaprop_contacted', JSON.stringify(contacted));
+            render();
+        }
+
         function switchView(view) {
             currentView = view;
             document.getElementById('btnViewCards').classList.toggle('active', view === 'cards');
@@ -1096,6 +1169,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             document.getElementById('filterAmbientes').value = '0';
             document.getElementById('sortBy').value = 'score_desc';
             document.getElementById('chkOnlySuper').checked = false;
+            document.getElementById('chkHideContacted').checked = false;
+            document.getElementById('chkOnlyContacted').checked = false;
             document.getElementById('chkOnlyFavs').checked = false;
             render();
         }
@@ -1107,6 +1182,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const maxSqm = parseFloat(document.getElementById('filterMaxSqm').value) || Infinity;
             const minAmb = parseInt(document.getElementById('filterAmbientes').value) || 0;
             const onlySuper = document.getElementById('chkOnlySuper').checked;
+            const hideContacted = document.getElementById('chkHideContacted').checked;
+            const onlyContacted = document.getElementById('chkOnlyContacted').checked;
             const onlyFavs = document.getElementById('chkOnlyFavs').checked;
             const sortBy = document.getElementById('sortBy').value;
 
@@ -1117,6 +1194,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 if (p.usd_m2 > maxSqm) return false;
                 if (minAmb > 0 && (p.ambientes || 0) < minAmb) return false;
                 if (onlySuper && p.opportunity_score < 75 && !p.badge_text.includes('Super')) return false;
+                
+                const isCont = contacted.includes(p.id);
+                if (hideContacted && isCont) return false;
+                if (onlyContacted && !isCont) return false;
+
                 if (onlyFavs && !favorites.includes(p.id)) return false;
                 return true;
             }).sort((a, b) => {
@@ -1134,7 +1216,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
             // Update KPIs
             document.getElementById('kpiTotal').innerText = data.length;
-            document.getElementById('kpiNewSub').innerText = `${data.length} de hoy`;
+            const totalContactedInView = RAW_DATA.filter(p => contacted.includes(p.id)).length;
+            document.getElementById('kpiContactedSub').innerText = `${totalContactedInView} ya contactadas`;
             const superCount = data.filter(p => p.opportunity_score >= 75 || p.badge_text.includes('Super')).length;
             document.getElementById('kpiSuper').innerText = superCount;
 
@@ -1148,23 +1231,25 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 document.getElementById('kpiAvgSqm').innerText = '-';
             }
 
-            document.getElementById('resultsCount').innerText = `Mostrando ${data.length} de ${RAW_DATA.length} propiedades de hoy`;
+            document.getElementById('resultsCount').innerText = `Mostrando ${data.length} de ${RAW_DATA.length} propiedades`;
             document.getElementById('emptyState').style.display = data.length === 0 ? 'block' : 'none';
 
             // Render Cards
             const grid = document.getElementById('propertyGrid');
             grid.innerHTML = data.map(p => {
                 const isFav = favorites.includes(p.id);
+                const isCont = contacted.includes(p.id);
                 const defaultImg = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&auto=format&fit=crop&q=60";
                 const imgUrl = p.image || defaultImg;
                 const pubDate = p.publication_date_text || 'Publicado hoy';
                 
                 return `
-                <div class="property-card">
+                <div class="property-card ${isCont ? 'is-contacted' : ''}">
                     <div class="card-img-wrapper">
                         <img src="${imgUrl}" alt="Foto propiedad" class="card-img" onerror="this.src='${defaultImg}'" loading="lazy">
                         <div class="badge-container">
                             <span class="badge ${p.badge_class}">${p.badge_text}</span>
+                            ${isCont ? '<span class="badge badge-contacted">✅ Ya Contactada</span>' : ''}
                             <span class="badge badge-date">🕒 ${pubDate}</span>
                             <span class="badge badge-new">✨ Nueva Hoy</span>
                         </div>
@@ -1192,6 +1277,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
                         <div class="card-actions">
                             <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="card-btn card-btn-view">Ver en Zonaprop ↗</a>
+                            <button class="contact-btn ${isCont ? 'active' : ''}" onclick="toggleContacted('${p.id}', event)" title="${isCont ? 'Desmarcar contactada' : 'Marcar como ya contactada'}">
+                                ${isCont ? '✅ Contactada' : '📞 Contactar'}
+                            </button>
                             <button class="fav-btn ${isFav ? 'active' : ''}" onclick="toggleFavorite('${p.id}', event)" title="Guardar en favoritos">${isFav ? '★' : '☆'}</button>
                         </div>
                     </div>
@@ -1203,12 +1291,18 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const tbody = document.getElementById('tableBody');
             tbody.innerHTML = data.map(p => {
                 const isFav = favorites.includes(p.id);
+                const isCont = contacted.includes(p.id);
                 const defaultImg = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=100&auto=format&fit=crop&q=60";
                 const imgUrl = p.image || defaultImg;
 
                 return `
-                <tr>
+                <tr class="${isCont ? 'is-contacted' : ''}">
                     <td><img src="${imgUrl}" class="table-thumb" onerror="this.src='${defaultImg}'"></td>
+                    <td>
+                        <button class="contact-btn ${isCont ? 'active' : ''}" style="padding:4px 8px; font-size:11px;" onclick="toggleContacted('${p.id}', event)">
+                            ${isCont ? '✅ Contactada' : '📞 Marcar'}
+                        </button>
+                    </td>
                     <td>
                         <strong>${p.barrio}</strong><br>
                         <small style="color:var(--text-muted)">${p.address || p.location}</small>
@@ -1388,21 +1482,25 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const data = filterData();
             if (data.length === 0) return alert('No hay datos para exportar.');
 
-            const headers = ['ID', 'Barrio', 'Direccion', 'Precio_USD', 'USD_m2', 'M2_Tot', 'Ambientes', 'Dormitorios', 'Publicacion', 'Score_Oportunidad', 'Descuento_Pct', 'Link'];
-            const rows = data.map(p => [
-                p.id,
-                `"${p.barrio}"`,
-                `"${(p.address || '').replace(/"/g, '""')}"`,
-                p.price_val,
-                p.usd_m2,
-                p.m2_tot || '',
-                p.ambientes || '',
-                p.dormitorios || '',
-                `"${p.publication_date_text || ''}"`,
-                p.opportunity_score,
-                p.discount_pct,
-                `"${p.link}"`
-            ]);
+            const headers = ['ID', 'Barrio', 'Direccion', 'Precio_USD', 'USD_m2', 'M2_Tot', 'Ambientes', 'Dormitorios', 'Publicacion', 'Score_Oportunidad', 'Descuento_Pct', 'Contactada', 'Link'];
+            const rows = data.map(p => {
+                const isCont = contacted.includes(p.id) ? 'SI' : 'NO';
+                return [
+                    p.id,
+                    `"${p.barrio}"`,
+                    `"${(p.address || '').replace(/"/g, '""')}"`,
+                    p.price_val,
+                    p.usd_m2,
+                    p.m2_tot || '',
+                    p.ambientes || '',
+                    p.dormitorios || '',
+                    `"${p.publication_date_text || ''}"`,
+                    p.opportunity_score,
+                    p.discount_pct,
+                    `"${isCont}"`,
+                    `"${p.link}"`
+                ];
+            });
 
             const csvContent = "data:text/csv;charset=utf-8," + [headers.join(','), ...rows.map(e => e.join(','))].join('\\n');
             const encodedUri = encodeURI(csvContent);
@@ -1415,7 +1513,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         }
 
         function exportToJSON() {
-            const data = filterData();
+            const data = filterData().map(p => ({
+                ...p,
+                contactada: contacted.includes(p.id)
+            }));
             const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data, null, 2));
             const link = document.createElement('a');
             link.setAttribute('href', dataStr);
