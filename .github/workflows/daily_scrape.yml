@@ -29,7 +29,7 @@ jobs:
 
       - name: Run Zonaprop Hunter & Market Analytics (Publicaciones del día)
         run: |
-          python main.py --no-browser --only-today
+          python scraper_main.py --no-browser --only-today
 
       - name: Commit and push updated dashboard & history
         run: |

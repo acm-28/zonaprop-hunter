@@ -6,7 +6,7 @@ echo    ZONAPROP HUNTER CABA - OPORTUNIDADES INMOBILIARIAS
 echo =========================================================
 echo.
 cd /d "%~dp0"
-python main.py
+python scraper_main.py
 echo.
 echo Presiona cualquier tecla para cerrar esta ventana...
 pause > nul

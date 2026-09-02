@@ -6,7 +6,7 @@ Plataforma en Python que rastrea automáticamente avisos de propiedades baratas 
 
 ## 🌟 Dos Módulos en una Sola Plataforma
 
-El reporte generado (`output/zonaprop_oportunidades.html`) incluye un menú de navegación superior con dos áreas clave:
+El reporte generado (`index.html` y `output/zonaprop_oportunidades.html`) incluye un menú de navegación superior con dos áreas clave:
 
 ### 1. 🔥 Pestaña: Oportunidades & Avisos
 - **Listado y Tarjetas con fotos:** Explorador interactivo con fotos en alta resolución, insignias de oportunidad, características (m², ambientes, expensas) y botón de acceso directo a Zonaprop.
@@ -48,33 +48,33 @@ El scraper descargará los avisos más recientes, actualizará las estadísticas
 
 ### 2. Ejecutar desde Consola (CLI)
 ```bash
-python main.py
+python scraper_main.py
 ```
 
 #### Comandos y Filtros Útiles:
 - **Filtrar estrictamente publicaciones de hoy:**
   ```bash
-  python main.py --only-today
+  python scraper_main.py --only-today
   ```
 
 - **Buscar propiedades hasta USD 65.000 explorando 6 páginas:**
   ```bash
-  python main.py --max-price 65000 --pages 6
+  python scraper_main.py --max-price 65000 --pages 6
   ```
 
 - **Filtrar únicamente barrios específicos (ej: Palermo, Recoleta, Caballito):**
   ```bash
-  python main.py --barrios palermo,recoleta,caballito --max-price 90000
+  python scraper_main.py --barrios palermo,recoleta,caballito --max-price 90000
   ```
 
 - **Fijar un tope de USD/m²:**
   ```bash
-  python main.py --max-usd-m2 1600
+  python scraper_main.py --max-usd-m2 1600
   ```
 
 - **Ejecución silenciosa en segundo plano (sin abrir el navegador):**
   ```bash
-  python main.py --no-browser
+  python scraper_main.py --no-browser
   ```
 
 ---
@@ -114,12 +114,7 @@ Puedes modificar los parámetros y los benchmarks de precio promedio por barrio 
 
 ---
 
-## ⏰ Programar Ejecución Automática Diaria (Windows)
+## ⏰ Programación Automática Diaria
 
-Para que el script se ejecute automáticamente todos los días por la mañana (ej. 08:30 AM) y acumule estadísticas:
-
-1. Abre PowerShell como Administrador.
-2. Navega a la carpeta del proyecto y ejecuta:
-   ```powershell
-   .\setup_daily_task.ps1
-   ```
+- **En la nube (GitHub Actions):** Se ejecuta solo todos los días a las **23:59 hora Argentina** y actualiza Vercel.
+- **En Windows local (opcional):** Ejecuta `setup_daily_task.ps1` como Administrador.
