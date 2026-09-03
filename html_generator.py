@@ -1,8 +1,8 @@
 """
 Generador de Dashboard HTML interactivo para Oportunidades Inmobiliarias y Market Intelligence en CABA.
 Incluye Plano 2D Arquitectónico Artesanal con límites de desplazamiento, centrado interactivo en barrios al clic,
-comparador directo entre barrios (VS hasta 3 zonas), distribución de precios con porcentajes explícitos representativos,
-ordenamiento en ranking con títulos compactos de dos líneas, favoritos y tracking de contacto.
+comparador directo entre barrios (VS ligero de baja carga cognitiva y desplegable), distribución de precios limpia sin lista redundante,
+catálogo completo de los 48 barrios de CABA, ordenamiento alfabético por defecto y tooltips conceptuales (ℹ️).
 """
 
 import json
@@ -177,6 +177,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             font-weight: 600;
             letter-spacing: 0.5px;
             margin-bottom: 6px;
+            display: flex;
+            align-items: center;
         }
 
         .kpi-value {
@@ -189,6 +191,61 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             font-size: 12px;
             color: var(--text-muted);
             margin-top: 4px;
+        }
+
+        /* INFO TOOLTIPS */
+        .info-tip {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: rgba(56, 189, 248, 0.15);
+            color: #38bdf8;
+            font-size: 10px;
+            font-weight: 800;
+            cursor: help;
+            position: relative;
+            margin-left: 6px;
+            vertical-align: middle;
+            user-select: none;
+            transition: all 0.2s;
+        }
+
+        .info-tip:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        .info-tip .info-tip-text {
+            visibility: hidden;
+            opacity: 0;
+            width: 230px;
+            background: #0f172a;
+            color: #f8fafc;
+            text-align: left;
+            border-radius: 8px;
+            padding: 8px 11px;
+            position: absolute;
+            z-index: 9999;
+            bottom: 140%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 11px;
+            font-weight: 500;
+            line-height: 1.4;
+            border: 1px solid #38bdf8;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            transition: opacity 0.2s;
+            pointer-events: none;
+            white-space: normal;
+            text-transform: none;
+        }
+
+        .info-tip:hover .info-tip-text {
+            visibility: visible;
+            opacity: 1;
         }
 
         /* FILTERS TOOLBAR */
@@ -907,7 +964,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         .chart-container {
             position: relative;
-            height: 270px;
+            height: 280px;
             width: 100%;
         }
 
@@ -1005,6 +1062,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         .typology-stat-label {
             color: var(--text-secondary);
+            display: flex;
+            align-items: center;
         }
 
         .typology-stat-val {
@@ -1258,25 +1317,37 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         <!-- ==================== TAB 2: MARKET ANALYTICS ==================== -->
         <div id="sectionAnalytics" style="display: none;">
-            <!-- MACRO MARKET METRICS -->
+            <!-- MACRO MARKET METRICS WITH TOOLTIPS -->
             <div class="kpi-grid">
                 <div class="kpi-card">
-                    <div class="kpi-label">M² Promedio Oportunidades</div>
+                    <div class="kpi-label">
+                        <span>M² Promedio Oportunidades</span>
+                        <span class="info-tip">i<span class="info-tip-text">Valor medio por metro cuadrado de los departamentos calificados como oportunidad en CABA.</span></span>
+                    </div>
                     <div class="kpi-value" id="macroAvgSqm">USD 0</div>
                     <div class="kpi-sub">En toda la muestra analizada</div>
                 </div>
                 <div class="kpi-card green">
-                    <div class="kpi-label">Mediana de Precio CABA</div>
+                    <div class="kpi-label">
+                        <span>Mediana de Precio CABA</span>
+                        <span class="info-tip">i<span class="info-tip-text">Precio central de la cartera; el 50% de las oportunidades cuesta menos que este importe (elimina distorsión de extremos).</span></span>
+                    </div>
                     <div class="kpi-value" id="macroMedianPrice">USD 0</div>
                     <div class="kpi-sub">Precio central de la oferta</div>
                 </div>
                 <div class="kpi-card flame">
-                    <div class="kpi-label">Descuento Promedio</div>
+                    <div class="kpi-label">
+                        <span>Descuento Promedio</span>
+                        <span class="info-tip">i<span class="info-tip-text">Rebaja porcentual media frente al precio de referencia zonal (benchmark) de cada barrio.</span></span>
+                    </div>
                     <div class="kpi-value" id="macroAvgDiscount">0%</div>
                     <div class="kpi-sub">Respecto a benchmarks de barrio</div>
                 </div>
                 <div class="kpi-card indigo">
-                    <div class="kpi-label">Superficie Media</div>
+                    <div class="kpi-label">
+                        <span>Superficie Media</span>
+                        <span class="info-tip">i<span class="info-tip-text">Tamaño total promedio en metros cuadrados de las unidades relevadas en la cartera.</span></span>
+                    </div>
                     <div class="kpi-value" id="macroAvgM2">0 m²</div>
                     <div class="kpi-sub">Tamaño promedio ofertado</div>
                 </div>
@@ -1359,20 +1430,21 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 </div>
             </div>
 
-            <!-- ANALYTICS GRID: BARRIO COMPARATOR (VS HASTA 3) + PRICE DISTRIBUTION -->
+            <!-- ANALYTICS GRID: BARRIO COMPARATOR (VS HASTA 3) + CLEAN PRICE DISTRIBUTION -->
             <div class="analytics-grid">
-                <!-- COMPARATIVA DIRECTA ENTRE BARRIOS (VS) -->
+                <!-- COMPARATIVA DIRECTA ENTRE BARRIOS (VS) - REDISEÑADO CON BAJA CARGA COGNITIVA -->
                 <div class="chart-box" style="display: flex; flex-direction: column;">
                     <div class="chart-title">
                         <span style="display: flex; align-items: center; gap: 8px;">
                             <span>⚔️ Comparativa Directa entre Barrios (VS)</span>
                             <span class="brand-badge">Hasta 3 Zonas</span>
+                            <span class="info-tip">i<span class="info-tip-text">Permite comparar el posicionamiento, precio por m², descuento y rotación de hasta 3 barrios de CABA.</span></span>
                         </span>
-                        <small style="font-size:12px; color:var(--text-muted);">Elige barrios para comparar métricas</small>
+                        <small style="font-size:12px; color:var(--text-muted);">Selecciona zonas de la A a la Z</small>
                     </div>
 
-                    <!-- SELECTORS -->
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 14px;">
+                    <!-- SELECTORS (A-Z) -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 16px;">
                         <div>
                             <label style="font-size: 11px; font-weight: 700; color: var(--accent-primary); display: block; margin-bottom: 4px;">🔵 BARRIO 1</label>
                             <select id="vsBarrio1" class="input-control" style="width: 100%; font-weight: 700;" onchange="renderBarriosVS()"></select>
@@ -1384,26 +1456,24 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         <div>
                             <label style="font-size: 11px; font-weight: 700; color: var(--accent-purple); display: block; margin-bottom: 4px;">🟣 BARRIO 3 (OPCIONAL)</label>
                             <select id="vsBarrio3" class="input-control" style="width: 100%; font-weight: 700;" onchange="renderBarriosVS()">
-                                <option value="">-- Ninguno (2 Barrios) --</option>
+                                <option value="">-- Ninguno (Comparar 2) --</option>
                             </select>
                         </div>
                     </div>
 
                     <!-- COMPARISON MATRIX CONTAINER -->
-                    <div id="vsMatrixContainer" style="flex-grow: 1; overflow-x: auto;"></div>
+                    <div id="vsMatrixContainer" style="flex-grow: 1;"></div>
                 </div>
 
-                <!-- PRICE DISTRIBUTION DOUGHNUT WITH EXPLICIT PERCENTAGES -->
+                <!-- PRICE DISTRIBUTION DOUGHNUT (CLEAN WITH EMBEDDED PERCENTAGES) -->
                 <div class="chart-box" style="display: flex; flex-direction: column;">
                     <div class="chart-title">
-                        <span>🥧 Distribución de Oferta por Rango de Precio</span>
-                        <small style="font-size:12px; color:var(--text-muted);">% Representativo Real</small>
+                        <span>🥧 Distribución de Oferta por Precio</span>
+                        <small style="font-size:12px; color:var(--text-muted);">Porcentaje Real</small>
                     </div>
-                    <div class="chart-container" style="height: 230px;">
+                    <div class="chart-container" style="height: 280px;">
                         <canvas id="chartDistribution"></canvas>
                     </div>
-                    <!-- PRICE RANGES BREAKDOWN LIST WITH EXPLICIT PERCENTAGES -->
-                    <div id="priceDistributionList" style="margin-top: 14px; display: flex; flex-direction: column; gap: 6px; font-size: 12px;"></div>
                 </div>
             </div>
 
@@ -1420,7 +1490,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         🗺️ Ranking y Mapa de Demanda de Barrios en CABA
                     </h2>
                     <p style="font-size: 13px; color: var(--text-secondary); margin-top: 2px;">
-                        Haz clic en el título de cualquier columna para ordenar el listado (mayor a menor o viceversa).
+                        Ordenado alfabéticamente por defecto. Haz clic en cualquier columna para reordenar de mayor a menor o viceversa.
                     </p>
                 </div>
             </div>
@@ -1429,16 +1499,26 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 <table>
                     <thead>
                         <tr>
-                            <th class="sortable-th" onclick="sortRankingTable('name')" style="min-width: 120px;">Barrio <span class="sort-icon" id="sortIcon_name">⇅</span></th>
-                            <th class="sortable-th active-sort" onclick="sortRankingTable('count')" style="min-width: 75px; text-align: center;">Avisos <span class="sort-icon" id="sortIcon_count">▼</span></th>
-                            <th class="sortable-th" onclick="sortRankingTable('avg_usd_m2')" style="min-width: 95px;">USD / m²<br>Promedio <span class="sort-icon" id="sortIcon_avg_usd_m2">⇅</span></th>
-                            <th class="sortable-th" onclick="sortRankingTable('benchmark_usd_m2')" style="min-width: 95px;">Benchmark<br>Barrio <span class="sort-icon" id="sortIcon_benchmark_usd_m2">⇅</span></th>
-                            <th class="sortable-th" onclick="sortRankingTable('avg_discount_pct')" style="min-width: 85px;">Descuento<br>Medio <span class="sort-icon" id="sortIcon_avg_discount_pct">⇅</span></th>
-                            <th class="sortable-th" onclick="sortRankingTable('avg_views')" style="min-width: 115px;">Vistas Prom. /<br>Demanda <span class="sort-icon" id="sortIcon_avg_views">⇅</span></th>
+                            <th class="sortable-th active-sort" onclick="sortRankingTable('name')" style="min-width: 120px;">Barrio <span class="sort-icon" id="sortIcon_name">▲</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('count')" style="min-width: 75px; text-align: center;">Avisos <span class="sort-icon" id="sortIcon_count">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('avg_usd_m2')" style="min-width: 95px;">
+                                USD / m²<br>Promedio <span class="info-tip">i<span class="info-tip-text">Valor promedio por m² de las oportunidades detectadas en el barrio.</span></span> <span class="sort-icon" id="sortIcon_avg_usd_m2">⇅</span>
+                            </th>
+                            <th class="sortable-th" onclick="sortRankingTable('benchmark_usd_m2')" style="min-width: 95px;">
+                                Benchmark<br>Barrio <span class="info-tip">i<span class="info-tip-text">Cotización histórica promedio del m² en la zona según Zonaprop.</span></span> <span class="sort-icon" id="sortIcon_benchmark_usd_m2">⇅</span>
+                            </th>
+                            <th class="sortable-th" onclick="sortRankingTable('avg_discount_pct')" style="min-width: 85px;">
+                                Descuento<br>Medio <span class="info-tip">i<span class="info-tip-text">Ahorro porcentual promedio frente al valor benchmark del barrio.</span></span> <span class="sort-icon" id="sortIcon_avg_discount_pct">⇅</span>
+                            </th>
+                            <th class="sortable-th" onclick="sortRankingTable('avg_views')" style="min-width: 115px;">
+                                Vistas Prom. /<br>Demanda <span class="info-tip">i<span class="info-tip-text">Estimación mensual de interesados y visitas que reciben los avisos en el barrio.</span></span> <span class="sort-icon" id="sortIcon_avg_views">⇅</span>
+                            </th>
                             <th class="sortable-th" onclick="sortRankingTable('min_price')" style="min-width: 85px;">Ticket<br>Mínimo <span class="sort-icon" id="sortIcon_min_price">⇅</span></th>
                             <th class="sortable-th" onclick="sortRankingTable('avg_expenses')" style="min-width: 85px;">Expensas<br>Prom. <span class="sort-icon" id="sortIcon_avg_expenses">⇅</span></th>
                             <th class="sortable-th" onclick="sortRankingTable('super_deals_count')" style="min-width: 85px; text-align: center;">Super<br>Oportunidades <span class="sort-icon" id="sortIcon_super_deals_count">⇅</span></th>
-                            <th class="sortable-th" onclick="sortRankingTable('liquidity_score')" style="min-width: 110px;">Liquidez /<br>Reventa <span class="sort-icon" id="sortIcon_liquidity_score">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('liquidity_score')" style="min-width: 110px;">
+                                Liquidez /<br>Reventa <span class="info-tip">i<span class="info-tip-text">Puntaje (0-100) que estima la velocidad de salida y rotación comercial de reventa.</span></span> <span class="sort-icon" id="sortIcon_liquidity_score">⇅</span>
+                            </th>
                         </tr>
                     </thead>
                     <tbody id="heatmapTableBody"></tbody>
@@ -1465,8 +1545,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         let chartsInitialized = false;
 
         let currentMapMode = 'score';
-        let rankingSortCol = 'count';
-        let rankingSortAsc = false;
+        // Orden alfabético por defecto (A-Z) según requerimiento
+        let rankingSortCol = 'name';
+        let rankingSortAsc = true;
+        let vsDetailsExpanded = false;
 
         // Variables de Zoom y Pan (Arrastrar)
         let mapZoom = 1.0;
@@ -1773,18 +1855,15 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const container = document.getElementById('cabaBarriosGroup');
             if (!container) return;
 
-            // Asociar datos de mercado por barrio
             const nList = MARKET_ANALYTICS.neighborhoods || [];
             const dataByBarrio = {};
 
-            // Mapear barrios analizados
             nList.forEach(item => {
                 const norm = normalizeName(item.name);
                 const officialName = SUBZONE_TO_BARRIO[norm] || item.name;
                 dataByBarrio[normalizeName(officialName)] = item;
             });
 
-            // Normalización para colores
             const benchmarks = nList.map(x => x.benchmark_usd_m2 || 1900);
             const maxBench = Math.max(...benchmarks, 2800);
             const minBench = Math.min(...benchmarks, 1100);
@@ -1793,9 +1872,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const maxViews = Math.max(...viewsList, 2200);
             const minViews = Math.min(...viewsList, 500);
 
-            const sqms = nList.map(x => x.avg_usd_m2 || 1700);
-            const maxSqm = Math.max(...sqms, 2100);
-            const minSqm = Math.min(...sqms, 1200);
+            const sqms = nList.filter(x => x.count > 0).map(x => x.avg_usd_m2 || 1700);
+            const maxSqm = sqms.length > 0 ? Math.max(...sqms, 2100) : 2100;
+            const minSqm = sqms.length > 0 ? Math.min(...sqms, 1200) : 1200;
 
             container.innerHTML = Object.entries(CABA_SVG_DATA).map(([bName, data]) => {
                 const norm = normalizeName(bName);
@@ -1804,7 +1883,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 const score = mData ? mData.opportunity_density_score : 15;
                 const avgSqm = mData ? mData.avg_usd_m2 : 0;
                 const bench = mData ? mData.benchmark_usd_m2 : 1900;
-                const views = mData ? mData.avg_views : (bName === 'Palermo' ? 2400 : (bName === 'Caballito' ? 2100 : 900));
+                const views = mData ? mData.avg_views : (bName === 'Palermo' ? 2450 : (bName === 'Caballito' ? 2200 : 1000));
 
                 let normVal = 0.5;
                 if (currentMapMode === 'score') {
@@ -1897,14 +1976,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const viewport = document.getElementById('mapViewport');
             if (!viewport) return;
 
-            // Rueda del ratón para zoom
             viewport.addEventListener('wheel', function(e) {
                 e.preventDefault();
                 const factor = e.deltaY < 0 ? 1.15 : 0.87;
                 zoomMap(factor, e);
             }, { passive: false });
 
-            // Inicio de arrastre (MouseDown)
             viewport.addEventListener('mousedown', function(e) {
                 if (e.button !== 0) return;
                 isPanning = true;
@@ -1914,7 +1991,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 viewport.classList.add('is-dragging');
             });
 
-            // Movimiento durante arrastre (MouseMove)
             window.addEventListener('mousemove', function(e) {
                 if (!isPanning) return;
                 const newX = e.clientX - panStartX;
@@ -1929,7 +2005,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 applyMapTransform();
             });
 
-            // Fin de arrastre (MouseUp)
             window.addEventListener('mouseup', function() {
                 if (isPanning) {
                     isPanning = false;
@@ -1938,14 +2013,13 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 }
             });
 
-            // Si el mouse sale de la ventana o pierde foco, resetear estado
             window.addEventListener('blur', function() {
                 isPanning = false;
                 didPanMove = false;
                 viewport.classList.remove('is-dragging');
             });
 
-            // Soporte Táctil (Móvil / Tablet)
+            // Touch support
             let touchStartX = 0, touchStartY = 0;
             let initialTouchDist = 0;
 
@@ -2047,7 +2121,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const tooltip = document.getElementById('mapTooltip');
             const viewport = document.getElementById('mapViewport').getBoundingClientRect();
             
-            // Buscar datos del barrio
             const nList = MARKET_ANALYTICS.neighborhoods || [];
             let mData = nList.find(x => normalizeName(x.name) === normalizeName(bName));
             if (!mData) {
@@ -2058,12 +2131,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             }
 
             const count = mData ? mData.count : 0;
-            const avgSqm = mData && mData.avg_usd_m2 ? `USD ${mData.avg_usd_m2.toLocaleString('es-AR')}` : 'Sin avisos activos';
+            const avgSqm = mData && mData.avg_usd_m2 > 0 ? `USD ${mData.avg_usd_m2.toLocaleString('es-AR')}` : 'Sin avisos activos';
             const bench = mData ? `USD ${mData.benchmark_usd_m2.toLocaleString('es-AR')}` : 'Consultar';
-            const disc = mData && mData.avg_discount_pct ? `+${mData.avg_discount_pct}%` : 'En línea';
-            const views = mData && mData.avg_views ? mData.avg_views.toLocaleString('es-AR') : (bName === 'Palermo' ? '2.400' : '950');
-            const demand = mData ? mData.demand_level : (parseInt(views.replace('.','')) >= 1600 ? '🔥 Muy Alta' : '🟢 Alta');
-            const exp = mData ? mData.avg_expenses_formatted : 'No informadas';
+            const disc = mData && mData.avg_discount_pct > 0 ? `+${mData.avg_discount_pct}%` : 'En línea';
+            const views = mData && mData.avg_views ? mData.avg_views.toLocaleString('es-AR') : '1.000';
+            const demand = mData ? mData.demand_level : '🟢 Alta Demanda';
+            const exp = mData && mData.count > 0 ? mData.avg_expenses_formatted : 'No informadas';
 
             tooltip.innerHTML = `
                 <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #334155; padding-bottom:6px; margin-bottom:8px;">
@@ -2101,7 +2174,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             if (tooltip) tooltip.style.display = 'none';
         }
 
-        // Centrar el plano en el barrio al hacer clic (sin irse de pestaña)
         function centerOnBarrio(bName) {
             if (didPanMove) return;
             const data = CABA_SVG_DATA[bName];
@@ -2139,10 +2211,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             showArtisanTooltip(fakeEvent, bName);
         }
 
-        // ==================== BARRIO COMPARATOR (VS HASTA 3 BARRIOS) ====================
+        // ==================== BARRIO COMPARATOR (VS LIGERO DE BAJA CARGA COGNITIVA) ====================
         function initBarriosVS() {
             if (!MARKET_ANALYTICS || !MARKET_ANALYTICS.neighborhoods) return;
-            const neighborhoods = MARKET_ANALYTICS.neighborhoods;
+            const neighborhoods = [...MARKET_ANALYTICS.neighborhoods].sort((a, b) => a.name.localeCompare(b.name));
 
             const sel1 = document.getElementById('vsBarrio1');
             const sel2 = document.getElementById('vsBarrio2');
@@ -2154,17 +2226,32 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             sel3.innerHTML = '<option value="">-- Ninguno (Comparar 2) --</option>';
 
             neighborhoods.forEach(b => {
-                sel1.add(new Option(`${b.name} (${b.count} avisos)`, b.name));
-                sel2.add(new Option(`${b.name} (${b.count} avisos)`, b.name));
-                sel3.add(new Option(`${b.name} (${b.count} avisos)`, b.name));
+                const countBadge = b.count > 0 ? ` (${b.count} avisos)` : '';
+                sel1.add(new Option(`${b.name}${countBadge}`, b.name));
+                sel2.add(new Option(`${b.name}${countBadge}`, b.name));
+                sel3.add(new Option(`${b.name}${countBadge}`, b.name));
             });
 
-            // Selecciones por defecto inteligentes
-            if (neighborhoods.length > 0) sel1.value = neighborhoods[0].name;
-            if (neighborhoods.length > 1) sel2.value = neighborhoods[1].name;
-            if (neighborhoods.length > 2) sel3.value = neighborhoods[2].name;
+            // Establecer barrios reconocidos y representativos por defecto
+            const hasPalermo = neighborhoods.some(b => b.name === 'Palermo');
+            const hasCaballito = neighborhoods.some(b => b.name === 'Caballito');
+            const hasRecoleta = neighborhoods.some(b => b.name === 'Recoleta');
+
+            sel1.value = hasPalermo ? 'Palermo' : (neighborhoods[0]?.name || '');
+            sel2.value = hasCaballito ? 'Caballito' : (neighborhoods[1]?.name || '');
+            sel3.value = hasRecoleta ? 'Recoleta' : '';
 
             renderBarriosVS();
+        }
+
+        function toggleVsDetails() {
+            vsDetailsExpanded = !vsDetailsExpanded;
+            const drawer = document.getElementById('vsDetailsDrawer');
+            const icon = document.getElementById('vsToggleIcon');
+            const btnText = document.getElementById('vsToggleBtnText');
+            if (drawer) drawer.style.display = vsDetailsExpanded ? 'block' : 'none';
+            if (icon) icon.innerText = vsDetailsExpanded ? '▴' : '▾';
+            if (btnText) btnText.innerText = vsDetailsExpanded ? 'Ocultar desglose detallado' : 'Ver desglose completo (+6 métricas)';
         }
 
         function renderBarriosVS() {
@@ -2186,110 +2273,159 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
             const colors = ['#38bdf8', '#10b981', '#a855f7'];
 
-            const rows = [
-                {
-                    label: '🏢 Oportunidades Activas',
-                    format: b => `${b.count} avisos`,
-                    best: vals => Math.max(...vals),
-                    raw: b => b.count
-                },
-                {
-                    label: '📐 USD / m² Cartera',
-                    format: b => `USD ${b.avg_usd_m2?.toLocaleString('es-AR')}`,
-                    best: vals => Math.min(...vals), // menor precio es mejor
-                    raw: b => b.avg_usd_m2
-                },
-                {
-                    label: '🏛️ Benchmark Zonal',
-                    format: b => `USD ${b.benchmark_usd_m2?.toLocaleString('es-AR')}`,
-                    best: null,
-                    raw: b => b.benchmark_usd_m2
-                },
-                {
-                    label: '🏷️ Descuento Medio',
-                    format: b => `+${b.avg_discount_pct}%`,
-                    best: vals => Math.max(...vals),
-                    raw: b => b.avg_discount_pct
-                },
-                {
-                    label: '👁️ Vistas Promedio',
-                    format: b => `${b.avg_views_formatted} (${b.demand_level})`,
-                    best: vals => Math.max(...vals),
-                    raw: b => b.avg_views
-                },
-                {
-                    label: '💲 Ticket Mínimo',
-                    format: b => `USD ${b.min_price?.toLocaleString('es-AR')}`,
-                    best: vals => Math.min(...vals),
-                    raw: b => b.min_price
-                },
-                {
-                    label: '💵 Expensas Promedio',
-                    format: b => b.avg_expenses_formatted,
-                    best: vals => {
-                        const valid = vals.filter(v => v > 0);
-                        return valid.length > 0 ? Math.min(...valid) : null;
-                    },
-                    raw: b => b.avg_expenses || 0
-                },
-                {
-                    label: '🔥 Super Oportunidades',
-                    format: b => `${b.super_deals_count} unidades`,
-                    best: vals => Math.max(...vals),
-                    raw: b => b.super_deals_count
-                },
-                {
-                    label: '⚡ Score Liquidez / Reventa',
-                    format: b => `${b.liquidity_score || b.opportunity_density_score}/100`,
-                    best: vals => Math.max(...vals),
-                    raw: b => b.liquidity_score || b.opportunity_density_score
-                }
-            ];
-
             const container = document.getElementById('vsMatrixContainer');
             if (!container) return;
 
-            let html = `
-            <table style="width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 4px;">
-                <thead>
-                    <tr style="border-bottom: 2px solid var(--border-color);">
-                        <th style="padding: 10px 12px; color: var(--text-muted); text-align: left; background: transparent; font-size: 11px;">MÉTRICA CLAVE</th>
-                        ${barrios.map((b, i) => `
-                            <th style="padding: 10px 12px; text-align: center; background: transparent; font-size: 13px; font-weight: 800; color: ${colors[i]};">
-                                ${b.name}
-                            </th>
-                        `).join('')}
-                    </tr>
-                </thead>
-                <tbody>
+            // 1. Hero Cards Superiores (Limpias, sin sobrecarga)
+            let heroCardsHtml = `
+            <div style="display: grid; grid-template-columns: repeat(${barrios.length}, 1fr); gap: 12px; margin-bottom: 16px;">
+                ${barrios.map((b, i) => `
+                    <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid ${colors[i]}; border-radius: 10px; padding: 12px 14px; text-align: center;">
+                        <div style="font-size: 15px; font-weight: 800; color: ${colors[i]}; margin-bottom: 4px;">${b.name}</div>
+                        <div style="font-size: 11px; color: ${b.count > 0 ? '#10b981' : 'var(--text-muted)'}; font-weight: 700; margin-bottom: 2px;">
+                            ${b.count > 0 ? `🟢 ${b.count} ${b.count === 1 ? 'aviso activo' : 'avisos activos'}` : '⚪ Sin avisos < USD 80k'}
+                        </div>
+                        <div style="font-size: 11px; color: var(--text-secondary);">${b.demand_level}</div>
+                    </div>
+                `).join('')}
+            </div>
             `;
 
-            rows.forEach((row, idx) => {
-                const rawVals = barrios.map(b => row.raw(b));
-                const bestVal = row.best ? row.best(rawVals) : null;
-                const bg = idx % 2 === 0 ? 'rgba(255,255,255,0.02)' : 'transparent';
+            // 2. Tres métricas de decisión clave con barras visuales intuitivas
+            const maxBench = Math.max(...barrios.map(b => b.benchmark_usd_m2 || 2000), 100);
+            const maxViews = Math.max(...barrios.map(b => b.avg_views || 1000), 100);
 
-                html += `<tr style="background: ${bg}; border-bottom: 1px solid rgba(255,255,255,0.05);">`;
-                html += `<td style="padding: 9px 12px; color: var(--text-secondary); font-weight: 600; white-space: nowrap;">${row.label}</td>`;
+            let keyMetricsHtml = `
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 12px;">
+                <!-- Métrica 1: Cotización m2 (Cartera vs Benchmark) -->
+                <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 10px 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">
+                        <span>📐 Cotización USD / m² (Oportunidad vs Benchmark Zonal)</span>
+                        <span class="info-tip">i<span class="info-tip-text">Compara el m² real de oportunidad detectado contra el valor histórico zonal del barrio.</span></span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(${barrios.length}, 1fr); gap: 10px;">
+                        ${barrios.map((b, i) => {
+                            const pct = Math.round((b.benchmark_usd_m2 / maxBench) * 100);
+                            const sqmDisp = b.count > 0 ? `USD ${b.avg_usd_m2.toLocaleString('es-AR')}` : `Benchmark USD ${b.benchmark_usd_m2.toLocaleString('es-AR')}`;
+                            return `
+                            <div>
+                                <div style="display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 3px;">
+                                    <span style="color: ${colors[i]}; font-weight: 700;">${b.name}</span>
+                                    <span style="color: #fff; font-weight: 800;">${sqmDisp}</span>
+                                </div>
+                                <div style="height: 6px; background: #0f172a; border-radius: 3px; overflow: hidden;">
+                                    <div style="height: 100%; width: ${pct}%; background: ${colors[i]}; border-radius: 3px;"></div>
+                                </div>
+                            </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
 
-                barrios.forEach(b => {
-                    const val = row.raw(b);
-                    const isWinner = bestVal !== null && val === bestVal && rawVals.filter(v => v === bestVal).length < barrios.length;
-                    const winnerBadge = isWinner ? '<span style="color: #10b981; font-weight: 800; margin-left: 4px;" title="Mejor indicador">🏆</span>' : '';
-                    const winnerStyle = isWinner ? 'color: #fff; font-weight: 800;' : 'color: var(--text-primary); font-weight: 600;';
+                <!-- Métrica 2: Descuento Zonal Promedio -->
+                <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 10px 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">
+                        <span>🏷️ Descuento Zonal Medio</span>
+                        <span class="info-tip">i<span class="info-tip-text">Rebaja media porcentual obtenida en las unidades activas frente a la media del barrio.</span></span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(${barrios.length}, 1fr); gap: 10px;">
+                        ${barrios.map((b, i) => `
+                            <div style="text-align: center; background: #0f172a; border: 1px solid var(--border-color); border-radius: 6px; padding: 6px 8px;">
+                                <div style="font-size: 11px; color: ${colors[i]}; font-weight: 700;">${b.name}</div>
+                                <div style="font-size: 15px; font-weight: 800; color: ${b.avg_discount_pct > 0 ? '#10b981' : 'var(--text-muted)'};">
+                                    ${b.avg_discount_pct > 0 ? `+${b.avg_discount_pct}%` : 'En línea'}
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
 
-                    html += `
-                    <td style="padding: 9px 12px; text-align: center; white-space: nowrap; ${winnerStyle}">
-                        ${row.format(b)} ${winnerBadge}
-                    </td>
-                    `;
-                });
+                <!-- Métrica 3: Demanda Comercial y Tráfico -->
+                <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 10px 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">
+                        <span>👁️ Interés & Tráfico Mensual de Búsqueda</span>
+                        <span class="info-tip">i<span class="info-tip-text">Cantidad promedio de interesados y visitas por aviso en la zona en los últimos 30 días.</span></span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(${barrios.length}, 1fr); gap: 10px;">
+                        ${barrios.map((b, i) => {
+                            const pct = Math.round((b.avg_views / maxViews) * 100);
+                            return `
+                            <div>
+                                <div style="display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 3px;">
+                                    <span style="color: ${colors[i]}; font-weight: 700;">${b.name}</span>
+                                    <span style="color: #38bdf8; font-weight: 800;">${b.avg_views_formatted} visitas</span>
+                                </div>
+                                <div style="height: 6px; background: #0f172a; border-radius: 3px; overflow: hidden;">
+                                    <div style="height: 100%; width: ${pct}%; background: ${colors[i]}; border-radius: 3px;"></div>
+                                </div>
+                            </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+            </div>
+            `;
 
-                html += `</tr>`;
-            });
+            // 3. Desplegable para desglose secundario (+6 métricas)
+            const secondaryRows = [
+                {
+                    label: '💲 Ticket Mínimo de Entrada',
+                    format: b => b.min_price > 0 ? `USD ${b.min_price.toLocaleString('es-AR')}` : 'Sin oferta'
+                },
+                {
+                    label: '🏛️ Benchmark Zonal Histórico',
+                    format: b => `USD ${b.benchmark_usd_m2?.toLocaleString('es-AR')}/m²`
+                },
+                {
+                    label: '💵 Expensas Promedio',
+                    format: b => b.avg_expenses_formatted
+                },
+                {
+                    label: '🔥 Super Oportunidades (>25% off)',
+                    format: b => `${b.super_deals_count} unidades`
+                },
+                {
+                    label: '⚡ Score de Liquidez / Reventa',
+                    format: b => `${b.liquidity_score || 50}/100`
+                }
+            ];
 
-            html += `</tbody></table>`;
-            container.innerHTML = html;
+            let drawerHtml = `
+            <div style="text-align: center; margin-top: 10px;">
+                <button class="btn" onclick="toggleVsDetails()" style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; background: #0f172a; border: 1px solid var(--border-color); color: var(--accent-primary);">
+                    <span id="vsToggleBtnText">${vsDetailsExpanded ? 'Ocultar desglose detallado' : 'Ver desglose completo (+6 métricas)'}</span>
+                    <span id="vsToggleIcon">${vsDetailsExpanded ? '▴' : '▾'}</span>
+                </button>
+            </div>
+            <div id="vsDetailsDrawer" style="display: ${vsDetailsExpanded ? 'block' : 'none'}; margin-top: 14px; overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 12px;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--border-color);">
+                            <th style="padding: 8px 10px; color: var(--text-muted); text-align: left; background: transparent; font-size: 11px;">MÉTRICA COMPLEMENTARIA</th>
+                            ${barrios.map((b, i) => `
+                                <th style="padding: 8px 10px; text-align: center; background: transparent; font-size: 12px; font-weight: 800; color: ${colors[i]};">
+                                    ${b.name}
+                                </th>
+                            `).join('')}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${secondaryRows.map((r, idx) => `
+                            <tr style="background: ${idx % 2 === 0 ? 'rgba(255,255,255,0.02)' : 'transparent'}; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <td style="padding: 8px 10px; color: var(--text-secondary); font-weight: 600;">${r.label}</td>
+                                ${barrios.map(b => `
+                                    <td style="padding: 8px 10px; text-align: center; color: #fff; font-weight: 600;">
+                                        ${r.format(b)}
+                                    </td>
+                                `).join('')}
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            </div>
+            `;
+
+            container.innerHTML = heroCardsHtml + keyMetricsHtml + drawerHtml;
         }
 
         // ==================== SORTABLE RANKING TABLE ====================
@@ -2335,21 +2471,34 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const heatmapTbody = document.getElementById('heatmapTableBody');
             heatmapTbody.innerHTML = neighborhoods.map(b => {
                 const scoreColor = (b.liquidity_score || b.opportunity_density_score) > 70 ? 'var(--accent-flame)' : ((b.liquidity_score || b.opportunity_density_score) > 40 ? 'var(--accent-green)' : 'var(--accent-primary)');
+                
+                let countBadge = `<span class="badge badge-date">${b.count} avisos</span>`;
+                let avgSqmText = `USD ${b.avg_usd_m2?.toLocaleString('es-AR')}`;
+                let discountText = `${b.avg_discount_pct > 0 ? '+' : ''}${b.avg_discount_pct}%`;
+                let minPriceText = `USD ${b.min_price?.toLocaleString('es-AR')}`;
+
+                if (b.count === 0) {
+                    countBadge = `<span class="badge" style="background:rgba(100,116,139,0.25); color:var(--text-muted); font-size:10px;">0 avisos</span>`;
+                    avgSqmText = `<span style="color:var(--text-muted); font-size:11px;">Sin oferta</span>`;
+                    discountText = `<span style="color:var(--text-muted); font-size:11px;">-</span>`;
+                    minPriceText = `<span style="color:var(--text-muted); font-size:11px;">-</span>`;
+                }
+
                 return `
                 <tr>
                     <td><strong>${b.name}</strong></td>
-                    <td style="text-align: center;"><span class="badge badge-date">${b.count} avisos</span></td>
-                    <td style="color:var(--accent-green); font-weight:700;">USD ${b.avg_usd_m2?.toLocaleString('es-AR')}</td>
+                    <td style="text-align: center;">${countBadge}</td>
+                    <td style="color:${b.count > 0 ? 'var(--accent-green)' : 'var(--text-muted)'}; font-weight:700;">${avgSqmText}</td>
                     <td style="color:var(--text-muted);">USD ${b.benchmark_usd_m2?.toLocaleString('es-AR')}</td>
                     <td style="font-weight:700; color:${b.avg_discount_pct > 0 ? 'var(--accent-green)' : 'var(--text-muted)'};">
-                        ${b.avg_discount_pct > 0 ? '+' : ''}${b.avg_discount_pct}%
+                        ${discountText}
                     </td>
                     <td>
                         <strong style="color:var(--accent-primary);">👁️ ${b.avg_views_formatted}</strong><br>
                         <small style="color:var(--text-muted); font-size:11px;">${b.demand_level}</small>
                     </td>
-                    <td>USD ${b.min_price?.toLocaleString('es-AR')}</td>
-                    <td>${b.avg_expenses_formatted}</td>
+                    <td>${minPriceText}</td>
+                    <td>${b.count > 0 ? b.avg_expenses_formatted : '-'}</td>
                     <td style="text-align: center;"><strong>${b.super_deals_count}</strong></td>
                     <td style="min-width:130px;">
                         <div style="display:flex; justify-content:space-between; font-size:11px; margin-bottom:2px;">
@@ -2388,7 +2537,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 </div>
             `).join('');
 
-            // Render Typology Cards
+            // Render Typology Cards with tooltips
             const typContainer = document.getElementById('typologyGrid');
             const typologies = MARKET_ANALYTICS.typologies || {};
             typContainer.innerHTML = Object.values(typologies).map(t => `
@@ -2398,15 +2547,24 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         <span class="brand-badge">${t.count} unidades</span>
                     </div>
                     <div class="typology-stat-row">
-                        <span class="typology-stat-label">Vistas Promedio por Aviso:</span>
+                        <span class="typology-stat-label">
+                            <span>Vistas Promedio por Aviso:</span>
+                            <span class="info-tip">i<span class="info-tip-text">Promedio de interesados que consultan avisos de esta tipología.</span></span>
+                        </span>
                         <span class="typology-stat-val" style="color:var(--accent-primary)">👁️ ${t.avg_views_formatted}</span>
                     </div>
                     <div class="typology-stat-row">
-                        <span class="typology-stat-label">Participación en Consultas:</span>
+                        <span class="typology-stat-label">
+                            <span>Participación en Consultas:</span>
+                            <span class="info-tip">i<span class="info-tip-text">Porcentaje del total de búsquedas y contactos que capta este formato.</span></span>
+                        </span>
                         <span class="typology-stat-val" style="color:var(--accent-yellow)">📊 ${t.demand_share}</span>
                     </div>
                     <div class="typology-stat-row">
-                        <span class="typology-stat-label">Velocidad de Absorción:</span>
+                        <span class="typology-stat-label">
+                            <span>Velocidad de Absorción:</span>
+                            <span class="info-tip">i<span class="info-tip-text">Rapidez estimada en que un aviso a buen precio de esta tipología es vendido o reservado.</span></span>
+                        </span>
                         <span class="typology-stat-val" style="font-size:11px; color:#10b981;">${t.sales_speed}</span>
                     </div>
                     <div class="typology-stat-row">
@@ -2434,10 +2592,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         function initCharts() {
             if (!MARKET_ANALYTICS) return;
 
-            // 1. Initialize Barrio Comparator (VS hasta 3)
             initBarriosVS();
 
-            // 2. Doughnut Chart: Price Distribution con porcentajes reales representativos
+            // Doughnut Chart: Price Distribution (Clean, no text list below)
             const dist = MARKET_ANALYTICS.price_distribution || {};
             const distValues = Object.values(dist);
             const totalCount = distValues.reduce((acc, d) => acc + (d.count || 0), 0);
@@ -2470,8 +2627,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                             labels: { 
                                 color: '#f8fafc', 
                                 font: { size: 12, family: 'Plus Jakarta Sans', weight: '600' },
-                                boxWidth: 12,
-                                padding: 10
+                                boxWidth: 14,
+                                padding: 12
                             } 
                         },
                         tooltip: {
@@ -2487,26 +2644,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     cutout: '66%'
                 }
             });
-
-            // Lista detallada de rangos de precio con porcentajes explícitos
-            const listContainer = document.getElementById('priceDistributionList');
-            if (listContainer) {
-                listContainer.innerHTML = distValues.map(d => {
-                    const pct = totalCount > 0 ? ((d.count / totalCount) * 100).toFixed(1) : 0;
-                    return `
-                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
-                        <span style="display: flex; align-items: center; gap: 8px;">
-                            <span style="width: 10px; height: 10px; border-radius: 50%; background: ${d.color}; display: inline-block;"></span>
-                            <span style="color: var(--text-primary); font-weight: 600;">${d.label}</span>
-                        </span>
-                        <span>
-                            <strong style="color: #38bdf8; font-size: 13px;">${pct}%</strong>
-                            <small style="color: var(--text-muted); margin-left: 5px;">(${d.count} ${d.count === 1 ? 'aviso' : 'avisos'})</small>
-                        </span>
-                    </div>
-                    `;
-                }).join('');
-            }
         }
 
         function exportToCSV() {

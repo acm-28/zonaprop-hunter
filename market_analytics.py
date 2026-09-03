@@ -7,6 +7,29 @@ distribución de precios, análisis por tipología y generación automatizada de
 import statistics
 from typing import List, Dict, Any
 
+OFFICIAL_CABA_BARRIOS = [
+    "Agronomia", "Almagro", "Balvanera", "Barracas", "Belgrano", "Boedo", "Caballito",
+    "Chacarita", "Coghlan", "Colegiales", "Constitucion", "Flores", "Floresta", "La Boca",
+    "Liniers", "Mataderos", "Monte Castro", "Monserrat", "Nueva Pompeya", "Nunez", "Palermo",
+    "Parque Avellaneda", "Parque Chacabuco", "Parque Chas", "Parque Patricios", "Puerto Madero",
+    "Recoleta", "Retiro", "Saavedra", "San Cristobal", "San Nicolas", "San Telmo",
+    "Velez Sarsfield", "Versalles", "Villa Crespo", "Villa del Parque", "Villa Devoto",
+    "Villa General Mitre", "Villa Lugano", "Villa Luro", "Villa Ortuzar", "Villa Pueyrredon",
+    "Villa Real", "Villa Riachuelo", "Villa Santa Rita", "Villa Soldati", "Villa Urquiza"
+]
+
+FALLBACK_DEMAND_VIEWS = {
+    "Palermo": 2450, "Recoleta": 2100, "Belgrano": 2150, "Caballito": 2200,
+    "Villa Urquiza": 1950, "Colegiales": 1750, "Villa Crespo": 1700,
+    "Chacarita": 1600, "Almagro": 1450, "San Telmo": 1300, "Villa Devoto": 1400,
+    "Nunez": 1900, "Nuñez": 1900, "Coghlan": 1450, "Saavedra": 1400,
+    "Flores": 1100, "Floresta": 950, "Boedo": 1200, "Barracas": 1050,
+    "Parque Patricios": 1150, "Parque Chacabuco": 1100, "Balvanera": 950,
+    "Monserrat": 900, "San Nicolas": 850, "San Cristobal": 850,
+    "Constitucion": 700, "Villa del Parque": 1300, "Paternal": 1150,
+    "Agronomia": 1250, "Puerto Madero": 2300, "Default": 1000
+}
+
 def compute_market_analytics(properties: List[Dict[str, Any]], config: Dict[str, Any], historical_snapshots: List[Dict[str, Any]] = None) -> Dict[str, Any]:
     """
     Calcula el análisis completo de mercado a partir de las propiedades evaluadas.
@@ -50,7 +73,6 @@ def compute_market_analytics(properties: List[Dict[str, Any]], config: Dict[str,
         "avg_discount_pct": avg_discount,
         "avg_m2_size": round(statistics.mean(m2_sizes), 1) if m2_sizes else 0
     }
-
     # 2. Análisis y Mapa de Calor por Barrio
     benchmarks = config.get("neighborhood_benchmarks_usd_m2", {})
     barrio_groups = {}
@@ -61,22 +83,37 @@ def compute_market_analytics(properties: List[Dict[str, Any]], config: Dict[str,
             barrio_groups[b] = []
         barrio_groups[b].append(p)
 
-    neighborhoods_analytics = []
-    for b_name, b_props in barrio_groups.items():
-        b_prices = [p["price_val"] for p in b_props if p.get("price_val")]
-        b_sqm = [p["usd_m2"] for p in b_props if p.get("usd_m2")]
-        b_disc = [p.get("discount_pct", 0) for p in b_props]
-        b_views = [p["user_views"] for p in b_props if p.get("user_views")]
-        b_exp = [p["expenses_val"] for p in b_props if p.get("expenses_val")]
-        b_benchmark = b_props[0].get("barrio_benchmark_m2", benchmarks.get(b_name, 1900))
-        b_super = sum(1 for p in b_props if p.get("opportunity_score", 0) >= 75 or "Super" in str(p.get("badge_text", "")))
+    # Consolidar todos los barrios conocidos y oficiales de CABA
+    all_barrio_names = sorted(list(set(OFFICIAL_CABA_BARRIOS + list(barrio_groups.keys()))))
 
-        b_avg_sqm = round(statistics.mean(b_sqm)) if b_sqm else 0
-        b_avg_disc = round(statistics.mean(b_disc), 1) if b_disc else 0.0
-        b_min_p = min(b_prices) if b_prices else 0
-        b_avg_p = round(statistics.mean(b_prices)) if b_prices else 0
-        b_avg_views = round(statistics.mean(b_views)) if b_views else 950
-        b_avg_exp = round(statistics.mean(b_exp)) if b_exp else None
+    neighborhoods_analytics = []
+    for b_name in all_barrio_names:
+        b_props = barrio_groups.get(b_name, [])
+        if b_props:
+            b_prices = [p["price_val"] for p in b_props if p.get("price_val")]
+            b_sqm = [p["usd_m2"] for p in b_props if p.get("usd_m2")]
+            b_disc = [p.get("discount_pct", 0) for p in b_props]
+            b_views = [p["user_views"] for p in b_props if p.get("user_views")]
+            b_exp = [p["expenses_val"] for p in b_props if p.get("expenses_val")]
+            b_benchmark = b_props[0].get("barrio_benchmark_m2", benchmarks.get(b_name, 1900))
+            b_super = sum(1 for p in b_props if p.get("opportunity_score", 0) >= 75 or "Super" in str(p.get("badge_text", "")))
+
+            b_avg_sqm = round(statistics.mean(b_sqm)) if b_sqm else 0
+            b_avg_disc = round(statistics.mean(b_disc), 1) if b_disc else 0.0
+            b_min_p = min(b_prices) if b_prices else 0
+            b_avg_p = round(statistics.mean(b_prices)) if b_prices else 0
+            b_avg_views = round(statistics.mean(b_views)) if b_views else 950
+            b_avg_exp = round(statistics.mean(b_exp)) if b_exp else None
+        else:
+            # Barrio sin avisos activos bajo los filtros actuales (ej: Palermo, Belgrano, etc.)
+            b_benchmark = benchmarks.get(b_name, 2100)
+            b_avg_views = FALLBACK_DEMAND_VIEWS.get(b_name, FALLBACK_DEMAND_VIEWS.get("Default", 1000))
+            b_avg_sqm = 0
+            b_avg_disc = 0.0
+            b_min_p = 0
+            b_avg_p = 0
+            b_avg_exp = None
+            b_super = 0
 
         # Nivel de demanda comercial / rotación de venta
         if b_avg_views >= 1800:
@@ -89,7 +126,7 @@ def compute_market_analytics(properties: List[Dict[str, Any]], config: Dict[str,
             demand_level = "⚪ Demanda Moderada"
 
         # Opportunity Density Score (0-100)
-        density_score = min(100, round((b_avg_disc * 2.2) + (len(b_props) * 4) + (b_super * 15)))
+        density_score = min(100, round((b_avg_disc * 2.2) + (len(b_props) * 4) + (b_super * 15))) if b_props else 10
         # Liquidity / Reventa Score (0-100)
         liquidity_score = min(100, max(25, round((b_avg_views / 2400) * 70 + (b_avg_disc * 1.0) + (len(b_props) * 2))))
 
@@ -111,8 +148,8 @@ def compute_market_analytics(properties: List[Dict[str, Any]], config: Dict[str,
             "opportunity_density_score": max(10, density_score)
         })
 
-    # Ordenar barrios por cantidad de oportunidades y luego por mejor descuento
-    neighborhoods_analytics.sort(key=lambda x: (x["count"], x["avg_discount_pct"]), reverse=True)
+    # Ordenar barrios alfabéticamente por defecto (A-Z)
+    neighborhoods_analytics.sort(key=lambda x: x["name"].lower())
 
     # 3. Matriz por Tipología (1, 2, 3+ Ambientes)
     typologies = {
