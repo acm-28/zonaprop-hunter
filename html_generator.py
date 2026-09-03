@@ -1,7 +1,7 @@
 """
 Generador de Dashboard HTML interactivo para Oportunidades Inmobiliarias y Market Intelligence en CABA.
-Crea un archivo HTML autónomo, moderno, responsivo, con gráficos interactivos, mapa geográfico de CABA con capas conmutables,
-métricas de vistas y demanda comercial, favoritos, tracking de contacto y cartera acumulada de 10 días.
+Incluye Plano Artesanal 2D/3D Isométrico de CABA con capas conmutables, ordenamiento interactivo
+en todas las columnas del ranking de barrios, métricas de vistas/demanda comercial, favoritos y tracking de contacto.
 """
 
 import json
@@ -19,14 +19,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <style>
         :root {
-            --bg-primary: #0f172a;
-            --bg-secondary: #1e293b;
-            --bg-card: #1e293b;
-            --bg-card-hover: #283548;
+            --bg-primary: #0b1120;
+            --bg-secondary: #131c31;
+            --bg-card: #17233d;
+            --bg-card-hover: #1e2f52;
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
             --text-muted: #64748b;
@@ -37,10 +35,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             --accent-purple: #a855f7;
             --accent-indigo: #6366f1;
             --accent-yellow: #eab308;
-            --border-color: #334155;
+            --border-color: #243454;
             --radius-md: 12px;
             --radius-lg: 16px;
-            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
         }
 
         * {
@@ -293,6 +291,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
             border-color: #38bdf8;
             color: #fff;
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4);
         }
 
         .btn-primary {
@@ -611,7 +610,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             border-color: #eab308;
         }
 
-        /* TABLE VIEW */
+        /* TABLE VIEW & SORTABLE HEADERS */
         .table-view {
             display: none;
             background: var(--bg-secondary);
@@ -637,6 +636,35 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             white-space: nowrap;
         }
 
+        th.sortable-th {
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        th.sortable-th:hover {
+            background: #1e293b;
+            color: #fff;
+        }
+
+        th.sortable-th .sort-icon {
+            display: inline-block;
+            margin-left: 6px;
+            font-size: 11px;
+            color: var(--text-muted);
+            transition: transform 0.2s, color 0.2s;
+        }
+
+        th.sortable-th.active-sort {
+            color: var(--accent-primary);
+            background: rgba(56, 189, 248, 0.08);
+        }
+
+        th.sortable-th.active-sort .sort-icon {
+            color: var(--accent-primary);
+            font-weight: 800;
+        }
+
         td {
             padding: 12px 16px;
             border-bottom: 1px solid var(--border-color);
@@ -657,6 +685,124 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             height: 40px;
             object-fit: cover;
             border-radius: 6px;
+        }
+
+        /* ==================== ARTISANAL CABA PLANO (2D / 3D ISOMETRIC) ==================== */
+        .artisan-map-wrapper {
+            background: linear-gradient(180deg, #090e1a 0%, #111a2e 100%);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            margin-bottom: 32px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+
+        .map-header-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 18px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .map-stage-viewport {
+            width: 100%;
+            height: 600px;
+            position: relative;
+            perspective: 1300px;
+            overflow: hidden;
+            border-radius: 12px;
+            background: radial-gradient(circle at 60% 30%, rgba(30, 41, 59, 0.4) 0%, rgba(11, 17, 32, 0.95) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .caba-svg-canvas {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+            transform-origin: center center;
+            overflow: visible;
+        }
+
+        .map-stage-viewport.is-3d .caba-svg-canvas {
+            transform: rotateX(32deg) rotateZ(-12deg) translateY(-25px) scale(0.92);
+            filter: drop-shadow(-30px 40px 50px rgba(0, 0, 0, 0.85));
+        }
+
+        /* BARRIO PATHS & HOVER EFFECTS */
+        .barrio-polygon-group {
+            cursor: pointer;
+            transition: transform 0.25s ease;
+        }
+
+        .barrio-poly {
+            transition: fill 0.3s ease, stroke 0.2s ease, stroke-width 0.2s ease, filter 0.2s ease;
+            stroke-linejoin: round;
+        }
+
+        .barrio-polygon-group:hover .barrio-poly {
+            stroke: #ffffff !important;
+            stroke-width: 2.8px !important;
+            filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.6)) brightness(1.25);
+        }
+
+        .barrio-svg-label {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            fill: #94a3b8;
+            pointer-events: none;
+            text-anchor: middle;
+            user-select: none;
+            transition: fill 0.2s;
+        }
+
+        .barrio-polygon-group:hover .barrio-svg-label {
+            fill: #ffffff;
+            font-weight: 800;
+        }
+
+        .barrio-badge-dot {
+            pointer-events: none;
+        }
+
+        /* FLOATING TOOLTIP */
+        .artisan-tooltip {
+            position: absolute;
+            pointer-events: none;
+            display: none;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid #38bdf8;
+            border-radius: 12px;
+            padding: 14px 16px;
+            z-index: 1000;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.7), 0 0 15px rgba(56, 189, 248, 0.2);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            min-width: 220px;
+            transition: opacity 0.15s ease, transform 0.15s ease;
+        }
+
+        /* COASTLINE WATERMARK */
+        .rio-label {
+            position: absolute;
+            top: 25px;
+            right: 40px;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            color: rgba(56, 189, 248, 0.25);
+            user-select: none;
+            pointer-events: none;
+            text-transform: uppercase;
         }
 
         /* ANALYTICS SECTION STYLES */
@@ -811,18 +957,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         .heatmap-bar {
             height: 100%;
             border-radius: 4px;
-        }
-
-        /* LEAFLET DARK POPUPS & TOOLTIPS */
-        .leaflet-popup-content-wrapper {
-            background: #1e293b !important;
-            color: #f8fafc !important;
-            border: 1px solid #334155;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);
-        }
-        .leaflet-popup-tip {
-            background: #1e293b !important;
         }
 
         /* EMPTY STATE */
@@ -1051,36 +1185,68 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             </h2>
             <div id="insightsList" class="insights-list"></div>
 
-            <!-- GEOGRAPHIC CABA HEATMAP (INTERACTIVE LEAFLET MAP) -->
-            <div class="chart-box" style="margin-bottom: 28px;">
-                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <!-- ==================== ARTISANAL CABA PLANO (2D / 3D ISOMETRIC) ==================== -->
+            <div class="artisan-map-wrapper">
+                <div class="map-header-row">
                     <div>
-                        <h2 style="font-size: 18px; font-weight: 800; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
-                            <span>🗺️ Mapa de Calor Geográfico de CABA</span>
-                            <span class="brand-badge">Explorador Territorial Interactivo</span>
+                        <h2 style="font-size: 19px; font-weight: 800; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
+                            <span>🗺️ Plano Territorial Arquitectónico de CABA</span>
+                            <span class="brand-badge" id="mapPerspectiveBadge">Plano 2D</span>
                         </h2>
-                        <p style="font-size: 13px; color: var(--text-secondary); margin-top: 2px;">
-                            Selecciona una capa para iluminar los barrios de la Ciudad. Pasa el cursor para ver las métricas completas o haz clic para filtrar sus avisos.
+                        <p style="font-size: 13px; color: var(--text-secondary); margin-top: 3px;">
+                            Iluminación zonal interactiva. Pasa el cursor por cualquier barrio para inspeccionar sus métricas o haz clic para filtrar sus avisos.
                         </p>
                     </div>
-                    <!-- HEATMAP LAYER TOGGLES -->
-                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                        <button class="btn active" id="btnModeScore" onclick="setMapHeatMode('score')">🎯 Oportunidades & Score</button>
-                        <button class="btn" id="btnModeCheapest" onclick="setMapHeatMode('cheapest')">🏷️ Más Baratos (USD/m²)</button>
-                        <button class="btn" id="btnModePrime" onclick="setMapHeatMode('prime')">💰 Zonas Prime (Benchmark)</button>
-                        <button class="btn" id="btnModeViews" onclick="setMapHeatMode('views')">👁️ Más Vistos (Mayor Demanda)</button>
+
+                    <!-- PERSPECTIVE & MODE CONTROLS -->
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+                        <div style="background: #0f172a; padding: 3px; border-radius: 8px; border: 1px solid var(--border-color); display: flex; gap: 4px;">
+                            <button class="btn active" id="btnPersp2D" onclick="setMapPerspective('2d')">📐 2D</button>
+                            <button class="btn" id="btnPersp3D" onclick="setMapPerspective('3d')">🏙️ 3D Isométrico</button>
+                        </div>
+
+                        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                            <button class="btn active" id="btnModeScore" onclick="setMapHeatMode('score')">🎯 Oportunidades</button>
+                            <button class="btn" id="btnModeCheapest" onclick="setMapHeatMode('cheapest')">🏷️ Más Baratos</button>
+                            <button class="btn" id="btnModePrime" onclick="setMapHeatMode('prime')">💰 Zonas Prime</button>
+                            <button class="btn" id="btnModeViews" onclick="setMapHeatMode('views')">👁️ Más Vistos</button>
+                        </div>
                     </div>
                 </div>
 
-                <!-- MAP CONTAINER -->
-                <div id="cabaMap" style="height: 480px; width: 100%; border-radius: 12px; border: 1px solid var(--border-color); background: #0f172a; z-index: 1;"></div>
+                <!-- MAP CANVAS VIEWPORT -->
+                <div class="map-stage-viewport" id="mapViewport">
+                    <div class="rio-label">RÍO DE LA PLATA 🌊</div>
+                    
+                    <svg class="caba-svg-canvas" id="cabaSvg" viewBox="0 0 920 820">
+                        <defs>
+                            <!-- Architectural grid pattern -->
+                            <pattern id="archGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+                                <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1"/>
+                            </pattern>
+                            <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="6" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+
+                        <!-- Background Blueprint Grid -->
+                        <rect width="920" height="820" fill="url(#archGrid)" />
+
+                        <!-- Barrios SVG Paths Group -->
+                        <g id="cabaBarriosGroup"></g>
+                    </svg>
+
+                    <!-- FLOATING HOVER TOOLTIP -->
+                    <div class="artisan-tooltip" id="mapTooltip"></div>
+                </div>
 
                 <!-- MAP LEGEND -->
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px; font-size: 12px; color: var(--text-secondary);">
-                    <span id="mapLegendLabel">🎯 Intensidad: Score de Oportunidades en Cartera</span>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 14px; font-size: 12px; color: var(--text-secondary);">
+                    <span id="mapLegendLabel">🎯 Intensidad: Concentración de Oportunidades y Descuento</span>
                     <div style="display: flex; align-items: center; gap: 8px;">
                         <span>Bajo</span>
-                        <div id="mapLegendGradient" style="width: 140px; height: 10px; border-radius: 5px; background: linear-gradient(90deg, rgba(56, 189, 248, 0.4), rgba(16, 185, 129, 0.8), rgba(249, 115, 22, 0.95));"></div>
+                        <div id="mapLegendGradient" style="width: 140px; height: 10px; border-radius: 5px; background: linear-gradient(90deg, rgba(56, 189, 248, 0.3), rgba(16, 185, 129, 0.8), rgba(249, 115, 22, 0.95));"></div>
                         <span>Alto</span>
                     </div>
                 </div>
@@ -1114,24 +1280,32 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             </h2>
             <div id="typologyGrid" class="typology-grid"></div>
 
-            <!-- NEIGHBORHOOD HEATMAP TABLE -->
-            <h2 style="font-size: 20px; font-weight: 800; margin-bottom: 16px; color: var(--text-primary);">
-                🗺️ Ranking y Mapa de Demanda de Barrios en CABA
-            </h2>
+            <!-- NEIGHBORHOOD HEATMAP TABLE (SORTABLE HEADERS) -->
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 14px;">
+                <div>
+                    <h2 style="font-size: 20px; font-weight: 800; color: var(--text-primary);">
+                        🗺️ Ranking y Mapa de Demanda de Barrios en CABA
+                    </h2>
+                    <p style="font-size: 13px; color: var(--text-secondary); margin-top: 2px;">
+                        Haz clic en el título de cualquier columna para ordenar el listado (mayor a menor o viceversa).
+                    </p>
+                </div>
+            </div>
+
             <div class="table-view" style="display: block; margin-bottom: 28px;">
                 <table>
                     <thead>
                         <tr>
-                            <th>Barrio</th>
-                            <th>Avisos</th>
-                            <th>USD / m² Promedio</th>
-                            <th>Benchmark Barrio</th>
-                            <th>Descuento Medio</th>
-                            <th>Vistas Promedio / Demanda</th>
-                            <th>Ticket Mínimo</th>
-                            <th>Expensas Prom.</th>
-                            <th>Super Oportunidades</th>
-                            <th>Liquidez / Reventa</th>
+                            <th class="sortable-th" onclick="sortRankingTable('name')">Barrio <span class="sort-icon" id="sortIcon_name">⇅</span></th>
+                            <th class="sortable-th active-sort" onclick="sortRankingTable('count')">Avisos <span class="sort-icon" id="sortIcon_count">▼</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('avg_usd_m2')">USD / m² Promedio <span class="sort-icon" id="sortIcon_avg_usd_m2">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('benchmark_usd_m2')">Benchmark Barrio <span class="sort-icon" id="sortIcon_benchmark_usd_m2">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('avg_discount_pct')">Descuento Medio <span class="sort-icon" id="sortIcon_avg_discount_pct">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('avg_views')">Vistas Promedio / Demanda <span class="sort-icon" id="sortIcon_avg_views">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('min_price')">Ticket Mínimo <span class="sort-icon" id="sortIcon_min_price">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('avg_expenses')">Expensas Prom. <span class="sort-icon" id="sortIcon_avg_expenses">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('super_deals_count')">Super Oportunidades <span class="sort-icon" id="sortIcon_super_deals_count">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('liquidity_score')">Liquidez / Reventa <span class="sort-icon" id="sortIcon_liquidity_score">⇅</span></th>
                         </tr>
                     </thead>
                     <tbody id="heatmapTableBody"></tbody>
@@ -1148,6 +1322,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <script>
         const RAW_DATA = __DATA_PLACEHOLDER__;
         const MARKET_ANALYTICS = __ANALYTICS_PLACEHOLDER__;
+        const CABA_SVG_DATA = __CABA_SVG_PLACEHOLDER__;
         const GENERATION_TIME = "__TIMESTAMP_PLACEHOLDER__";
 
         let currentView = 'cards';
@@ -1155,32 +1330,30 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         let favorites = JSON.parse(localStorage.getItem('zonaprop_favs') || '[]');
         let contacted = JSON.parse(localStorage.getItem('zonaprop_contacted') || '[]');
         let chartsInitialized = false;
-        let cabaMap = null;
-        let mapMarkersLayer = null;
-        let currentMapMode = 'score';
 
-        // Coordenadas geográficas de los barrios de CABA
-        const BARRIO_GEO = {
-            "Palermo": [-34.588, -58.420], "Recoleta": [-34.587, -58.393], "Belgrano": [-34.562, -58.456],
-            "Caballito": [-34.618, -58.443], "Almagro": [-34.610, -58.420], "Villa Urquiza": [-34.572, -58.495],
-            "Colegiales": [-34.576, -58.448], "Villa Crespo": [-34.598, -58.440], "Chacarita": [-34.588, -58.455],
-            "Villa Devoto": [-34.599, -58.513], "Nuñez": [-34.545, -58.465], "San Telmo": [-34.621, -58.373],
-            "Retiro": [-34.592, -58.378], "Puerto Madero": [-34.610, -58.362], "Balvanera": [-34.610, -58.400],
-            "Once": [-34.608, -58.406], "Congreso": [-34.609, -58.392], "Monserrat": [-34.613, -58.383],
-            "San Nicolás": [-34.603, -58.380], "San Nicolas": [-34.603, -58.380], "San Cristóbal": [-34.624, -58.400],
-            "San Cristobal": [-34.624, -58.400], "Constitución": [-34.627, -58.382], "Constitucion": [-34.627, -58.382],
-            "Barracas": [-34.646, -58.380], "La Boca": [-34.636, -58.362], "Parque Patricios": [-34.637, -58.406],
-            "Boedo": [-34.629, -58.419], "Parque Chacabuco": [-34.632, -58.443], "Flores": [-34.631, -58.465],
-            "Floresta": [-34.631, -58.484], "Villa del Parque": [-34.605, -58.490], "Paternal": [-34.598, -58.468],
-            "Agronomía": [-34.591, -58.487], "Agronomia": [-34.591, -58.487], "Villa Ortúzar": [-34.581, -58.471],
-            "Villa Ortuzar": [-34.581, -58.471], "Parque Chas": [-34.582, -58.480], "Coghlan": [-34.565, -58.473],
-            "Saavedra": [-34.550, -58.489], "Villa Santa Rita": [-34.614, -58.480], "Villa General Mitre": [-34.608, -58.470],
-            "Villa Luro": [-34.638, -58.502], "Villa Pueyrredón": [-34.580, -58.505], "Villa Pueyrredon": [-34.580, -58.505],
-            "Villa Real": [-34.615, -58.525], "Versalles": [-34.626, -58.522], "Monte Castro": [-34.620, -58.505],
-            "Mataderos": [-34.656, -58.504], "Liniers": [-34.645, -58.520], "Parque Avellaneda": [-34.645, -58.478],
-            "Nueva Pompeya": [-34.654, -58.420], "Villa Lugano": [-34.675, -58.470], "Villa Soldati": [-34.664, -58.445],
-            "Villa Riachuelo": [-34.685, -58.460]
+        let currentMapMode = 'score';
+        let currentPerspective = '2d';
+        let rankingSortCol = 'count';
+        let rankingSortAsc = false;
+
+        // Mapeo de subzonas o nombres de Zonaprop a los 48 polígonos oficiales de CABA
+        const SUBZONE_TO_BARRIO = {
+            'barrio norte': 'Recoleta', 'recoleta': 'Recoleta', 'once': 'Balvanera', 'abasto': 'Balvanera',
+            'balvanera': 'Balvanera', 'congreso': 'Balvanera', 'tribunales': 'San Nicolas', 'centro': 'San Nicolas',
+            'centro / microcentro': 'San Nicolas', 'microcentro': 'San Nicolas', 'san nicolas': 'San Nicolas',
+            'san nicolás': 'San Nicolas', 'monserrat': 'Monserrat', 'palermo soho': 'Palermo',
+            'palermo hollywood': 'Palermo', 'palermo chico': 'Palermo', 'botanico': 'Palermo',
+            'botánico': 'Palermo', 'las cañitas': 'Palermo', 'las canitas': 'Palermo', 'palermo': 'Palermo',
+            'belgrano r': 'Belgrano', 'belgrano c': 'Belgrano', 'belgrano': 'Belgrano', 'caballito norte': 'Caballito',
+            'caballito sur': 'Caballito', 'parque centenario': 'Caballito', 'caballito': 'Caballito',
+            'pompeya': 'Nueva Pompeya', 'nueva pompeya': 'Nueva Pompeya', 'lugano': 'Villa Lugano',
+            'villa lugano': 'Villa Lugano'
         };
+
+        function normalizeName(name) {
+            if (!name) return "";
+            return name.normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").toLowerCase().trim();
+        }
 
         function init() {
             const todayCount = RAW_DATA.filter(p => (p.days_ago === 0 || p.is_new)).length;
@@ -1215,6 +1388,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
             render();
             renderAnalytics();
+            initArtisanMap();
         }
 
         function switchMainTab(tab) {
@@ -1224,29 +1398,17 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             document.getElementById('sectionOpportunities').style.display = tab === 'opportunities' ? 'block' : 'none';
             document.getElementById('sectionAnalytics').style.display = tab === 'analytics' ? 'block' : 'none';
 
-            if (tab === 'analytics') {
-                if (!chartsInitialized) {
-                    initCharts();
-                    chartsInitialized = true;
-                }
-                setTimeout(() => {
-                    if (!cabaMap) {
-                        initCabaMap();
-                    } else {
-                        cabaMap.invalidateSize();
-                    }
-                }, 150);
+            if (tab === 'analytics' && !chartsInitialized) {
+                initCharts();
+                chartsInitialized = true;
             }
         }
 
         function toggleFavorite(id, e) {
             if (e) e.stopPropagation();
             const idx = favorites.indexOf(id);
-            if (idx > -1) {
-                favorites.splice(idx, 1);
-            } else {
-                favorites.push(id);
-            }
+            if (idx > -1) favorites.splice(idx, 1);
+            else favorites.push(id);
             localStorage.setItem('zonaprop_favs', JSON.stringify(favorites));
             render();
         }
@@ -1254,11 +1416,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         function toggleContacted(id, e) {
             if (e) e.stopPropagation();
             const idx = contacted.indexOf(id);
-            if (idx > -1) {
-                contacted.splice(idx, 1);
-            } else {
-                contacted.push(id);
-            }
+            if (idx > -1) contacted.splice(idx, 1);
+            else contacted.push(id);
             localStorage.setItem('zonaprop_contacted', JSON.stringify(contacted));
             render();
         }
@@ -1465,6 +1624,286 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             }).join('');
         }
 
+        // ==================== ARTISANAL CABA PLANO LOGIC ====================
+        function initArtisanMap() {
+            if (!CABA_SVG_DATA) return;
+            const container = document.getElementById('cabaBarriosGroup');
+            if (!container) return;
+
+            // Asociar datos de mercado por barrio
+            const nList = MARKET_ANALYTICS.neighborhoods || [];
+            const dataByBarrio = {};
+
+            // Mapear barrios analizados
+            nList.forEach(item => {
+                const norm = normalizeName(item.name);
+                const officialName = SUBZONE_TO_BARRIO[norm] || item.name;
+                dataByBarrio[normalizeName(officialName)] = item;
+            });
+
+            // Normalización para colores
+            const benchmarks = nList.map(x => x.benchmark_usd_m2 || 1900);
+            const maxBench = Math.max(...benchmarks, 2800);
+            const minBench = Math.min(...benchmarks, 1100);
+
+            const viewsList = nList.map(x => x.avg_views || 950);
+            const maxViews = Math.max(...viewsList, 2200);
+            const minViews = Math.min(...viewsList, 500);
+
+            const sqms = nList.map(x => x.avg_usd_m2 || 1700);
+            const maxSqm = Math.max(...sqms, 2100);
+            const minSqm = Math.min(...sqms, 1200);
+
+            container.innerHTML = Object.entries(CABA_SVG_DATA).map(([bName, data]) => {
+                const norm = normalizeName(bName);
+                const mData = dataByBarrio[norm];
+                const count = mData ? mData.count : 0;
+                const score = mData ? mData.opportunity_density_score : 15;
+                const avgSqm = mData ? mData.avg_usd_m2 : 0;
+                const bench = mData ? mData.benchmark_usd_m2 : 1900;
+                const views = mData ? mData.avg_views : (bName === 'Palermo' ? 2400 : (bName === 'Caballito' ? 2100 : 900));
+
+                let normVal = 0.5;
+                if (currentMapMode === 'score') {
+                    normVal = count > 0 ? (score / 100) : 0.12;
+                } else if (currentMapMode === 'cheapest') {
+                    normVal = avgSqm > 0 ? 1 - ((avgSqm - minSqm) / Math.max(1, maxSqm - minSqm)) : 0.2;
+                } else if (currentMapMode === 'prime') {
+                    normVal = (bench - minBench) / Math.max(1, maxBench - minBench);
+                } else if (currentMapMode === 'views') {
+                    normVal = (views - minViews) / Math.max(1, maxViews - minViews);
+                }
+
+                const color = getPlanoColor(normVal, currentMapMode, count > 0);
+                const strokeColor = count > 0 ? color : 'rgba(56, 189, 248, 0.25)';
+                const strokeWidth = count > 0 ? '1.8' : '1.0';
+
+                const cx = data.center[0];
+                const cy = data.center[1];
+
+                const labelHtml = count > 0 ? `
+                    <text class="barrio-svg-label" x="${cx}" y="${cy - 3}" style="fill:#fff; font-weight:800; font-size:10px;">${bName}</text>
+                    <text class="barrio-svg-label" x="${cx}" y="${cy + 9}" style="fill:${color}; font-size:9px; font-weight:800;">${count} ${count === 1 ? 'aviso' : 'avisos'}</text>
+                ` : `
+                    <text class="barrio-svg-label" x="${cx}" y="${cy + 3}">${bName}</text>
+                `;
+
+                return `
+                <g class="barrio-polygon-group" data-barrio="${bName}" 
+                   onmousemove="showArtisanTooltip(event, '${bName}')" 
+                   onmouseleave="hideArtisanTooltip()" 
+                   onclick="filterByArtisanBarrio('${bName}')">
+                    <path class="barrio-poly" d="${data.path}" 
+                          fill="${color}" fill-opacity="${count > 0 ? '0.78' : '0.28'}" 
+                          stroke="${strokeColor}" stroke-width="${strokeWidth}" />
+                    ${labelHtml}
+                </g>
+                `;
+            }).join('');
+        }
+
+        function getPlanoColor(v, mode, hasDeals) {
+            const val = Math.max(0, Math.min(1, v));
+            if (!hasDeals && mode === 'score') return 'rgba(30, 41, 59, 0.4)';
+
+            if (mode === 'score') {
+                return val > 0.6 ? '#f97316' : (val > 0.3 ? '#10b981' : '#38bdf8');
+            } else if (mode === 'cheapest') {
+                return val > 0.6 ? '#10b981' : (val > 0.3 ? '#38bdf8' : '#818cf8');
+            } else if (mode === 'prime') {
+                return val > 0.6 ? '#eab308' : (val > 0.3 ? '#a855f7' : '#6366f1');
+            } else {
+                return val > 0.6 ? '#ef4444' : (val > 0.3 ? '#f97316' : '#eab308');
+            }
+        }
+
+        function setMapHeatMode(mode) {
+            currentMapMode = mode;
+            ['btnModeScore', 'btnModeCheapest', 'btnModePrime', 'btnModeViews'].forEach(id => {
+                document.getElementById(id).classList.remove('active');
+            });
+
+            const modeBtnMap = {
+                'score': 'btnModeScore',
+                'cheapest': 'btnModeCheapest',
+                'prime': 'btnModePrime',
+                'views': 'btnModeViews'
+            };
+            document.getElementById(modeBtnMap[mode]).classList.add('active');
+
+            const labels = {
+                'score': '🎯 Intensidad: Concentración de Oportunidades y Descuento en Cartera',
+                'cheapest': '🏷️ Intensidad: Zonas Más Económicas (Menor USD/m² de Oportunidad)',
+                'prime': '💰 Intensidad: Zonas Prime / Mayor Valor de Mercado (Benchmark Zonal)',
+                'views': '👁️ Intensidad: Barrios Más Vistos y Mayor Rotación Comercial'
+            };
+            document.getElementById('mapLegendLabel').innerText = labels[mode];
+            initArtisanMap();
+        }
+
+        function setMapPerspective(perspective) {
+            currentPerspective = perspective;
+            const viewport = document.getElementById('mapViewport');
+            const badge = document.getElementById('mapPerspectiveBadge');
+            document.getElementById('btnPersp2D').classList.toggle('active', perspective === '2d');
+            document.getElementById('btnPersp3D').classList.toggle('active', perspective === '3d');
+
+            if (perspective === '3d') {
+                viewport.classList.add('is-3d');
+                badge.innerText = 'Perspectiva 3D Isométrica';
+            } else {
+                viewport.classList.remove('is-3d');
+                badge.innerText = 'Plano 2D Arquitectónico';
+            }
+        }
+
+        function showArtisanTooltip(e, bName) {
+            const tooltip = document.getElementById('mapTooltip');
+            const viewport = document.getElementById('mapViewport').getBoundingClientRect();
+            
+            // Buscar datos del barrio
+            const nList = MARKET_ANALYTICS.neighborhoods || [];
+            let mData = nList.find(x => normalizeName(x.name) === normalizeName(bName));
+            if (!mData) {
+                // Chequear mapeo de subzona
+                mData = nList.find(x => {
+                    const mapped = SUBZONE_TO_BARRIO[normalizeName(x.name)];
+                    return mapped && normalizeName(mapped) === normalizeName(bName);
+                });
+            }
+
+            const count = mData ? mData.count : 0;
+            const avgSqm = mData && mData.avg_usd_m2 ? `USD ${mData.avg_usd_m2.toLocaleString('es-AR')}` : 'Sin avisos activos';
+            const bench = mData ? `USD ${mData.benchmark_usd_m2.toLocaleString('es-AR')}` : 'Consultar';
+            const disc = mData && mData.avg_discount_pct ? `+${mData.avg_discount_pct}%` : 'En línea';
+            const views = mData && mData.avg_views ? mData.avg_views.toLocaleString('es-AR') : (bName === 'Palermo' ? '2.400' : '950');
+            const demand = mData ? mData.demand_level : (parseInt(views.replace('.','')) >= 1600 ? '🔥 Muy Alta' : '🟢 Alta');
+            const exp = mData ? mData.avg_expenses_formatted : 'No informadas';
+
+            tooltip.innerHTML = `
+                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #334155; padding-bottom:6px; margin-bottom:8px;">
+                    <strong style="font-size:15px; color:#fff;">${bName}</strong>
+                    <span style="font-size:11px; background:#38bdf8; color:#0f172a; font-weight:800; padding:2px 7px; border-radius:4px;">
+                        ${count} ${count === 1 ? 'aviso' : 'avisos'}
+                    </span>
+                </div>
+                <div style="font-size:12px; line-height:1.6; color:#94a3b8;">
+                    <div>📐 USD/m² Cartera: <strong style="color:#10b981;">${avgSqm}</strong></div>
+                    <div>🏛️ Benchmark Zonal: <span style="color:#f8fafc;">${bench}/m²</span></div>
+                    <div>🏷️ Descuento Medio: <strong style="color:#10b981;">${disc}</strong></div>
+                    <div>💵 Expensas Promedio: <span style="color:#f8fafc;">${exp}</span></div>
+                    <div>👁️ Vistas Promedio: <strong style="color:#38bdf8;">${views}</strong></div>
+                    <div>🔥 Demanda Comercial: <strong style="color:#f8fafc;">${demand}</strong></div>
+                </div>
+                <div style="margin-top:10px; font-size:11px; color:#38bdf8; text-align:right; font-weight:700;">
+                    👉 Clic para ver avisos en Tab Oportunidades
+                </div>
+            `;
+
+            tooltip.style.display = 'block';
+            let left = e.clientX - viewport.left + 15;
+            let top = e.clientY - viewport.top + 15;
+
+            // Prevenir desborde en el viewport
+            if (left + 230 > viewport.width) left = left - 250;
+            if (top + 200 > viewport.height) top = top - 180;
+
+            tooltip.style.left = `${left}px`;
+            tooltip.style.top = `${top}px`;
+        }
+
+        function hideArtisanTooltip() {
+            const tooltip = document.getElementById('mapTooltip');
+            if (tooltip) tooltip.style.display = 'none';
+        }
+
+        function filterByArtisanBarrio(bName) {
+            switchMainTab('opportunities');
+            const select = document.getElementById('filterBarrio');
+            select.value = bName;
+            if (select.value !== bName) {
+                // Si el select no lo tiene con ese nombre exacto, filtrar por búsqueda de texto
+                document.getElementById('filterSearch').value = bName;
+            }
+            render();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ==================== SORTABLE RANKING TABLE ====================
+        function sortRankingTable(col) {
+            if (rankingSortCol === col) {
+                rankingSortAsc = !rankingSortAsc;
+            } else {
+                rankingSortCol = col;
+                // Para nombres de barrio, comenzar ascendente (A-Z). Para números, descendente (mayor a menor).
+                rankingSortAsc = col === 'name' ? true : false;
+            }
+
+            // Actualizar clases de th y flechas
+            document.querySelectorAll('.sortable-th').forEach(th => th.classList.remove('active-sort'));
+            document.querySelectorAll('.sort-icon').forEach(icon => icon.innerText = '⇅');
+
+            const activeIcon = document.getElementById(`sortIcon_${col}`);
+            if (activeIcon) {
+                activeIcon.parentElement.classList.add('active-sort');
+                activeIcon.innerText = rankingSortAsc ? '▲' : '▼';
+            }
+
+            renderRankingTable();
+        }
+
+        function renderRankingTable() {
+            if (!MARKET_ANALYTICS || !MARKET_ANALYTICS.neighborhoods) return;
+            const neighborhoods = [...MARKET_ANALYTICS.neighborhoods];
+
+            neighborhoods.sort((a, b) => {
+                let valA = a[rankingSortCol];
+                let valB = b[rankingSortCol];
+
+                if (typeof valA === 'string') {
+                    valA = valA.toLowerCase();
+                    valB = valB.toLowerCase();
+                    return rankingSortAsc ? valA.localeCompare(valB) : valB.localeCompare(valA);
+                } else {
+                    valA = valA || 0;
+                    valB = valB || 0;
+                    return rankingSortAsc ? valA - valB : valB - valA;
+                }
+            });
+
+            const heatmapTbody = document.getElementById('heatmapTableBody');
+            heatmapTbody.innerHTML = neighborhoods.map(b => {
+                const scoreColor = (b.liquidity_score || b.opportunity_density_score) > 70 ? 'var(--accent-flame)' : ((b.liquidity_score || b.opportunity_density_score) > 40 ? 'var(--accent-green)' : 'var(--accent-primary)');
+                return `
+                <tr>
+                    <td><strong>${b.name}</strong></td>
+                    <td><span class="badge badge-date">${b.count} avisos</span></td>
+                    <td style="color:var(--accent-green); font-weight:700;">USD ${b.avg_usd_m2?.toLocaleString('es-AR')}</td>
+                    <td style="color:var(--text-muted);">USD ${b.benchmark_usd_m2?.toLocaleString('es-AR')}</td>
+                    <td style="font-weight:700; color:${b.avg_discount_pct > 0 ? 'var(--accent-green)' : 'var(--text-muted)'};">
+                        ${b.avg_discount_pct > 0 ? '+' : ''}${b.avg_discount_pct}%
+                    </td>
+                    <td>
+                        <strong style="color:var(--accent-primary);">👁️ ${b.avg_views_formatted}</strong><br>
+                        <small style="color:var(--text-muted); font-size:11px;">${b.demand_level}</small>
+                    </td>
+                    <td>USD ${b.min_price?.toLocaleString('es-AR')}</td>
+                    <td>${b.avg_expenses_formatted}</td>
+                    <td><strong>${b.super_deals_count}</strong></td>
+                    <td style="min-width:140px;">
+                        <div style="display:flex; justify-content:space-between; font-size:11px; margin-bottom:2px;">
+                            <span>Liquidez</span>
+                            <span style="font-weight:700; color:${scoreColor}">${b.liquidity_score || b.opportunity_density_score}/100</span>
+                        </div>
+                        <div class="heatmap-bar-container">
+                            <div class="heatmap-bar" style="width:${b.liquidity_score || b.opportunity_density_score}%; background:${scoreColor};"></div>
+                        </div>
+                    </td>
+                </tr>
+                `;
+            }).join('');
+        }
+
         function renderAnalytics() {
             if (!MARKET_ANALYTICS) return;
             const macro = MARKET_ANALYTICS.macro || {};
@@ -1488,7 +1927,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 </div>
             `).join('');
 
-            // Render Typology Cards (con Vistas y Velocidad de Venta)
+            // Render Typology Cards
             const typContainer = document.getElementById('typologyGrid');
             const typologies = MARKET_ANALYTICS.typologies || {};
             typContainer.innerHTML = Object.values(typologies).map(t => `
@@ -1528,210 +1967,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 </div>
             `).join('');
 
-            // Render Heatmap Table (con Vistas y Expensas)
-            const heatmapTbody = document.getElementById('heatmapTableBody');
-            const neighborhoods = MARKET_ANALYTICS.neighborhoods || [];
-            heatmapTbody.innerHTML = neighborhoods.map(b => {
-                const scoreColor = b.opportunity_density_score > 70 ? 'var(--accent-flame)' : (b.opportunity_density_score > 40 ? 'var(--accent-green)' : 'var(--accent-primary)');
-                return `
-                <tr>
-                    <td><strong>${b.name}</strong></td>
-                    <td><span class="badge badge-date">${b.count} avisos</span></td>
-                    <td style="color:var(--accent-green); font-weight:700;">USD ${b.avg_usd_m2?.toLocaleString('es-AR')}</td>
-                    <td style="color:var(--text-muted);">USD ${b.benchmark_usd_m2?.toLocaleString('es-AR')}</td>
-                    <td style="font-weight:700; color:${b.avg_discount_pct > 0 ? 'var(--accent-green)' : 'var(--text-muted)'};">
-                        ${b.avg_discount_pct > 0 ? '+' : ''}${b.avg_discount_pct}%
-                    </td>
-                    <td>
-                        <strong style="color:var(--accent-primary);">👁️ ${b.avg_views_formatted}</strong><br>
-                        <small style="color:var(--text-muted); font-size:11px;">${b.demand_level}</small>
-                    </td>
-                    <td>USD ${b.min_price?.toLocaleString('es-AR')}</td>
-                    <td>${b.avg_expenses_formatted}</td>
-                    <td><strong>${b.super_deals_count}</strong></td>
-                    <td style="min-width:140px;">
-                        <div style="display:flex; justify-content:space-between; font-size:11px; margin-bottom:2px;">
-                            <span>Liquidez</span>
-                            <span style="font-weight:700; color:${scoreColor}">${b.liquidity_score || b.opportunity_density_score}/100</span>
-                        </div>
-                        <div class="heatmap-bar-container">
-                            <div class="heatmap-bar" style="width:${b.liquidity_score || b.opportunity_density_score}%; background:${scoreColor};"></div>
-                        </div>
-                    </td>
-                </tr>
-                `;
-            }).join('');
-        }
-
-        // ==================== CABA LEAFLET HEATMAP ====================
-        function initCabaMap() {
-            const mapContainer = document.getElementById('cabaMap');
-            if (!mapContainer || cabaMap) return;
-
-            // Centro geométrico de Capital Federal
-            cabaMap = L.map('cabaMap', {
-                center: [-34.615, -58.435],
-                zoom: 12,
-                minZoom: 11,
-                maxZoom: 15,
-                attributionControl: false
-            });
-
-            // CartoDB Dark Matter Tiles
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-                maxZoom: 19,
-                subdomains: 'abcd'
-            }).addTo(cabaMap);
-
-            mapMarkersLayer = L.layerGroup().addTo(cabaMap);
-            renderMapLayer();
-        }
-
-        function setMapHeatMode(mode) {
-            currentMapMode = mode;
-            ['btnModeScore', 'btnModeCheapest', 'btnModePrime', 'btnModeViews'].forEach(id => {
-                document.getElementById(id).classList.remove('active');
-            });
-
-            const modeBtnMap = {
-                'score': 'btnModeScore',
-                'cheapest': 'btnModeCheapest',
-                'prime': 'btnModePrime',
-                'views': 'btnModeViews'
-            };
-            document.getElementById(modeBtnMap[mode]).classList.add('active');
-
-            const labels = {
-                'score': '🎯 Intensidad: Score de Oportunidad y Descuento en Cartera',
-                'cheapest': '🏷️ Intensidad: Zonas Más Económicas (Menor USD/m² Oportunidad)',
-                'prime': '💰 Intensidad: Zonas Prime / Mayor Valor de Mercado (Benchmark USD/m²)',
-                'views': '👁️ Intensidad: Barrios Más Vistos y Mayor Rotación Comercial'
-            };
-            document.getElementById('mapLegendLabel').innerText = labels[mode];
-
-            renderMapLayer();
-        }
-
-        function getHeatColor(normVal, mode) {
-            // normVal de 0.0 (mínimo) a 1.0 (máximo)
-            const v = Math.max(0, Math.min(1, normVal));
-            if (mode === 'score') {
-                // Azul suave a Verde a Naranja brillante
-                return v > 0.6 ? '#f97316' : (v > 0.3 ? '#10b981' : '#38bdf8');
-            } else if (mode === 'cheapest') {
-                // Invertido: más barato es más verde/cian
-                return v > 0.6 ? '#10b981' : (v > 0.3 ? '#38bdf8' : '#818cf8');
-            } else if (mode === 'prime') {
-                // Dorado y violeta para zonas premium
-                return v > 0.6 ? '#eab308' : (v > 0.3 ? '#a855f7' : '#6366f1');
-            } else {
-                // Vistas: rojo fuego a naranja a amarillo
-                return v > 0.6 ? '#ef4444' : (v > 0.3 ? '#f97316' : '#eab308');
-            }
-        }
-
-        function renderMapLayer() {
-            if (!mapMarkersLayer || !MARKET_ANALYTICS) return;
-            mapMarkersLayer.clearLayers();
-
-            const nList = MARKET_ANALYTICS.neighborhoods || [];
-            const nMap = {};
-            nList.forEach(item => { nMap[item.name.toLowerCase()] = item; });
-
-            // Calcular rangos min/max para normalizar
-            const benchmarks = Object.values(nList).map(x => x.benchmark_usd_m2 || 1900);
-            const maxBench = Math.max(...benchmarks, 3000);
-            const minBench = Math.min(...benchmarks, 1000);
-
-            const viewsList = Object.values(nList).map(x => x.avg_views || 950);
-            const maxViews = Math.max(...viewsList, 2200);
-            const minViews = Math.min(...viewsList, 500);
-
-            const sqms = Object.values(nList).map(x => x.avg_usd_m2 || 1700);
-            const maxSqm = Math.max(...sqms, 2100);
-            const minSqm = Math.min(...sqms, 1200);
-
-            // Iterar barrios de CABA
-            Object.entries(BARRIO_GEO).forEach(([bName, coords]) => {
-                const data = nMap[bName.toLowerCase()];
-                const count = data ? data.count : 0;
-                const avgSqm = data ? data.avg_usd_m2 : 0;
-                const bench = data ? data.benchmark_usd_m2 : 1900;
-                const disc = data ? data.avg_discount_pct : 0;
-                const views = data ? data.avg_views : (bName === 'Palermo' ? 2400 : (bName === 'Caballito' ? 2100 : 1000));
-                const demand = data ? data.demand_level : (views >= 1600 ? '🔥 Muy Alta' : '🟢 Alta');
-                const expenses = data ? data.avg_expenses_formatted : 'No informadas';
-                const score = data ? data.opportunity_density_score : 20;
-
-                // Determinar valor de normalización según modo
-                let norm = 0.5;
-                let radius = 800;
-
-                if (currentMapMode === 'score') {
-                    norm = count > 0 ? (score / 100) : 0.15;
-                    radius = count > 0 ? 850 + Math.min(count * 60, 450) : 650;
-                } else if (currentMapMode === 'cheapest') {
-                    norm = avgSqm > 0 ? 1 - ((avgSqm - minSqm) / Math.max(1, maxSqm - minSqm)) : 0.2;
-                    radius = 850;
-                } else if (currentMapMode === 'prime') {
-                    norm = (bench - minBench) / Math.max(1, maxBench - minBench);
-                    radius = 900;
-                } else if (currentMapMode === 'views') {
-                    norm = (views - minViews) / Math.max(1, maxViews - minViews);
-                    radius = 800 + Math.round(norm * 400);
-                }
-
-                const color = getHeatColor(norm, currentMapMode);
-
-                const circle = L.circle(coords, {
-                    color: color,
-                    fillColor: color,
-                    fillOpacity: count > 0 ? 0.60 : 0.30,
-                    weight: count > 0 ? 2 : 1,
-                    radius: radius
-                });
-
-                // Tooltip enriquecido
-                const tooltipHtml = `
-                <div style="font-family:'Plus Jakarta Sans',sans-serif; min-width:180px; padding:4px;">
-                    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #334155; padding-bottom:4px; margin-bottom:6px;">
-                        <strong style="font-size:14px; color:#fff;">${bName}</strong>
-                        <span style="font-size:11px; background:${color}; color:#0f172a; font-weight:800; padding:2px 6px; border-radius:4px;">
-                            ${count} avisos
-                        </span>
-                    </div>
-                    <div style="font-size:12px; line-height:1.6; color:#94a3b8;">
-                        <div>📐 USD/m² Cartera: <strong style="color:#10b981;">${avgSqm > 0 ? 'USD ' + avgSqm.toLocaleString('es-AR') : 'Sin oferta activa'}</strong></div>
-                        <div>🏛️ Benchmark Zonal: <span style="color:#f8fafc;">USD ${bench.toLocaleString('es-AR')}/m²</span></div>
-                        ${disc > 0 ? `<div>🏷️ Descuento Medio: <strong style="color:#10b981;">+${disc}%</strong></div>` : ''}
-                        <div>💵 Expensas Promedio: <span style="color:#f8fafc;">${expenses}</span></div>
-                        <div>👁️ Vistas Promedio: <strong style="color:#38bdf8;">${views.toLocaleString('es-AR')}</strong></div>
-                        <div>🔥 Demanda Comercial: <strong style="color:#f8fafc;">${demand}</strong></div>
-                    </div>
-                    <div style="margin-top:8px; font-size:11px; color:#38bdf8; text-align:right; font-weight:600;">
-                        👉 Clic para ver avisos del barrio
-                    </div>
-                </div>
-                `;
-
-                circle.bindPopup(tooltipHtml);
-                circle.on('mouseover', function() { this.openPopup(); this.setStyle({ fillOpacity: 0.85, weight: 3 }); });
-                circle.on('mouseout', function() { this.setStyle({ fillOpacity: count > 0 ? 0.60 : 0.30, weight: count > 0 ? 2 : 1 }); });
-
-                // Al hacer clic, filtra las propiedades en Tab 1
-                circle.on('click', function() {
-                    switchMainTab('opportunities');
-                    const select = document.getElementById('filterBarrio');
-                    select.value = bName;
-                    if (select.value !== bName) {
-                        // Si no estaba en el select, buscar por texto
-                        document.getElementById('filterSearch').value = bName;
-                    }
-                    render();
-                });
-
-                mapMarkersLayer.addLayer(circle);
-            });
+            renderRankingTable();
         }
 
         function initCharts() {
@@ -1856,11 +2092,20 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
 def generate_html_report(properties: List[Dict[str, Any]], market_analytics: Dict[str, Any], output_path: str) -> str:
     """
-    Genera el archivo HTML inyectando la cartera de propiedades evaluadas y los analytics de mercado.
+    Genera el archivo HTML inyectando la cartera de propiedades evaluadas, los analytics de mercado
+    y el plano vectorial artesanal de los 48 barrios de CABA.
     Retorna la ruta absoluta del archivo generado.
     """
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    svg_json_path = os.path.join(base_dir, "barrios_svg.json")
+    if os.path.exists(svg_json_path):
+        with open(svg_json_path, "r", encoding="utf-8") as f:
+            caba_svg_data = f.read()
+    else:
+        caba_svg_data = "{}"
+
     json_properties = json.dumps(properties, ensure_ascii=False)
     json_analytics = json.dumps(market_analytics, ensure_ascii=False)
     timestamp = datetime.now().isoformat()
@@ -1869,6 +2114,7 @@ def generate_html_report(properties: List[Dict[str, Any]], market_analytics: Dic
         HTML_TEMPLATE
         .replace("__DATA_PLACEHOLDER__", json_properties)
         .replace("__ANALYTICS_PLACEHOLDER__", json_analytics)
+        .replace("__CABA_SVG_PLACEHOLDER__", caba_svg_data)
         .replace("__TIMESTAMP_PLACEHOLDER__", timestamp)
     )
 
