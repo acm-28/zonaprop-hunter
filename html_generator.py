@@ -1,8 +1,7 @@
 """
 Generador de Dashboard HTML interactivo para Oportunidades Inmobiliarias y Market Intelligence en CABA.
-Incluye Plano 2D Arquitectónico Artesanal con Zoom/Pan (arrastrar y zoom con rueda/botones),
-ordenamiento interactivo en todas las columnas del ranking de barrios (responsive optimizado),
-métricas de vistas/demanda comercial, favoritos y tracking de contacto.
+Incluye Plano 2D Arquitectónico Artesanal con límites de desplazamiento, centrado interactivo en barrios al clic,
+resolución de tooltips, ordenamiento responsive con títulos compactos de dos líneas, favoritos y tracking de contacto.
 """
 
 import json
@@ -627,7 +626,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         .table-view table {
             width: 100%;
-            min-width: 1060px;
+            min-width: 940px;
             border-collapse: collapse;
             font-size: 13px;
             text-align: left;
@@ -635,10 +634,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         th {
             background: #0f172a;
-            padding: 13px 14px;
+            padding: 10px 12px;
             color: var(--text-secondary);
             font-weight: 700;
             border-bottom: 1px solid var(--border-color);
+            line-height: 1.3;
+            vertical-align: bottom;
             white-space: nowrap;
             position: sticky;
             top: 0;
@@ -658,7 +659,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         th.sortable-th .sort-icon {
             display: inline-block;
-            margin-left: 5px;
+            margin-left: 4px;
             font-size: 11px;
             color: var(--text-muted);
             transition: transform 0.2s, color 0.2s;
@@ -675,7 +676,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         }
 
         td {
-            padding: 12px 14px;
+            padding: 11px 12px;
             border-bottom: 1px solid var(--border-color);
             color: var(--text-primary);
             vertical-align: middle;
@@ -749,7 +750,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         /* BARRIO PATHS & HOVER EFFECTS */
         .barrio-polygon-group {
             cursor: pointer;
-            transition: transform 0.2s ease;
         }
 
         .barrio-poly {
@@ -1297,7 +1297,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                             <span class="brand-badge">Plano Interactivo 2D</span>
                         </h2>
                         <p style="font-size: 13px; color: var(--text-secondary); margin-top: 3px;">
-                            Usa la rueda o los botones para hacer zoom y arrastra para recorrer la Ciudad. Haz clic en un barrio para ver sus avisos.
+                            Usa la rueda o los botones para hacer zoom y arrastra para recorrer la Ciudad. Haz clic en un barrio para centrar el plano en él.
                         </p>
                     </div>
 
@@ -1313,7 +1313,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 <!-- MAP CANVAS VIEWPORT (WITH DRAG / PAN & ZOOM) -->
                 <div class="map-stage-viewport" id="mapViewport">
                     <div class="map-instruction-pill">
-                        <span>🖐️ Arrastra para mover &bull; 🔍 Rueda o botones para Zoom</span>
+                        <span>🖐️ Arrastra para mover &bull; 🔍 Rueda o botones para Zoom &bull; 🎯 Clic para centrar</span>
                     </div>
 
                     <div class="rio-label">RÍO DE LA PLATA 🌊</div>
@@ -1407,16 +1407,16 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 <table>
                     <thead>
                         <tr>
-                            <th class="sortable-th" onclick="sortRankingTable('name')" style="min-width: 150px;">Barrio <span class="sort-icon" id="sortIcon_name">⇅</span></th>
-                            <th class="sortable-th active-sort" onclick="sortRankingTable('count')" style="min-width: 90px; text-align: center;">Avisos <span class="sort-icon" id="sortIcon_count">▼</span></th>
-                            <th class="sortable-th" onclick="sortRankingTable('avg_usd_m2')" style="min-width: 125px;">USD / m² Promedio <span class="sort-icon" id="sortIcon_avg_usd_m2">⇅</span></th>
-                            <th class="sortable-th" onclick="sortRankingTable('benchmark_usd_m2')" style="min-width: 125px;">Benchmark Barrio <span class="sort-icon" id="sortIcon_benchmark_usd_m2">⇅</span></th>
-                            <th class="sortable-th" onclick="sortRankingTable('avg_discount_pct')" style="min-width: 110px;">Descuento Medio <span class="sort-icon" id="sortIcon_avg_discount_pct">⇅</span></th>
-                            <th class="sortable-th" onclick="sortRankingTable('avg_views')" style="min-width: 150px;">Vistas Promedio / Demanda <span class="sort-icon" id="sortIcon_avg_views">⇅</span></th>
-                            <th class="sortable-th" onclick="sortRankingTable('min_price')" style="min-width: 110px;">Ticket Mínimo <span class="sort-icon" id="sortIcon_min_price">⇅</span></th>
-                            <th class="sortable-th" onclick="sortRankingTable('avg_expenses')" style="min-width: 120px;">Expensas Prom. <span class="sort-icon" id="sortIcon_avg_expenses">⇅</span></th>
-                            <th class="sortable-th" onclick="sortRankingTable('super_deals_count')" style="min-width: 110px; text-align: center;">Super Oportunidades <span class="sort-icon" id="sortIcon_super_deals_count">⇅</span></th>
-                            <th class="sortable-th" onclick="sortRankingTable('liquidity_score')" style="min-width: 140px;">Liquidez / Reventa <span class="sort-icon" id="sortIcon_liquidity_score">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('name')" style="min-width: 120px;">Barrio <span class="sort-icon" id="sortIcon_name">⇅</span></th>
+                            <th class="sortable-th active-sort" onclick="sortRankingTable('count')" style="min-width: 75px; text-align: center;">Avisos <span class="sort-icon" id="sortIcon_count">▼</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('avg_usd_m2')" style="min-width: 95px;">USD / m²<br>Promedio <span class="sort-icon" id="sortIcon_avg_usd_m2">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('benchmark_usd_m2')" style="min-width: 95px;">Benchmark<br>Barrio <span class="sort-icon" id="sortIcon_benchmark_usd_m2">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('avg_discount_pct')" style="min-width: 85px;">Descuento<br>Medio <span class="sort-icon" id="sortIcon_avg_discount_pct">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('avg_views')" style="min-width: 115px;">Vistas Prom. /<br>Demanda <span class="sort-icon" id="sortIcon_avg_views">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('min_price')" style="min-width: 85px;">Ticket<br>Mínimo <span class="sort-icon" id="sortIcon_min_price">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('avg_expenses')" style="min-width: 85px;">Expensas<br>Prom. <span class="sort-icon" id="sortIcon_avg_expenses">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('super_deals_count')" style="min-width: 85px; text-align: center;">Super<br>Oportunidades <span class="sort-icon" id="sortIcon_super_deals_count">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('liquidity_score')" style="min-width: 110px;">Liquidez /<br>Reventa <span class="sort-icon" id="sortIcon_liquidity_score">⇅</span></th>
                         </tr>
                     </thead>
                     <tbody id="heatmapTableBody"></tbody>
@@ -1812,7 +1812,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 <g class="barrio-polygon-group" data-barrio="${bName}" 
                    onmousemove="showArtisanTooltip(event, '${bName}')" 
                    onmouseleave="hideArtisanTooltip()" 
-                   onclick="filterByArtisanBarrio('${bName}')">
+                   onclick="centerOnBarrio('${bName}')">
                     <path class="barrio-poly" d="${data.path}" 
                           fill="${color}" fill-opacity="${count > 0 ? '0.78' : '0.28'}" 
                           stroke="${strokeColor}" stroke-width="${strokeWidth}" />
@@ -1861,7 +1861,17 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             initArtisanMap();
         }
 
-        // ==================== PAN & ZOOM ENGINE (ARRASTRAR Y ZOOM) ====================
+        // ==================== PAN & ZOOM ENGINE (ARRASTRAR Y ZOOM CON LÍMITES) ====================
+        function clampMapBounds() {
+            // El mapa SVG tiene dimensiones 920 x 820.
+            // Limitar el desplazamiento para que CABA nunca desaparezca de la pantalla
+            const maxBoundX = 400 * mapZoom + 150;
+            const maxBoundY = 360 * mapZoom + 120;
+            
+            mapPanX = Math.max(-maxBoundX, Math.min(maxBoundX, mapPanX));
+            mapPanY = Math.max(-maxBoundY, Math.min(maxBoundY, mapPanY));
+        }
+
         function setupMapPanAndZoom() {
             const viewport = document.getElementById('mapViewport');
             if (!viewport) return;
@@ -1894,6 +1904,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 }
                 mapPanX = newX;
                 mapPanY = newY;
+                clampMapBounds();
                 applyMapTransform();
             });
 
@@ -1902,7 +1913,15 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 if (isPanning) {
                     isPanning = false;
                     viewport.classList.remove('is-dragging');
+                    setTimeout(() => { didPanMove = false; }, 80);
                 }
+            });
+
+            // Si el mouse sale de la ventana o pierde foco, resetear estado para que los tooltips nunca fallen
+            window.addEventListener('blur', function() {
+                isPanning = false;
+                didPanMove = false;
+                viewport.classList.remove('is-dragging');
             });
 
             // Soporte Táctil (Móvil / Tablet)
@@ -1933,6 +1952,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     }
                     mapPanX = newX;
                     mapPanY = newY;
+                    clampMapBounds();
                     applyMapTransform();
                 } else if (e.touches.length === 2) {
                     const dist = Math.hypot(
@@ -1950,12 +1970,13 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             viewport.addEventListener('touchend', function() {
                 isPanning = false;
                 initialTouchDist = 0;
+                setTimeout(() => { didPanMove = false; }, 80);
             });
         }
 
         function zoomMap(factor, event) {
             const prevZoom = mapZoom;
-            mapZoom = Math.max(0.75, Math.min(4.5, mapZoom * factor));
+            mapZoom = Math.max(0.85, Math.min(4.5, mapZoom * factor));
 
             if (event && event.clientX) {
                 const viewportRect = document.getElementById('mapViewport').getBoundingClientRect();
@@ -1972,6 +1993,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 mapPanY = centerY - (centerY - mapPanY) * (mapZoom / prevZoom);
             }
 
+            clampMapBounds();
             applyMapTransform();
         }
 
@@ -1979,7 +2001,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             mapZoom = 1.0;
             mapPanX = 0;
             mapPanY = 0;
-            applyMapTransform();
+            const zoomGroup = document.getElementById('cabaZoomGroup');
+            if (zoomGroup) {
+                zoomGroup.style.transition = 'transform 0.4s ease';
+                applyMapTransform();
+                setTimeout(() => { zoomGroup.style.transition = 'none'; }, 420);
+            } else {
+                applyMapTransform();
+            }
         }
 
         function applyMapTransform() {
@@ -1994,7 +2023,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         }
 
         function showArtisanTooltip(e, bName) {
-            if (isPanning || didPanMove) return;
+            if (isPanning) return; // Solo silenciar tooltip mientras se arrastra activamente
             const tooltip = document.getElementById('mapTooltip');
             const viewport = document.getElementById('mapViewport').getBoundingClientRect();
             
@@ -2032,7 +2061,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     <div>🔥 Demanda Comercial: <strong style="color:#f8fafc;">${demand}</strong></div>
                 </div>
                 <div style="margin-top:10px; font-size:11px; color:#38bdf8; text-align:right; font-weight:700;">
-                    👉 Clic para ver avisos en Tab Oportunidades
+                    🎯 Clic para centrar el plano en ${bName}
                 </div>
             `;
 
@@ -2053,16 +2082,45 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             if (tooltip) tooltip.style.display = 'none';
         }
 
-        function filterByArtisanBarrio(bName) {
-            if (didPanMove) return; // Evitar disparar filtro si el usuario estaba arrastrando el plano
-            switchMainTab('opportunities');
-            const select = document.getElementById('filterBarrio');
-            select.value = bName;
-            if (select.value !== bName) {
-                document.getElementById('filterSearch').value = bName;
+        // Centrar el plano en el barrio al hacer clic (sin irse de pestaña)
+        function centerOnBarrio(bName) {
+            if (didPanMove) return; // Si estaba arrastrando, no centrar
+            const data = CABA_SVG_DATA[bName];
+            if (!data || !data.center) return;
+
+            // Asegurar un nivel de zoom adecuado para apreciar el barrio
+            if (mapZoom < 1.45) {
+                mapZoom = 1.45;
             }
-            render();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            const cx = data.center[0];
+            const cy = data.center[1];
+
+            // Centrar punto (cx, cy) exactamente en el medio de la vista SVG (460, 410)
+            mapPanX = 460 - (cx * mapZoom);
+            mapPanY = 410 - (cy * mapZoom);
+
+            clampMapBounds();
+
+            const zoomGroup = document.getElementById('cabaZoomGroup');
+            if (zoomGroup) {
+                zoomGroup.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+                applyMapTransform();
+                setTimeout(() => {
+                    zoomGroup.style.transition = 'none';
+                }, 520);
+            } else {
+                applyMapTransform();
+            }
+
+            // Mostrar la ficha informativa del barrio en el centro
+            const viewport = document.getElementById('mapViewport');
+            const rect = viewport.getBoundingClientRect();
+            const fakeEvent = {
+                clientX: rect.left + rect.width / 2,
+                clientY: rect.top + rect.height / 2 - 40
+            };
+            showArtisanTooltip(fakeEvent, bName);
         }
 
         // ==================== SORTABLE RANKING TABLE ====================
@@ -2071,6 +2129,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 rankingSortAsc = !rankingSortAsc;
             } else {
                 rankingSortCol = col;
+                // Para nombres de barrio, comenzar ascendente (A-Z). Para números, descendente (mayor a menor).
                 rankingSortAsc = col === 'name' ? true : false;
             }
 
@@ -2125,7 +2184,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     <td>USD ${b.min_price?.toLocaleString('es-AR')}</td>
                     <td>${b.avg_expenses_formatted}</td>
                     <td style="text-align: center;"><strong>${b.super_deals_count}</strong></td>
-                    <td style="min-width:140px;">
+                    <td style="min-width:130px;">
                         <div style="display:flex; justify-content:space-between; font-size:11px; margin-bottom:2px;">
                             <span>Liquidez</span>
                             <span style="font-weight:700; color:${scoreColor}">${b.liquidity_score || b.opportunity_density_score}/100</span>
