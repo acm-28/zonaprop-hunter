@@ -1,7 +1,8 @@
 """
 Generador de Dashboard HTML interactivo para Oportunidades Inmobiliarias y Market Intelligence en CABA.
-Incluye Plano Artesanal 2D/3D Isométrico de CABA con capas conmutables, ordenamiento interactivo
-en todas las columnas del ranking de barrios, métricas de vistas/demanda comercial, favoritos y tracking de contacto.
+Incluye Plano 2D Arquitectónico Artesanal con Zoom/Pan (arrastrar y zoom con rueda/botones),
+ordenamiento interactivo en todas las columnas del ranking de barrios (responsive optimizado),
+métricas de vistas/demanda comercial, favoritos y tracking de contacto.
 """
 
 import json
@@ -610,18 +611,23 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             border-color: #eab308;
         }
 
-        /* TABLE VIEW & SORTABLE HEADERS */
+        /* ==================== RESPONSIVE TABLE VIEW ==================== */
         .table-view {
             display: none;
             background: var(--bg-secondary);
             border: 1px solid var(--border-color);
             border-radius: var(--radius-lg);
             overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
             box-shadow: var(--shadow);
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 24px;
         }
 
-        table {
+        .table-view table {
             width: 100%;
+            min-width: 1060px;
             border-collapse: collapse;
             font-size: 13px;
             text-align: left;
@@ -629,11 +635,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         th {
             background: #0f172a;
-            padding: 14px 16px;
+            padding: 13px 14px;
             color: var(--text-secondary);
             font-weight: 700;
             border-bottom: 1px solid var(--border-color);
             white-space: nowrap;
+            position: sticky;
+            top: 0;
+            z-index: 5;
         }
 
         th.sortable-th {
@@ -649,7 +658,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         th.sortable-th .sort-icon {
             display: inline-block;
-            margin-left: 6px;
+            margin-left: 5px;
             font-size: 11px;
             color: var(--text-muted);
             transition: transform 0.2s, color 0.2s;
@@ -666,10 +675,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         }
 
         td {
-            padding: 12px 16px;
+            padding: 12px 14px;
             border-bottom: 1px solid var(--border-color);
             color: var(--text-primary);
             vertical-align: middle;
+            white-space: nowrap;
         }
 
         tr:hover td {
@@ -687,7 +697,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             border-radius: 6px;
         }
 
-        /* ==================== ARTISANAL CABA PLANO (2D / 3D ISOMETRIC) ==================== */
+        /* ==================== ARTISANAL CABA 2D PLANO (WITH PAN & ZOOM) ==================== */
         .artisan-map-wrapper {
             background: linear-gradient(180deg, #090e1a 0%, #111a2e 100%);
             border: 1px solid var(--border-color);
@@ -705,7 +715,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             justify-content: space-between;
             align-items: center;
             gap: 14px;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
             z-index: 10;
             position: relative;
         }
@@ -714,37 +724,36 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             width: 100%;
             height: 600px;
             position: relative;
-            perspective: 1300px;
             overflow: hidden;
             border-radius: 12px;
-            background: radial-gradient(circle at 60% 30%, rgba(30, 41, 59, 0.4) 0%, rgba(11, 17, 32, 0.95) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.07);
+            background: radial-gradient(circle at 60% 30%, rgba(30, 41, 59, 0.35) 0%, rgba(11, 17, 32, 0.95) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             display: flex;
             align-items: center;
             justify-content: center;
+            cursor: grab;
+            user-select: none;
+            touch-action: none;
+        }
+
+        .map-stage-viewport.is-dragging {
+            cursor: grabbing;
         }
 
         .caba-svg-canvas {
             width: 100%;
             height: 100%;
-            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
-            transform-origin: center center;
             overflow: visible;
-        }
-
-        .map-stage-viewport.is-3d .caba-svg-canvas {
-            transform: rotateX(32deg) rotateZ(-12deg) translateY(-25px) scale(0.92);
-            filter: drop-shadow(-30px 40px 50px rgba(0, 0, 0, 0.85));
         }
 
         /* BARRIO PATHS & HOVER EFFECTS */
         .barrio-polygon-group {
             cursor: pointer;
-            transition: transform 0.25s ease;
+            transition: transform 0.2s ease;
         }
 
         .barrio-poly {
-            transition: fill 0.3s ease, stroke 0.2s ease, stroke-width 0.2s ease, filter 0.2s ease;
+            transition: fill 0.25s ease, stroke 0.2s ease, stroke-width 0.2s ease, filter 0.2s ease;
             stroke-linejoin: round;
         }
 
@@ -770,8 +779,66 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             font-weight: 800;
         }
 
-        .barrio-badge-dot {
+        /* ZOOM CONTROLS WIDGET */
+        .map-zoom-controls {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(15, 23, 42, 0.90);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            padding: 6px 12px;
+            border-radius: 10px;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .zoom-btn {
+            background: #1e293b;
+            border: 1px solid var(--border-color);
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 700;
+            transition: all 0.2s;
+            user-select: none;
+        }
+
+        .zoom-btn:hover {
+            background: var(--accent-primary);
+            color: #0f172a;
+            border-color: var(--accent-primary);
+        }
+
+        .reset-zoom-btn {
+            font-size: 13px;
+        }
+
+        .map-instruction-pill {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+            font-size: 11px;
+            padding: 5px 10px;
+            border-radius: 8px;
             pointer-events: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            z-index: 90;
         }
 
         /* FLOATING TOOLTIP */
@@ -779,24 +846,24 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             position: absolute;
             pointer-events: none;
             display: none;
-            background: rgba(15, 23, 42, 0.95);
+            background: rgba(15, 23, 42, 0.96);
             backdrop-filter: blur(12px);
             border: 1px solid #38bdf8;
             border-radius: 12px;
             padding: 14px 16px;
             z-index: 1000;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.7), 0 0 15px rgba(56, 189, 248, 0.2);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.7), 0 0 15px rgba(56, 189, 248, 0.25);
             font-family: 'Plus Jakarta Sans', sans-serif;
             min-width: 220px;
-            transition: opacity 0.15s ease, transform 0.15s ease;
+            transition: opacity 0.15s ease;
         }
 
         /* COASTLINE WATERMARK */
         .rio-label {
             position: absolute;
-            top: 25px;
-            right: 40px;
-            font-size: 14px;
+            top: 20px;
+            right: 25px;
+            font-size: 13px;
             font-weight: 800;
             letter-spacing: 4px;
             color: rgba(56, 189, 248, 0.25);
@@ -979,6 +1046,42 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             color: var(--text-muted);
             border-top: 1px solid var(--border-color);
             padding-top: 24px;
+        }
+
+        /* RESPONSIVE MEDIA QUERIES */
+        @media (max-width: 768px) {
+            body {
+                padding: 16px 12px;
+            }
+            .brand-title {
+                font-size: 21px;
+            }
+            .artisan-map-wrapper {
+                padding: 16px 12px;
+            }
+            .map-stage-viewport {
+                height: 450px;
+            }
+            .kpi-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+            .kpi-card {
+                padding: 14px;
+            }
+            .kpi-value {
+                font-size: 20px;
+            }
+            .nav-tabs {
+                width: 100%;
+                overflow-x: auto;
+            }
+            .nav-tab {
+                flex: 1;
+                justify-content: center;
+                font-size: 13px;
+                padding: 8px 12px;
+            }
         }
     </style>
 </head>
@@ -1185,37 +1288,34 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             </h2>
             <div id="insightsList" class="insights-list"></div>
 
-            <!-- ==================== ARTISANAL CABA PLANO (2D / 3D ISOMETRIC) ==================== -->
+            <!-- ==================== ARTISANAL CABA 2D PLANO (WITH PAN & ZOOM) ==================== -->
             <div class="artisan-map-wrapper">
                 <div class="map-header-row">
                     <div>
                         <h2 style="font-size: 19px; font-weight: 800; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
                             <span>🗺️ Plano Territorial Arquitectónico de CABA</span>
-                            <span class="brand-badge" id="mapPerspectiveBadge">Plano 2D</span>
+                            <span class="brand-badge">Plano Interactivo 2D</span>
                         </h2>
                         <p style="font-size: 13px; color: var(--text-secondary); margin-top: 3px;">
-                            Iluminación zonal interactiva. Pasa el cursor por cualquier barrio para inspeccionar sus métricas o haz clic para filtrar sus avisos.
+                            Usa la rueda o los botones para hacer zoom y arrastra para recorrer la Ciudad. Haz clic en un barrio para ver sus avisos.
                         </p>
                     </div>
 
-                    <!-- PERSPECTIVE & MODE CONTROLS -->
-                    <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
-                        <div style="background: #0f172a; padding: 3px; border-radius: 8px; border: 1px solid var(--border-color); display: flex; gap: 4px;">
-                            <button class="btn active" id="btnPersp2D" onclick="setMapPerspective('2d')">📐 2D</button>
-                            <button class="btn" id="btnPersp3D" onclick="setMapPerspective('3d')">🏙️ 3D Isométrico</button>
-                        </div>
-
-                        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
-                            <button class="btn active" id="btnModeScore" onclick="setMapHeatMode('score')">🎯 Oportunidades</button>
-                            <button class="btn" id="btnModeCheapest" onclick="setMapHeatMode('cheapest')">🏷️ Más Baratos</button>
-                            <button class="btn" id="btnModePrime" onclick="setMapHeatMode('prime')">💰 Zonas Prime</button>
-                            <button class="btn" id="btnModeViews" onclick="setMapHeatMode('views')">👁️ Más Vistos</button>
-                        </div>
+                    <!-- MODE CONTROLS -->
+                    <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center;">
+                        <button class="btn active" id="btnModeScore" onclick="setMapHeatMode('score')">🎯 Oportunidades</button>
+                        <button class="btn" id="btnModeCheapest" onclick="setMapHeatMode('cheapest')">🏷️ Más Baratos</button>
+                        <button class="btn" id="btnModePrime" onclick="setMapHeatMode('prime')">💰 Zonas Prime</button>
+                        <button class="btn" id="btnModeViews" onclick="setMapHeatMode('views')">👁️ Más Vistos</button>
                     </div>
                 </div>
 
-                <!-- MAP CANVAS VIEWPORT -->
+                <!-- MAP CANVAS VIEWPORT (WITH DRAG / PAN & ZOOM) -->
                 <div class="map-stage-viewport" id="mapViewport">
+                    <div class="map-instruction-pill">
+                        <span>🖐️ Arrastra para mover &bull; 🔍 Rueda o botones para Zoom</span>
+                    </div>
+
                     <div class="rio-label">RÍO DE LA PLATA 🌊</div>
                     
                     <svg class="caba-svg-canvas" id="cabaSvg" viewBox="0 0 920 820">
@@ -1224,25 +1324,31 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                             <pattern id="archGrid" width="30" height="30" patternUnits="userSpaceOnUse">
                                 <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1"/>
                             </pattern>
-                            <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
-                                <feGaussianBlur stdDeviation="6" result="blur" />
-                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                            </filter>
                         </defs>
 
                         <!-- Background Blueprint Grid -->
                         <rect width="920" height="820" fill="url(#archGrid)" />
 
-                        <!-- Barrios SVG Paths Group -->
-                        <g id="cabaBarriosGroup"></g>
+                        <!-- Zoom / Pan Transform Wrapper Group -->
+                        <g id="cabaZoomGroup" transform="translate(0, 0) scale(1)">
+                            <g id="cabaBarriosGroup"></g>
+                        </g>
                     </svg>
 
                     <!-- FLOATING HOVER TOOLTIP -->
                     <div class="artisan-tooltip" id="mapTooltip"></div>
+
+                    <!-- ZOOM WIDGET CONTROLS -->
+                    <div class="map-zoom-controls">
+                        <button class="zoom-btn" onclick="zoomMap(1.25)" title="Acercar (+)">+</button>
+                        <button class="zoom-btn" onclick="zoomMap(0.80)" title="Alejar (−)">−</button>
+                        <button class="zoom-btn reset-zoom-btn" onclick="resetMapZoom()" title="Restablecer Vista (100%)">↺</button>
+                        <span id="zoomLevelDisplay" style="font-size:11px; font-weight:700; color:var(--text-secondary); margin-left:4px;">100%</span>
+                    </div>
                 </div>
 
                 <!-- MAP LEGEND -->
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 14px; font-size: 12px; color: var(--text-secondary);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 14px; font-size: 12px; color: var(--text-secondary); flex-wrap: wrap; gap: 8px;">
                     <span id="mapLegendLabel">🎯 Intensidad: Concentración de Oportunidades y Descuento</span>
                     <div style="display: flex; align-items: center; gap: 8px;">
                         <span>Bajo</span>
@@ -1280,8 +1386,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             </h2>
             <div id="typologyGrid" class="typology-grid"></div>
 
-            <!-- NEIGHBORHOOD HEATMAP TABLE (SORTABLE HEADERS) -->
-            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 14px;">
+            <!-- NEIGHBORHOOD HEATMAP TABLE (SORTABLE HEADERS & RESPONSIVE SCROLL) -->
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
                 <div>
                     <h2 style="font-size: 20px; font-weight: 800; color: var(--text-primary);">
                         🗺️ Ranking y Mapa de Demanda de Barrios en CABA
@@ -1290,22 +1396,27 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         Haz clic en el título de cualquier columna para ordenar el listado (mayor a menor o viceversa).
                     </p>
                 </div>
+                <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-muted);">
+                    <span style="background: rgba(56, 189, 248, 0.1); color: var(--accent-primary); padding: 4px 10px; border-radius: 6px; border: 1px solid rgba(56, 189, 248, 0.25); font-weight: 600;">
+                        ↔️ Desliza horizontalmente la tabla para ver todas las columnas
+                    </span>
+                </div>
             </div>
 
             <div class="table-view" style="display: block; margin-bottom: 28px;">
                 <table>
                     <thead>
                         <tr>
-                            <th class="sortable-th" onclick="sortRankingTable('name')">Barrio <span class="sort-icon" id="sortIcon_name">⇅</span></th>
-                            <th class="sortable-th active-sort" onclick="sortRankingTable('count')">Avisos <span class="sort-icon" id="sortIcon_count">▼</span></th>
-                            <th class="sortable-th" onclick="sortRankingTable('avg_usd_m2')">USD / m² Promedio <span class="sort-icon" id="sortIcon_avg_usd_m2">⇅</span></th>
-                            <th class="sortable-th" onclick="sortRankingTable('benchmark_usd_m2')">Benchmark Barrio <span class="sort-icon" id="sortIcon_benchmark_usd_m2">⇅</span></th>
-                            <th class="sortable-th" onclick="sortRankingTable('avg_discount_pct')">Descuento Medio <span class="sort-icon" id="sortIcon_avg_discount_pct">⇅</span></th>
-                            <th class="sortable-th" onclick="sortRankingTable('avg_views')">Vistas Promedio / Demanda <span class="sort-icon" id="sortIcon_avg_views">⇅</span></th>
-                            <th class="sortable-th" onclick="sortRankingTable('min_price')">Ticket Mínimo <span class="sort-icon" id="sortIcon_min_price">⇅</span></th>
-                            <th class="sortable-th" onclick="sortRankingTable('avg_expenses')">Expensas Prom. <span class="sort-icon" id="sortIcon_avg_expenses">⇅</span></th>
-                            <th class="sortable-th" onclick="sortRankingTable('super_deals_count')">Super Oportunidades <span class="sort-icon" id="sortIcon_super_deals_count">⇅</span></th>
-                            <th class="sortable-th" onclick="sortRankingTable('liquidity_score')">Liquidez / Reventa <span class="sort-icon" id="sortIcon_liquidity_score">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('name')" style="min-width: 150px;">Barrio <span class="sort-icon" id="sortIcon_name">⇅</span></th>
+                            <th class="sortable-th active-sort" onclick="sortRankingTable('count')" style="min-width: 90px; text-align: center;">Avisos <span class="sort-icon" id="sortIcon_count">▼</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('avg_usd_m2')" style="min-width: 125px;">USD / m² Promedio <span class="sort-icon" id="sortIcon_avg_usd_m2">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('benchmark_usd_m2')" style="min-width: 125px;">Benchmark Barrio <span class="sort-icon" id="sortIcon_benchmark_usd_m2">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('avg_discount_pct')" style="min-width: 110px;">Descuento Medio <span class="sort-icon" id="sortIcon_avg_discount_pct">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('avg_views')" style="min-width: 150px;">Vistas Promedio / Demanda <span class="sort-icon" id="sortIcon_avg_views">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('min_price')" style="min-width: 110px;">Ticket Mínimo <span class="sort-icon" id="sortIcon_min_price">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('avg_expenses')" style="min-width: 120px;">Expensas Prom. <span class="sort-icon" id="sortIcon_avg_expenses">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('super_deals_count')" style="min-width: 110px; text-align: center;">Super Oportunidades <span class="sort-icon" id="sortIcon_super_deals_count">⇅</span></th>
+                            <th class="sortable-th" onclick="sortRankingTable('liquidity_score')" style="min-width: 140px;">Liquidez / Reventa <span class="sort-icon" id="sortIcon_liquidity_score">⇅</span></th>
                         </tr>
                     </thead>
                     <tbody id="heatmapTableBody"></tbody>
@@ -1332,9 +1443,17 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         let chartsInitialized = false;
 
         let currentMapMode = 'score';
-        let currentPerspective = '2d';
         let rankingSortCol = 'count';
         let rankingSortAsc = false;
+
+        // Variables de Zoom y Pan (Arrastrar)
+        let mapZoom = 1.0;
+        let mapPanX = 0;
+        let mapPanY = 0;
+        let isPanning = false;
+        let panStartX = 0;
+        let panStartY = 0;
+        let didPanMove = false;
 
         // Mapeo de subzonas o nombres de Zonaprop a los 48 polígonos oficiales de CABA
         const SUBZONE_TO_BARRIO = {
@@ -1389,6 +1508,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             render();
             renderAnalytics();
             initArtisanMap();
+            setupMapPanAndZoom();
         }
 
         function switchMainTab(tab) {
@@ -1624,7 +1744,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             }).join('');
         }
 
-        // ==================== ARTISANAL CABA PLANO LOGIC ====================
+        // ==================== ARTISANAL CABA 2D PLANO LOGIC ====================
         function initArtisanMap() {
             if (!CABA_SVG_DATA) return;
             const container = document.getElementById('cabaBarriosGroup');
@@ -1741,23 +1861,140 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             initArtisanMap();
         }
 
-        function setMapPerspective(perspective) {
-            currentPerspective = perspective;
+        // ==================== PAN & ZOOM ENGINE (ARRASTRAR Y ZOOM) ====================
+        function setupMapPanAndZoom() {
             const viewport = document.getElementById('mapViewport');
-            const badge = document.getElementById('mapPerspectiveBadge');
-            document.getElementById('btnPersp2D').classList.toggle('active', perspective === '2d');
-            document.getElementById('btnPersp3D').classList.toggle('active', perspective === '3d');
+            if (!viewport) return;
 
-            if (perspective === '3d') {
-                viewport.classList.add('is-3d');
-                badge.innerText = 'Perspectiva 3D Isométrica';
+            // Rueda del ratón para zoom
+            viewport.addEventListener('wheel', function(e) {
+                e.preventDefault();
+                const factor = e.deltaY < 0 ? 1.15 : 0.87;
+                zoomMap(factor, e);
+            }, { passive: false });
+
+            // Inicio de arrastre (MouseDown)
+            viewport.addEventListener('mousedown', function(e) {
+                if (e.button !== 0) return;
+                isPanning = true;
+                didPanMove = false;
+                panStartX = e.clientX - mapPanX;
+                panStartY = e.clientY - mapPanY;
+                viewport.classList.add('is-dragging');
+            });
+
+            // Movimiento durante arrastre (MouseMove)
+            window.addEventListener('mousemove', function(e) {
+                if (!isPanning) return;
+                const newX = e.clientX - panStartX;
+                const newY = e.clientY - panStartY;
+                if (Math.abs(newX - mapPanX) > 4 || Math.abs(newY - mapPanY) > 4) {
+                    didPanMove = true;
+                    hideArtisanTooltip();
+                }
+                mapPanX = newX;
+                mapPanY = newY;
+                applyMapTransform();
+            });
+
+            // Fin de arrastre (MouseUp)
+            window.addEventListener('mouseup', function() {
+                if (isPanning) {
+                    isPanning = false;
+                    viewport.classList.remove('is-dragging');
+                }
+            });
+
+            // Soporte Táctil (Móvil / Tablet)
+            let touchStartX = 0, touchStartY = 0;
+            let initialTouchDist = 0;
+
+            viewport.addEventListener('touchstart', function(e) {
+                if (e.touches.length === 1) {
+                    isPanning = true;
+                    didPanMove = false;
+                    touchStartX = e.touches[0].clientX - mapPanX;
+                    touchStartY = e.touches[0].clientY - mapPanY;
+                } else if (e.touches.length === 2) {
+                    initialTouchDist = Math.hypot(
+                        e.touches[0].clientX - e.touches[1].clientX,
+                        e.touches[0].clientY - e.touches[1].clientY
+                    );
+                }
+            }, { passive: true });
+
+            viewport.addEventListener('touchmove', function(e) {
+                if (e.touches.length === 1 && isPanning) {
+                    const newX = e.touches[0].clientX - touchStartX;
+                    const newY = e.touches[0].clientY - touchStartY;
+                    if (Math.abs(newX - mapPanX) > 4 || Math.abs(newY - mapPanY) > 4) {
+                        didPanMove = true;
+                        hideArtisanTooltip();
+                    }
+                    mapPanX = newX;
+                    mapPanY = newY;
+                    applyMapTransform();
+                } else if (e.touches.length === 2) {
+                    const dist = Math.hypot(
+                        e.touches[0].clientX - e.touches[1].clientX,
+                        e.touches[0].clientY - e.touches[1].clientY
+                    );
+                    if (initialTouchDist > 0) {
+                        const factor = dist / initialTouchDist;
+                        zoomMap(factor > 1 ? 1.04 : 0.96);
+                        initialTouchDist = dist;
+                    }
+                }
+            }, { passive: true });
+
+            viewport.addEventListener('touchend', function() {
+                isPanning = false;
+                initialTouchDist = 0;
+            });
+        }
+
+        function zoomMap(factor, event) {
+            const prevZoom = mapZoom;
+            mapZoom = Math.max(0.75, Math.min(4.5, mapZoom * factor));
+
+            if (event && event.clientX) {
+                const viewportRect = document.getElementById('mapViewport').getBoundingClientRect();
+                const mouseX = event.clientX - viewportRect.left;
+                const mouseY = event.clientY - viewportRect.top;
+                mapPanX = mouseX - (mouseX - mapPanX) * (mapZoom / prevZoom);
+                mapPanY = mouseY - (mouseY - mapPanY) * (mapZoom / prevZoom);
             } else {
-                viewport.classList.remove('is-3d');
-                badge.innerText = 'Plano 2D Arquitectónico';
+                // Zoom al centro si se usan los botones +/-
+                const viewport = document.getElementById('mapViewport');
+                const centerX = viewport.clientWidth / 2;
+                const centerY = viewport.clientHeight / 2;
+                mapPanX = centerX - (centerX - mapPanX) * (mapZoom / prevZoom);
+                mapPanY = centerY - (centerY - mapPanY) * (mapZoom / prevZoom);
+            }
+
+            applyMapTransform();
+        }
+
+        function resetMapZoom() {
+            mapZoom = 1.0;
+            mapPanX = 0;
+            mapPanY = 0;
+            applyMapTransform();
+        }
+
+        function applyMapTransform() {
+            const zoomGroup = document.getElementById('cabaZoomGroup');
+            const zoomDisplay = document.getElementById('zoomLevelDisplay');
+            if (zoomGroup) {
+                zoomGroup.setAttribute('transform', `translate(${mapPanX}, ${mapPanY}) scale(${mapZoom})`);
+            }
+            if (zoomDisplay) {
+                zoomDisplay.innerText = `${Math.round(mapZoom * 100)}%`;
             }
         }
 
         function showArtisanTooltip(e, bName) {
+            if (isPanning || didPanMove) return;
             const tooltip = document.getElementById('mapTooltip');
             const viewport = document.getElementById('mapViewport').getBoundingClientRect();
             
@@ -1765,7 +2002,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const nList = MARKET_ANALYTICS.neighborhoods || [];
             let mData = nList.find(x => normalizeName(x.name) === normalizeName(bName));
             if (!mData) {
-                // Chequear mapeo de subzona
                 mData = nList.find(x => {
                     const mapped = SUBZONE_TO_BARRIO[normalizeName(x.name)];
                     return mapped && normalizeName(mapped) === normalizeName(bName);
@@ -1818,11 +2054,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         }
 
         function filterByArtisanBarrio(bName) {
+            if (didPanMove) return; // Evitar disparar filtro si el usuario estaba arrastrando el plano
             switchMainTab('opportunities');
             const select = document.getElementById('filterBarrio');
             select.value = bName;
             if (select.value !== bName) {
-                // Si el select no lo tiene con ese nombre exacto, filtrar por búsqueda de texto
                 document.getElementById('filterSearch').value = bName;
             }
             render();
@@ -1835,7 +2071,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 rankingSortAsc = !rankingSortAsc;
             } else {
                 rankingSortCol = col;
-                // Para nombres de barrio, comenzar ascendente (A-Z). Para números, descendente (mayor a menor).
                 rankingSortAsc = col === 'name' ? true : false;
             }
 
@@ -1877,7 +2112,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 return `
                 <tr>
                     <td><strong>${b.name}</strong></td>
-                    <td><span class="badge badge-date">${b.count} avisos</span></td>
+                    <td style="text-align: center;"><span class="badge badge-date">${b.count} avisos</span></td>
                     <td style="color:var(--accent-green); font-weight:700;">USD ${b.avg_usd_m2?.toLocaleString('es-AR')}</td>
                     <td style="color:var(--text-muted);">USD ${b.benchmark_usd_m2?.toLocaleString('es-AR')}</td>
                     <td style="font-weight:700; color:${b.avg_discount_pct > 0 ? 'var(--accent-green)' : 'var(--text-muted)'};">
@@ -1889,7 +2124,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     </td>
                     <td>USD ${b.min_price?.toLocaleString('es-AR')}</td>
                     <td>${b.avg_expenses_formatted}</td>
-                    <td><strong>${b.super_deals_count}</strong></td>
+                    <td style="text-align: center;"><strong>${b.super_deals_count}</strong></td>
                     <td style="min-width:140px;">
                         <div style="display:flex; justify-content:space-between; font-size:11px; margin-bottom:2px;">
                             <span>Liquidez</span>
