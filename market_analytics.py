@@ -150,10 +150,10 @@ def compute_market_analytics(properties: List[Dict[str, Any]], config: Dict[str,
 
     # 4. Distribución de Precios (Rangos)
     price_ranges = {
-        "under_45k": {"label": "< USD 45.000", "count": 0, "color": "#10b981"},
-        "45k_to_60k": {"label": "USD 45k - 60k", "count": 0, "color": "#38bdf8"},
-        "60k_to_75k": {"label": "USD 60k - 75k", "count": 0, "color": "#818cf8"},
-        "above_75k": {"label": "> USD 75.000", "count": 0, "color": "#f97316"}
+        "under_45k": {"label": "< USD 45.000", "count": 0, "pct": 0.0, "color": "#10b981"},
+        "45k_to_60k": {"label": "USD 45k - 60k", "count": 0, "pct": 0.0, "color": "#38bdf8"},
+        "60k_to_75k": {"label": "USD 60k - 75k", "count": 0, "pct": 0.0, "color": "#818cf8"},
+        "above_75k": {"label": "> USD 75.000", "count": 0, "pct": 0.0, "color": "#f97316"}
     }
 
     for p in properties:
@@ -166,6 +166,10 @@ def compute_market_analytics(properties: List[Dict[str, Any]], config: Dict[str,
             price_ranges["60k_to_75k"]["count"] += 1
         else:
             price_ranges["above_75k"]["count"] += 1
+
+    total_props = max(1, len(properties))
+    for r in price_ranges.values():
+        r["pct"] = round((r["count"] / total_props) * 100, 1)
 
     # 5. Generación Automatizada de Insights de Mercado ("Radar del Experto")
     insights = []

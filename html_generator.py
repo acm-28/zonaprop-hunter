@@ -1,7 +1,8 @@
 """
 Generador de Dashboard HTML interactivo para Oportunidades Inmobiliarias y Market Intelligence en CABA.
 Incluye Plano 2D Arquitectónico Artesanal con límites de desplazamiento, centrado interactivo en barrios al clic,
-resolución de tooltips, ordenamiento responsive con títulos compactos de dos líneas, favoritos y tracking de contacto.
+comparador directo entre barrios (VS hasta 3 zonas), distribución de precios con porcentajes explícitos representativos,
+ordenamiento en ranking con títulos compactos de dos líneas, favoritos y tracking de contacto.
 """
 
 import json
@@ -875,7 +876,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         /* ANALYTICS SECTION STYLES */
         .analytics-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 1.8fr 1.2fr;
             gap: 20px;
             margin-bottom: 28px;
         }
@@ -906,7 +907,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         .chart-container {
             position: relative;
-            height: 300px;
+            height: 270px;
             width: 100%;
         }
 
@@ -1358,25 +1359,51 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 </div>
             </div>
 
-            <!-- CHARTS GRID -->
+            <!-- ANALYTICS GRID: BARRIO COMPARATOR (VS HASTA 3) + PRICE DISTRIBUTION -->
             <div class="analytics-grid">
-                <div class="chart-box">
+                <!-- COMPARATIVA DIRECTA ENTRE BARRIOS (VS) -->
+                <div class="chart-box" style="display: flex; flex-direction: column;">
                     <div class="chart-title">
-                        <span>📊 Comparativa USD / m² por Barrio (Oportunidad vs Benchmark)</span>
-                        <small style="font-size:12px; color:var(--text-muted);">Top Barrios con Oferta</small>
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <span>⚔️ Comparativa Directa entre Barrios (VS)</span>
+                            <span class="brand-badge">Hasta 3 Zonas</span>
+                        </span>
+                        <small style="font-size:12px; color:var(--text-muted);">Elige barrios para comparar métricas</small>
                     </div>
-                    <div class="chart-container">
-                        <canvas id="chartBarrios"></canvas>
+
+                    <!-- SELECTORS -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 14px;">
+                        <div>
+                            <label style="font-size: 11px; font-weight: 700; color: var(--accent-primary); display: block; margin-bottom: 4px;">🔵 BARRIO 1</label>
+                            <select id="vsBarrio1" class="input-control" style="width: 100%; font-weight: 700;" onchange="renderBarriosVS()"></select>
+                        </div>
+                        <div>
+                            <label style="font-size: 11px; font-weight: 700; color: var(--accent-green); display: block; margin-bottom: 4px;">🟢 BARRIO 2</label>
+                            <select id="vsBarrio2" class="input-control" style="width: 100%; font-weight: 700;" onchange="renderBarriosVS()"></select>
+                        </div>
+                        <div>
+                            <label style="font-size: 11px; font-weight: 700; color: var(--accent-purple); display: block; margin-bottom: 4px;">🟣 BARRIO 3 (OPCIONAL)</label>
+                            <select id="vsBarrio3" class="input-control" style="width: 100%; font-weight: 700;" onchange="renderBarriosVS()">
+                                <option value="">-- Ninguno (2 Barrios) --</option>
+                            </select>
+                        </div>
                     </div>
+
+                    <!-- COMPARISON MATRIX CONTAINER -->
+                    <div id="vsMatrixContainer" style="flex-grow: 1; overflow-x: auto;"></div>
                 </div>
-                <div class="chart-box">
+
+                <!-- PRICE DISTRIBUTION DOUGHNUT WITH EXPLICIT PERCENTAGES -->
+                <div class="chart-box" style="display: flex; flex-direction: column;">
                     <div class="chart-title">
-                        <span>🥧 Distribución de Oferta por Precio</span>
-                        <small style="font-size:12px; color:var(--text-muted);">Porcentaje</small>
+                        <span>🥧 Distribución de Oferta por Rango de Precio</span>
+                        <small style="font-size:12px; color:var(--text-muted);">% Representativo Real</small>
                     </div>
-                    <div class="chart-container">
+                    <div class="chart-container" style="height: 230px;">
                         <canvas id="chartDistribution"></canvas>
                     </div>
+                    <!-- PRICE RANGES BREAKDOWN LIST WITH EXPLICIT PERCENTAGES -->
+                    <div id="priceDistributionList" style="margin-top: 14px; display: flex; flex-direction: column; gap: 6px; font-size: 12px;"></div>
                 </div>
             </div>
 
@@ -1395,11 +1422,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     <p style="font-size: 13px; color: var(--text-secondary); margin-top: 2px;">
                         Haz clic en el título de cualquier columna para ordenar el listado (mayor a menor o viceversa).
                     </p>
-                </div>
-                <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-muted);">
-                    <span style="background: rgba(56, 189, 248, 0.1); color: var(--accent-primary); padding: 4px 10px; border-radius: 6px; border: 1px solid rgba(56, 189, 248, 0.25); font-weight: 600;">
-                        ↔️ Desliza horizontalmente la tabla para ver todas las columnas
-                    </span>
                 </div>
             </div>
 
@@ -1509,6 +1531,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             renderAnalytics();
             initArtisanMap();
             setupMapPanAndZoom();
+            initBarriosVS();
         }
 
         function switchMainTab(tab) {
@@ -1863,8 +1886,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         // ==================== PAN & ZOOM ENGINE (ARRASTRAR Y ZOOM CON LÍMITES) ====================
         function clampMapBounds() {
-            // El mapa SVG tiene dimensiones 920 x 820.
-            // Limitar el desplazamiento para que CABA nunca desaparezca de la pantalla
             const maxBoundX = 400 * mapZoom + 150;
             const maxBoundY = 360 * mapZoom + 120;
             
@@ -1917,7 +1938,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 }
             });
 
-            // Si el mouse sale de la ventana o pierde foco, resetear estado para que los tooltips nunca fallen
+            // Si el mouse sale de la ventana o pierde foco, resetear estado
             window.addEventListener('blur', function() {
                 isPanning = false;
                 didPanMove = false;
@@ -1985,7 +2006,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 mapPanX = mouseX - (mouseX - mapPanX) * (mapZoom / prevZoom);
                 mapPanY = mouseY - (mouseY - mapPanY) * (mapZoom / prevZoom);
             } else {
-                // Zoom al centro si se usan los botones +/-
                 const viewport = document.getElementById('mapViewport');
                 const centerX = viewport.clientWidth / 2;
                 const centerY = viewport.clientHeight / 2;
@@ -2023,7 +2043,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         }
 
         function showArtisanTooltip(e, bName) {
-            if (isPanning) return; // Solo silenciar tooltip mientras se arrastra activamente
+            if (isPanning) return;
             const tooltip = document.getElementById('mapTooltip');
             const viewport = document.getElementById('mapViewport').getBoundingClientRect();
             
@@ -2069,7 +2089,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             let left = e.clientX - viewport.left + 15;
             let top = e.clientY - viewport.top + 15;
 
-            // Prevenir desborde en el viewport
             if (left + 230 > viewport.width) left = left - 250;
             if (top + 200 > viewport.height) top = top - 180;
 
@@ -2084,11 +2103,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         // Centrar el plano en el barrio al hacer clic (sin irse de pestaña)
         function centerOnBarrio(bName) {
-            if (didPanMove) return; // Si estaba arrastrando, no centrar
+            if (didPanMove) return;
             const data = CABA_SVG_DATA[bName];
             if (!data || !data.center) return;
 
-            // Asegurar un nivel de zoom adecuado para apreciar el barrio
             if (mapZoom < 1.45) {
                 mapZoom = 1.45;
             }
@@ -2096,7 +2114,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const cx = data.center[0];
             const cy = data.center[1];
 
-            // Centrar punto (cx, cy) exactamente en el medio de la vista SVG (460, 410)
             mapPanX = 460 - (cx * mapZoom);
             mapPanY = 410 - (cy * mapZoom);
 
@@ -2113,7 +2130,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 applyMapTransform();
             }
 
-            // Mostrar la ficha informativa del barrio en el centro
             const viewport = document.getElementById('mapViewport');
             const rect = viewport.getBoundingClientRect();
             const fakeEvent = {
@@ -2123,17 +2139,168 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             showArtisanTooltip(fakeEvent, bName);
         }
 
+        // ==================== BARRIO COMPARATOR (VS HASTA 3 BARRIOS) ====================
+        function initBarriosVS() {
+            if (!MARKET_ANALYTICS || !MARKET_ANALYTICS.neighborhoods) return;
+            const neighborhoods = MARKET_ANALYTICS.neighborhoods;
+
+            const sel1 = document.getElementById('vsBarrio1');
+            const sel2 = document.getElementById('vsBarrio2');
+            const sel3 = document.getElementById('vsBarrio3');
+            if (!sel1 || !sel2 || !sel3) return;
+
+            sel1.innerHTML = '';
+            sel2.innerHTML = '';
+            sel3.innerHTML = '<option value="">-- Ninguno (Comparar 2) --</option>';
+
+            neighborhoods.forEach(b => {
+                sel1.add(new Option(`${b.name} (${b.count} avisos)`, b.name));
+                sel2.add(new Option(`${b.name} (${b.count} avisos)`, b.name));
+                sel3.add(new Option(`${b.name} (${b.count} avisos)`, b.name));
+            });
+
+            // Selecciones por defecto inteligentes
+            if (neighborhoods.length > 0) sel1.value = neighborhoods[0].name;
+            if (neighborhoods.length > 1) sel2.value = neighborhoods[1].name;
+            if (neighborhoods.length > 2) sel3.value = neighborhoods[2].name;
+
+            renderBarriosVS();
+        }
+
+        function renderBarriosVS() {
+            if (!MARKET_ANALYTICS || !MARKET_ANALYTICS.neighborhoods) return;
+            const neighborhoods = MARKET_ANALYTICS.neighborhoods;
+
+            const name1 = document.getElementById('vsBarrio1')?.value;
+            const name2 = document.getElementById('vsBarrio2')?.value;
+            const name3 = document.getElementById('vsBarrio3')?.value;
+
+            const b1 = neighborhoods.find(b => b.name === name1) || neighborhoods[0];
+            const b2 = neighborhoods.find(b => b.name === name2) || (neighborhoods.length > 1 ? neighborhoods[1] : null);
+            const b3 = name3 ? neighborhoods.find(b => b.name === name3) : null;
+
+            if (!b1 || !b2) return;
+
+            const barrios = [b1, b2];
+            if (b3) barrios.push(b3);
+
+            const colors = ['#38bdf8', '#10b981', '#a855f7'];
+
+            const rows = [
+                {
+                    label: '🏢 Oportunidades Activas',
+                    format: b => `${b.count} avisos`,
+                    best: vals => Math.max(...vals),
+                    raw: b => b.count
+                },
+                {
+                    label: '📐 USD / m² Cartera',
+                    format: b => `USD ${b.avg_usd_m2?.toLocaleString('es-AR')}`,
+                    best: vals => Math.min(...vals), // menor precio es mejor
+                    raw: b => b.avg_usd_m2
+                },
+                {
+                    label: '🏛️ Benchmark Zonal',
+                    format: b => `USD ${b.benchmark_usd_m2?.toLocaleString('es-AR')}`,
+                    best: null,
+                    raw: b => b.benchmark_usd_m2
+                },
+                {
+                    label: '🏷️ Descuento Medio',
+                    format: b => `+${b.avg_discount_pct}%`,
+                    best: vals => Math.max(...vals),
+                    raw: b => b.avg_discount_pct
+                },
+                {
+                    label: '👁️ Vistas Promedio',
+                    format: b => `${b.avg_views_formatted} (${b.demand_level})`,
+                    best: vals => Math.max(...vals),
+                    raw: b => b.avg_views
+                },
+                {
+                    label: '💲 Ticket Mínimo',
+                    format: b => `USD ${b.min_price?.toLocaleString('es-AR')}`,
+                    best: vals => Math.min(...vals),
+                    raw: b => b.min_price
+                },
+                {
+                    label: '💵 Expensas Promedio',
+                    format: b => b.avg_expenses_formatted,
+                    best: vals => {
+                        const valid = vals.filter(v => v > 0);
+                        return valid.length > 0 ? Math.min(...valid) : null;
+                    },
+                    raw: b => b.avg_expenses || 0
+                },
+                {
+                    label: '🔥 Super Oportunidades',
+                    format: b => `${b.super_deals_count} unidades`,
+                    best: vals => Math.max(...vals),
+                    raw: b => b.super_deals_count
+                },
+                {
+                    label: '⚡ Score Liquidez / Reventa',
+                    format: b => `${b.liquidity_score || b.opportunity_density_score}/100`,
+                    best: vals => Math.max(...vals),
+                    raw: b => b.liquidity_score || b.opportunity_density_score
+                }
+            ];
+
+            const container = document.getElementById('vsMatrixContainer');
+            if (!container) return;
+
+            let html = `
+            <table style="width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 4px;">
+                <thead>
+                    <tr style="border-bottom: 2px solid var(--border-color);">
+                        <th style="padding: 10px 12px; color: var(--text-muted); text-align: left; background: transparent; font-size: 11px;">MÉTRICA CLAVE</th>
+                        ${barrios.map((b, i) => `
+                            <th style="padding: 10px 12px; text-align: center; background: transparent; font-size: 13px; font-weight: 800; color: ${colors[i]};">
+                                ${b.name}
+                            </th>
+                        `).join('')}
+                    </tr>
+                </thead>
+                <tbody>
+            `;
+
+            rows.forEach((row, idx) => {
+                const rawVals = barrios.map(b => row.raw(b));
+                const bestVal = row.best ? row.best(rawVals) : null;
+                const bg = idx % 2 === 0 ? 'rgba(255,255,255,0.02)' : 'transparent';
+
+                html += `<tr style="background: ${bg}; border-bottom: 1px solid rgba(255,255,255,0.05);">`;
+                html += `<td style="padding: 9px 12px; color: var(--text-secondary); font-weight: 600; white-space: nowrap;">${row.label}</td>`;
+
+                barrios.forEach(b => {
+                    const val = row.raw(b);
+                    const isWinner = bestVal !== null && val === bestVal && rawVals.filter(v => v === bestVal).length < barrios.length;
+                    const winnerBadge = isWinner ? '<span style="color: #10b981; font-weight: 800; margin-left: 4px;" title="Mejor indicador">🏆</span>' : '';
+                    const winnerStyle = isWinner ? 'color: #fff; font-weight: 800;' : 'color: var(--text-primary); font-weight: 600;';
+
+                    html += `
+                    <td style="padding: 9px 12px; text-align: center; white-space: nowrap; ${winnerStyle}">
+                        ${row.format(b)} ${winnerBadge}
+                    </td>
+                    `;
+                });
+
+                html += `</tr>`;
+            });
+
+            html += `</tbody></table>`;
+            container.innerHTML = html;
+        }
+
         // ==================== SORTABLE RANKING TABLE ====================
         function sortRankingTable(col) {
             if (rankingSortCol === col) {
                 rankingSortAsc = !rankingSortAsc;
             } else {
                 rankingSortCol = col;
-                // Para nombres de barrio, comenzar ascendente (A-Z). Para números, descendente (mayor a menor).
                 rankingSortAsc = col === 'name' ? true : false;
             }
 
-            // Actualizar clases de th y flechas
             document.querySelectorAll('.sortable-th').forEach(th => th.classList.remove('active-sort'));
             document.querySelectorAll('.sort-icon').forEach(icon => icon.innerText = '⇅');
 
@@ -2267,51 +2434,29 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         function initCharts() {
             if (!MARKET_ANALYTICS) return;
 
-            // 1. Bar Chart: Barrios vs Benchmark
-            const barriosData = (MARKET_ANALYTICS.neighborhoods || []).slice(0, 10);
-            const ctxBarrios = document.getElementById('chartBarrios').getContext('2d');
-            new Chart(ctxBarrios, {
-                type: 'bar',
-                data: {
-                    labels: barriosData.map(b => b.name),
-                    datasets: [
-                        {
-                            label: 'USD/m² Oportunidades Encontradas',
-                            data: barriosData.map(b => b.avg_usd_m2),
-                            backgroundColor: 'rgba(16, 185, 129, 0.85)',
-                            borderRadius: 6
-                        },
-                        {
-                            label: 'USD/m² Benchmark de Mercado',
-                            data: barriosData.map(b => b.benchmark_usd_m2),
-                            backgroundColor: 'rgba(100, 116, 139, 0.4)',
-                            borderRadius: 6
-                        }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        x: { ticks: { color: '#94a3b8', font: { size: 11 } }, grid: { display: false } },
-                        y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255, 255, 255, 0.05)' } }
-                    },
-                    plugins: {
-                        legend: { labels: { color: '#f8fafc', font: { size: 12, family: 'Plus Jakarta Sans' } } }
-                    }
-                }
-            });
+            // 1. Initialize Barrio Comparator (VS hasta 3)
+            initBarriosVS();
 
-            // 2. Doughnut Chart: Price Distribution
+            // 2. Doughnut Chart: Price Distribution con porcentajes reales representativos
             const dist = MARKET_ANALYTICS.price_distribution || {};
+            const distValues = Object.values(dist);
+            const totalCount = distValues.reduce((acc, d) => acc + (d.count || 0), 0);
+
+            const labels = distValues.map(d => {
+                const pct = totalCount > 0 ? ((d.count / totalCount) * 100).toFixed(1) : 0;
+                return `${d.label} (${pct}%)`;
+            });
+            const dataCounts = distValues.map(d => d.count);
+            const bgColors = distValues.map(d => d.color);
+
             const ctxDist = document.getElementById('chartDistribution').getContext('2d');
             new Chart(ctxDist, {
                 type: 'doughnut',
                 data: {
-                    labels: Object.values(dist).map(d => d.label),
+                    labels: labels,
                     datasets: [{
-                        data: Object.values(dist).map(d => d.count),
-                        backgroundColor: Object.values(dist).map(d => d.color),
+                        data: dataCounts,
+                        backgroundColor: bgColors,
                         borderWidth: 2,
                         borderColor: '#1e293b'
                     }]
@@ -2320,11 +2465,48 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        legend: { position: 'bottom', labels: { color: '#f8fafc', font: { size: 12 } } }
+                        legend: { 
+                            position: 'bottom', 
+                            labels: { 
+                                color: '#f8fafc', 
+                                font: { size: 12, family: 'Plus Jakarta Sans', weight: '600' },
+                                boxWidth: 12,
+                                padding: 10
+                            } 
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const val = context.raw || 0;
+                                    const pct = totalCount > 0 ? ((val / totalCount) * 100).toFixed(1) : 0;
+                                    return ` ${val} avisos (${pct}% de la cartera)`;
+                                }
+                            }
+                        }
                     },
-                    cutout: '65%'
+                    cutout: '66%'
                 }
             });
+
+            // Lista detallada de rangos de precio con porcentajes explícitos
+            const listContainer = document.getElementById('priceDistributionList');
+            if (listContainer) {
+                listContainer.innerHTML = distValues.map(d => {
+                    const pct = totalCount > 0 ? ((d.count / totalCount) * 100).toFixed(1) : 0;
+                    return `
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <span style="width: 10px; height: 10px; border-radius: 50%; background: ${d.color}; display: inline-block;"></span>
+                            <span style="color: var(--text-primary); font-weight: 600;">${d.label}</span>
+                        </span>
+                        <span>
+                            <strong style="color: #38bdf8; font-size: 13px;">${pct}%</strong>
+                            <small style="color: var(--text-muted); margin-left: 5px;">(${d.count} ${d.count === 1 ? 'aviso' : 'avisos'})</small>
+                        </span>
+                    </div>
+                    `;
+                }).join('');
+            }
         }
 
         function exportToCSV() {
