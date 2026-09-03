@@ -1,6 +1,7 @@
 """
 Zonaprop Hunter CABA - Script Principal
 Rastreador, Evaluador y Monitor de Market Intelligence Inmobiliario en Capital Federal.
+Mantiene un histórico activo de oportunidades de los últimos 10 días.
 """
 
 import os
@@ -22,7 +23,7 @@ from datetime import datetime
 
 from scraper import ZonapropScraper
 from evaluator import evaluate_and_rank_properties
-from storage import process_properties_history, record_daily_market_snapshot, load_history
+from storage import merge_and_sync_history, record_daily_market_snapshot, load_history
 from market_analytics import compute_market_analytics
 from html_generator import generate_html_report
 
@@ -44,6 +45,7 @@ def main():
     parser.add_argument("--pages", type=int, help="Cantidad de paginas de Zonaprop a consultar (ej: 5)")
     parser.add_argument("--barrios", type=str, help="Barrios separados por coma (ej: palermo,recoleta,caballito)")
     parser.add_argument("--max-usd-m2", type=int, help="Tope maximo de USD por m2 (ej: 1900)")
+    parser.add_argument("--retention-days", type=int, help="Cantidad de dias de historico a retener en cartera (ej: 10)")
     parser.add_argument("--all-dates", action="store_true", help="Desactivar filtro estricto de hoy y traer todos los recientes")
     parser.add_argument("--sort", type=str, choices=["orden-publicado-descendente", "orden-precio-menor"], help="Criterio de ordenamiento en Zonaprop")
     parser.add_argument("--no-browser", action="store_true", help="No abrir automaticamente el navegador al finalizar")
@@ -65,23 +67,27 @@ def main():
         search_cfg["max_usd_m2"] = args.max_usd_m2
     if args.all_dates:
         search_cfg["only_published_today"] = False
+    if args.retention_days:
+        search_cfg["history_retention_days"] = args.retention_days
     if args.sort:
         search_cfg["sort_by"] = args.sort
     if args.barrios:
         search_cfg["filter_barrios"] = [b.strip() for b in args.barrios.split(",") if b.strip()]
 
     only_today = search_cfg.get("only_published_today", True)
+    retention_days = search_cfg.get("history_retention_days", 10)
     output_file = args.output or DEFAULT_OUTPUT_HTML
 
     print("=" * 68)
     print(" [ZONAPROP HUNTER & MARKET INTELLIGENCE CABA]")
-    print(f" Fecha y Hora:       {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f" Filtro Precio Max:  USD {search_cfg.get('max_price_usd', 80000):,}")
-    print(f" Tope USD/m2:        USD {search_cfg.get('max_usd_m2', 2200):,}")
-    print(f" Modo Publicados Hoy:{' ACTIVADO (Solo avisos de hoy)' if only_today else ' Todos los recientes'}")
-    print(f" Paginas a explorar: {search_cfg.get('pages_to_scrape', 5)}")
+    print(f" Fecha y Hora:        {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f" Filtro Precio Max:   USD {search_cfg.get('max_price_usd', 80000):,}")
+    print(f" Tope USD/m2:         USD {search_cfg.get('max_usd_m2', 2200):,}")
+    print(f" Modo Publicados Hoy: {' ACTIVADO (Solo avisos de hoy)' if only_today else ' Todos los recientes'}")
+    print(f" Histórico en cartera:{retention_days} días de retención continua")
+    print(f" Paginas a explorar:  {search_cfg.get('pages_to_scrape', 5)}")
     if search_cfg.get("filter_barrios"):
-        print(f" Barrios filtrados:  {', '.join(search_cfg['filter_barrios'])}")
+        print(f" Barrios filtrados:   {', '.join(search_cfg['filter_barrios'])}")
     print("=" * 68)
 
     # 1. Scrapear propiedades de Zonaprop
@@ -89,15 +95,17 @@ def main():
     raw_properties = scraper.scrape()
 
     if not raw_properties:
-        print("\n[Aviso] No se encontraron avisos que coincidan con los criterios.")
-        sys.exit(0)
+        print("\n[Aviso] No se encontraron avisos nuevos en Zonaprop en esta corrida.")
+        # Aun asi, si hay histórico previo de los últimos 10 días, cargarlo para no dejar la web vacía
+        processed_properties, new_count = merge_and_sync_history([], retention_days=retention_days)
+    else:
+        # 2. Evaluar y rankear oportunidades (filtro anti-pozos activo)
+        print("\n[Evaluador] Analizando y calculando scores de oportunidad en Zonaprop...")
+        ranked_properties = evaluate_and_rank_properties(raw_properties, config)
 
-    # 2. Evaluar y rankear oportunidades (filtro anti-pozos activo)
-    print("\n[Evaluador] Analizando y calculando scores de oportunidad en Zonaprop...")
-    ranked_properties = evaluate_and_rank_properties(raw_properties, config)
-
-    # 3. Procesar historial de propiedades (identificar novedades de hoy)
-    processed_properties, new_count = process_properties_history(ranked_properties)
+        # 3. Procesar y sincronizar con el histórico de los últimos 10 días
+        print(f"[Historial] Sincronizando cartera acumulada de los últimos {retention_days} días...")
+        processed_properties, new_count = merge_and_sync_history(ranked_properties, retention_days=retention_days)
 
     # 4. Calcular Inteligencia de Mercado y Métricas Avanzadas
     print("[Market Intelligence] Generando mapas de calor, matrices y radar de insights...")
@@ -122,21 +130,23 @@ def main():
     # 6. Resumen de resultados en consola
     macro = analytics.get("macro", {})
     print("\n" + "=" * 68)
-    print(" 📊 RESUMEN EJECUTIVO ZONAPROP CABA")
+    print(f" 📊 RESUMEN EJECUTIVO (CARTERA ACTIVA {retention_days} DÍAS)")
     print("=" * 68)
-    print(f" ✅ Total avisos analizados de hoy: {len(raw_properties)}")
-    print(f" 💎 Oportunidades calificadas CABA: {len(processed_properties)}")
-    print(f" ✨ Nuevas oportunidades hoy:       {new_count}")
-    print(f" 📐 Valor medio metro cuadrado:     USD {macro.get('avg_usd_m2', 0):,}/m²")
-    print(f" 🏷️ Descuento medio vs barrio:      {macro.get('avg_discount_pct', 0)}%")
-    print(f" 🚪 Mediana de precio en oferta:    USD {macro.get('median_price', 0):,}")
+    print(f" ✅ Total avisos rastreados en esta corrida: {len(raw_properties)}")
+    print(f" ✨ Nuevas oportunidades detectadas hoy:     {new_count}")
+    print(f" 💎 Total oportunidades activas en cartera: {len(processed_properties)}")
+    print(f" 📐 Valor medio metro cuadrado:             USD {macro.get('avg_usd_m2', 0):,}/m²")
+    print(f" 🏷️ Descuento medio vs barrio:              {macro.get('avg_discount_pct', 0)}%")
+    print(f" 🚪 Mediana de precio en oferta:            USD {macro.get('median_price', 0):,}")
 
     if processed_properties:
         top_deal = processed_properties[0]
-        print(f"\n 🔥 TOP OPORTUNIDAD DEL DIA:")
+        days_ago = top_deal.get("days_ago", 0)
+        age_str = "Hoy" if days_ago == 0 else f"Hace {days_ago} días"
+        print(f"\n 🔥 TOP OPORTUNIDAD EN CARTERA:")
         print(f"    - Barrio:      {top_deal['barrio']} ({top_deal.get('address', 'Sin calle')})")
         print(f"    - Precio:      {top_deal['price_usd_formatted']} ({top_deal['usd_m2_formatted']})")
-        print(f"    - Publicación: {top_deal.get('publication_date_text', 'Reciente')}")
+        print(f"    - Detección:   {top_deal.get('first_seen_date', 'Hoy')} ({age_str})")
         print(f"    - Descuento:   {top_deal['discount_pct']}% vs promedio del barrio")
         print(f"    - Link:        {top_deal['link']}")
 

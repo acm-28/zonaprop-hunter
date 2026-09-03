@@ -9,6 +9,7 @@
     "sort_by": "orden-publicado-descendente",
     "pages_to_scrape": 5,
     "only_published_today": true,
+    "history_retention_days": 10,
     "include_developments": false,
     "filter_barrios": [],
     "enabled_sources": ["zonaprop"]

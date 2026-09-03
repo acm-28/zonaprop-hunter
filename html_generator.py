@@ -1,6 +1,7 @@
 """
 Generador de Dashboard HTML interactivo para Oportunidades Inmobiliarias y Market Intelligence en CABA.
-Crea un archivo HTML autónomo, moderno, responsivo, con gráficos interactivos, favoritos y tracking de propiedades contactadas.
+Crea un archivo HTML autónomo, moderno, responsivo, con gráficos interactivos, favoritos, tracking de contacto
+y cartera acumulada de oportunidades de los últimos 10 días.
 """
 
 import json
@@ -13,7 +14,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zonaprop Hunter CABA | Oportunidades & Market Intelligence</title>
+    <title>Zonaprop Hunter CABA | Cartera & Market Intelligence</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -829,9 +830,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             <div>
                 <div class="brand-title">
                     <span>🏢 Zonaprop Hunter CABA</span>
-                    <span class="brand-badge">Publicaciones de Hoy</span>
+                    <span class="brand-badge">Cartera 10 Días</span>
                 </div>
-                <div class="header-meta" id="headerMeta">Monitor Diario de Oportunidades Reales y Market Intelligence en CABA</div>
+                <div class="header-meta" id="headerMeta">Cartera Activa de Oportunidades Reales y Market Intelligence en CABA</div>
             </div>
             <div class="action-buttons">
                 <button class="btn" onclick="exportToCSV()">📥 Exportar CSV</button>
@@ -842,7 +843,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <!-- NAVIGATION TABS -->
         <div class="nav-tabs">
             <button class="nav-tab active" id="tabOpportunities" onclick="switchMainTab('opportunities')">
-                🔥 Oportunidades Zonaprop (<span id="tabCount">0</span>)
+                🔥 Oportunidades en Cartera (<span id="tabCount">0</span>)
             </button>
             <button class="nav-tab" id="tabAnalytics" onclick="switchMainTab('analytics')">
                 📈 Mercado & Analytics CABA
@@ -854,9 +855,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             <!-- KPI METRICS -->
             <div class="kpi-grid">
                 <div class="kpi-card">
-                    <div class="kpi-label">Avisos Hoy en Zonaprop</div>
+                    <div class="kpi-label">Oportunidades en Cartera</div>
                     <div class="kpi-value" id="kpiTotal">0</div>
-                    <div class="kpi-sub" id="kpiContactedSub">0 contactadas</div>
+                    <div class="kpi-sub" id="kpiNewSub">0 nuevas hoy</div>
                 </div>
                 <div class="kpi-card flame">
                     <div class="kpi-label">Super Oportunidades</div>
@@ -866,7 +867,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 <div class="kpi-card green">
                     <div class="kpi-label">Precio Mínimo</div>
                     <div class="kpi-value" id="kpiMinPrice">-</div>
-                    <div class="kpi-sub">Encontrado hoy</div>
+                    <div class="kpi-sub" id="kpiContactedSub">0 ya contactadas</div>
                 </div>
                 <div class="kpi-card purple">
                     <div class="kpi-label">Promedio USD / m²</div>
@@ -881,6 +882,16 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     <div class="filter-group">
                         <label>Buscar (Palabra clave / Calle)</label>
                         <input type="text" id="filterSearch" class="input-control" placeholder="Ej: Palermo, Balcón, Reciclado...">
+                    </div>
+                    <div class="filter-group">
+                        <label>Antigüedad en Cartera</label>
+                        <select id="filterAntiquity" class="input-control">
+                            <option value="ALL">Todo el histórico (10 días)</option>
+                            <option value="TODAY">🕒 Nuevas de Hoy</option>
+                            <option value="2DAYS">📅 Últimas 48 horas (2 días)</option>
+                            <option value="5DAYS">📅 Últimos 5 días</option>
+                            <option value="7DAYS">📅 Últimos 7 días</option>
+                        </select>
                     </div>
                     <div class="filter-group">
                         <label>Barrio</label>
@@ -909,6 +920,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         <label>Ordenar Por</label>
                         <select id="sortBy" class="input-control">
                             <option value="score_desc">🏆 Mayor Oportunidad (Score)</option>
+                            <option value="newest_desc">🕒 Más Recientes Primero</option>
                             <option value="price_asc">💲 Precio: Menor a Mayor</option>
                             <option value="sqm_asc">📐 USD/m²: Menor a Mayor</option>
                             <option value="m2_desc">🏢 Superficie: Mayor a Menor</option>
@@ -962,7 +974,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                             <th>USD / m²</th>
                             <th>Superficie</th>
                             <th>Amb.</th>
-                            <th>Publicación</th>
+                            <th>Detección</th>
                             <th>Descuento</th>
                             <th>Score</th>
                             <th>Acción</th>
@@ -1066,7 +1078,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         </div>
 
         <footer>
-            <p>Zonaprop Hunter CABA &bull; Monitor Diario &bull; Generado el <span id="footerDate"></span></p>
+            <p>Zonaprop Hunter CABA &bull; Cartera Histórica 10 Días &bull; Generado el <span id="footerDate"></span></p>
         </footer>
     </div>
 
@@ -1083,7 +1095,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         let chartsInitialized = false;
 
         function init() {
-            document.getElementById('headerMeta').innerText = `Actualizado el ${new Date(GENERATION_TIME).toLocaleString('es-AR')} • ${RAW_DATA.length} avisos publicados hoy en Zonaprop CABA`;
+            const todayCount = RAW_DATA.filter(p => (p.days_ago === 0 || p.is_new)).length;
+            document.getElementById('headerMeta').innerText = `Actualizado el ${new Date(GENERATION_TIME).toLocaleString('es-AR')} • ${RAW_DATA.length} oportunidades activas en cartera (${todayCount} nuevas hoy)`;
             document.getElementById('footerDate').innerText = new Date(GENERATION_TIME).toLocaleString('es-AR');
             document.getElementById('tabCount').innerText = RAW_DATA.length;
 
@@ -1099,7 +1112,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             });
 
             // Event Listeners
-            ['filterSearch', 'filterBarrio', 'filterMaxPrice', 'filterMaxSqm', 'filterAmbientes', 'sortBy', 'chkOnlySuper', 'chkHideContacted', 'chkOnlyContacted', 'chkOnlyFavs'].forEach(id => {
+            ['filterSearch', 'filterAntiquity', 'filterBarrio', 'filterMaxPrice', 'filterMaxSqm', 'filterAmbientes', 'sortBy', 'chkOnlySuper', 'chkHideContacted', 'chkOnlyContacted', 'chkOnlyFavs'].forEach(id => {
                 document.getElementById(id).addEventListener('input', render);
                 document.getElementById(id).addEventListener('change', render);
             });
@@ -1163,6 +1176,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         function resetFilters() {
             document.getElementById('filterSearch').value = '';
+            document.getElementById('filterAntiquity').value = 'ALL';
             document.getElementById('filterBarrio').value = 'ALL';
             document.getElementById('filterMaxPrice').value = '';
             document.getElementById('filterMaxSqm').value = '';
@@ -1177,6 +1191,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         function filterData() {
             const query = document.getElementById('filterSearch').value.toLowerCase().trim();
+            const antiquity = document.getElementById('filterAntiquity').value;
             const barrio = document.getElementById('filterBarrio').value;
             const maxPrice = parseFloat(document.getElementById('filterMaxPrice').value) || Infinity;
             const maxSqm = parseFloat(document.getElementById('filterMaxSqm').value) || Infinity;
@@ -1195,6 +1210,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 if (minAmb > 0 && (p.ambientes || 0) < minAmb) return false;
                 if (onlySuper && p.opportunity_score < 75 && !p.badge_text.includes('Super')) return false;
                 
+                const daysAgo = (typeof p.days_ago === 'number') ? p.days_ago : 0;
+                if (antiquity === 'TODAY' && daysAgo !== 0 && !p.is_new) return false;
+                if (antiquity === '2DAYS' && daysAgo > 1) return false;
+                if (antiquity === '5DAYS' && daysAgo > 4) return false;
+                if (antiquity === '7DAYS' && daysAgo > 6) return false;
+
                 const isCont = contacted.includes(p.id);
                 if (hideContacted && isCont) return false;
                 if (onlyContacted && !isCont) return false;
@@ -1203,6 +1224,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 return true;
             }).sort((a, b) => {
                 if (sortBy === 'score_desc') return b.opportunity_score - a.opportunity_score;
+                if (sortBy === 'newest_desc') return (a.days_ago || 0) - (b.days_ago || 0);
                 if (sortBy === 'price_asc') return a.price_val - b.price_val;
                 if (sortBy === 'sqm_asc') return a.usd_m2 - b.usd_m2;
                 if (sortBy === 'm2_desc') return (b.m2_tot || 0) - (a.m2_tot || 0);
@@ -1216,10 +1238,13 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
             // Update KPIs
             document.getElementById('kpiTotal').innerText = data.length;
-            const totalContactedInView = RAW_DATA.filter(p => contacted.includes(p.id)).length;
-            document.getElementById('kpiContactedSub').innerText = `${totalContactedInView} ya contactadas`;
+            const newTodayCount = data.filter(p => p.days_ago === 0 || p.is_new).length;
+            document.getElementById('kpiNewSub').innerText = `${newTodayCount} detectadas hoy`;
             const superCount = data.filter(p => p.opportunity_score >= 75 || p.badge_text.includes('Super')).length;
             document.getElementById('kpiSuper').innerText = superCount;
+
+            const totalContactedInView = data.filter(p => contacted.includes(p.id)).length;
+            document.getElementById('kpiContactedSub').innerText = `${totalContactedInView} ya contactadas`;
 
             if (data.length > 0) {
                 const minP = Math.min(...data.map(p => p.price_val));
@@ -1231,7 +1256,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 document.getElementById('kpiAvgSqm').innerText = '-';
             }
 
-            document.getElementById('resultsCount').innerText = `Mostrando ${data.length} de ${RAW_DATA.length} propiedades`;
+            document.getElementById('resultsCount').innerText = `Mostrando ${data.length} de ${RAW_DATA.length} oportunidades en cartera`;
             document.getElementById('emptyState').style.display = data.length === 0 ? 'block' : 'none';
 
             // Render Cards
@@ -1241,7 +1266,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 const isCont = contacted.includes(p.id);
                 const defaultImg = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&auto=format&fit=crop&q=60";
                 const imgUrl = p.image || defaultImg;
-                const pubDate = p.publication_date_text || 'Publicado hoy';
+                
+                let ageBadge = '<span class="badge badge-new">✨ Nueva Hoy</span>';
+                if (typeof p.days_ago === 'number' && p.days_ago > 0) {
+                    ageBadge = `<span class="badge badge-date">📅 Hace ${p.days_ago} ${p.days_ago === 1 ? 'día' : 'días'}</span>`;
+                }
                 
                 return `
                 <div class="property-card ${isCont ? 'is-contacted' : ''}">
@@ -1250,8 +1279,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         <div class="badge-container">
                             <span class="badge ${p.badge_class}">${p.badge_text}</span>
                             ${isCont ? '<span class="badge badge-contacted">✅ Ya Contactada</span>' : ''}
-                            <span class="badge badge-date">🕒 ${pubDate}</span>
-                            <span class="badge badge-new">✨ Nueva Hoy</span>
+                            ${ageBadge}
                         </div>
                         <div class="score-pill">Score: ${p.opportunity_score}/100</div>
                     </div>
@@ -1294,6 +1322,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 const isCont = contacted.includes(p.id);
                 const defaultImg = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=100&auto=format&fit=crop&q=60";
                 const imgUrl = p.image || defaultImg;
+                const ageLabel = (p.days_ago === 0 || p.is_new) ? '✨ Hoy' : `Hace ${p.days_ago}d`;
 
                 return `
                 <tr class="${isCont ? 'is-contacted' : ''}">
@@ -1311,7 +1340,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     <td style="color:var(--accent-green)"><strong>${p.usd_m2_formatted}</strong></td>
                     <td>${p.m2_tot || '-'} m²</td>
                     <td>${p.ambientes || '-'} amb</td>
-                    <td><small style="color:var(--accent-primary); font-weight:600;">${p.publication_date_text || 'Publicado hoy'}</small></td>
+                    <td><small style="color:var(--accent-primary); font-weight:700;">${ageLabel}</small></td>
                     <td>
                         <span style="color:${p.discount_pct > 0 ? 'var(--accent-green)' : 'var(--text-muted)'}">
                             ${p.discount_pct > 0 ? '+' : ''}${p.discount_pct}%
@@ -1482,7 +1511,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const data = filterData();
             if (data.length === 0) return alert('No hay datos para exportar.');
 
-            const headers = ['ID', 'Barrio', 'Direccion', 'Precio_USD', 'USD_m2', 'M2_Tot', 'Ambientes', 'Dormitorios', 'Publicacion', 'Score_Oportunidad', 'Descuento_Pct', 'Contactada', 'Link'];
+            const headers = ['ID', 'Barrio', 'Direccion', 'Precio_USD', 'USD_m2', 'M2_Tot', 'Ambientes', 'Dormitorios', 'Fecha_Deteccion', 'Dias_En_Cartera', 'Score_Oportunidad', 'Descuento_Pct', 'Contactada', 'Link'];
             const rows = data.map(p => {
                 const isCont = contacted.includes(p.id) ? 'SI' : 'NO';
                 return [
@@ -1494,7 +1523,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     p.m2_tot || '',
                     p.ambientes || '',
                     p.dormitorios || '',
-                    `"${p.publication_date_text || ''}"`,
+                    `"${p.first_seen_date || ''}"`,
+                    p.days_ago ?? 0,
                     p.opportunity_score,
                     p.discount_pct,
                     `"${isCont}"`,
@@ -1506,7 +1536,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const encodedUri = encodeURI(csvContent);
             const link = document.createElement('a');
             link.setAttribute('href', encodedUri);
-            link.setAttribute('download', `zonaprop_oportunidades_${new Date().toISOString().slice(0,10)}.csv`);
+            link.setAttribute('download', `zonaprop_cartera_10d_${new Date().toISOString().slice(0,10)}.csv`);
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -1520,7 +1550,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data, null, 2));
             const link = document.createElement('a');
             link.setAttribute('href', dataStr);
-            link.setAttribute('download', `zonaprop_oportunidades_${new Date().toISOString().slice(0,10)}.json`);
+            link.setAttribute('download', `zonaprop_cartera_10d_${new Date().toISOString().slice(0,10)}.json`);
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -1534,7 +1564,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
 def generate_html_report(properties: List[Dict[str, Any]], market_analytics: Dict[str, Any], output_path: str) -> str:
     """
-    Genera el archivo HTML inyectando la lista de propiedades evaluadas y los analytics de mercado de Zonaprop.
+    Genera el archivo HTML inyectando la cartera de propiedades evaluadas y los analytics de mercado.
     Retorna la ruta absoluta del archivo generado.
     """
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
