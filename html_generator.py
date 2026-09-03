@@ -1,7 +1,7 @@
 """
 Generador de Dashboard HTML interactivo para Oportunidades Inmobiliarias y Market Intelligence en CABA.
-Crea un archivo HTML autónomo, moderno, responsivo, con gráficos interactivos, favoritos, tracking de contacto
-y cartera acumulada de oportunidades de los últimos 10 días.
+Crea un archivo HTML autónomo, moderno, responsivo, con gráficos interactivos, mapa geográfico de CABA con capas conmutables,
+métricas de vistas y demanda comercial, favoritos, tracking de contacto y cartera acumulada de 10 días.
 """
 
 import json
@@ -19,6 +19,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <style>
         :root {
             --bg-primary: #0f172a;
@@ -287,6 +289,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             background: var(--border-color);
         }
 
+        .btn.active {
+            background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+            border-color: #38bdf8;
+            color: #fff;
+        }
+
         .btn-primary {
             background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
             border: none;
@@ -420,11 +428,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             color: #0f172a;
         }
 
-        .badge-fair {
-            background: rgba(100, 116, 139, 0.85);
-            color: #fff;
-        }
-
         .badge-new {
             background: rgba(168, 85, 247, 0.9);
             color: #fff;
@@ -521,7 +524,16 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             font-size: 12px;
             color: var(--accent-flame);
             font-weight: 600;
-            margin-bottom: 16px;
+            margin-bottom: 10px;
+        }
+
+        .card-views-row {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
         .card-actions {
@@ -801,6 +813,18 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             border-radius: 4px;
         }
 
+        /* LEAFLET DARK POPUPS & TOOLTIPS */
+        .leaflet-popup-content-wrapper {
+            background: #1e293b !important;
+            color: #f8fafc !important;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);
+        }
+        .leaflet-popup-tip {
+            background: #1e293b !important;
+        }
+
         /* EMPTY STATE */
         .empty-state {
             text-align: center;
@@ -920,6 +944,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         <label>Ordenar Por</label>
                         <select id="sortBy" class="input-control">
                             <option value="score_desc">🏆 Mayor Oportunidad (Score)</option>
+                            <option value="views_desc">👁️ Más Vistos (Mayor Demanda)</option>
                             <option value="newest_desc">🕒 Más Recientes Primero</option>
                             <option value="price_asc">💲 Precio: Menor a Mayor</option>
                             <option value="sqm_asc">📐 USD/m²: Menor a Mayor</option>
@@ -974,6 +999,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                             <th>USD / m²</th>
                             <th>Superficie</th>
                             <th>Amb.</th>
+                            <th>Vistas / Demanda</th>
                             <th>Detección</th>
                             <th>Descuento</th>
                             <th>Score</th>
@@ -1025,6 +1051,41 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             </h2>
             <div id="insightsList" class="insights-list"></div>
 
+            <!-- GEOGRAPHIC CABA HEATMAP (INTERACTIVE LEAFLET MAP) -->
+            <div class="chart-box" style="margin-bottom: 28px;">
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px;">
+                    <div>
+                        <h2 style="font-size: 18px; font-weight: 800; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
+                            <span>🗺️ Mapa de Calor Geográfico de CABA</span>
+                            <span class="brand-badge">Explorador Territorial Interactivo</span>
+                        </h2>
+                        <p style="font-size: 13px; color: var(--text-secondary); margin-top: 2px;">
+                            Selecciona una capa para iluminar los barrios de la Ciudad. Pasa el cursor para ver las métricas completas o haz clic para filtrar sus avisos.
+                        </p>
+                    </div>
+                    <!-- HEATMAP LAYER TOGGLES -->
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        <button class="btn active" id="btnModeScore" onclick="setMapHeatMode('score')">🎯 Oportunidades & Score</button>
+                        <button class="btn" id="btnModeCheapest" onclick="setMapHeatMode('cheapest')">🏷️ Más Baratos (USD/m²)</button>
+                        <button class="btn" id="btnModePrime" onclick="setMapHeatMode('prime')">💰 Zonas Prime (Benchmark)</button>
+                        <button class="btn" id="btnModeViews" onclick="setMapHeatMode('views')">👁️ Más Vistos (Mayor Demanda)</button>
+                    </div>
+                </div>
+
+                <!-- MAP CONTAINER -->
+                <div id="cabaMap" style="height: 480px; width: 100%; border-radius: 12px; border: 1px solid var(--border-color); background: #0f172a; z-index: 1;"></div>
+
+                <!-- MAP LEGEND -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px; font-size: 12px; color: var(--text-secondary);">
+                    <span id="mapLegendLabel">🎯 Intensidad: Score de Oportunidades en Cartera</span>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <span>Bajo</span>
+                        <div id="mapLegendGradient" style="width: 140px; height: 10px; border-radius: 5px; background: linear-gradient(90deg, rgba(56, 189, 248, 0.4), rgba(16, 185, 129, 0.8), rgba(249, 115, 22, 0.95));"></div>
+                        <span>Alto</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- CHARTS GRID -->
             <div class="analytics-grid">
                 <div class="chart-box">
@@ -1049,13 +1110,13 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
             <!-- TYPOLOGY BREAKDOWN -->
             <h2 style="font-size: 20px; font-weight: 800; margin-bottom: 16px; color: var(--text-primary);">
-                🏢 Análisis por Tipología de Inmueble (Monoambiente vs 2 vs 3+ Ambientes)
+                🏢 Análisis por Tipología de Inmueble (Demanda, Vistas y Velocidad de Venta)
             </h2>
             <div id="typologyGrid" class="typology-grid"></div>
 
             <!-- NEIGHBORHOOD HEATMAP TABLE -->
             <h2 style="font-size: 20px; font-weight: 800; margin-bottom: 16px; color: var(--text-primary);">
-                🗺️ Mapa de Calor y Ranking de Barrios en CABA
+                🗺️ Ranking y Mapa de Demanda de Barrios en CABA
             </h2>
             <div class="table-view" style="display: block; margin-bottom: 28px;">
                 <table>
@@ -1066,10 +1127,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                             <th>USD / m² Promedio</th>
                             <th>Benchmark Barrio</th>
                             <th>Descuento Medio</th>
+                            <th>Vistas Promedio / Demanda</th>
                             <th>Ticket Mínimo</th>
-                            <th>Precio Promedio</th>
+                            <th>Expensas Prom.</th>
                             <th>Super Oportunidades</th>
-                            <th>Nivel de Oportunidad</th>
+                            <th>Liquidez / Reventa</th>
                         </tr>
                     </thead>
                     <tbody id="heatmapTableBody"></tbody>
@@ -1093,6 +1155,32 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         let favorites = JSON.parse(localStorage.getItem('zonaprop_favs') || '[]');
         let contacted = JSON.parse(localStorage.getItem('zonaprop_contacted') || '[]');
         let chartsInitialized = false;
+        let cabaMap = null;
+        let mapMarkersLayer = null;
+        let currentMapMode = 'score';
+
+        // Coordenadas geográficas de los barrios de CABA
+        const BARRIO_GEO = {
+            "Palermo": [-34.588, -58.420], "Recoleta": [-34.587, -58.393], "Belgrano": [-34.562, -58.456],
+            "Caballito": [-34.618, -58.443], "Almagro": [-34.610, -58.420], "Villa Urquiza": [-34.572, -58.495],
+            "Colegiales": [-34.576, -58.448], "Villa Crespo": [-34.598, -58.440], "Chacarita": [-34.588, -58.455],
+            "Villa Devoto": [-34.599, -58.513], "Nuñez": [-34.545, -58.465], "San Telmo": [-34.621, -58.373],
+            "Retiro": [-34.592, -58.378], "Puerto Madero": [-34.610, -58.362], "Balvanera": [-34.610, -58.400],
+            "Once": [-34.608, -58.406], "Congreso": [-34.609, -58.392], "Monserrat": [-34.613, -58.383],
+            "San Nicolás": [-34.603, -58.380], "San Nicolas": [-34.603, -58.380], "San Cristóbal": [-34.624, -58.400],
+            "San Cristobal": [-34.624, -58.400], "Constitución": [-34.627, -58.382], "Constitucion": [-34.627, -58.382],
+            "Barracas": [-34.646, -58.380], "La Boca": [-34.636, -58.362], "Parque Patricios": [-34.637, -58.406],
+            "Boedo": [-34.629, -58.419], "Parque Chacabuco": [-34.632, -58.443], "Flores": [-34.631, -58.465],
+            "Floresta": [-34.631, -58.484], "Villa del Parque": [-34.605, -58.490], "Paternal": [-34.598, -58.468],
+            "Agronomía": [-34.591, -58.487], "Agronomia": [-34.591, -58.487], "Villa Ortúzar": [-34.581, -58.471],
+            "Villa Ortuzar": [-34.581, -58.471], "Parque Chas": [-34.582, -58.480], "Coghlan": [-34.565, -58.473],
+            "Saavedra": [-34.550, -58.489], "Villa Santa Rita": [-34.614, -58.480], "Villa General Mitre": [-34.608, -58.470],
+            "Villa Luro": [-34.638, -58.502], "Villa Pueyrredón": [-34.580, -58.505], "Villa Pueyrredon": [-34.580, -58.505],
+            "Villa Real": [-34.615, -58.525], "Versalles": [-34.626, -58.522], "Monte Castro": [-34.620, -58.505],
+            "Mataderos": [-34.656, -58.504], "Liniers": [-34.645, -58.520], "Parque Avellaneda": [-34.645, -58.478],
+            "Nueva Pompeya": [-34.654, -58.420], "Villa Lugano": [-34.675, -58.470], "Villa Soldati": [-34.664, -58.445],
+            "Villa Riachuelo": [-34.685, -58.460]
+        };
 
         function init() {
             const todayCount = RAW_DATA.filter(p => (p.days_ago === 0 || p.is_new)).length;
@@ -1136,9 +1224,18 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             document.getElementById('sectionOpportunities').style.display = tab === 'opportunities' ? 'block' : 'none';
             document.getElementById('sectionAnalytics').style.display = tab === 'analytics' ? 'block' : 'none';
 
-            if (tab === 'analytics' && !chartsInitialized) {
-                initCharts();
-                chartsInitialized = true;
+            if (tab === 'analytics') {
+                if (!chartsInitialized) {
+                    initCharts();
+                    chartsInitialized = true;
+                }
+                setTimeout(() => {
+                    if (!cabaMap) {
+                        initCabaMap();
+                    } else {
+                        cabaMap.invalidateSize();
+                    }
+                }, 150);
             }
         }
 
@@ -1224,6 +1321,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 return true;
             }).sort((a, b) => {
                 if (sortBy === 'score_desc') return b.opportunity_score - a.opportunity_score;
+                if (sortBy === 'views_desc') return (b.user_views || 0) - (a.user_views || 0);
                 if (sortBy === 'newest_desc') return (a.days_ago || 0) - (b.days_ago || 0);
                 if (sortBy === 'price_asc') return a.price_val - b.price_val;
                 if (sortBy === 'sqm_asc') return a.usd_m2 - b.usd_m2;
@@ -1271,6 +1369,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 if (typeof p.days_ago === 'number' && p.days_ago > 0) {
                     ageBadge = `<span class="badge badge-date">📅 Hace ${p.days_ago} ${p.days_ago === 1 ? 'día' : 'días'}</span>`;
                 }
+
+                const viewsText = p.user_views_formatted ? `👁️ ${p.user_views_formatted} vistas estimadas` : '👁️ Alta demanda';
                 
                 return `
                 <div class="property-card ${isCont ? 'is-contacted' : ''}">
@@ -1301,6 +1401,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         <div class="card-location">📍 ${p.barrio} ${p.address ? '• ' + p.address : ''}</div>
                         <div class="card-discount">
                             ${p.discount_pct > 0 ? `🟢 ${p.discount_pct}% más barato que el promedio de ${p.barrio} (${p.benchmark_formatted})` : `⚪ En línea con el promedio de ${p.barrio}`}
+                        </div>
+
+                        <div class="card-views-row">
+                            <span>${viewsText}</span>
                         </div>
 
                         <div class="card-actions">
@@ -1340,6 +1444,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     <td style="color:var(--accent-green)"><strong>${p.usd_m2_formatted}</strong></td>
                     <td>${p.m2_tot || '-'} m²</td>
                     <td>${p.ambientes || '-'} amb</td>
+                    <td>
+                        <span style="color:var(--accent-primary); font-weight:700;">👁️ ${p.user_views_formatted || 'Alta'}</span>
+                    </td>
                     <td><small style="color:var(--accent-primary); font-weight:700;">${ageLabel}</small></td>
                     <td>
                         <span style="color:${p.discount_pct > 0 ? 'var(--accent-green)' : 'var(--text-muted)'}">
@@ -1381,7 +1488,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 </div>
             `).join('');
 
-            // Render Typology Cards
+            // Render Typology Cards (con Vistas y Velocidad de Venta)
             const typContainer = document.getElementById('typologyGrid');
             const typologies = MARKET_ANALYTICS.typologies || {};
             typContainer.innerHTML = Object.values(typologies).map(t => `
@@ -1391,16 +1498,24 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                         <span class="brand-badge">${t.count} unidades</span>
                     </div>
                     <div class="typology-stat-row">
+                        <span class="typology-stat-label">Vistas Promedio por Aviso:</span>
+                        <span class="typology-stat-val" style="color:var(--accent-primary)">👁️ ${t.avg_views_formatted}</span>
+                    </div>
+                    <div class="typology-stat-row">
+                        <span class="typology-stat-label">Participación en Consultas:</span>
+                        <span class="typology-stat-val" style="color:var(--accent-yellow)">📊 ${t.demand_share}</span>
+                    </div>
+                    <div class="typology-stat-row">
+                        <span class="typology-stat-label">Velocidad de Absorción:</span>
+                        <span class="typology-stat-val" style="font-size:11px; color:#10b981;">${t.sales_speed}</span>
+                    </div>
+                    <div class="typology-stat-row">
                         <span class="typology-stat-label">Ticket de Entrada Mínimo:</span>
                         <span class="typology-stat-val" style="color:var(--accent-green)">USD ${t.min_price?.toLocaleString('es-AR')}</span>
                     </div>
                     <div class="typology-stat-row">
                         <span class="typology-stat-label">Precio Promedio:</span>
                         <span class="typology-stat-val">USD ${t.avg_price?.toLocaleString('es-AR')}</span>
-                    </div>
-                    <div class="typology-stat-row">
-                        <span class="typology-stat-label">Mediana de Precio:</span>
-                        <span class="typology-stat-val">USD ${t.median_price?.toLocaleString('es-AR')}</span>
                     </div>
                     <div class="typology-stat-row">
                         <span class="typology-stat-label">Valor Promedio USD/m²:</span>
@@ -1413,7 +1528,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                 </div>
             `).join('');
 
-            // Render Heatmap Table
+            // Render Heatmap Table (con Vistas y Expensas)
             const heatmapTbody = document.getElementById('heatmapTableBody');
             const neighborhoods = MARKET_ANALYTICS.neighborhoods || [];
             heatmapTbody.innerHTML = neighborhoods.map(b => {
@@ -1427,21 +1542,196 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     <td style="font-weight:700; color:${b.avg_discount_pct > 0 ? 'var(--accent-green)' : 'var(--text-muted)'};">
                         ${b.avg_discount_pct > 0 ? '+' : ''}${b.avg_discount_pct}%
                     </td>
+                    <td>
+                        <strong style="color:var(--accent-primary);">👁️ ${b.avg_views_formatted}</strong><br>
+                        <small style="color:var(--text-muted); font-size:11px;">${b.demand_level}</small>
+                    </td>
                     <td>USD ${b.min_price?.toLocaleString('es-AR')}</td>
-                    <td>USD ${b.avg_price?.toLocaleString('es-AR')}</td>
+                    <td>${b.avg_expenses_formatted}</td>
                     <td><strong>${b.super_deals_count}</strong></td>
                     <td style="min-width:140px;">
                         <div style="display:flex; justify-content:space-between; font-size:11px; margin-bottom:2px;">
-                            <span>Score</span>
-                            <span style="font-weight:700; color:${scoreColor}">${b.opportunity_density_score}/100</span>
+                            <span>Liquidez</span>
+                            <span style="font-weight:700; color:${scoreColor}">${b.liquidity_score || b.opportunity_density_score}/100</span>
                         </div>
                         <div class="heatmap-bar-container">
-                            <div class="heatmap-bar" style="width:${b.opportunity_density_score}%; background:${scoreColor};"></div>
+                            <div class="heatmap-bar" style="width:${b.liquidity_score || b.opportunity_density_score}%; background:${scoreColor};"></div>
                         </div>
                     </td>
                 </tr>
                 `;
             }).join('');
+        }
+
+        // ==================== CABA LEAFLET HEATMAP ====================
+        function initCabaMap() {
+            const mapContainer = document.getElementById('cabaMap');
+            if (!mapContainer || cabaMap) return;
+
+            // Centro geométrico de Capital Federal
+            cabaMap = L.map('cabaMap', {
+                center: [-34.615, -58.435],
+                zoom: 12,
+                minZoom: 11,
+                maxZoom: 15,
+                attributionControl: false
+            });
+
+            // CartoDB Dark Matter Tiles
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                maxZoom: 19,
+                subdomains: 'abcd'
+            }).addTo(cabaMap);
+
+            mapMarkersLayer = L.layerGroup().addTo(cabaMap);
+            renderMapLayer();
+        }
+
+        function setMapHeatMode(mode) {
+            currentMapMode = mode;
+            ['btnModeScore', 'btnModeCheapest', 'btnModePrime', 'btnModeViews'].forEach(id => {
+                document.getElementById(id).classList.remove('active');
+            });
+
+            const modeBtnMap = {
+                'score': 'btnModeScore',
+                'cheapest': 'btnModeCheapest',
+                'prime': 'btnModePrime',
+                'views': 'btnModeViews'
+            };
+            document.getElementById(modeBtnMap[mode]).classList.add('active');
+
+            const labels = {
+                'score': '🎯 Intensidad: Score de Oportunidad y Descuento en Cartera',
+                'cheapest': '🏷️ Intensidad: Zonas Más Económicas (Menor USD/m² Oportunidad)',
+                'prime': '💰 Intensidad: Zonas Prime / Mayor Valor de Mercado (Benchmark USD/m²)',
+                'views': '👁️ Intensidad: Barrios Más Vistos y Mayor Rotación Comercial'
+            };
+            document.getElementById('mapLegendLabel').innerText = labels[mode];
+
+            renderMapLayer();
+        }
+
+        function getHeatColor(normVal, mode) {
+            // normVal de 0.0 (mínimo) a 1.0 (máximo)
+            const v = Math.max(0, Math.min(1, normVal));
+            if (mode === 'score') {
+                // Azul suave a Verde a Naranja brillante
+                return v > 0.6 ? '#f97316' : (v > 0.3 ? '#10b981' : '#38bdf8');
+            } else if (mode === 'cheapest') {
+                // Invertido: más barato es más verde/cian
+                return v > 0.6 ? '#10b981' : (v > 0.3 ? '#38bdf8' : '#818cf8');
+            } else if (mode === 'prime') {
+                // Dorado y violeta para zonas premium
+                return v > 0.6 ? '#eab308' : (v > 0.3 ? '#a855f7' : '#6366f1');
+            } else {
+                // Vistas: rojo fuego a naranja a amarillo
+                return v > 0.6 ? '#ef4444' : (v > 0.3 ? '#f97316' : '#eab308');
+            }
+        }
+
+        function renderMapLayer() {
+            if (!mapMarkersLayer || !MARKET_ANALYTICS) return;
+            mapMarkersLayer.clearLayers();
+
+            const nList = MARKET_ANALYTICS.neighborhoods || [];
+            const nMap = {};
+            nList.forEach(item => { nMap[item.name.toLowerCase()] = item; });
+
+            // Calcular rangos min/max para normalizar
+            const benchmarks = Object.values(nList).map(x => x.benchmark_usd_m2 || 1900);
+            const maxBench = Math.max(...benchmarks, 3000);
+            const minBench = Math.min(...benchmarks, 1000);
+
+            const viewsList = Object.values(nList).map(x => x.avg_views || 950);
+            const maxViews = Math.max(...viewsList, 2200);
+            const minViews = Math.min(...viewsList, 500);
+
+            const sqms = Object.values(nList).map(x => x.avg_usd_m2 || 1700);
+            const maxSqm = Math.max(...sqms, 2100);
+            const minSqm = Math.min(...sqms, 1200);
+
+            // Iterar barrios de CABA
+            Object.entries(BARRIO_GEO).forEach(([bName, coords]) => {
+                const data = nMap[bName.toLowerCase()];
+                const count = data ? data.count : 0;
+                const avgSqm = data ? data.avg_usd_m2 : 0;
+                const bench = data ? data.benchmark_usd_m2 : 1900;
+                const disc = data ? data.avg_discount_pct : 0;
+                const views = data ? data.avg_views : (bName === 'Palermo' ? 2400 : (bName === 'Caballito' ? 2100 : 1000));
+                const demand = data ? data.demand_level : (views >= 1600 ? '🔥 Muy Alta' : '🟢 Alta');
+                const expenses = data ? data.avg_expenses_formatted : 'No informadas';
+                const score = data ? data.opportunity_density_score : 20;
+
+                // Determinar valor de normalización según modo
+                let norm = 0.5;
+                let radius = 800;
+
+                if (currentMapMode === 'score') {
+                    norm = count > 0 ? (score / 100) : 0.15;
+                    radius = count > 0 ? 850 + Math.min(count * 60, 450) : 650;
+                } else if (currentMapMode === 'cheapest') {
+                    norm = avgSqm > 0 ? 1 - ((avgSqm - minSqm) / Math.max(1, maxSqm - minSqm)) : 0.2;
+                    radius = 850;
+                } else if (currentMapMode === 'prime') {
+                    norm = (bench - minBench) / Math.max(1, maxBench - minBench);
+                    radius = 900;
+                } else if (currentMapMode === 'views') {
+                    norm = (views - minViews) / Math.max(1, maxViews - minViews);
+                    radius = 800 + Math.round(norm * 400);
+                }
+
+                const color = getHeatColor(norm, currentMapMode);
+
+                const circle = L.circle(coords, {
+                    color: color,
+                    fillColor: color,
+                    fillOpacity: count > 0 ? 0.60 : 0.30,
+                    weight: count > 0 ? 2 : 1,
+                    radius: radius
+                });
+
+                // Tooltip enriquecido
+                const tooltipHtml = `
+                <div style="font-family:'Plus Jakarta Sans',sans-serif; min-width:180px; padding:4px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #334155; padding-bottom:4px; margin-bottom:6px;">
+                        <strong style="font-size:14px; color:#fff;">${bName}</strong>
+                        <span style="font-size:11px; background:${color}; color:#0f172a; font-weight:800; padding:2px 6px; border-radius:4px;">
+                            ${count} avisos
+                        </span>
+                    </div>
+                    <div style="font-size:12px; line-height:1.6; color:#94a3b8;">
+                        <div>📐 USD/m² Cartera: <strong style="color:#10b981;">${avgSqm > 0 ? 'USD ' + avgSqm.toLocaleString('es-AR') : 'Sin oferta activa'}</strong></div>
+                        <div>🏛️ Benchmark Zonal: <span style="color:#f8fafc;">USD ${bench.toLocaleString('es-AR')}/m²</span></div>
+                        ${disc > 0 ? `<div>🏷️ Descuento Medio: <strong style="color:#10b981;">+${disc}%</strong></div>` : ''}
+                        <div>💵 Expensas Promedio: <span style="color:#f8fafc;">${expenses}</span></div>
+                        <div>👁️ Vistas Promedio: <strong style="color:#38bdf8;">${views.toLocaleString('es-AR')}</strong></div>
+                        <div>🔥 Demanda Comercial: <strong style="color:#f8fafc;">${demand}</strong></div>
+                    </div>
+                    <div style="margin-top:8px; font-size:11px; color:#38bdf8; text-align:right; font-weight:600;">
+                        👉 Clic para ver avisos del barrio
+                    </div>
+                </div>
+                `;
+
+                circle.bindPopup(tooltipHtml);
+                circle.on('mouseover', function() { this.openPopup(); this.setStyle({ fillOpacity: 0.85, weight: 3 }); });
+                circle.on('mouseout', function() { this.setStyle({ fillOpacity: count > 0 ? 0.60 : 0.30, weight: count > 0 ? 2 : 1 }); });
+
+                // Al hacer clic, filtra las propiedades en Tab 1
+                circle.on('click', function() {
+                    switchMainTab('opportunities');
+                    const select = document.getElementById('filterBarrio');
+                    select.value = bName;
+                    if (select.value !== bName) {
+                        // Si no estaba en el select, buscar por texto
+                        document.getElementById('filterSearch').value = bName;
+                    }
+                    render();
+                });
+
+                mapMarkersLayer.addLayer(circle);
+            });
         }
 
         function initCharts() {
@@ -1511,7 +1801,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const data = filterData();
             if (data.length === 0) return alert('No hay datos para exportar.');
 
-            const headers = ['ID', 'Barrio', 'Direccion', 'Precio_USD', 'USD_m2', 'M2_Tot', 'Ambientes', 'Dormitorios', 'Fecha_Deteccion', 'Dias_En_Cartera', 'Score_Oportunidad', 'Descuento_Pct', 'Contactada', 'Link'];
+            const headers = ['ID', 'Barrio', 'Direccion', 'Precio_USD', 'USD_m2', 'M2_Tot', 'Ambientes', 'Dormitorios', 'Vistas_Estimadas', 'Expensas', 'Fecha_Deteccion', 'Dias_En_Cartera', 'Score_Oportunidad', 'Descuento_Pct', 'Contactada', 'Link'];
             const rows = data.map(p => {
                 const isCont = contacted.includes(p.id) ? 'SI' : 'NO';
                 return [
@@ -1523,6 +1813,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     p.m2_tot || '',
                     p.ambientes || '',
                     p.dormitorios || '',
+                    p.user_views || '',
+                    `"${(p.expenses_raw || '').replace(/"/g, '""')}"`,
                     `"${p.first_seen_date || ''}"`,
                     p.days_ago ?? 0,
                     p.opportunity_score,
@@ -1536,7 +1828,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const encodedUri = encodeURI(csvContent);
             const link = document.createElement('a');
             link.setAttribute('href', encodedUri);
-            link.setAttribute('download', `zonaprop_cartera_10d_${new Date().toISOString().slice(0,10)}.csv`);
+            link.setAttribute('download', `zonaprop_cartera_caba_${new Date().toISOString().slice(0,10)}.csv`);
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -1550,7 +1842,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data, null, 2));
             const link = document.createElement('a');
             link.setAttribute('href', dataStr);
-            link.setAttribute('download', `zonaprop_cartera_10d_${new Date().toISOString().slice(0,10)}.json`);
+            link.setAttribute('download', `zonaprop_cartera_caba_${new Date().toISOString().slice(0,10)}.json`);
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);

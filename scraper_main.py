@@ -92,7 +92,7 @@ def main():
 
     # 1. Scrapear propiedades de Zonaprop
     scraper = ZonapropScraper(config)
-    raw_properties = scraper.scrape()
+    raw_properties = scraper.scrape(max_pages=search_cfg.get("pages_to_scrape", 5))
 
     if not raw_properties:
         print("\n[Aviso] No se encontraron avisos nuevos en Zonaprop en esta corrida.")

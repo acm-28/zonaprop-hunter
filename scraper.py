@@ -130,8 +130,28 @@ class ZonapropScraper:
                 or card.select_one('[class*="expenses"], [class*="Expenses"]')
             )
             expenses_raw = expenses_el.get_text(strip=True) if expenses_el else ""
+            expenses_val = None
+            if expenses_raw:
+                exp_nums = re.findall(r'[\d\.]+', expenses_raw)
+                if exp_nums:
+                    try:
+                        expenses_val = int(exp_nums[-1].replace('.', ''))
+                    except ValueError:
+                        pass
 
-            # 4. Características principales (m2, amb, dorm, baños, coch)
+            # 4. Vistas / Visualizaciones (si está presente en la tarjeta)
+            views_el = card.select_one('[class*="views"], [class*="visitas"], [class*="visualizaciones"]')
+            views_raw = views_el.get_text(strip=True) if views_el else ""
+            user_views = None
+            if views_raw:
+                v_nums = re.findall(r'[\d\.]+', views_raw)
+                if v_nums:
+                    try:
+                        user_views = int(v_nums[-1].replace('.', ''))
+                    except ValueError:
+                        pass
+
+            # 5. Características principales (m2, amb, dorm, baños, coch)
             features_el = (
                 card.find(attrs={"data-qa": lambda x: x and "feature" in x.lower()})
                 or card.select_one('[class*="mainFeatures"], [class*="Features"], [class*="postingMainFeatures"]')
@@ -210,6 +230,8 @@ class ZonapropScraper:
                 "price_val": price_val,
                 "currency": currency,
                 "expenses_raw": expenses_raw,
+                "expenses_val": expenses_val,
+                "user_views": user_views,
                 "features_raw": features_raw,
                 "m2_tot": m2_tot,
                 "m2_cub": m2_cub,
