@@ -58,10 +58,17 @@ def merge_and_sync_history(today_properties: List[Dict[str, Any]], retention_day
     cutoff_date = now - timedelta(days=retention_days)
     new_today_count = 0
 
-    # 1. Purgar oportunidades con más de retention_days de antigüedad
+    # 1. Purgar oportunidades con más de retention_days o que no califiquen como Buen Precio
     purged_deals = {}
     for prop_id, prop_data in active_deals.items():
         first_seen_str = prop_data.get("first_seen_date", today_str)
+        badge = prop_data.get("badge_text", "")
+        disc = prop_data.get("discount_pct", 0)
+
+        # Descartar si era 'Precio Normal' o tenía descuento negativo
+        if "Normal" in badge or disc < 0:
+            continue
+
         try:
             first_seen_dt = datetime.strptime(first_seen_str, "%Y-%m-%d")
             if first_seen_dt >= cutoff_date:

@@ -154,27 +154,31 @@ def evaluate_property(raw_prop: Dict[str, Any], config: Dict[str, Any]) -> Optio
     # 7. Calcular descuento porcentual vs benchmark del barrio
     discount_pct = round(((barrio_benchmark - usd_m2) / barrio_benchmark) * 100, 1)
 
-    # 8. Score de Oportunidad (0 a 100)
-    discount_score = max(0, min(100, (discount_pct + 10) * 1.8))
-    price_score = max(0, min(100, (1 - (price_val - min_price) / max(1, max_price - min_price)) * 100))
-    benchmark_weight = min(100, (barrio_benchmark / 2800) * 100)
-    
-    opportunity_score = round(0.55 * discount_score + 0.30 * price_score + 0.15 * benchmark_weight)
-    opportunity_score = max(10, min(99, opportunity_score))
+    # Descartar propiedades que estén por encima del benchmark del barrio
+    if discount_pct < 0:
+        return None
 
-    # Badge de Oportunidad
-    if discount_pct >= 35 or (usd_m2 <= 1300 and barrio_benchmark >= 2000):
+    # 8. Calificación y Badge de Oportunidad (mínimo exigido: 'Buen Precio')
+    if discount_pct >= 30 or (usd_m2 <= 1300 and barrio_benchmark >= 1800 and discount_pct >= 15):
         badge_text = "🔥 Super Oportunidad"
         badge_class = "badge-super"
-    elif discount_pct >= 20 or (usd_m2 <= 1500 and barrio_benchmark >= 2000):
+    elif discount_pct >= 18 or (usd_m2 <= 1450 and barrio_benchmark >= 1800 and discount_pct >= 10):
         badge_text = "💎 Gran Oportunidad"
         badge_class = "badge-great"
-    elif discount_pct >= 10 or usd_m2 <= 1650:
+    elif discount_pct >= 5 or (usd_m2 <= 1650 and discount_pct >= 0):
         badge_text = "🏷️ Buen Precio"
         badge_class = "badge-good"
     else:
-        badge_text = "📊 Precio Normal"
-        badge_class = "badge-fair"
+        # No califica como oportunidad (es precio normal o poco atractivo): se descarta
+        return None
+
+    # 9. Score de Oportunidad (0 a 100)
+    discount_score = max(0, min(100, (discount_pct + 5) * 2.2))
+    price_score = max(0, min(100, (1 - (price_val - min_price) / max(1, max_price - min_price)) * 100))
+    benchmark_weight = min(100, (barrio_benchmark / 2600) * 100)
+    
+    opportunity_score = round(0.60 * discount_score + 0.25 * price_score + 0.15 * benchmark_weight)
+    opportunity_score = max(30, min(99, opportunity_score))
 
     source = raw_prop.get("source", "Zonaprop")
     source_badge = raw_prop.get("source_badge", f"🔵 {source}")
