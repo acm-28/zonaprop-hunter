@@ -5,8 +5,44 @@ echo =========================================================
 echo    ZONAPROP HUNTER CABA - OPORTUNIDADES INMOBILIARIAS
 echo =========================================================
 echo.
+
 cd /d "%~dp0"
-python scraper_main.py
+
+echo [1/3] Ejecutando rastreo diario en Zonaprop (Publicados hoy)...
+python scraper_main.py --no-browser
+set SCRAPER_EXIT=%ERRORLEVEL%
+
+if not "%SCRAPER_EXIT%"=="0" (
+    echo [ERROR] Ocurrió un fallo durante la ejecución del scraper.
+    goto END
+)
+
 echo.
+echo [2/3] Verificando novedades para GitHub y Vercel...
+git add index.html output/ history.json
+
+git diff --staged --quiet
+if errorlevel 1 (
+    echo [3/3] Nuevas oportunidades detectadas. Sincronizando con GitHub...
+    git commit -m "chore(data): auto-update daily opportunities & analytics [skip ci]"
+    git pull --rebase -X theirs origin main
+    git push origin main
+    echo.
+    echo =========================================================
+    echo [OK] Cambios subidos a GitHub exitosamente!
+    echo Vercel está compilando la versión actualizada del sitio.
+    echo =========================================================
+) else (
+    echo [3/3] No hay datos nuevos respecto a la última corrida.
+)
+
+:END
+echo.
+if "%1"=="--scheduled" goto EXIT
+if "%1"=="--no-pause" goto EXIT
+
 echo Presiona cualquier tecla para cerrar esta ventana...
 pause > nul
+
+:EXIT
+exit /b %SCRAPER_EXIT%
