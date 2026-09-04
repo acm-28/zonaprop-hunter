@@ -4382,9 +4382,59 @@
       "first_seen": "2026-09-04",
       "last_price": 74900,
       "barrio": "Flores"
+    },
+    "ZPROP-60070681": {
+      "first_seen": "2026-09-04",
+      "last_price": 63000,
+      "barrio": "Caballito"
+    },
+    "ZPROP-60070140": {
+      "first_seen": "2026-09-04",
+      "last_price": 65000,
+      "barrio": "Colegiales"
+    },
+    "ZPROP-60069845": {
+      "first_seen": "2026-09-04",
+      "last_price": 70000,
+      "barrio": "San Nicolas"
+    },
+    "ZPROP-60070909": {
+      "first_seen": "2026-09-04",
+      "last_price": 59000,
+      "barrio": "Balvanera"
+    },
+    "ZPROP-60070982": {
+      "first_seen": "2026-09-04",
+      "last_price": 78000,
+      "barrio": "Barrio Norte"
+    },
+    "ZPROP-60069333": {
+      "first_seen": "2026-09-04",
+      "last_price": 68000,
+      "barrio": "Caballito"
+    },
+    "ZPROP-60070133": {
+      "first_seen": "2026-09-04",
+      "last_price": 55000,
+      "barrio": "Barracas"
+    },
+    "ZPROP-60069800": {
+      "first_seen": "2026-09-04",
+      "last_price": 60000,
+      "barrio": "Caballito"
+    },
+    "ZPROP-60070378": {
+      "first_seen": "2026-09-04",
+      "last_price": 63000,
+      "barrio": "Boedo"
+    },
+    "ZPROP-60070564": {
+      "first_seen": "2026-09-04",
+      "last_price": 69000,
+      "barrio": "Monserrat"
     }
   },
-  "last_run": "2026-09-04T17:00:17.116086",
+  "last_run": "2026-09-04T19:30:16.148783",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -4421,13 +4471,13 @@
     },
     {
       "date": "2026-09-04",
-      "timestamp": "2026-09-04T17:00:17.163247",
-      "total_properties": 123,
-      "new_today": 88,
-      "avg_usd_m2": 1412,
+      "timestamp": "2026-09-04T19:30:16.197707",
+      "total_properties": 133,
+      "new_today": 98,
+      "avg_usd_m2": 1424,
       "min_price": 25500,
       "median_price": 65000,
-      "super_deals_count": 27,
+      "super_deals_count": 30,
       "top_neighborhoods": []
     }
   ],
@@ -7874,7 +7924,7 @@
       "benchmark_formatted": "USD 1.100/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60063639": {
       "id": "ZPROP-60063639",
@@ -7956,7 +8006,7 @@
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60062992": {
       "id": "ZPROP-60062992",
@@ -8038,7 +8088,7 @@
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60063995": {
       "id": "ZPROP-60063995",
@@ -8079,7 +8129,7 @@
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60064028": {
       "id": "ZPROP-60064028",
@@ -8120,7 +8170,7 @@
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60062817": {
       "id": "ZPROP-60062817",
@@ -8161,7 +8211,7 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60062757": {
       "id": "ZPROP-60062757",
@@ -8202,7 +8252,7 @@
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60065156": {
       "id": "ZPROP-60065156",
@@ -8284,7 +8334,7 @@
       "benchmark_formatted": "USD 2.650/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60065109": {
       "id": "ZPROP-60065109",
@@ -8325,7 +8375,7 @@
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60064846": {
       "id": "ZPROP-60064846",
@@ -8407,7 +8457,7 @@
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60068296": {
       "id": "ZPROP-60068296",
@@ -8448,7 +8498,7 @@
       "benchmark_formatted": "USD 1.100/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60066532": {
       "id": "ZPROP-60066532",
@@ -8530,7 +8580,7 @@
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60066574": {
       "id": "ZPROP-60066574",
@@ -8571,7 +8621,7 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60068968": {
       "id": "ZPROP-60068968",
@@ -8612,7 +8662,7 @@
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60067165": {
       "id": "ZPROP-60067165",
@@ -8653,7 +8703,7 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60067548": {
       "id": "ZPROP-60067548",
@@ -8694,7 +8744,7 @@
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60069205": {
       "id": "ZPROP-60069205",
@@ -8735,7 +8785,7 @@
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60067972": {
       "id": "ZPROP-60067972",
@@ -8817,7 +8867,7 @@
       "benchmark_formatted": "USD 1.600/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60068070": {
       "id": "ZPROP-60068070",
@@ -8858,7 +8908,7 @@
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60066797": {
       "id": "ZPROP-60066797",
@@ -8899,7 +8949,7 @@
       "benchmark_formatted": "USD 1.650/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60067076": {
       "id": "ZPROP-60067076",
@@ -8940,7 +8990,7 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60064293": {
       "id": "ZPROP-60064293",
@@ -8981,7 +9031,7 @@
       "benchmark_formatted": "USD 1.400/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60067720": {
       "id": "ZPROP-60067720",
@@ -9022,7 +9072,7 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60067261": {
       "id": "ZPROP-60067261",
@@ -9063,7 +9113,7 @@
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60067664": {
       "id": "ZPROP-60067664",
@@ -9104,7 +9154,7 @@
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60067980": {
       "id": "ZPROP-60067980",
@@ -9145,7 +9195,7 @@
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60067132": {
       "id": "ZPROP-60067132",
@@ -9186,7 +9236,7 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60067328": {
       "id": "ZPROP-60067328",
@@ -9227,7 +9277,7 @@
       "benchmark_formatted": "USD 1.450/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60064995": {
       "id": "ZPROP-60064995",
@@ -9268,7 +9318,7 @@
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60066753": {
       "id": "ZPROP-60066753",
@@ -9309,7 +9359,7 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60067071": {
       "id": "ZPROP-60067071",
@@ -9350,7 +9400,7 @@
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60066120": {
       "id": "ZPROP-60066120",
@@ -9391,7 +9441,7 @@
       "benchmark_formatted": "USD 1.100/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60066632": {
       "id": "ZPROP-60066632",
@@ -9432,7 +9482,7 @@
       "benchmark_formatted": "USD 1.450/m²",
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
-      "last_synced": "2026-09-04T17:00:17.116086"
+      "last_synced": "2026-09-04T19:30:16.148783"
     },
     "ZPROP-60067388": {
       "id": "ZPROP-60067388",
@@ -9474,6 +9524,416 @@
       "first_seen_date": "2026-09-04",
       "days_ago": 0,
       "last_synced": "2026-09-04T17:00:17.116086"
+    },
+    "ZPROP-60070681": {
+      "id": "ZPROP-60070681",
+      "title": "Corredor Responsable: Sergio Rua cpi 8154 / Liliana Fernández cmq 1049- Contacto: Karina Zagarella. departamento 2 ambientes en venta caballito capital federal - apto crédito. Este departamento ubicado en Hidalgo, piso 8 de un edificio de 8 pisos, representa una oportunidad para quienes buscan una propiedad con potencial de transformación en una de las zonas más dinámicas de la ciudad. Con una superficie total de 46 m² distribuidos en 2 ambientes, el departamento cuenta con dormitorio, baño completo, cocina separada y placard. Su estado general es regular, conservando características originales de su construcción de 1975 que invitan a una renovación integral. El ambiente principal recibe buena luz natural y ofrece salida directa a un balcón aterrazado, un diferencial destacado para disfrutar del aire libre, incorporar plantas o crear un espacio de descanso en plena ciudad. Complementa la propiedad un patio actualmente cubierto que suma un espacio versátil con diferentes posibilidades de aprovechamiento. La disposición frente del departamento favorece la iluminación y ventilación natural. El edificio cuenta con ascensor, facilitando el acceso al octavo piso. La propiedad dispone de servicios de electricidad, agua y gas en funcionamiento. Ubicación estratégica en el corazón de caballito. La propiedad se encuentra a pasos de Avenida Rivadavia, en el epicentro comercial de Caballito y muy próxima a la estación Acoyte de la Línea A del subte. Esta ubicación garantiza una conexión excepcional con distintos puntos de la ciudad a través de numerosas líneas de colectivo. El barrio ofrece acceso inmediato a shopping, cines, supermercados, bancos, comercios variados y propuestas gastronómicas diversas. Todos los servicios necesarios para la vida cotidiana se encuentran a pocos metros, permitiendo disfrutar del barrio caminando. Apto crédito Y múltiples posibilidades. La clasificación como apto crédito facilita opciones de financiamiento para su adquisición. El departamento permite mascotas y cuenta con aptitud turística, ampliando sus posibilidades de uso. Puede convertirse en una primera vivienda donde renovar cada sector de acuerdo con los gustos y necesidades de su próximo propietario, o representar una interesante alternativa para inversores que buscan adquirir una propiedad para actualizar, revalorizar y destinar a renta en una ubicación con gran movimiento y demanda. Una oportunidad para quienes pueden mirar más allá de su estado actual e imaginar todo lo que este departamento puede llegar a ser. Contacte para conocerlo y descubrir todas sus posibilidades. Corredores Responsables: Sergio Rua cpi 8154 – Liliana Fernández cmq 1049. En cumplimiento de las normas legales aplicables, los agentes no ejercen el corretaje inmobiliario. Todas las operaciones inmobiliarias son objeto de intermediación y conclusión por parte del Corredor Público Inmobiliario matriculado de la oficina. Rau S. R. L. No ejerce el corretaje inmobiliario. El presente sitio web es una plataforma en donde cada oficina inmobiliaria independiente que contrata los servicios re/max puede publicar las propiedades a su cargo. Cada oficina es de propiedad y gestión independiente, por lo que rau S. R. L. No interviene en los datos de la publicación, en la operación inmobiliaria, ni en la confección y/o firma del boleto de compraventa y/o escritura y/o contrato de alquiler. En cumplimiento de las leyes vigentes que regulan el corretaje inmobiliario, Ley Nacional 25. 028, Ley 22. 802 de Lealtad Comercial, Ley 24. 240 de Defensa al Consumidor, las normas del Código Civil y Comercial de la Nación y Constitucionales, los agentes/gestores no ejercen el corretaje inmobiliario. Todas las operaciones inmobiliarias son objeto de intermediación y conclusión por parte del corredor público inmobiliario colegiado a cargo de la publicación, cuyos datos se exhiben en la presente. La presente publicación describe las características esenciales del inmueble, debiéndose consultar al corredor público inmobiliario responsable de la operación por la eventual actualización de las medidas, descripciones arquitectónicas y funcionales, valores de expensas, servicios, impuestos, precios y demás información, cuyos valores son aproximados. El inmueble no es accesible para personas con discapacidades físicas. Comprá la casa que querés! No la que podés. Accedé a un préstamo por hasta el 30% del valor de esta propiedad. Simulá tu cuota en Lendar",
+      "description": "Corredor Responsable: Sergio Rua cpi 8154 / Liliana Fernández cmq 1049- Contacto: Karina Zagarella. departamento 2 ambientes en venta caballito capital federal - apto crédito. Este departamento ubicado en Hidalgo, piso 8 de un edificio de 8 pisos, representa una oportunidad para quienes buscan una propiedad con potencial de transformación en una de las zonas más dinámicas de la ciudad. Con una superficie total de 46 m² distribuidos en 2 ambientes, el departamento cuenta con dormitorio, baño completo, cocina separada y placard. Su estado general es regular, conservando características originales de su construcción de 1975 que invitan a una renovación integral. El ambiente principal recibe buena luz natural y ofrece salida directa a un balcón aterrazado, un diferencial destacado para disfrutar del aire libre, incorporar plantas o crear un espacio de descanso en plena ciudad. Complementa la propiedad un patio actualmente cubierto que suma un espacio versátil con diferentes posibilidades de aprovechamiento. La disposición frente del departamento favorece la iluminación y ventilación natural. El edificio cuenta con ascensor, facilitando el acceso al octavo piso. La propiedad dispone de servicios de electricidad, agua y gas en funcionamiento. Ubicación estratégica en el corazón de caballito. La propiedad se encuentra a pasos de Avenida Rivadavia, en el epicentro comercial de Caballito y muy próxima a la estación Acoyte de la Línea A del subte. Esta ubicación garantiza una conexión excepcional con distintos puntos de la ciudad a través de numerosas líneas de colectivo. El barrio ofrece acceso inmediato a shopping, cines, supermercados, bancos, comercios variados y propuestas gastronómicas diversas. Todos los servicios necesarios para la vida cotidiana se encuentran a pocos metros, permitiendo disfrutar del barrio caminando. Apto crédito Y múltiples posibilidades. La clasificación como apto crédito facilita opciones de financiamiento para su adquisición. El departamento permite mascotas y cuenta con aptitud turística, ampliando sus posibilidades de uso. Puede convertirse en una primera vivienda donde renovar cada sector de acuerdo con los gustos y necesidades de su próximo propietario, o representar una interesante alternativa para inversores que buscan adquirir una propiedad para actualizar, revalorizar y destinar a renta en una ubicación con gran movimiento y demanda. Una oportunidad para quienes pueden mirar más allá de su estado actual e imaginar todo lo que este departamento puede llegar a ser. Contacte para conocerlo y descubrir todas sus posibilidades. Corredores Responsables: Sergio Rua cpi 8154 – Liliana Fernández cmq 1049. En cumplimiento de las normas legales aplicables, los agentes no ejercen el corretaje inmobiliario. Todas las operaciones inmobiliarias son objeto de intermediación y conclusión por parte del Corredor Público Inmobiliario matriculado de la oficina. Rau S. R. L. No ejerce el corretaje inmobiliario. El presente sitio web es una plataforma en donde cada oficina inmobiliaria independiente que contrata los servicios re/max puede publicar las propiedades a su cargo. Cada oficina es de propiedad y gestión independiente, por lo que rau S. R. L. No interviene en los datos de la publicación, en la operación inmobiliaria, ni en la confección y/o firma del boleto de compraventa y/o escritura y/o contrato de alquiler. En cumplimiento de las leyes vigentes que regulan el corretaje inmobiliario, Ley Nacional 25. 028, Ley 22. 802 de Lealtad Comercial, Ley 24. 240 de Defensa al Consumidor, las normas del Código Civil y Comercial de la Nación y Constitucionales, los agentes/gestores no ejercen el corretaje inmobiliario. Todas las operaciones inmobiliarias son objeto de intermediación y conclusión por parte del corredor público inmobiliario colegiado a cargo de la publicación, cuyos datos se exhiben en la presente. La presente publicación describe las características esenciales del inmueble, debiéndose consultar al corredor público inmobiliario responsable de la operación por la eventual actualización de las medidas, descripciones arquitectónicas y funcionales, valores de expensas, servicios, impuestos, precios y demás información, cuyos valores son aproximados. El inmueble no es accesible para personas con discapacidades físicas. Comprá la casa que querés! No la que podés. Accedé a un préstamo por hasta el 30% del valor de esta propiedad. Simulá tu cuota en Lendar",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 63.000",
+      "price_val": 63000,
+      "currency": "USD",
+      "expenses_raw": "$ 190.000 Expensas",
+      "expenses_val": 190000,
+      "user_views": 3420,
+      "features_raw": "46 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 46,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Caballito, Capital Federal",
+      "address": "Hidalgo 0",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/07/06/81/360x266/2076480329.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-2-amb-balcon-aterrazado-apto-credito-60070681.html",
+      "is_development": false,
+      "barrio": "Caballito",
+      "barrio_benchmark_m2": 2150,
+      "usd_m2": 1370,
+      "discount_pct": 36.3,
+      "opportunity_score": 74,
+      "user_views_formatted": "3.420",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 63.000",
+      "usd_m2_formatted": "USD 1.370/m²",
+      "benchmark_formatted": "USD 2.150/m²",
+      "first_seen_date": "2026-09-04",
+      "days_ago": 0,
+      "last_synced": "2026-09-04T19:30:16.148783"
+    },
+    "ZPROP-60070140": {
+      "id": "ZPROP-60070140",
+      "title": "Corredor Responsable: Marcelo Trujillo cucicba 6470 / cmcpdjlm 810- Contacto: Betina Pérez Matzkin. Oportunidad en Colegiales | Departamento de 2 Ambientes (42 m²) Ubicado en la calle Federico Lacroze 3300, este departamento de 2 ambientes destaca por su distribución funcional y la tranquilidad de su disposición interna hacia el pulmón de manzana. Se comercializa a valor de publicación, representando una excelente oportunidad de inversión o primera vivienda. Distribución y Características. Ambientes: Living-comedor, dormitorio independiente, baño completo, cocina separada a gas y sector de lavadero. Terminaciones: Pisos de parquet tradicionales y calefón nuevo. Servicios: Instalaciones activas de luz, gas natural y agua. Edificio. Estructura: Edificio consolidado de 6 pisos (solo 3 departamentos por piso). Comodidades: 2 ascensores y una antigüedad aproximada de 40 años. Entorno y Conectividad. Medios de Transporte: Ubicación estratégica a 3 cuadras de Av. Córdoba. Excelente conectividad con rápida salida hacia toda la ciudad a través de múltiples líneas de colectivo (19, 39, 42, 44, 63, 65, 90, 93, 140, 151, 168, 176, 184) y cercanía al centro de transbordo Federico Lacroze (Subte B y Tren Urquiza). Gastronomía y Vida de Barrio: Emplazado en un entorno residencial rodeado de cafeterías de especialidad, bistrós y la variada oferta gastronómica de Colegiales, con rápida conexión al polo dinámico de Chacarita y Palermo Hollywood. Centros de Salud y Servicios: Zona con infraestructura completa, cercana a importantes centros asistenciales (Sanatorio Colegiales, Sanatorio de la Trinidad, centros médicos de Av. Córdoba) además de farmacias, supermercados y espacios verdes a pocos minutos. Rau S. R. L. No ejerce el corretaje inmobiliario. El presente sitio web es una plataforma en donde cada oficina inmobiliaria independiente que contrata los servicios re/max puede publicar las propiedades a su cargo. Cada oficina es de propiedad y gestión independiente, por lo que rau S. R. L. No interviene en los datos de la publicación, en la operación inmobiliaria, ni en la confección y/o firma del boleto de compraventa y/o escritura y/o contrato de alquiler. En cumplimiento de las leyes vigentes que regulan el corretaje inmobiliario, Ley Nacional 25. 028, Ley 22. 802 de Lealtad Comercial, Ley 24. 240 de Defensa al Consumidor, las normas del Código Civil y Comercial de la Nación y Constitucionales, los agentes/gestores no ejercen el corretaje inmobiliario. Todas las operaciones inmobiliarias son objeto de intermediación y conclusión por parte del corredor público inmobiliario colegiado a cargo de la publicación, cuyos datos se exhiben en la presente. La presente publicación describe las características esenciales del inmueble, debiéndose consultar al corredor público inmobiliario responsable de la operación por la eventual actualización de las medidas, descripciones arquitectónicas y funcionales, valores de expensas, servicios, impuestos, precios y demás información, cuyos valores son aproximados. El inmueble no es accesible para personas con discapacidades físicas. Comprá la casa que querés! No la que podés. Accedé a un préstamo por hasta el 30% del valor de esta propiedad. Simulá tu cuota en Lendar",
+      "description": "Corredor Responsable: Marcelo Trujillo cucicba 6470 / cmcpdjlm 810- Contacto: Betina Pérez Matzkin. Oportunidad en Colegiales | Departamento de 2 Ambientes (42 m²) Ubicado en la calle Federico Lacroze 3300, este departamento de 2 ambientes destaca por su distribución funcional y la tranquilidad de su disposición interna hacia el pulmón de manzana. Se comercializa a valor de publicación, representando una excelente oportunidad de inversión o primera vivienda. Distribución y Características. Ambientes: Living-comedor, dormitorio independiente, baño completo, cocina separada a gas y sector de lavadero. Terminaciones: Pisos de parquet tradicionales y calefón nuevo. Servicios: Instalaciones activas de luz, gas natural y agua. Edificio. Estructura: Edificio consolidado de 6 pisos (solo 3 departamentos por piso). Comodidades: 2 ascensores y una antigüedad aproximada de 40 años. Entorno y Conectividad. Medios de Transporte: Ubicación estratégica a 3 cuadras de Av. Córdoba. Excelente conectividad con rápida salida hacia toda la ciudad a través de múltiples líneas de colectivo (19, 39, 42, 44, 63, 65, 90, 93, 140, 151, 168, 176, 184) y cercanía al centro de transbordo Federico Lacroze (Subte B y Tren Urquiza). Gastronomía y Vida de Barrio: Emplazado en un entorno residencial rodeado de cafeterías de especialidad, bistrós y la variada oferta gastronómica de Colegiales, con rápida conexión al polo dinámico de Chacarita y Palermo Hollywood. Centros de Salud y Servicios: Zona con infraestructura completa, cercana a importantes centros asistenciales (Sanatorio Colegiales, Sanatorio de la Trinidad, centros médicos de Av. Córdoba) además de farmacias, supermercados y espacios verdes a pocos minutos. Rau S. R. L. No ejerce el corretaje inmobiliario. El presente sitio web es una plataforma en donde cada oficina inmobiliaria independiente que contrata los servicios re/max puede publicar las propiedades a su cargo. Cada oficina es de propiedad y gestión independiente, por lo que rau S. R. L. No interviene en los datos de la publicación, en la operación inmobiliaria, ni en la confección y/o firma del boleto de compraventa y/o escritura y/o contrato de alquiler. En cumplimiento de las leyes vigentes que regulan el corretaje inmobiliario, Ley Nacional 25. 028, Ley 22. 802 de Lealtad Comercial, Ley 24. 240 de Defensa al Consumidor, las normas del Código Civil y Comercial de la Nación y Constitucionales, los agentes/gestores no ejercen el corretaje inmobiliario. Todas las operaciones inmobiliarias son objeto de intermediación y conclusión por parte del corredor público inmobiliario colegiado a cargo de la publicación, cuyos datos se exhiben en la presente. La presente publicación describe las características esenciales del inmueble, debiéndose consultar al corredor público inmobiliario responsable de la operación por la eventual actualización de las medidas, descripciones arquitectónicas y funcionales, valores de expensas, servicios, impuestos, precios y demás información, cuyos valores son aproximados. El inmueble no es accesible para personas con discapacidades físicas. Comprá la casa que querés! No la que podés. Accedé a un préstamo por hasta el 30% del valor de esta propiedad. Simulá tu cuota en Lendar",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 65.000",
+      "price_val": 65000,
+      "currency": "USD",
+      "expenses_raw": "$ 180.000 Expensas",
+      "expenses_val": 180000,
+      "user_views": 2708,
+      "features_raw": "42 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 42,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Colegiales, Capital Federal",
+      "address": "Avenida Federico Lacroze 3300",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/07/01/40/360x266/2076466767.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-2-ambientes-colegiales-60070140.html",
+      "is_development": false,
+      "barrio": "Colegiales",
+      "barrio_benchmark_m2": 2400,
+      "usd_m2": 1548,
+      "discount_pct": 35.5,
+      "opportunity_score": 73,
+      "user_views_formatted": "2.708",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 65.000",
+      "usd_m2_formatted": "USD 1.548/m²",
+      "benchmark_formatted": "USD 2.400/m²",
+      "first_seen_date": "2026-09-04",
+      "days_ago": 0,
+      "last_synced": "2026-09-04T19:30:16.148783"
+    },
+    "ZPROP-60069845": {
+      "id": "ZPROP-60069845",
+      "title": "Departamento de 3 ambientes al frente con recepción – Apto profesionalUnidad de 69, 33 m² cubiertos, ubicada en 4° piso al frente. Cuenta con hall de recepción y tres ambientes con una distribución versátil que permite adaptarlos a distintas actividades profesionales. Dispone además de kitchenette, toilette y espacios de guardado. La unidad cuenta con cuatro equipos de aire acondicionado frío/calor, doble circulación, acceso principal y de servicio con puertas blindadas. Cableado para sistema de monitoreo interno. Dos ascensores y encargado con vivienda. Destino de las unidades (según reglamento): oficinas, estudios profesionales y/o consultorios odontológicos o médicos. El edificio Buro Plaza se encuentra estratégicamente ubicado en San Nicolás, en el entorno de Tribunales y sobre uno de los principales corredores de la Ciudad, con excelente conectividad mediante transporte público. La zona cuenta con una amplia oferta de comercios, servicios, gastronomía y teatros, característica del corredor de Av. Corrientes. Su ubicación en esquina ofrece vistas abiertas hacia Montevideo, con orientación Este, y hacia Av. Corrientes, con orientación Sur, favoreciendo el ingreso de luz natural. El edificio no posee suministro de gas. Esta publicación cuenta con fotos, video, plano y tour 360 para poder apreciarla en su totalidad. Contactanos para conocerlo! --Corredor responsable: Jorge Izrastzoff / cucicba 1354 - csi 7304",
+      "description": "Departamento de 3 ambientes al frente con recepción – Apto profesionalUnidad de 69, 33 m² cubiertos, ubicada en 4° piso al frente. Cuenta con hall de recepción y tres ambientes con una distribución versátil que permite adaptarlos a distintas actividades profesionales. Dispone además de kitchenette, toilette y espacios de guardado. La unidad cuenta con cuatro equipos de aire acondicionado frío/calor, doble circulación, acceso principal y de servicio con puertas blindadas. Cableado para sistema de monitoreo interno. Dos ascensores y encargado con vivienda. Destino de las unidades (según reglamento): oficinas, estudios profesionales y/o consultorios odontológicos o médicos. El edificio Buro Plaza se encuentra estratégicamente ubicado en San Nicolás, en el entorno de Tribunales y sobre uno de los principales corredores de la Ciudad, con excelente conectividad mediante transporte público. La zona cuenta con una amplia oferta de comercios, servicios, gastronomía y teatros, característica del corredor de Av. Corrientes. Su ubicación en esquina ofrece vistas abiertas hacia Montevideo, con orientación Este, y hacia Av. Corrientes, con orientación Sur, favoreciendo el ingreso de luz natural. El edificio no posee suministro de gas. Esta publicación cuenta con fotos, video, plano y tour 360 para poder apreciarla en su totalidad. Contactanos para conocerlo! --Corredor responsable: Jorge Izrastzoff / cucicba 1354 - csi 7304",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 70.000",
+      "price_val": 70000,
+      "currency": "USD",
+      "expenses_raw": "$ 381.400 Expensas",
+      "expenses_val": 381400,
+      "user_views": 937,
+      "features_raw": "69 m² tot. | 1 baño",
+      "m2_tot": 69,
+      "m2_cub": null,
+      "ambientes": null,
+      "dormitorios": null,
+      "banos": 1,
+      "cocheras": null,
+      "location": "San Nicolás, Capital Federal",
+      "address": "Montevideo al 400 y Av. Corrientes",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/06/98/45/360x266/2076460802.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-departamento-3-ambientes-al-frente-apto-60069845.html",
+      "is_development": false,
+      "barrio": "San Nicolas",
+      "barrio_benchmark_m2": 1500,
+      "usd_m2": 1014,
+      "discount_pct": 32.4,
+      "opportunity_score": 62,
+      "user_views_formatted": "937",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 70.000",
+      "usd_m2_formatted": "USD 1.014/m²",
+      "benchmark_formatted": "USD 1.500/m²",
+      "first_seen_date": "2026-09-04",
+      "days_ago": 0,
+      "last_synced": "2026-09-04T19:30:16.148783"
+    },
+    "ZPROP-60070909": {
+      "id": "ZPROP-60070909",
+      "title": "Departamento en venta de 3 ambientes en Balvanera. Ubicado a 1 cuadra y media de Av Corrientes alt. 2400, a 3 de Av Rivadavia misma altura. Transportes cercanos: Subte línea B y Línea A; colectivos 5, 7, 8, 24, 26, 41, 57, 60, 61, 62, 64, 68, y otrosEs 2do piso por escalera. Muy luminoso. Posee Living Comedor amplio2 habitaciones con placard. Techos altos-Baño completoCocina independienteLavadero exterior techado. Edificio con Encargado part-time. Consultas y visitas: ¡No pierda esta oportunidad! Contáctenos para más información. ¡Los esperamos! ley 5859 solo aplicable a las propiedades ubicadas en la Juridiccion de la Ciudad Autonoma de Buenos Aires “se encuentra prohibido cobrar comisiones inmobiliarias y gastos de gestoría de informes a los inquilinos que sean personas físicas. Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede requerir a los propietarios será el equivalente al cuatro con quince centésimos por ciento (4, 15%) del valor total del respectivo contrato”. -",
+      "description": "Departamento en venta de 3 ambientes en Balvanera. Ubicado a 1 cuadra y media de Av Corrientes alt. 2400, a 3 de Av Rivadavia misma altura. Transportes cercanos: Subte línea B y Línea A; colectivos 5, 7, 8, 24, 26, 41, 57, 60, 61, 62, 64, 68, y otrosEs 2do piso por escalera. Muy luminoso. Posee Living Comedor amplio2 habitaciones con placard. Techos altos-Baño completoCocina independienteLavadero exterior techado. Edificio con Encargado part-time. Consultas y visitas: ¡No pierda esta oportunidad! Contáctenos para más información. ¡Los esperamos! ley 5859 solo aplicable a las propiedades ubicadas en la Juridiccion de la Ciudad Autonoma de Buenos Aires “se encuentra prohibido cobrar comisiones inmobiliarias y gastos de gestoría de informes a los inquilinos que sean personas físicas. Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede requerir a los propietarios será el equivalente al cuatro con quince centésimos por ciento (4, 15%) del valor total del respectivo contrato”. -",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 59.000",
+      "price_val": 59000,
+      "currency": "USD",
+      "expenses_raw": "$ 85.000 Expensas",
+      "expenses_val": 85000,
+      "user_views": 920,
+      "features_raw": "49 m² tot. | 3 amb. | 2 dorm. | 1 baño",
+      "m2_tot": 49,
+      "m2_cub": null,
+      "ambientes": 3,
+      "dormitorios": 2,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Balvanera, Capital Federal",
+      "address": "Azcuénaga  al 200",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/07/09/09/360x266/2076485624.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-en-balvanera-60070909.html",
+      "is_development": false,
+      "barrio": "Balvanera",
+      "barrio_benchmark_m2": 1450,
+      "usd_m2": 1204,
+      "discount_pct": 17.0,
+      "opportunity_score": 46,
+      "user_views_formatted": "920",
+      "badge_text": "🏷️ Buen Precio",
+      "badge_class": "badge-good",
+      "price_usd_formatted": "USD 59.000",
+      "usd_m2_formatted": "USD 1.204/m²",
+      "benchmark_formatted": "USD 1.450/m²",
+      "first_seen_date": "2026-09-04",
+      "days_ago": 0,
+      "last_synced": "2026-09-04T19:30:16.148783"
+    },
+    "ZPROP-60070982": {
+      "id": "ZPROP-60070982",
+      "title": "Venta departamento de 2 ambientes en barrio norte / palermo / almagroexcelente ubicación con muchos medios de transportes y comercios. Cerca de las avenidas Medrano, Honduras, Coronel Diaz y Corrientes. A mentros de la Universidad de Palermo &quot;up&quot;Propiedad de 2 ambientes muy luminoso, orientado al norte, a pulmón de manzana amplio! El departamento cuenta con living comedor con cerámicos. Cocina separada y lavadero independiente. Dormitorio con amplio placard, más un segundo lugar de guardado práctico. Baño completo. Agua caliente por termotanque eléctrico. Encargado con vivienda y ayudante. Superficie de: 35, 59m² cubiertos y 0, 98m² descubiertos (espacio de lavadero) ; con una superficie total de 36, 57m². importante: estos precios estan A sujetos A aprobacion del propietario. tasamos tu propiedad en el diacontamos con profesionales especialmente entrenados para tasar el valor real de los inmuebles y establecer los criterios adecuados para la cotización del mismo, respetando el patrimonio del cliente que nos confía su propiedad. Mario Korn - cmcpsi: 6293cucicba: 3512",
+      "description": "Venta departamento de 2 ambientes en barrio norte / palermo / almagroexcelente ubicación con muchos medios de transportes y comercios. Cerca de las avenidas Medrano, Honduras, Coronel Diaz y Corrientes. A mentros de la Universidad de Palermo &quot;up&quot;Propiedad de 2 ambientes muy luminoso, orientado al norte, a pulmón de manzana amplio! El departamento cuenta con living comedor con cerámicos. Cocina separada y lavadero independiente. Dormitorio con amplio placard, más un segundo lugar de guardado práctico. Baño completo. Agua caliente por termotanque eléctrico. Encargado con vivienda y ayudante. Superficie de: 35, 59m² cubiertos y 0, 98m² descubiertos (espacio de lavadero) ; con una superficie total de 36, 57m². importante: estos precios estan A sujetos A aprobacion del propietario. tasamos tu propiedad en el diacontamos con profesionales especialmente entrenados para tasar el valor real de los inmuebles y establecer los criterios adecuados para la cotización del mismo, respetando el patrimonio del cliente que nos confía su propiedad. Mario Korn - cmcpsi: 6293cucicba: 3512",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 78.000",
+      "price_val": 78000,
+      "currency": "USD",
+      "expenses_raw": "$ 193.543 Expensas",
+      "expenses_val": 193543,
+      "user_views": 1372,
+      "features_raw": "36 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 36,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Barrio Norte, Capital Federal",
+      "address": "Cordoba al 3400, Entre Mario Bravo y Billinghurst",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/07/09/82/360x266/2076487518.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-departamento-de-2-ambientes-luminoso-en-barrio-60070982.html",
+      "is_development": false,
+      "barrio": "Barrio Norte",
+      "barrio_benchmark_m2": 2600,
+      "usd_m2": 2167,
+      "discount_pct": 16.7,
+      "opportunity_score": 44,
+      "user_views_formatted": "1.372",
+      "badge_text": "🏷️ Buen Precio",
+      "badge_class": "badge-good",
+      "price_usd_formatted": "USD 78.000",
+      "usd_m2_formatted": "USD 2.167/m²",
+      "benchmark_formatted": "USD 2.600/m²",
+      "first_seen_date": "2026-09-04",
+      "days_ago": 0,
+      "last_synced": "2026-09-04T19:30:16.148783"
+    },
+    "ZPROP-60069333": {
+      "id": "ZPROP-60069333",
+      "title": "Venta - departamento - 2 ambientes al frente - luminoso — apto créditodepartamento al frente cómodo y muy luminoso. El amplio balcón deja entrar la luz natural durante todo el día y suma un espacio extra para tomar aire, poner plantas o simplemente sentarte a mirar la calle. Dormitorio con aire acondicionado para estar cómodo en cualquier época del año. Cocina amplia y baño completo. Un barrio con todo cerca: A metros de Av. Acoyte, en pleno Caballito. Comercios, bares, verdulerías y todo lo que necesitás para el día a día a pocas cuadras. Excelente conexión de transporte: Estación Caballito (tren Sarmiento). Subte Línea A: estaciones Acoyte y Río de Janeiro. Colectivos 15, 55, 65, 119, 135 y 146 con parada a metros de la puerta. Apto crédito. Coordiná tu visita.",
+      "description": "Venta - departamento - 2 ambientes al frente - luminoso — apto créditodepartamento al frente cómodo y muy luminoso. El amplio balcón deja entrar la luz natural durante todo el día y suma un espacio extra para tomar aire, poner plantas o simplemente sentarte a mirar la calle. Dormitorio con aire acondicionado para estar cómodo en cualquier época del año. Cocina amplia y baño completo. Un barrio con todo cerca: A metros de Av. Acoyte, en pleno Caballito. Comercios, bares, verdulerías y todo lo que necesitás para el día a día a pocas cuadras. Excelente conexión de transporte: Estación Caballito (tren Sarmiento). Subte Línea A: estaciones Acoyte y Río de Janeiro. Colectivos 15, 55, 65, 119, 135 y 146 con parada a metros de la puerta. Apto crédito. Coordiná tu visita.",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 68.000",
+      "price_val": 68000,
+      "currency": "USD",
+      "expenses_raw": "$ 150.000 Expensas",
+      "expenses_val": 150000,
+      "user_views": 3026,
+      "features_raw": "37 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 37,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Caballito, Capital Federal",
+      "address": "Avellaneda al 300",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/06/93/33/360x266/2076449865.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-departamento-2-ambientes-caballito-60069333.html",
+      "is_development": false,
+      "barrio": "Caballito",
+      "barrio_benchmark_m2": 2150,
+      "usd_m2": 1838,
+      "discount_pct": 14.5,
+      "opportunity_score": 43,
+      "user_views_formatted": "3.026",
+      "badge_text": "🏷️ Buen Precio",
+      "badge_class": "badge-good",
+      "price_usd_formatted": "USD 68.000",
+      "usd_m2_formatted": "USD 1.838/m²",
+      "benchmark_formatted": "USD 2.150/m²",
+      "first_seen_date": "2026-09-04",
+      "days_ago": 0,
+      "last_synced": "2026-09-04T19:30:16.148783"
+    },
+    "ZPROP-60070133": {
+      "id": "ZPROP-60070133",
+      "title": "Departamento de 2 Ambientes al Frente, con Balcón, en Impecable Estado. Es luminoso dado que todos sus ambientes son al frente. Cuenta con un amplio Living Comedor con salida a un Balcón Corrido, un cómodo Dormitorio con Placard, Baño Completo, Placard en Hall de Distribución, Cocina súper completa con lugar para una mesa para dos personas y Lavadero Separado. Ubicado a pasos de la Avenida Patricios donde se encuentran una amplia variedad de comercios y líneas de colectivos.",
+      "description": "Departamento de 2 Ambientes al Frente, con Balcón, en Impecable Estado. Es luminoso dado que todos sus ambientes son al frente. Cuenta con un amplio Living Comedor con salida a un Balcón Corrido, un cómodo Dormitorio con Placard, Baño Completo, Placard en Hall de Distribución, Cocina súper completa con lugar para una mesa para dos personas y Lavadero Separado. Ubicado a pasos de la Avenida Patricios donde se encuentran una amplia variedad de comercios y líneas de colectivos.",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 55.000",
+      "price_val": 55000,
+      "currency": "USD",
+      "expenses_raw": "$ 230.000 Expensas",
+      "expenses_val": 230000,
+      "user_views": 1240,
+      "features_raw": "40 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 40,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Barracas, Capital Federal",
+      "address": "Magallanes 1200",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/07/01/33/360x266/2076466603.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-2-ambientes-al-frente-con-balcon-a-pasos-de-av-60070133.html",
+      "is_development": false,
+      "barrio": "Barracas",
+      "barrio_benchmark_m2": 1550,
+      "usd_m2": 1375,
+      "discount_pct": 11.3,
+      "opportunity_score": 41,
+      "user_views_formatted": "1.240",
+      "badge_text": "🏷️ Buen Precio",
+      "badge_class": "badge-good",
+      "price_usd_formatted": "USD 55.000",
+      "usd_m2_formatted": "USD 1.375/m²",
+      "benchmark_formatted": "USD 1.550/m²",
+      "first_seen_date": "2026-09-04",
+      "days_ago": 0,
+      "last_synced": "2026-09-04T19:30:16.148783"
+    },
+    "ZPROP-60069800": {
+      "id": "ZPROP-60069800",
+      "title": "Corredor Responsable: Marcelo Trujillo cucicba 6470 / cmcpdjlm 810- Contacto: Sofía Calvo Lowus. el equipo de remax vende este departamento monoambiente ubicado en el barrio de caballito. Caracteristicas: - depto monoambiente con cocina separada. - placard empotrado. - edificio cuenta con un ascensor. - terraza transitable con lavadero. rau S. R. L. No ejerce el corretaje inmobiliario. El presente sitio web es una plataforma en donde cada oficina inmobiliaria independiente que contrata los servicios re/max puede publicar las propiedades a su cargo. Cada oficina es de propiedad y gestión independiente, por lo que rau S. R. L. No interviene en los datos de la publicación, en la operación inmobiliaria, ni en la confección y/o firma del boleto de compraventa y/o escritura y/o contrato de alquiler. En cumplimiento de las leyes vigentes que regulan el corretaje inmobiliario, Ley Nacional 25. 028, Ley 22. 802 de Lealtad Comercial, Ley 24. 240 de Defensa al Consumidor, las normas del Código Civil y Comercial de la Nación y Constitucionales, los agentes/gestores no ejercen el corretaje inmobiliario. Todas las operaciones inmobiliarias son objeto de intermediación y conclusión por parte del corredor público inmobiliario colegiado a cargo de la publicación, cuyos datos se exhiben en la presente. La presente publicación describe las características esenciales del inmueble, debiéndose consultar al corredor público inmobiliario responsable de la operación por la eventual actualización de las medidas, descripciones arquitectónicas y funcionales, valores de expensas, servicios, impuestos, precios y demás información, cuyos valores son aproximados. El inmueble es accesible para personas con discapacidades físicas. Comprá la casa que querés! No la que podés. Accedé a un préstamo por hasta el 30% del valor de esta propiedad. Simulá tu cuota en Lendar",
+      "description": "Corredor Responsable: Marcelo Trujillo cucicba 6470 / cmcpdjlm 810- Contacto: Sofía Calvo Lowus. el equipo de remax vende este departamento monoambiente ubicado en el barrio de caballito. Caracteristicas: - depto monoambiente con cocina separada. - placard empotrado. - edificio cuenta con un ascensor. - terraza transitable con lavadero. rau S. R. L. No ejerce el corretaje inmobiliario. El presente sitio web es una plataforma en donde cada oficina inmobiliaria independiente que contrata los servicios re/max puede publicar las propiedades a su cargo. Cada oficina es de propiedad y gestión independiente, por lo que rau S. R. L. No interviene en los datos de la publicación, en la operación inmobiliaria, ni en la confección y/o firma del boleto de compraventa y/o escritura y/o contrato de alquiler. En cumplimiento de las leyes vigentes que regulan el corretaje inmobiliario, Ley Nacional 25. 028, Ley 22. 802 de Lealtad Comercial, Ley 24. 240 de Defensa al Consumidor, las normas del Código Civil y Comercial de la Nación y Constitucionales, los agentes/gestores no ejercen el corretaje inmobiliario. Todas las operaciones inmobiliarias son objeto de intermediación y conclusión por parte del corredor público inmobiliario colegiado a cargo de la publicación, cuyos datos se exhiben en la presente. La presente publicación describe las características esenciales del inmueble, debiéndose consultar al corredor público inmobiliario responsable de la operación por la eventual actualización de las medidas, descripciones arquitectónicas y funcionales, valores de expensas, servicios, impuestos, precios y demás información, cuyos valores son aproximados. El inmueble es accesible para personas con discapacidades físicas. Comprá la casa que querés! No la que podés. Accedé a un préstamo por hasta el 30% del valor de esta propiedad. Simulá tu cuota en Lendar",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 60.000",
+      "price_val": 60000,
+      "currency": "USD",
+      "expenses_raw": "$ 130.000 Expensas",
+      "expenses_val": 130000,
+      "user_views": 2849,
+      "features_raw": "30 m² tot. | 1 amb. | 1 baño",
+      "m2_tot": 30,
+      "m2_cub": null,
+      "ambientes": 1,
+      "dormitorios": null,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Caballito, Capital Federal",
+      "address": "Valle 700",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/06/98/00/360x266/2076459842.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-depto-monoambiente-caballito-60069800.html",
+      "is_development": false,
+      "barrio": "Caballito",
+      "barrio_benchmark_m2": 2150,
+      "usd_m2": 2000,
+      "discount_pct": 7.0,
+      "opportunity_score": 36,
+      "user_views_formatted": "2.849",
+      "badge_text": "🏷️ Buen Precio",
+      "badge_class": "badge-good",
+      "price_usd_formatted": "USD 60.000",
+      "usd_m2_formatted": "USD 2.000/m²",
+      "benchmark_formatted": "USD 2.150/m²",
+      "first_seen_date": "2026-09-04",
+      "days_ago": 0,
+      "last_synced": "2026-09-04T19:30:16.148783"
+    },
+    "ZPROP-60070378": {
+      "id": "ZPROP-60070378",
+      "title": "Venta de Departamento 2 Ambientes con Balcón Al Frente en Boedo - caba. Se encuentra ubicado entre Av. San Juan y Humberto 1°, en una zona con excelente conectividad, cercana a la línea E de subte y con rápido acceso hacia distintos puntos de la ciudad. La unidad está en buen estado, con una distribución funcional y espacios bien aprovechados. Cuenta con balcón, disposición al frente y ambientes cómodos para vivir o invertir. - Lo mejor de está propiedad. _Balcón que conecta con la habitación. _Buen estado en general. _Departamento al frente. _Muy buen ubicación dentro de Boedo con cercanía a Subte y Autopista. - Es ideal para: _Quienes buscan su primera vivienda. _Inversión para renta. _Personas que priorizan buena ubicación y conectividad",
+      "description": "Venta de Departamento 2 Ambientes con Balcón Al Frente en Boedo - caba. Se encuentra ubicado entre Av. San Juan y Humberto 1°, en una zona con excelente conectividad, cercana a la línea E de subte y con rápido acceso hacia distintos puntos de la ciudad. La unidad está en buen estado, con una distribución funcional y espacios bien aprovechados. Cuenta con balcón, disposición al frente y ambientes cómodos para vivir o invertir. - Lo mejor de está propiedad. _Balcón que conecta con la habitación. _Buen estado en general. _Departamento al frente. _Muy buen ubicación dentro de Boedo con cercanía a Subte y Autopista. - Es ideal para: _Quienes buscan su primera vivienda. _Inversión para renta. _Personas que priorizan buena ubicación y conectividad",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 63.000",
+      "price_val": 63000,
+      "currency": "USD",
+      "expenses_raw": "$ 200.000 Expensas",
+      "expenses_val": 200000,
+      "user_views": 1431,
+      "features_raw": "38 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 38,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Boedo, Capital Federal",
+      "address": "Virrey Liniers 1165",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/07/03/78/360x266/2076472947.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-de-departamento-2-ambientes-con-balcon-al-frente-60070378.html",
+      "is_development": false,
+      "barrio": "Boedo",
+      "barrio_benchmark_m2": 1750,
+      "usd_m2": 1658,
+      "discount_pct": 5.3,
+      "opportunity_score": 31,
+      "user_views_formatted": "1.431",
+      "badge_text": "🏷️ Buen Precio",
+      "badge_class": "badge-good",
+      "price_usd_formatted": "USD 63.000",
+      "usd_m2_formatted": "USD 1.658/m²",
+      "benchmark_formatted": "USD 1.750/m²",
+      "first_seen_date": "2026-09-04",
+      "days_ago": 0,
+      "last_synced": "2026-09-04T19:30:16.148783"
+    },
+    "ZPROP-60070564": {
+      "id": "ZPROP-60070564",
+      "title": "Venta Departamento de 2 ambientes con Patio - Monserrat ( Méjico y Chile) -Cómodo y funcional departamento de 2 ambientes. -Living Comedor-Cocina independiente con salida al Patio. - Lavadero, conexión para lavarropas- Habitación principal-Baño completo- Muy buena ventilación en todos los ambientes. Estratégicamente ubicado en calle Méjico y ChilePrincipales líneas de colectivo 151 y 168. Medidas y superficies de los planos, son meramente a titulo estimativo y no forma parte de ningún tipo de documentación contractual, pueden no ser exactos y/o no estar actualizados a la hora de la visualización de este aviso. Curcio Colegiales srl, Matrícula 7338 - cucicba",
+      "description": "Venta Departamento de 2 ambientes con Patio - Monserrat ( Méjico y Chile) -Cómodo y funcional departamento de 2 ambientes. -Living Comedor-Cocina independiente con salida al Patio. - Lavadero, conexión para lavarropas- Habitación principal-Baño completo- Muy buena ventilación en todos los ambientes. Estratégicamente ubicado en calle Méjico y ChilePrincipales líneas de colectivo 151 y 168. Medidas y superficies de los planos, son meramente a titulo estimativo y no forma parte de ningún tipo de documentación contractual, pueden no ser exactos y/o no estar actualizados a la hora de la visualización de este aviso. Curcio Colegiales srl, Matrícula 7338 - cucicba",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 69.000",
+      "price_val": 69000,
+      "currency": "USD",
+      "expenses_raw": "$ 138.500 Expensas",
+      "expenses_val": 138500,
+      "user_views": 1068,
+      "features_raw": "45 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 45,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Monserrat, Capital Federal",
+      "address": "Virrey Cevallos al 600",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/07/05/64/360x266/2076477245.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-departamento-2-ambientes-con-patio-en-monserrat-60070564.html",
+      "is_development": false,
+      "barrio": "Monserrat",
+      "barrio_benchmark_m2": 1550,
+      "usd_m2": 1533,
+      "discount_pct": 1.1,
+      "opportunity_score": 30,
+      "user_views_formatted": "1.068",
+      "badge_text": "🏷️ Buen Precio",
+      "badge_class": "badge-good",
+      "price_usd_formatted": "USD 69.000",
+      "usd_m2_formatted": "USD 1.533/m²",
+      "benchmark_formatted": "USD 1.550/m²",
+      "first_seen_date": "2026-09-04",
+      "days_ago": 0,
+      "last_synced": "2026-09-04T19:30:16.148783"
     }
   }
 }
