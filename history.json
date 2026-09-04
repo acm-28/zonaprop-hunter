@@ -4184,7 +4184,7 @@
       "barrio": "Balvanera"
     }
   },
-  "last_run": "2026-09-03T17:00:20.577950",
+  "last_run": "2026-09-04T08:30:08.171384",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -4218,6 +4218,17 @@
       "median_price": 64000,
       "super_deals_count": 15,
       "top_neighborhoods": []
+    },
+    {
+      "date": "2026-09-04",
+      "timestamp": "2026-09-04T08:30:08.205705",
+      "total_properties": 83,
+      "new_today": 48,
+      "avg_usd_m2": 1410,
+      "min_price": 25500,
+      "median_price": 64000,
+      "super_deals_count": 15,
+      "top_neighborhoods": []
     }
   ],
   "active_deals": {
@@ -4228,7 +4239,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 78.000",
       "price_val": 78000,
       "currency": "USD",
@@ -4259,7 +4270,7 @@
       "usd_m2_formatted": "USD 1.368/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60050955": {
@@ -4269,7 +4280,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 80.000",
       "price_val": 80000,
       "currency": "USD",
@@ -4300,7 +4311,7 @@
       "usd_m2_formatted": "USD 1.290/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60051726": {
@@ -4310,7 +4321,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 50.000",
       "price_val": 50000,
       "currency": "USD",
@@ -4341,7 +4352,7 @@
       "usd_m2_formatted": "USD 1.351/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60051322": {
@@ -4351,7 +4362,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 55.000",
       "price_val": 55000,
       "currency": "USD",
@@ -4382,7 +4393,7 @@
       "usd_m2_formatted": "USD 1.196/m²",
       "benchmark_formatted": "USD 1.400/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60050982": {
@@ -4392,7 +4403,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 68.000",
       "price_val": 68000,
       "currency": "USD",
@@ -4423,7 +4434,7 @@
       "usd_m2_formatted": "USD 2.000/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60051147": {
@@ -4433,7 +4444,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 77.000",
       "price_val": 77000,
       "currency": "USD",
@@ -4464,7 +4475,7 @@
       "usd_m2_formatted": "USD 1.925/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60051719": {
@@ -4474,7 +4485,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 50.000",
       "price_val": 50000,
       "currency": "USD",
@@ -4505,7 +4516,7 @@
       "usd_m2_formatted": "USD 1.351/m²",
       "benchmark_formatted": "USD 1.450/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60051721": {
@@ -4515,7 +4526,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 50.000",
       "price_val": 50000,
       "currency": "USD",
@@ -4546,7 +4557,7 @@
       "usd_m2_formatted": "USD 1.351/m²",
       "benchmark_formatted": "USD 1.450/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60051723": {
@@ -4556,7 +4567,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 50.000",
       "price_val": 50000,
       "currency": "USD",
@@ -4587,7 +4598,7 @@
       "usd_m2_formatted": "USD 1.351/m²",
       "benchmark_formatted": "USD 1.400/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60052101": {
@@ -4597,7 +4608,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 73.000",
       "price_val": 73000,
       "currency": "USD",
@@ -4628,7 +4639,7 @@
       "usd_m2_formatted": "USD 1.352/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60052105": {
@@ -4638,7 +4649,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 73.000",
       "price_val": 73000,
       "currency": "USD",
@@ -4669,7 +4680,7 @@
       "usd_m2_formatted": "USD 1.352/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60052108": {
@@ -4679,7 +4690,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 73.000",
       "price_val": 73000,
       "currency": "USD",
@@ -4710,7 +4721,7 @@
       "usd_m2_formatted": "USD 1.352/m²",
       "benchmark_formatted": "USD 1.500/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60052223": {
@@ -4720,7 +4731,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 75.000",
       "price_val": 75000,
       "currency": "USD",
@@ -4751,7 +4762,7 @@
       "usd_m2_formatted": "USD 1.389/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60051788": {
@@ -4761,7 +4772,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 63.000",
       "price_val": 63000,
       "currency": "USD",
@@ -4792,7 +4803,7 @@
       "usd_m2_formatted": "USD 1.500/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60052103": {
@@ -4802,7 +4813,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 73.000",
       "price_val": 73000,
       "currency": "USD",
@@ -4833,7 +4844,7 @@
       "usd_m2_formatted": "USD 1.352/m²",
       "benchmark_formatted": "USD 1.450/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60051879": {
@@ -4843,7 +4854,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 70.000",
       "price_val": 70000,
       "currency": "USD",
@@ -4874,7 +4885,7 @@
       "usd_m2_formatted": "USD 1.489/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60052228": {
@@ -4884,7 +4895,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 75.000",
       "price_val": 75000,
       "currency": "USD",
@@ -4915,7 +4926,7 @@
       "usd_m2_formatted": "USD 1.389/m²",
       "benchmark_formatted": "USD 1.450/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60052561": {
@@ -4925,7 +4936,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 48.000",
       "price_val": 48000,
       "currency": "USD",
@@ -4956,7 +4967,7 @@
       "usd_m2_formatted": "USD 1.231/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60050958": {
@@ -4966,7 +4977,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 79.000",
       "price_val": 79000,
       "currency": "USD",
@@ -4997,7 +5008,7 @@
       "usd_m2_formatted": "USD 2.079/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60046740": {
@@ -5007,7 +5018,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 26.500",
       "price_val": 26500,
       "currency": "USD",
@@ -5038,7 +5049,7 @@
       "usd_m2_formatted": "USD 1.395/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60042352": {
@@ -5048,7 +5059,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 46.900",
       "price_val": 46900,
       "currency": "USD",
@@ -5079,7 +5090,7 @@
       "usd_m2_formatted": "USD 977/m²",
       "benchmark_formatted": "USD 1.600/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60043588": {
@@ -5089,7 +5100,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 51.500",
       "price_val": 51500,
       "currency": "USD",
@@ -5120,7 +5131,7 @@
       "usd_m2_formatted": "USD 873/m²",
       "benchmark_formatted": "USD 1.400/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60053649": {
@@ -5130,7 +5141,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 69.000",
       "price_val": 69000,
       "currency": "USD",
@@ -5161,7 +5172,7 @@
       "usd_m2_formatted": "USD 821/m²",
       "benchmark_formatted": "USD 1.600/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-59403653": {
@@ -5171,7 +5182,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 53.000",
       "price_val": 53000,
       "currency": "USD",
@@ -5202,7 +5213,7 @@
       "usd_m2_formatted": "USD 1.233/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60047702": {
@@ -5212,7 +5223,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 80.000",
       "price_val": 80000,
       "currency": "USD",
@@ -5243,7 +5254,7 @@
       "usd_m2_formatted": "USD 727/m²",
       "benchmark_formatted": "USD 1.300/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60047992": {
@@ -5253,7 +5264,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 78.500",
       "price_val": 78500,
       "currency": "USD",
@@ -5284,7 +5295,7 @@
       "usd_m2_formatted": "USD 1.090/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60049444": {
@@ -5294,7 +5305,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 53.000",
       "price_val": 53000,
       "currency": "USD",
@@ -5325,7 +5336,7 @@
       "usd_m2_formatted": "USD 1.233/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60047376": {
@@ -5335,7 +5346,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 35.000",
       "price_val": 35000,
       "currency": "USD",
@@ -5366,7 +5377,7 @@
       "usd_m2_formatted": "USD 729/m²",
       "benchmark_formatted": "USD 1.000/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60045959": {
@@ -5376,7 +5387,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 65.000",
       "price_val": 65000,
       "currency": "USD",
@@ -5407,7 +5418,7 @@
       "usd_m2_formatted": "USD 1.857/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60042603": {
@@ -5417,7 +5428,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 60.000",
       "price_val": 60000,
       "currency": "USD",
@@ -5448,7 +5459,7 @@
       "usd_m2_formatted": "USD 1.935/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60043556": {
@@ -5458,7 +5469,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 75.000",
       "price_val": 75000,
       "currency": "USD",
@@ -5489,7 +5500,7 @@
       "usd_m2_formatted": "USD 1.172/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60043342": {
@@ -5499,7 +5510,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 56.000",
       "price_val": 56000,
       "currency": "USD",
@@ -5530,7 +5541,7 @@
       "usd_m2_formatted": "USD 2.000/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60048259": {
@@ -5540,7 +5551,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 58.500",
       "price_val": 58500,
       "currency": "USD",
@@ -5571,7 +5582,7 @@
       "usd_m2_formatted": "USD 770/m²",
       "benchmark_formatted": "USD 1.100/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60043162": {
@@ -5581,7 +5592,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 56.000",
       "price_val": 56000,
       "currency": "USD",
@@ -5612,7 +5623,7 @@
       "usd_m2_formatted": "USD 1.647/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60044815": {
@@ -5622,7 +5633,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 50.000",
       "price_val": 50000,
       "currency": "USD",
@@ -5653,7 +5664,7 @@
       "usd_m2_formatted": "USD 1.220/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60052605": {
@@ -5663,7 +5674,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 48.000",
       "price_val": 48000,
       "currency": "USD",
@@ -5694,7 +5705,7 @@
       "usd_m2_formatted": "USD 1.231/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60049747": {
@@ -5704,7 +5715,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 50.000",
       "price_val": 50000,
       "currency": "USD",
@@ -5735,7 +5746,7 @@
       "usd_m2_formatted": "USD 877/m²",
       "benchmark_formatted": "USD 1.100/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60042210": {
@@ -5745,7 +5756,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 56.000",
       "price_val": 56000,
       "currency": "USD",
@@ -5776,7 +5787,7 @@
       "usd_m2_formatted": "USD 1.514/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60053726": {
@@ -5786,7 +5797,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 69.000",
       "price_val": 69000,
       "currency": "USD",
@@ -5817,7 +5828,7 @@
       "usd_m2_formatted": "USD 1.725/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60053216": {
@@ -5827,7 +5838,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 65.000",
       "price_val": 65000,
       "currency": "USD",
@@ -5858,7 +5869,7 @@
       "usd_m2_formatted": "USD 1.548/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60043460": {
@@ -5868,7 +5879,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 68.000",
       "price_val": 68000,
       "currency": "USD",
@@ -5899,7 +5910,7 @@
       "usd_m2_formatted": "USD 1.838/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60042351": {
@@ -5909,7 +5920,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 75.000",
       "price_val": 75000,
       "currency": "USD",
@@ -5940,7 +5951,7 @@
       "usd_m2_formatted": "USD 1.172/m²",
       "benchmark_formatted": "USD 1.450/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60044225": {
@@ -5950,7 +5961,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 73.500",
       "price_val": 73500,
       "currency": "USD",
@@ -5981,7 +5992,7 @@
       "usd_m2_formatted": "USD 1.225/m²",
       "benchmark_formatted": "USD 1.500/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60041028": {
@@ -5991,7 +6002,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 68.000",
       "price_val": 68000,
       "currency": "USD",
@@ -6022,7 +6033,7 @@
       "usd_m2_formatted": "USD 1.478/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60047959": {
@@ -6032,7 +6043,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 59.900",
       "price_val": 59900,
       "currency": "USD",
@@ -6063,7 +6074,7 @@
       "usd_m2_formatted": "USD 1.619/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60047960": {
@@ -6073,7 +6084,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 58.000",
       "price_val": 58000,
       "currency": "USD",
@@ -6104,7 +6115,7 @@
       "usd_m2_formatted": "USD 1.933/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60049240": {
@@ -6114,7 +6125,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 65.900",
       "price_val": 65900,
       "currency": "USD",
@@ -6145,7 +6156,7 @@
       "usd_m2_formatted": "USD 1.098/m²",
       "benchmark_formatted": "USD 1.300/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60042919": {
@@ -6155,7 +6166,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 62.000",
       "price_val": 62000,
       "currency": "USD",
@@ -6186,7 +6197,7 @@
       "usd_m2_formatted": "USD 1.632/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60043694": {
@@ -6196,7 +6207,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 45.000",
       "price_val": 45000,
       "currency": "USD",
@@ -6227,7 +6238,7 @@
       "usd_m2_formatted": "USD 1.731/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60050067": {
@@ -6237,7 +6248,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 50.000",
       "price_val": 50000,
       "currency": "USD",
@@ -6268,7 +6279,7 @@
       "usd_m2_formatted": "USD 1.515/m²",
       "benchmark_formatted": "USD 1.650/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60045284": {
@@ -6278,7 +6289,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 79.000",
       "price_val": 79000,
       "currency": "USD",
@@ -6309,7 +6320,7 @@
       "usd_m2_formatted": "USD 1.295/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60052644": {
@@ -6319,7 +6330,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 48.000",
       "price_val": 48000,
       "currency": "USD",
@@ -6350,7 +6361,7 @@
       "usd_m2_formatted": "USD 1.231/m²",
       "benchmark_formatted": "USD 1.300/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60053665": {
@@ -6360,7 +6371,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 73.000",
       "price_val": 73000,
       "currency": "USD",
@@ -6391,7 +6402,7 @@
       "usd_m2_formatted": "USD 1.404/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60053263": {
@@ -6401,7 +6412,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 69.000",
       "price_val": 69000,
       "currency": "USD",
@@ -6432,7 +6443,7 @@
       "usd_m2_formatted": "USD 2.029/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60044402": {
@@ -6442,7 +6453,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 79.000",
       "price_val": 79000,
       "currency": "USD",
@@ -6473,7 +6484,7 @@
       "usd_m2_formatted": "USD 1.362/m²",
       "benchmark_formatted": "USD 1.500/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60041898": {
@@ -6483,7 +6494,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 68.500",
       "price_val": 68500,
       "currency": "USD",
@@ -6514,7 +6525,7 @@
       "usd_m2_formatted": "USD 1.427/m²",
       "benchmark_formatted": "USD 1.500/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60043770": {
@@ -6524,7 +6535,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 50.000",
       "price_val": 50000,
       "currency": "USD",
@@ -6555,7 +6566,7 @@
       "usd_m2_formatted": "USD 1.429/m²",
       "benchmark_formatted": "USD 1.450/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60043327": {
@@ -6565,7 +6576,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 75.000",
       "price_val": 75000,
       "currency": "USD",
@@ -6596,7 +6607,7 @@
       "usd_m2_formatted": "USD 1.596/m²",
       "benchmark_formatted": "USD 1.600/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60043167": {
@@ -6606,7 +6617,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 56.000",
       "price_val": 56000,
       "currency": "USD",
@@ -6637,7 +6648,7 @@
       "usd_m2_formatted": "USD 1.647/m²",
       "benchmark_formatted": "USD 1.700/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60043157": {
@@ -6647,7 +6658,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 56.000",
       "price_val": 56000,
       "currency": "USD",
@@ -6678,7 +6689,7 @@
       "usd_m2_formatted": "USD 1.647/m²",
       "benchmark_formatted": "USD 1.650/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60049170": {
@@ -6688,7 +6699,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado desde ayer",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 75.000",
       "price_val": 75000,
       "currency": "USD",
@@ -6719,7 +6730,7 @@
       "usd_m2_formatted": "USD 1.974/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T12:49:28.327763"
     },
     "ZPROP-60055428": {
@@ -6729,7 +6740,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 25.500",
       "price_val": 25500,
       "currency": "USD",
@@ -6760,7 +6771,7 @@
       "usd_m2_formatted": "USD 708/m²",
       "benchmark_formatted": "USD 1.300/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60053919": {
@@ -6770,7 +6781,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 55.000",
       "price_val": 55000,
       "currency": "USD",
@@ -6801,7 +6812,7 @@
       "usd_m2_formatted": "USD 529/m²",
       "benchmark_formatted": "USD 1.100/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60054727": {
@@ -6811,7 +6822,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 50.000",
       "price_val": 50000,
       "currency": "USD",
@@ -6842,7 +6853,7 @@
       "usd_m2_formatted": "USD 1.786/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60055038": {
@@ -6852,7 +6863,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 48.000",
       "price_val": 48000,
       "currency": "USD",
@@ -6883,7 +6894,7 @@
       "usd_m2_formatted": "USD 1.067/m²",
       "benchmark_formatted": "USD 1.500/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60055341": {
@@ -6893,7 +6904,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 50.000",
       "price_val": 50000,
       "currency": "USD",
@@ -6924,7 +6935,7 @@
       "usd_m2_formatted": "USD 1.064/m²",
       "benchmark_formatted": "USD 1.450/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60056192": {
@@ -6934,7 +6945,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 80.000",
       "price_val": 80000,
       "currency": "USD",
@@ -6965,7 +6976,7 @@
       "usd_m2_formatted": "USD 1.053/m²",
       "benchmark_formatted": "USD 1.600/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60057416": {
@@ -6975,7 +6986,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 55.000",
       "price_val": 55000,
       "currency": "USD",
@@ -7006,7 +7017,7 @@
       "usd_m2_formatted": "USD 2.037/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60055826": {
@@ -7016,7 +7027,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 78.000",
       "price_val": 78000,
       "currency": "USD",
@@ -7047,7 +7058,7 @@
       "usd_m2_formatted": "USD 2.167/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60054090": {
@@ -7057,7 +7068,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 52.000",
       "price_val": 52000,
       "currency": "USD",
@@ -7088,7 +7099,7 @@
       "usd_m2_formatted": "USD 1.486/m²",
       "benchmark_formatted": "USD 1.900/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60055003": {
@@ -7098,7 +7109,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 58.000",
       "price_val": 58000,
       "currency": "USD",
@@ -7129,7 +7140,7 @@
       "usd_m2_formatted": "USD 1.657/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60056227": {
@@ -7139,7 +7150,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 57.000",
       "price_val": 57000,
       "currency": "USD",
@@ -7170,7 +7181,7 @@
       "usd_m2_formatted": "USD 1.267/m²",
       "benchmark_formatted": "USD 1.600/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60054870": {
@@ -7180,7 +7191,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 64.000",
       "price_val": 64000,
       "currency": "USD",
@@ -7211,7 +7222,7 @@
       "usd_m2_formatted": "USD 1.333/m²",
       "benchmark_formatted": "USD 1.700/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60057132": {
@@ -7221,7 +7232,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 74.900",
       "price_val": 74900,
       "currency": "USD",
@@ -7252,7 +7263,7 @@
       "usd_m2_formatted": "USD 1.628/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60054162": {
@@ -7262,7 +7273,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 74.000",
       "price_val": 74000,
       "currency": "USD",
@@ -7293,7 +7304,7 @@
       "usd_m2_formatted": "USD 1.721/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60056885": {
@@ -7303,7 +7314,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 65.000",
       "price_val": 65000,
       "currency": "USD",
@@ -7334,7 +7345,7 @@
       "usd_m2_formatted": "USD 1.512/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60054772": {
@@ -7344,7 +7355,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 74.996",
       "price_val": 74996,
       "currency": "USD",
@@ -7375,7 +7386,7 @@
       "usd_m2_formatted": "USD 1.250/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60054875": {
@@ -7385,7 +7396,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 71.000",
       "price_val": 71000,
       "currency": "USD",
@@ -7416,7 +7427,7 @@
       "usd_m2_formatted": "USD 1.291/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60056946": {
@@ -7426,7 +7437,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 60.000",
       "price_val": 60000,
       "currency": "USD",
@@ -7457,7 +7468,7 @@
       "usd_m2_formatted": "USD 1.500/m²",
       "benchmark_formatted": "USD 1.650/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60054529": {
@@ -7467,7 +7478,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 78.000",
       "price_val": 78000,
       "currency": "USD",
@@ -7498,7 +7509,7 @@
       "usd_m2_formatted": "USD 1.345/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60055135": {
@@ -7508,7 +7519,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 79.000",
       "price_val": 79000,
       "currency": "USD",
@@ -7539,7 +7550,7 @@
       "usd_m2_formatted": "USD 1.317/m²",
       "benchmark_formatted": "USD 1.500/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60054075": {
@@ -7549,7 +7560,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 55.000",
       "price_val": 55000,
       "currency": "USD",
@@ -7580,7 +7591,7 @@
       "usd_m2_formatted": "USD 1.375/m²",
       "benchmark_formatted": "USD 1.450/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     },
     "ZPROP-60053609": {
@@ -7590,7 +7601,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 75.000",
       "price_val": 75000,
       "currency": "USD",
@@ -7621,7 +7632,7 @@
       "usd_m2_formatted": "USD 1.415/m²",
       "benchmark_formatted": "USD 1.450/m²",
       "first_seen_date": "2026-09-03",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-03T17:00:20.577950"
     }
   }
