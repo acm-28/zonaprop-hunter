@@ -6,14 +6,14 @@ echo    ZONAPROP HUNTER CABA - OPORTUNIDADES INMOBILIARIAS
 echo =========================================================
 echo.
 
-cd /d "%~dp0"
+cd /d %~dp0
 
 echo [1/3] Ejecutando rastreo diario en Zonaprop (Publicados hoy)...
 python scraper_main.py --no-browser
 set SCRAPER_EXIT=%ERRORLEVEL%
 
 if not "%SCRAPER_EXIT%"=="0" (
-    echo [ERROR] Ocurrió un fallo durante la ejecución del scraper.
+    echo [ERROR] Ocurrio un fallo durante la ejecucion del scraper.
     goto END
 )
 
@@ -30,10 +30,10 @@ if errorlevel 1 (
     echo.
     echo =========================================================
     echo [OK] Cambios subidos a GitHub exitosamente!
-    echo Vercel está compilando la versión actualizada del sitio.
+    echo Vercel esta compilando la version actualizada del sitio.
     echo =========================================================
 ) else (
-    echo [3/3] No hay datos nuevos respecto a la última corrida.
+    echo [3/3] No hay datos nuevos respecto a la ultima corrida.
 )
 
 :END
