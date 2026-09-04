@@ -32,6 +32,22 @@ CONFIG_FILE = os.path.join(BASE_DIR, "config.json")
 DEFAULT_OUTPUT_HTML = os.path.join(BASE_DIR, "output", "zonaprop_oportunidades.html")
 ROOT_INDEX_HTML = os.path.join(BASE_DIR, "index.html")
 
+class DualLogger:
+    def __init__(self, filepath, orig_stream, append=False):
+        self.orig_stream = orig_stream
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+        mode = "a" if append else "w"
+        self.file = open(filepath, mode, encoding="utf-8", errors="replace")
+
+    def write(self, data):
+        self.orig_stream.write(data)
+        self.file.write(data)
+        self.file.flush()
+
+    def flush(self):
+        self.orig_stream.flush()
+        self.file.flush()
+
 def load_config() -> dict:
     if os.path.exists(CONFIG_FILE):
         with open(CONFIG_FILE, "r", encoding="utf-8") as f:
@@ -39,6 +55,14 @@ def load_config() -> dict:
     return {}
 
 def main():
+    log_dir = os.path.join(BASE_DIR, "logs")
+    last_log = os.path.join(log_dir, "task_last_run.log")
+    try:
+        sys.stdout = DualLogger(last_log, sys.stdout)
+        sys.stderr = DualLogger(last_log, sys.stderr, append=True)
+    except Exception:
+        pass
+
     parser = argparse.ArgumentParser(description="Zonaprop Hunter - Oportunidades & Market Intelligence CABA")
     parser.add_argument("--max-price", type=int, help="Precio maximo en USD (ej: 75000)")
     parser.add_argument("--min-price", type=int, help="Precio minimo en USD (ej: 20000)")

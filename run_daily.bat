@@ -19,13 +19,12 @@ if not "%SCRAPER_EXIT%"=="0" (
 
 echo.
 echo [2/3] Verificando novedades para GitHub y Vercel...
-git add index.html output/ history.json
+git add index.html output/ history.json check_status.bat scraper_main.py
 
 git diff --staged --quiet
 if errorlevel 1 (
     echo [3/3] Nuevas oportunidades detectadas. Sincronizando con GitHub...
     git commit -m "chore(data): auto-update daily opportunities & analytics [skip ci]"
-    git pull --rebase -X theirs origin main
     git push origin main
     echo.
     echo =========================================================
