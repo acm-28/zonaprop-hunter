@@ -127,6 +127,17 @@ def main():
         print("\n[Evaluador] Analizando y calculando scores de oportunidad en Zonaprop...")
         ranked_properties = evaluate_and_rank_properties(raw_properties, config)
 
+        # 2.1 Enriquecer con vistas REALES de cada ficha en Zonaprop
+        if ranked_properties:
+            print(f"[Scraper Zonaprop] Extrayendo vistas reales de Zonaprop para {len(ranked_properties)} oportunidades calificadas...")
+            for p in ranked_properties:
+                link = p.get("link")
+                if link:
+                    real_views = scraper.fetch_property_views(link)
+                    if real_views is not None:
+                        p["user_views"] = real_views
+                        p["user_views_formatted"] = f"{real_views:,}".replace(",", ".")
+
         # 3. Procesar y sincronizar con el histórico de los últimos 10 días
         print(f"[Historial] Sincronizando cartera acumulada de los últimos {retention_days} días...")
         processed_properties, new_count = merge_and_sync_history(ranked_properties, retention_days=retention_days)
