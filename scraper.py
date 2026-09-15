@@ -70,6 +70,22 @@ class ZonapropScraper:
                 time.sleep(attempt * 2)
         return None
 
+    def fetch_property_views(self, url: str) -> Optional[int]:
+        """
+        Consulta la ficha individual de la propiedad en Zonaprop y extrae el valor exacto de 'usersViews'.
+        Representa la cantidad real de personas que vieron el aviso en los últimos 30 días.
+        """
+        html = self.fetch_page(url)
+        if not html:
+            return None
+        match = re.search(r'usersViews\s*=\s*(\d+)', html)
+        if match:
+            try:
+                return int(match.group(1))
+            except ValueError:
+                pass
+        return None
+
     def parse_card(self, card) -> Optional[Dict[str, Any]]:
         """Extrae de forma precisa todos los campos de una tarjeta de propiedad."""
         try:

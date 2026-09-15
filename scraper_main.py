@@ -22,7 +22,7 @@ import webbrowser
 from datetime import datetime
 
 from scraper import ZonapropScraper
-from evaluator import evaluate_and_rank_properties
+from evaluator import evaluate_and_rank_properties, NEIGHBORHOOD_DEMAND_VIEWS
 from storage import merge_and_sync_history, record_daily_market_snapshot, load_history
 from market_analytics import compute_market_analytics
 from html_generator import generate_html_report
@@ -134,9 +134,13 @@ def main():
                 link = p.get("link")
                 if link:
                     real_views = scraper.fetch_property_views(link)
-                    if real_views is not None:
+                    if real_views is not None and real_views > 0:
                         p["user_views"] = real_views
                         p["user_views_formatted"] = f"{real_views:,}".replace(",", ".")
+                    elif not p.get("user_views") or p["user_views"] == 0:
+                        fb_views = NEIGHBORHOOD_DEMAND_VIEWS.get(p.get("barrio"), 32)
+                        p["user_views"] = fb_views
+                        p["user_views_formatted"] = f"{fb_views:,}".replace(",", ".")
 
         # 3. Procesar y sincronizar con el histórico de los últimos 10 días
         print(f"[Historial] Sincronizando cartera acumulada de los últimos {retention_days} días...")

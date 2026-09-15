@@ -7,6 +7,7 @@ opciones de compra detectadas recientemente.
 
 import json
 import os
+import unicodedata
 from datetime import datetime, timedelta
 from typing import Dict, Any, Tuple, List
 
@@ -58,15 +59,50 @@ def merge_and_sync_history(today_properties: List[Dict[str, Any]], retention_day
     cutoff_date = now - timedelta(days=retention_days)
     new_today_count = 0
 
-    # 1. Purgar oportunidades con más de retention_days o que no califiquen como Buen Precio
+    # 1. Cargar criterios de filtro actuales desde config.json
+    config_path = os.path.join(os.path.dirname(__file__), "config.json")
+    allowed_barrios = []
+    excluded_barrios = []
+    min_m2_filter = 48
+    if os.path.exists(config_path):
+        try:
+            with open(config_path, "r", encoding="utf-8") as f:
+                cfg_search = json.load(f).get("search", {})
+                min_m2_filter = cfg_search.get("min_m2", 48)
+                def _norm(t):
+                    if not t: return ""
+                    return unicodedata.normalize('NFKD', str(t)).encode('ASCII', 'ignore').decode('ASCII').strip().lower()
+                allowed_barrios = [_norm(b) for b in cfg_search.get("allowed_barrios", []) if b]
+                excluded_barrios = [_norm(b) for b in cfg_search.get("excluded_barrios", []) if b]
+        except Exception:
+            pass
+
+    # 2. Purgar oportunidades con más de retention_days, menor metraje (< 48 m2), barrio excluido o sin buen precio
     purged_deals = {}
     for prop_id, prop_data in active_deals.items():
         first_seen_str = prop_data.get("first_seen_date", today_str)
         badge = prop_data.get("badge_text", "")
         disc = prop_data.get("discount_pct", 0)
+        m2_tot = prop_data.get("m2_tot") or 0
 
         # Descartar si era 'Precio Normal' o tenía descuento negativo
         if "Normal" in badge or disc < 0:
+            continue
+
+        # Descartar si no alcanza la superficie mínima exigida (ej: < 48 m2)
+        if m2_tot < min_m2_filter:
+            continue
+
+        # Descartar si pertenece a barrios excluidos
+        barrio_norm = _norm(prop_data.get("barrio", ""))
+        location_norm = _norm(prop_data.get("location", ""))
+        title_norm = _norm(prop_data.get("title", ""))
+        
+        if any(ex in barrio_norm or ex in location_norm or (len(ex) >= 5 and ex in title_norm) for ex in excluded_barrios):
+            continue
+
+        # Descartar si no pertenece a las zonas permitidas (si está configurada la lista)
+        if allowed_barrios and not any(ab in barrio_norm or ab in location_norm for ab in allowed_barrios):
             continue
 
         try:

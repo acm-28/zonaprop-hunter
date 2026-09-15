@@ -1151,9 +1151,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             <div>
                 <div class="brand-title">
                     <span>🏢 Zonaprop Hunter CABA</span>
-                    <span class="brand-badge">Cartera 10 Días</span>
+                    <span class="brand-badge">Deptos & PHs ≥ 48 m²</span>
                 </div>
-                <div class="header-meta" id="headerMeta">Cartera Activa de Oportunidades Reales y Market Intelligence en CABA</div>
+                <div class="header-meta" id="headerMeta">Cartera Activa de Departamentos y PHs (≥ 48 m² hasta USD 100k) en Zonas Seguras y Conectadas de CABA</div>
             </div>
             <div class="action-buttons">
                 <button class="btn" onclick="exportToCSV()">📥 Exportar CSV</button>
@@ -1222,17 +1222,16 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     </div>
                     <div class="filter-group">
                         <label>Precio Máximo (USD)</label>
-                        <input type="number" id="filterMaxPrice" class="input-control" placeholder="Ej: 75000" step="5000">
+                        <input type="number" id="filterMaxPrice" class="input-control" placeholder="Ej: 100000" step="5000">
                     </div>
                     <div class="filter-group">
                         <label>Máximo USD / m²</label>
-                        <input type="number" id="filterMaxSqm" class="input-control" placeholder="Ej: 1800" step="100">
+                        <input type="number" id="filterMaxSqm" class="input-control" placeholder="Ej: 2100" step="100">
                     </div>
                     <div class="filter-group">
                         <label>Ambientes Mínimos</label>
                         <select id="filterAmbientes" class="input-control">
-                            <option value="0">Cualquiera</option>
-                            <option value="1">1 Ambiente (Monoambiente)</option>
+                            <option value="0">Cualquiera (≥ 48 m²)</option>
                             <option value="2">2 Ambientes</option>
                             <option value="3">3+ Ambientes</option>
                         </select>
@@ -1580,7 +1579,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         function init() {
             const todayCount = RAW_DATA.filter(p => (p.days_ago === 0 || p.is_new)).length;
-            document.getElementById('headerMeta').innerText = `Actualizado el ${new Date(GENERATION_TIME).toLocaleString('es-AR')} • ${RAW_DATA.length} oportunidades activas en cartera (${todayCount} nuevas hoy)`;
+            document.getElementById('headerMeta').innerText = `Actualizado el ${new Date(GENERATION_TIME).toLocaleString('es-AR')} • ${RAW_DATA.length} oportunidades activas (Deptos y PHs ≥ 48 m² en Zonas Seguras y Conectadas)`;
             document.getElementById('footerDate').innerText = new Date(GENERATION_TIME).toLocaleString('es-AR');
             document.getElementById('tabCount').innerText = RAW_DATA.length;
 
@@ -1754,7 +1753,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     ageBadge = `<span class="badge badge-date">📅 Hace ${p.days_ago} ${p.days_ago === 1 ? 'día' : 'días'}</span>`;
                 }
 
-                const viewsText = p.user_views_formatted ? `👁️ ${p.user_views_formatted} vistas estimadas` : '👁️ Alta demanda';
+                const viewsText = p.user_views ? `👁️ ${p.user_views} personas vieron este aviso (últimos 30 días)` : '👁️ Alta demanda comercial';
                 
                 return `
                 <div class="property-card ${isCont ? 'is-contacted' : ''}">
@@ -1829,7 +1828,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     <td>${p.m2_tot || '-'} m²</td>
                     <td>${p.ambientes || '-'} amb</td>
                     <td>
-                        <span style="color:var(--accent-primary); font-weight:700;">👁️ ${p.user_views_formatted || 'Alta'}</span>
+                        <span style="color:var(--accent-primary); font-weight:700;">👁️ ${p.user_views ? p.user_views + ' personas' : 'Alta'}</span>
                     </td>
                     <td><small style="color:var(--accent-primary); font-weight:700;">${ageLabel}</small></td>
                     <td>

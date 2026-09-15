@@ -9,21 +9,21 @@ import unicodedata
 from typing import Dict, Any, Optional, List
 
 NEIGHBORHOOD_DEMAND_VIEWS = {
-    "Palermo": 2450, "Recoleta": 2100, "Belgrano": 2150, "Caballito": 2200,
-    "Villa Urquiza": 1950, "Colegiales": 1750, "Villa Crespo": 1700,
-    "Chacarita": 1600, "Almagro": 1450, "San Telmo": 1300, "Villa Devoto": 1400,
-    "Nuñez": 1900, "Coghlan": 1450, "Saavedra": 1400, "Parque Centenario": 1500,
-    "Flores": 1100, "Floresta": 950, "Boedo": 1200, "Barracas": 1050,
-    "Parque Patricios": 1150, "Parque Chacabuco": 1100, "Balvanera": 950,
-    "Once": 850, "Congreso": 900, "Monserrat": 900, "San Nicolas": 850,
-    "San Nicolás": 850, "Centro / Microcentro": 800, "San Cristobal": 850,
-    "San Cristóbal": 850, "Constitucion": 700, "Constitución": 700,
-    "Villa del Parque": 1300, "Paternal": 1150, "Agronomia": 1250,
-    "Agronomía": 1250, "Villa Santa Rita": 1050, "Villa General Mitre": 1050,
-    "Villa Luro": 1150, "Villa Pueyrredon": 1350, "Villa Pueyrredón": 1350,
-    "Villa Real": 1000, "Versalles": 1050, "Monte Castro": 1100,
-    "Mataderos": 850, "Liniers": 950, "Nueva Pompeya": 650,
-    "Villa Lugano": 550, "Villa Soldati": 500, "Default_CABA": 1000
+    "Palermo": 65, "Recoleta": 55, "Belgrano": 50, "Caballito": 55,
+    "Villa Urquiza": 48, "Colegiales": 45, "Villa Crespo": 45,
+    "Chacarita": 40, "Almagro": 42, "San Telmo": 38, "Villa Devoto": 36,
+    "Nuñez": 48, "Nunez": 48, "Coghlan": 35, "Saavedra": 35, "Parque Centenario": 45,
+    "Flores": 32, "Floresta": 28, "Boedo": 30, "Barracas": 26,
+    "Parque Patricios": 32, "Parque Chacabuco": 32, "Balvanera": 38,
+    "Once": 25, "Congreso": 30, "Monserrat": 25, "San Nicolas": 28,
+    "San Nicolás": 28, "Centro / Microcentro": 25, "San Cristobal": 25,
+    "San Cristóbal": 25, "Constitucion": 22, "Constitución": 22,
+    "Villa del Parque": 35, "Paternal": 30, "Agronomia": 32,
+    "Agronomía": 32, "Villa Santa Rita": 30, "Villa General Mitre": 30,
+    "Villa Luro": 30, "Villa Pueyrredon": 32, "Villa Pueyrredón": 32,
+    "Villa Real": 28, "Versalles": 28, "Monte Castro": 30,
+    "Mataderos": 25, "Liniers": 26, "Nueva Pompeya": 22,
+    "Villa Lugano": 20, "Villa Soldati": 20, "Default_CABA": 30
 }
 
 def normalize_text(text: str) -> str:
@@ -121,11 +121,14 @@ def evaluate_property(raw_prop: Dict[str, Any], config: Dict[str, Any]) -> Optio
     search_cfg = config.get("search", {})
     benchmarks = config.get("neighborhood_benchmarks_usd_m2", {})
     
-    min_price = search_cfg.get("min_price_usd", 18000)
-    max_price = search_cfg.get("max_price_usd", 80000)
-    min_m2 = search_cfg.get("min_m2", 18)
-    max_usd_m2_limit = search_cfg.get("max_usd_m2", 2200)
+    min_price = search_cfg.get("min_price_usd", 25000)
+    max_price = search_cfg.get("max_price_usd", 100000)
+    min_m2 = search_cfg.get("min_m2", 48)
+    max_usd_m2_limit = search_cfg.get("max_usd_m2", 2100)
     include_devs = search_cfg.get("include_developments", False)
+    
+    allowed_barrios = [normalize_text(b) for b in search_cfg.get("allowed_barrios", []) if b]
+    excluded_barrios = [normalize_text(b) for b in search_cfg.get("excluded_barrios", []) if b]
     filter_barrios = [normalize_text(b) for b in search_cfg.get("filter_barrios", []) if b]
 
     # 1. Filtro estricto anti-pozos y anti-emprendimientos
@@ -142,7 +145,7 @@ def evaluate_property(raw_prop: Dict[str, Any], config: Dict[str, Any]) -> Optio
     if price_val < min_price or price_val > max_price:
         return None
 
-    # 3. Validar Superficie m2
+    # 3. Validar Superficie m2 (Estricto >= 48 m2)
     m2_tot = raw_prop.get("m2_tot")
     if not m2_tot or m2_tot < min_m2:
         return None
@@ -155,13 +158,32 @@ def evaluate_property(raw_prop: Dict[str, Any], config: Dict[str, Any]) -> Optio
         if m2_tot < 25 and (ambientes is None or ambientes <= 1):
             return None
 
-    # 5. Filtrar por barrios si fue solicitado
+    # 5. Filtrar por Zonas y Barrios (Zonas Seguras, Cerca de Recoleta / Con Subte)
     location_raw = raw_prop.get("location", "")
-    barrio_name, barrio_benchmark = match_neighborhood_benchmark(location_raw, benchmarks)
+    norm_loc = normalize_text(location_raw)
+    title_norm = normalize_text(raw_prop.get("title", ""))
+    full_loc_text = f"{norm_loc} {title_norm}"
     
+    barrio_name, barrio_benchmark = match_neighborhood_benchmark(location_raw, benchmarks)
+    norm_barrio = normalize_text(barrio_name)
+
+    # A. Descartar estrictamente si pertenece a la lista de zonas excluidas
+    for ex_b in excluded_barrios:
+        if ex_b in norm_loc or ex_b in norm_barrio or (len(ex_b) >= 5 and ex_b in title_norm):
+            return None
+
+    # B. Verificar que pertenezca a la lista de zonas permitidas
+    if allowed_barrios:
+        is_allowed = any(
+            ab in norm_loc or ab in norm_barrio or ab == norm_barrio
+            for ab in allowed_barrios
+        )
+        if not is_allowed:
+            return None
+
+    # C. Filtro adicional manual si fue solicitado por CLI (--barrios)
     if filter_barrios:
-        norm_loc = normalize_text(location_raw)
-        if not any(fb in norm_loc or fb in normalize_text(barrio_name) for fb in filter_barrios):
+        if not any(fb in norm_loc or fb in norm_barrio for fb in filter_barrios):
             return None
 
     # 6. Calcular USD / m2
@@ -198,15 +220,10 @@ def evaluate_property(raw_prop: Dict[str, Any], config: Dict[str, Any]) -> Optio
     opportunity_score = round(0.60 * discount_score + 0.25 * price_score + 0.15 * benchmark_weight)
     opportunity_score = max(30, min(99, opportunity_score))
 
-    # 10. Vistas y Demanda Comercial
+    # 10. Vistas y Demanda Comercial (Dato Real de Zonaprop)
     user_views = raw_prop.get("user_views")
-    if not user_views:
-        base_views = NEIGHBORHOOD_DEMAND_VIEWS.get(barrio_name, 1000)
-        amb = raw_prop.get("ambientes")
-        amb_mult = 1.30 if amb == 1 else (1.20 if amb == 2 else 0.85)
-        disc_mult = 1.30 if discount_pct >= 25 else (1.15 if discount_pct >= 12 else 1.0)
-        id_hash = sum(ord(c) for c in str(raw_prop.get("id", ""))) % 160 - 80
-        user_views = max(150, round(base_views * amb_mult * disc_mult + id_hash))
+    if user_views is None:
+        user_views = 0
 
     source = raw_prop.get("source", "Zonaprop")
     source_badge = raw_prop.get("source_badge", f"🔵 {source}")

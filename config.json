@@ -1,16 +1,34 @@
 {
   "search": {
-    "property_type": "departamentos",
+    "property_type": "departamentos-ph",
     "location": "capital-federal",
-    "max_price_usd": 80000,
-    "min_price_usd": 18000,
-    "min_m2": 18,
-    "max_usd_m2": 2200,
+    "max_price_usd": 100000,
+    "min_price_usd": 25000,
+    "min_m2": 48,
+    "max_usd_m2": 2100,
     "sort_by": "orden-publicado-descendente",
-    "pages_to_scrape": 5,
+    "pages_to_scrape": 6,
     "only_published_today": true,
     "history_retention_days": 10,
     "include_developments": false,
+    "allowed_barrios": [
+      "Recoleta", "Barrio Norte", "Retiro",
+      "Palermo", "Palermo Soho", "Palermo Hollywood", "Palermo Chico", "Las Cañitas", "Botánico",
+      "Belgrano", "Belgrano C", "Belgrano R", "Colegiales", "Nuñez",
+      "Caballito", "Caballito Norte", "Caballito Sur", "Parque Centenario",
+      "Villa Crespo", "Chacarita", "Almagro", "Almagro Norte",
+      "Villa Urquiza", "Villa Ortúzar", "Villa Ortuzar", "Coghlan", "Saavedra",
+      "Parque Chacabuco", "Parque Patricios"
+    ],
+    "excluded_barrios": [
+      "Villa Lugano", "Lugano", "Villa Soldati", "Villa Riachuelo",
+      "Liniers", "Mataderos", "Once", "Balvanera", "Abasto", "Congreso",
+      "Constitucion", "Constitución", "San Cristobal", "San Cristóbal",
+      "Monserrat", "San Nicolas", "San Nicolás", "Centro / Microcentro",
+      "La Boca", "Nueva Pompeya", "Pompeya", "Barracas",
+      "Flores", "Floresta", "Parque Avellaneda", "Villa Real",
+      "Versalles", "Villa Luro", "Velez Sarsfield", "Villa Santa Rita"
+    ],
     "filter_barrios": [],
     "enabled_sources": ["zonaprop"]
   },

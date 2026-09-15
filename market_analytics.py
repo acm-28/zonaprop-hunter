@@ -19,15 +19,15 @@ OFFICIAL_CABA_BARRIOS = [
 ]
 
 FALLBACK_DEMAND_VIEWS = {
-    "Palermo": 2450, "Recoleta": 2100, "Belgrano": 2150, "Caballito": 2200,
-    "Villa Urquiza": 1950, "Colegiales": 1750, "Villa Crespo": 1700,
-    "Chacarita": 1600, "Almagro": 1450, "San Telmo": 1300, "Villa Devoto": 1400,
-    "Nunez": 1900, "Nuñez": 1900, "Coghlan": 1450, "Saavedra": 1400,
-    "Flores": 1100, "Floresta": 950, "Boedo": 1200, "Barracas": 1050,
-    "Parque Patricios": 1150, "Parque Chacabuco": 1100, "Balvanera": 950,
-    "Monserrat": 900, "San Nicolas": 850, "San Cristobal": 850,
-    "Constitucion": 700, "Villa del Parque": 1300, "Paternal": 1150,
-    "Agronomia": 1250, "Puerto Madero": 2300, "Default": 1000
+    "Palermo": 65, "Recoleta": 55, "Belgrano": 50, "Caballito": 55,
+    "Villa Urquiza": 48, "Colegiales": 45, "Villa Crespo": 45,
+    "Chacarita": 40, "Almagro": 42, "San Telmo": 38, "Villa Devoto": 36,
+    "Nunez": 48, "Nuñez": 48, "Coghlan": 35, "Saavedra": 35,
+    "Flores": 32, "Floresta": 28, "Boedo": 30, "Barracas": 26,
+    "Parque Patricios": 32, "Parque Chacabuco": 32, "Balvanera": 38,
+    "Monserrat": 25, "San Nicolas": 28, "San Cristobal": 25,
+    "Constitucion": 22, "Villa del Parque": 35, "Paternal": 30,
+    "Agronomia": 32, "Puerto Madero": 60, "Default": 30
 }
 
 def compute_market_analytics(properties: List[Dict[str, Any]], config: Dict[str, Any], historical_snapshots: List[Dict[str, Any]] = None) -> Dict[str, Any]:
@@ -102,12 +102,12 @@ def compute_market_analytics(properties: List[Dict[str, Any]], config: Dict[str,
             b_avg_disc = round(statistics.mean(b_disc), 1) if b_disc else 0.0
             b_min_p = min(b_prices) if b_prices else 0
             b_avg_p = round(statistics.mean(b_prices)) if b_prices else 0
-            b_avg_views = round(statistics.mean(b_views)) if b_views else 950
+            b_avg_views = round(statistics.mean(b_views)) if b_views else FALLBACK_DEMAND_VIEWS.get(b_name, 35)
             b_avg_exp = round(statistics.mean(b_exp)) if b_exp else None
         else:
             # Barrio sin avisos activos bajo los filtros actuales (ej: Palermo, Belgrano, etc.)
             b_benchmark = benchmarks.get(b_name, 2100)
-            b_avg_views = FALLBACK_DEMAND_VIEWS.get(b_name, FALLBACK_DEMAND_VIEWS.get("Default", 1000))
+            b_avg_views = FALLBACK_DEMAND_VIEWS.get(b_name, FALLBACK_DEMAND_VIEWS.get("Default", 30))
             b_avg_sqm = 0
             b_avg_disc = 0.0
             b_min_p = 0
@@ -115,12 +115,12 @@ def compute_market_analytics(properties: List[Dict[str, Any]], config: Dict[str,
             b_avg_exp = None
             b_super = 0
 
-        # Nivel de demanda comercial / rotación de venta
-        if b_avg_views >= 1800:
+        # Nivel de demanda comercial / rotación de venta (escala de vistas reales en 30 días)
+        if b_avg_views >= 50:
             demand_level = "🔥 Muy Alta Demanda"
-        elif b_avg_views >= 1300:
+        elif b_avg_views >= 32:
             demand_level = "🟢 Alta Demanda"
-        elif b_avg_views >= 850:
+        elif b_avg_views >= 18:
             demand_level = "🟡 Demanda Media"
         else:
             demand_level = "⚪ Demanda Moderada"
@@ -128,7 +128,7 @@ def compute_market_analytics(properties: List[Dict[str, Any]], config: Dict[str,
         # Opportunity Density Score (0-100)
         density_score = min(100, round((b_avg_disc * 2.2) + (len(b_props) * 4) + (b_super * 15))) if b_props else 10
         # Liquidity / Reventa Score (0-100)
-        liquidity_score = min(100, max(25, round((b_avg_views / 2400) * 70 + (b_avg_disc * 1.0) + (len(b_props) * 2))))
+        liquidity_score = min(100, max(25, round((b_avg_views / 70) * 65 + (b_avg_disc * 1.2) + (len(b_props) * 2))))
 
         neighborhoods_analytics.append({
             "name": b_name,
@@ -179,30 +179,30 @@ def compute_market_analytics(properties: List[Dict[str, Any]], config: Dict[str,
             "median_price": round(statistics.median(v["prices"])) if v["prices"] else 0,
             "avg_usd_m2": round(statistics.mean(v["sqm"])) if v["sqm"] else 0,
             "avg_m2": round(statistics.mean(v["m2"]), 1) if v["m2"] else 0,
-            "avg_views": round(statistics.mean(v["views"])) if v["views"] else 1100,
-            "avg_views_formatted": f"{round(statistics.mean(v['views'])) if v['views'] else 1100:,}".replace(",", "."),
+            "avg_views": round(statistics.mean(v["views"])) if v["views"] else 35,
+            "avg_views_formatted": f"{round(statistics.mean(v['views'])) if v['views'] else 35:,}".replace(",", "."),
             "demand_share": v["demand_share"],
             "sales_speed": v["sales_speed"]
         }
 
-    # 4. Distribución de Precios (Rangos)
+    # 4. Distribución de Precios (Rangos hasta 100k USD)
     price_ranges = {
-        "under_45k": {"label": "< USD 45.000", "count": 0, "pct": 0.0, "color": "#10b981"},
-        "45k_to_60k": {"label": "USD 45k - 60k", "count": 0, "pct": 0.0, "color": "#38bdf8"},
-        "60k_to_75k": {"label": "USD 60k - 75k", "count": 0, "pct": 0.0, "color": "#818cf8"},
-        "above_75k": {"label": "> USD 75.000", "count": 0, "pct": 0.0, "color": "#f97316"}
+        "under_60k": {"label": "< USD 60.000", "count": 0, "pct": 0.0, "color": "#10b981"},
+        "60k_to_75k": {"label": "USD 60k - 75k", "count": 0, "pct": 0.0, "color": "#38bdf8"},
+        "75k_to_90k": {"label": "USD 75k - 90k", "count": 0, "pct": 0.0, "color": "#818cf8"},
+        "above_90k": {"label": "USD 90k - 100k", "count": 0, "pct": 0.0, "color": "#f97316"}
     }
 
     for p in properties:
         val = p.get("price_val", 0)
-        if val < 45000:
-            price_ranges["under_45k"]["count"] += 1
-        elif 45000 <= val < 60000:
-            price_ranges["45k_to_60k"]["count"] += 1
+        if val < 60000:
+            price_ranges["under_60k"]["count"] += 1
         elif 60000 <= val < 75000:
             price_ranges["60k_to_75k"]["count"] += 1
+        elif 75000 <= val < 90000:
+            price_ranges["75k_to_90k"]["count"] += 1
         else:
-            price_ranges["above_75k"]["count"] += 1
+            price_ranges["above_90k"]["count"] += 1
 
     total_props = max(1, len(properties))
     for r in price_ranges.values():
@@ -234,7 +234,16 @@ def compute_market_analytics(properties: List[Dict[str, Any]], config: Dict[str,
             })
 
     # Insight 3: Tipología con mejor ticket de entrada
-    if typology_summary.get("1_amb", {}).get("count", 0) > 0 and typology_summary.get("2_amb", {}).get("count", 0) > 0:
+    if typology_summary.get("2_amb", {}).get("count", 0) > 0 and typology_summary.get("3_plus_amb", {}).get("count", 0) > 0:
+        dos_min = typology_summary["2_amb"]["min_price"]
+        tres_min = typology_summary["3_plus_amb"]["min_price"]
+        insights.append({
+            "category": "TICKET DE ENTRADA",
+            "icon": "🚪",
+            "title": "Brecha de acceso por tipología",
+            "desc": f"El piso de entrada para un 2 ambientes en CABA hoy es de USD {dos_min:,}, mientras que un 3+ ambientes arranca en USD {tres_min:,}.".replace(",", ".")
+        })
+    elif typology_summary.get("1_amb", {}).get("count", 0) > 0 and typology_summary.get("2_amb", {}).get("count", 0) > 0:
         mono_min = typology_summary["1_amb"]["min_price"]
         dos_min = typology_summary["2_amb"]["min_price"]
         insights.append({
