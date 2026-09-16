@@ -5672,9 +5672,19 @@
       "first_seen": "2026-09-15",
       "last_price": 87800,
       "barrio": "Almagro"
+    },
+    "ZPROP-60166525": {
+      "first_seen": "2026-09-16",
+      "last_price": 46000,
+      "barrio": "Parque Chacabuco"
+    },
+    "ZPROP-60165783": {
+      "first_seen": "2026-09-16",
+      "last_price": 92000,
+      "barrio": "Villa Urquiza"
     }
   },
-  "last_run": "2026-09-15T20:04:38.675768",
+  "last_run": "2026-09-16T12:00:18.189961",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -5796,6 +5806,17 @@
       "median_price": 78000,
       "super_deals_count": 10,
       "top_neighborhoods": []
+    },
+    {
+      "date": "2026-09-16",
+      "timestamp": "2026-09-16T12:00:18.237408",
+      "total_properties": 23,
+      "new_today": 23,
+      "avg_usd_m2": 1515,
+      "min_price": 46000,
+      "median_price": 78000,
+      "super_deals_count": 11,
+      "top_neighborhoods": []
     }
   ],
   "active_deals": {
@@ -5837,7 +5858,7 @@
       "usd_m2_formatted": "USD 1.316/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-09-07",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-09-07T16:01:15.216029"
     },
     "ZPROP-60085064": {
@@ -5878,7 +5899,7 @@
       "usd_m2_formatted": "USD 1.552/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-09-07",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-09-07T16:01:15.216029"
     },
     "ZPROP-60085701": {
@@ -5919,7 +5940,7 @@
       "usd_m2_formatted": "USD 1.472/m²",
       "benchmark_formatted": "USD 2.400/m²",
       "first_seen_date": "2026-09-07",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-09-07T16:01:15.216029"
     },
     "ZPROP-60097337": {
@@ -5960,7 +5981,7 @@
       "usd_m2_formatted": "USD 1.000/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-08",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-09-08T19:31:51.374730"
     },
     "ZPROP-60100487": {
@@ -6001,7 +6022,7 @@
       "usd_m2_formatted": "USD 1.560/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-08",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-09-08T19:31:51.374730"
     },
     "ZPROP-60106322": {
@@ -6042,7 +6063,7 @@
       "usd_m2_formatted": "USD 1.562/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-09-09",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-09-09T16:01:29.400837"
     },
     "ZPROP-60111600": {
@@ -6083,7 +6104,7 @@
       "usd_m2_formatted": "USD 1.460/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-09-09",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-09-09T16:01:29.400837"
     },
     "ZPROP-60107368": {
@@ -6124,7 +6145,7 @@
       "usd_m2_formatted": "USD 1.600/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-09",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-09-09T16:01:29.400837"
     },
     "ZPROP-60108504": {
@@ -6165,7 +6186,7 @@
       "usd_m2_formatted": "USD 1.571/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-09-09",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-09-09T16:01:29.400837"
     },
     "ZPROP-60117686": {
@@ -6206,7 +6227,7 @@
       "usd_m2_formatted": "USD 1.500/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-09-10",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-09-10T19:31:36.731628"
     },
     "ZPROP-60126680": {
@@ -6247,7 +6268,7 @@
       "usd_m2_formatted": "USD 1.579/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-09-11",
-      "days_ago": 4,
+      "days_ago": 5,
       "last_synced": "2026-09-11T12:00:52.767181"
     },
     "ZPROP-60127206": {
@@ -6288,7 +6309,7 @@
       "usd_m2_formatted": "USD 1.500/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-11",
-      "days_ago": 4,
+      "days_ago": 5,
       "last_synced": "2026-09-11T12:00:52.767181"
     },
     "ZPROP-60148868": {
@@ -6329,7 +6350,7 @@
       "usd_m2_formatted": "USD 1.537/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-09-14",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-09-14T16:01:16.656639"
     },
     "ZPROP-60156737": {
@@ -6339,7 +6360,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 79.000",
       "price_val": 79000,
       "currency": "USD",
@@ -6370,7 +6391,7 @@
       "usd_m2_formatted": "USD 760/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60154052": {
@@ -6380,7 +6401,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 85.000",
       "price_val": 85000,
       "currency": "USD",
@@ -6411,7 +6432,7 @@
       "usd_m2_formatted": "USD 1.308/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60157595": {
@@ -6421,7 +6442,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 98.000",
       "price_val": 98000,
       "currency": "USD",
@@ -6452,7 +6473,7 @@
       "usd_m2_formatted": "USD 1.782/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60156230": {
@@ -6462,7 +6483,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 85.000",
       "price_val": 85000,
       "currency": "USD",
@@ -6493,7 +6514,7 @@
       "usd_m2_formatted": "USD 1.700/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60153525": {
@@ -6503,7 +6524,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 89.000",
       "price_val": 89000,
       "currency": "USD",
@@ -6534,7 +6555,7 @@
       "usd_m2_formatted": "USD 1.854/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60160241": {
@@ -6544,7 +6565,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 99.000",
       "price_val": 99000,
       "currency": "USD",
@@ -6575,7 +6596,7 @@
       "usd_m2_formatted": "USD 1.678/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60155634": {
@@ -6585,7 +6606,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 98.500",
       "price_val": 98500,
       "currency": "USD",
@@ -6616,7 +6637,7 @@
       "usd_m2_formatted": "USD 2.010/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60157959": {
@@ -6626,7 +6647,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 87.800",
       "price_val": 87800,
       "currency": "USD",
@@ -6657,8 +6678,90 @@
       "usd_m2_formatted": "USD 1.722/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-15T20:04:38.675768"
+    },
+    "ZPROP-60166525": {
+      "id": "ZPROP-60166525",
+      "title": "Departamento 2 ambientes con balcón al frenteCuenta con un amplio living-comedor de 5, 60 x 3, 30 m, con salida al balcón al frente de 3, 30 x 1, 30 m, que aporta luminosidad y un agradable espacio exterior. Hall de distribución de 3. 15x1. 30x1. 40. Cocina completa con muebles bajo mesada con lavadero independiente de 1, 65 x 1, 50 m El dormitorio, de 3, 75 x 3, 30 m. Baño completo de 2, 30 x 1, 60 m. Las medidas son aproximadas y se informan a título orientativo. C. U. C. I. C. B. A., Nº 4367;Rosenblum Dumoutier Carlos Alberto. -",
+      "description": "Departamento 2 ambientes con balcón al frenteCuenta con un amplio living-comedor de 5, 60 x 3, 30 m, con salida al balcón al frente de 3, 30 x 1, 30 m, que aporta luminosidad y un agradable espacio exterior. Hall de distribución de 3. 15x1. 30x1. 40. Cocina completa con muebles bajo mesada con lavadero independiente de 1, 65 x 1, 50 m El dormitorio, de 3, 75 x 3, 30 m. Baño completo de 2, 30 x 1, 60 m. Las medidas son aproximadas y se informan a título orientativo. C. U. C. I. C. B. A., Nº 4367;Rosenblum Dumoutier Carlos Alberto. -",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 46.000",
+      "price_val": 46000,
+      "currency": "USD",
+      "expenses_raw": "$ 86.000 Expensas",
+      "expenses_val": 86000,
+      "user_views": 32,
+      "features_raw": "51 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 51,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Parque Chacabuco, Capital Federal",
+      "address": "Crespo 2100",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/16/65/25/360x266/2078818503.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-en-parque-chacabuco-60166525.html",
+      "is_development": false,
+      "barrio": "Parque Chacabuco",
+      "barrio_benchmark_m2": 1750,
+      "usd_m2": 902,
+      "discount_pct": 48.5,
+      "opportunity_score": 88,
+      "user_views_formatted": "32",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 46.000",
+      "usd_m2_formatted": "USD 902/m²",
+      "benchmark_formatted": "USD 1.750/m²",
+      "first_seen_date": "2026-09-16",
+      "days_ago": 0,
+      "last_synced": "2026-09-16T12:00:18.189961"
+    },
+    "ZPROP-60165783": {
+      "id": "ZPROP-60165783",
+      "title": "Departamento 2 ambientes en venta - villa urquizaubicado sobre Av. Olazábal, en una zona estratégica de Villa Urquiza, a pasos del polo comercial y gastronómico y con excelente conectividad, este departamento de dos ambientes en venta se destaca por su amplitud y luminosidad. La unidad se encuentra en el séptimo piso de un edificio sólido. Al ingresar, nos recibe un living-comedor de generosas dimensiones, con pisos de madera y muy buena entrada de luz natural. La cocina es cómoda y funcional, con conexión al lavadero. El dormitorio cuenta con placard y buenas medidas. Completa la propiedad un baño completo. Una excelente oportunidad para actualizar a gusto y lograr un departamento amplio, práctico y muy bien ubicado dentro de uno de los barrios más buscados. ¡Contáctanos para más información o para coordinar una visita!",
+      "description": "Departamento 2 ambientes en venta - villa urquizaubicado sobre Av. Olazábal, en una zona estratégica de Villa Urquiza, a pasos del polo comercial y gastronómico y con excelente conectividad, este departamento de dos ambientes en venta se destaca por su amplitud y luminosidad. La unidad se encuentra en el séptimo piso de un edificio sólido. Al ingresar, nos recibe un living-comedor de generosas dimensiones, con pisos de madera y muy buena entrada de luz natural. La cocina es cómoda y funcional, con conexión al lavadero. El dormitorio cuenta con placard y buenas medidas. Completa la propiedad un baño completo. Una excelente oportunidad para actualizar a gusto y lograr un departamento amplio, práctico y muy bien ubicado dentro de uno de los barrios más buscados. ¡Contáctanos para más información o para coordinar una visita!",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 92.000",
+      "price_val": 92000,
+      "currency": "USD",
+      "expenses_raw": "",
+      "expenses_val": null,
+      "user_views": 48,
+      "features_raw": "48 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 48,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Villa Urquiza, Capital Federal",
+      "address": "Olazabal al 5300",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/16/57/83/360x266/2078799692.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-2-ambientes-en-villa-urquiza-60165783.html",
+      "is_development": false,
+      "barrio": "Villa Urquiza",
+      "barrio_benchmark_m2": 2350,
+      "usd_m2": 1917,
+      "discount_pct": 18.4,
+      "opportunity_score": 47,
+      "user_views_formatted": "48",
+      "badge_text": "💎 Gran Oportunidad",
+      "badge_class": "badge-great",
+      "price_usd_formatted": "USD 92.000",
+      "usd_m2_formatted": "USD 1.917/m²",
+      "benchmark_formatted": "USD 2.350/m²",
+      "first_seen_date": "2026-09-16",
+      "days_ago": 0,
+      "last_synced": "2026-09-16T12:00:18.189961"
     }
   }
 }
