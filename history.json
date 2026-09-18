@@ -5724,7 +5724,7 @@
       "barrio": "Almagro"
     }
   },
-  "last_run": "2026-09-17T16:00:28.857921",
+  "last_run": "2026-09-18T07:44:59.130585",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -5868,91 +5868,20 @@
       "median_price": 85000,
       "super_deals_count": 9,
       "top_neighborhoods": []
+    },
+    {
+      "date": "2026-09-18",
+      "timestamp": "2026-09-18T07:44:59.203313",
+      "total_properties": 26,
+      "new_today": 26,
+      "avg_usd_m2": 1619,
+      "min_price": 46000,
+      "median_price": 85500,
+      "super_deals_count": 8,
+      "top_neighborhoods": []
     }
   ],
   "active_deals": {
-    "ZPROP-60097337": {
-      "id": "ZPROP-60097337",
-      "title": "Excelente Departamento de 4 Ambientes Oportunidad Parque Patricios72m2 TotalesPiso Alto, Toda Vista Abierta, Con BalcónAmplios Dormitorios Con Placard CompletoHall de Distribución Con Amplio Placard de GuardadoCocina Independiente C/Ventilación y LavaderoConexión Para Lavarropas Amplio BalcónBaño completo con Bañera Muy Buen Estado de Confirmación Todos los Ambientes ExternosComplejo con Gran patio, y terraza de uso común. Espacio libre para estacionamiento en Pb Excelente Ubicación a 3 cuadras de Av. Caseros y de av Jujuy, Subte Línea “H” y del parque Patricios. Consúltenosjumo inmobiliariatelf: Ver datos - Ver datos - Ver datos Corredor Responsable, Juliano Montalto, Matricula Cucciba 2394",
-      "description": "Excelente Departamento de 4 Ambientes Oportunidad Parque Patricios72m2 TotalesPiso Alto, Toda Vista Abierta, Con BalcónAmplios Dormitorios Con Placard CompletoHall de Distribución Con Amplio Placard de GuardadoCocina Independiente C/Ventilación y LavaderoConexión Para Lavarropas Amplio BalcónBaño completo con Bañera Muy Buen Estado de Confirmación Todos los Ambientes ExternosComplejo con Gran patio, y terraza de uso común. Espacio libre para estacionamiento en Pb Excelente Ubicación a 3 cuadras de Av. Caseros y de av Jujuy, Subte Línea “H” y del parque Patricios. Consúltenosjumo inmobiliariatelf: Ver datos - Ver datos - Ver datos Corredor Responsable, Juliano Montalto, Matricula Cucciba 2394",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 72.000",
-      "price_val": 72000,
-      "currency": "USD",
-      "expenses_raw": "$ 220.000 Expensas",
-      "expenses_val": 220000,
-      "user_views": 30,
-      "features_raw": "72 m² tot. | 4 amb. | 3 dorm. | 1 baño",
-      "m2_tot": 72,
-      "m2_cub": null,
-      "ambientes": 4,
-      "dormitorios": 3,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Parque Patricios, Capital Federal",
-      "address": "Salcedo 2900",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/09/73/37/360x266/2077101120.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-salcedo-2900-departamento-4-ambientes-piso-alto-60097337.html",
-      "is_development": false,
-      "barrio": "Parque Patricios",
-      "barrio_benchmark_m2": 1550,
-      "usd_m2": 1000,
-      "discount_pct": 35.5,
-      "opportunity_score": 66,
-      "user_views_formatted": "30",
-      "badge_text": "🔥 Super Oportunidad",
-      "badge_class": "badge-super",
-      "price_usd_formatted": "USD 72.000",
-      "usd_m2_formatted": "USD 1.000/m²",
-      "benchmark_formatted": "USD 1.550/m²",
-      "first_seen_date": "2026-09-08",
-      "days_ago": 9,
-      "last_synced": "2026-09-08T19:31:51.374730"
-    },
-    "ZPROP-60100487": {
-      "id": "ZPROP-60100487",
-      "title": "Departamento de 2 ambientes en venta ubicado en Almagro Sur, con 48 m² de superficie construida y 50 m² de superficie total. La propiedad de 40 años de antigüedad cuenta con disposición lateral, orientación noreste y se distribuye en living comedor, cocina, lavadero, 1 dormitorio y 1 baño completo. El inmueble posee calefacción y es muy luminoso, resultando apto profesional y apto para uso comercial. El edificio tiene 8 pisos de altura, ascensor, encargado y servicio de limpieza. La zona es un área urbana consolidada con excelente conectividad a través de múltiples líneas de colectivos y estaciones de subte cercanas. El barrio ofrece una variada oferta de comercios, supermercados, centros de salud y opciones gastronómicas.",
-      "description": "Departamento de 2 ambientes en venta ubicado en Almagro Sur, con 48 m² de superficie construida y 50 m² de superficie total. La propiedad de 40 años de antigüedad cuenta con disposición lateral, orientación noreste y se distribuye en living comedor, cocina, lavadero, 1 dormitorio y 1 baño completo. El inmueble posee calefacción y es muy luminoso, resultando apto profesional y apto para uso comercial. El edificio tiene 8 pisos de altura, ascensor, encargado y servicio de limpieza. La zona es un área urbana consolidada con excelente conectividad a través de múltiples líneas de colectivos y estaciones de subte cercanas. El barrio ofrece una variada oferta de comercios, supermercados, centros de salud y opciones gastronómicas.",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 78.000",
-      "price_val": 78000,
-      "currency": "USD",
-      "expenses_raw": "$ 140.000 Expensas",
-      "expenses_val": 140000,
-      "user_views": 72,
-      "features_raw": "50 m² tot. | 2 amb. | 1 dorm. | 1 baño",
-      "m2_tot": 50,
-      "m2_cub": null,
-      "ambientes": 2,
-      "dormitorios": 1,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Almagro Sur, Almagro",
-      "address": "Avenida Boedo 255",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/10/04/87/360x266/2077181894.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-de-48-m-sup2--con-1-dormitorio-en-venta-60100487.html",
-      "is_development": false,
-      "barrio": "Almagro",
-      "barrio_benchmark_m2": 1850,
-      "usd_m2": 1560,
-      "discount_pct": 15.7,
-      "opportunity_score": 39,
-      "user_views_formatted": "72",
-      "badge_text": "🏷️ Buen Precio",
-      "badge_class": "badge-good",
-      "price_usd_formatted": "USD 78.000",
-      "usd_m2_formatted": "USD 1.560/m²",
-      "benchmark_formatted": "USD 1.850/m²",
-      "first_seen_date": "2026-09-08",
-      "days_ago": 9,
-      "last_synced": "2026-09-08T19:31:51.374730"
-    },
     "ZPROP-60106322": {
       "id": "ZPROP-60106322",
       "title": "[mel-Ver datos] Amplio 2 ambientes en retiro con vista abierta y excelente ubicación!! Ubicado en un tradicional barrio de Retiro, con cercanía a múltiples medios de transporte y a lugares emblemáticos de la ciudad. La unidad, de muy buena distribución, presenta al ingreso un living comedor (con armario o biblioteca extra de guardado) , pisos de parquet y un sector ideal para escritorio o espacio de trabajo. Cuenta con cocina independiente y lavadero, con doble circulación, lo que brinda mayor funcionalidad al ambiente. El dormitorio posee placard y, al igual que los demás ambientes, cuenta con vista abierta a un silencioso pulmón de manzana, aportando tranquilidad y buena luminosidad. Dispone además de baño completo con bañera y amplia ventana, que favorece la ventilación natural. Cuenta además con 2 aire acondicionados de ventana de bajo consumo ideal para la economía familiar. La propiedad se encuentra en un edificio sólido y reconocido, que ofrece servicio de recepción de 7 a 20hs en horario ininterrumpido. El inmueble cuenta con medidor de gas instalado, restando únicamente el restablecimiento del servicio.. -7360- Ambientes: Living comedor (3. 61×4. 17) Cocina (1. 5×2. 14) Dormitorio (3. 34×3. 98) Servicios: Agua Corriente, Cloacas, Electricidad, Pavimento",
@@ -5991,7 +5920,7 @@
       "usd_m2_formatted": "USD 1.562/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-09-09",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-09-09T16:01:29.400837"
     },
     "ZPROP-60111600": {
@@ -6032,7 +5961,7 @@
       "usd_m2_formatted": "USD 1.460/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-09-09",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-09-09T16:01:29.400837"
     },
     "ZPROP-60107368": {
@@ -6073,7 +6002,7 @@
       "usd_m2_formatted": "USD 1.600/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-09",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-09-09T16:01:29.400837"
     },
     "ZPROP-60108504": {
@@ -6114,7 +6043,7 @@
       "usd_m2_formatted": "USD 1.571/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-09-09",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-09-09T16:01:29.400837"
     },
     "ZPROP-60117686": {
@@ -6155,7 +6084,7 @@
       "usd_m2_formatted": "USD 1.500/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-09-10",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-09-10T19:31:36.731628"
     },
     "ZPROP-60126680": {
@@ -6196,7 +6125,7 @@
       "usd_m2_formatted": "USD 1.579/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-09-11",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-09-11T12:00:52.767181"
     },
     "ZPROP-60127206": {
@@ -6237,7 +6166,7 @@
       "usd_m2_formatted": "USD 1.500/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-11",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-09-11T12:00:52.767181"
     },
     "ZPROP-60148868": {
@@ -6278,7 +6207,7 @@
       "usd_m2_formatted": "USD 1.537/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-09-14",
-      "days_ago": 3,
+      "days_ago": 4,
       "last_synced": "2026-09-14T16:01:16.656639"
     },
     "ZPROP-60156737": {
@@ -6319,7 +6248,7 @@
       "usd_m2_formatted": "USD 760/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60154052": {
@@ -6360,7 +6289,7 @@
       "usd_m2_formatted": "USD 1.308/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60157595": {
@@ -6401,7 +6330,7 @@
       "usd_m2_formatted": "USD 1.782/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60156230": {
@@ -6442,7 +6371,7 @@
       "usd_m2_formatted": "USD 1.700/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60153525": {
@@ -6483,7 +6412,7 @@
       "usd_m2_formatted": "USD 1.854/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60160241": {
@@ -6524,7 +6453,7 @@
       "usd_m2_formatted": "USD 1.678/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60155634": {
@@ -6565,7 +6494,7 @@
       "usd_m2_formatted": "USD 2.010/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60157959": {
@@ -6606,7 +6535,7 @@
       "usd_m2_formatted": "USD 1.722/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60166525": {
@@ -6647,7 +6576,7 @@
       "usd_m2_formatted": "USD 902/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60165783": {
@@ -6688,7 +6617,7 @@
       "usd_m2_formatted": "USD 1.917/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60168778": {
@@ -6729,7 +6658,7 @@
       "usd_m2_formatted": "USD 1.868/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60169549": {
@@ -6770,7 +6699,7 @@
       "usd_m2_formatted": "USD 1.792/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60170848": {
@@ -6811,7 +6740,7 @@
       "usd_m2_formatted": "USD 1.854/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60171512": {
@@ -6852,7 +6781,7 @@
       "usd_m2_formatted": "USD 1.980/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60176834": {
@@ -6862,7 +6791,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 84.900",
       "price_val": 84900,
       "currency": "USD",
@@ -6893,7 +6822,7 @@
       "usd_m2_formatted": "USD 1.633/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-17",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-17T16:00:28.857921"
     },
     "ZPROP-60176841": {
@@ -6903,7 +6832,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 93.000",
       "price_val": 93000,
       "currency": "USD",
@@ -6934,7 +6863,7 @@
       "usd_m2_formatted": "USD 1.824/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-17",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-17T16:00:28.857921"
     },
     "ZPROP-60176611": {
@@ -6944,7 +6873,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 99.000",
       "price_val": 99000,
       "currency": "USD",
@@ -6975,7 +6904,7 @@
       "usd_m2_formatted": "USD 1.500/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-09-17",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-17T16:00:28.857921"
     },
     "ZPROP-60178252": {
@@ -6985,7 +6914,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 99.000",
       "price_val": 99000,
       "currency": "USD",
@@ -7016,7 +6945,7 @@
       "usd_m2_formatted": "USD 1.707/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-17",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-17T16:00:28.857921"
     }
   }
