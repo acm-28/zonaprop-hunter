@@ -5737,9 +5737,14 @@
       "first_seen": "2026-09-18",
       "last_price": 99000,
       "barrio": "Caballito"
+    },
+    "ZPROP-60189163": {
+      "first_seen": "2026-09-18",
+      "last_price": 99000,
+      "barrio": "Villa Urquiza"
     }
   },
-  "last_run": "2026-09-18T16:00:26.571151",
+  "last_run": "2026-09-18T21:25:20.190773",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -5886,13 +5891,13 @@
     },
     {
       "date": "2026-09-18",
-      "timestamp": "2026-09-18T16:00:26.604337",
-      "total_properties": 29,
-      "new_today": 29,
-      "avg_usd_m2": 1649,
+      "timestamp": "2026-09-18T21:25:20.220811",
+      "total_properties": 30,
+      "new_today": 30,
+      "avg_usd_m2": 1629,
       "min_price": 46000,
-      "median_price": 87800,
-      "super_deals_count": 8,
+      "median_price": 88400,
+      "super_deals_count": 9,
       "top_neighborhoods": []
     }
   ],
@@ -7017,7 +7022,7 @@
       "currency": "USD",
       "expenses_raw": "",
       "expenses_val": null,
-      "user_views": 48,
+      "user_views": 16,
       "features_raw": "53 m² tot. | 2 amb. | 1 dorm. | 1 baño",
       "m2_tot": 53,
       "m2_cub": null,
@@ -7035,7 +7040,7 @@
       "usd_m2": 1868,
       "discount_pct": 20.5,
       "opportunity_score": 48,
-      "user_views_formatted": "48",
+      "user_views_formatted": "16",
       "badge_text": "💎 Gran Oportunidad",
       "badge_class": "badge-great",
       "price_usd_formatted": "USD 99.000",
@@ -7043,7 +7048,7 @@
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-09-18",
       "days_ago": 0,
-      "last_synced": "2026-09-18T16:00:26.571151"
+      "last_synced": "2026-09-18T21:25:20.190773"
     },
     "ZPROP-60188726": {
       "id": "ZPROP-60188726",
@@ -7085,6 +7090,47 @@
       "first_seen_date": "2026-09-18",
       "days_ago": 0,
       "last_synced": "2026-09-18T16:00:26.571151"
+    },
+    "ZPROP-60189163": {
+      "id": "ZPROP-60189163",
+      "title": "3 ambientes en venta con patio- apto profesional. Muy luminoso departamento en planta baja, con excelente distribución y dos patios. La unidad cuenta con --recepción, dos dormitorios con salida a patio al contrafrente--, cocina independiente con acceso a un segundo patio más pequeño, --baño completo y segundo baño con ducha--. Excelente ubicación, próximo a la --estación Los Incas del Subte Línea B--, con fácil acceso a medios de transporte y servicios. Bajas expensas. apto profesional. lepore propiedades. Ver datos. Ver datos / C. 11 Ver datos. lepore Propiedades S. A. Cuit: Ver datos-9 C. U. C. I. C. B. A. Matrícula Nº 1207 (Sucursal Recoleta) aviso legal: Las descripciones arquitectónicas y funcionales, valores de expensas, impuestos y servicios, fotos y medidas de este inmueble son aproximados. Los datos fueron proporcionados por el propietario y pueden no estar actualizados a la hora de la visualización de este aviso por lo cual pueden arrojar inexactitudes y discordancias con las que surgen de los las facturas, títulos y planos legales del inmueble. El interesado deberá realizar las verificaciones respectivas previamente a la realización de cualquier operación, requiriendo por sí o sus profesionales las copias necesarias de la documentación que corresponda. Venta supeditada al cumplimiento por parte del propietario de los requisitos de la resolución general Nº 2371 de la afip (pedido de coti) xintel(lep-le8-Ver datos)",
+      "description": "3 ambientes en venta con patio- apto profesional. Muy luminoso departamento en planta baja, con excelente distribución y dos patios. La unidad cuenta con --recepción, dos dormitorios con salida a patio al contrafrente--, cocina independiente con acceso a un segundo patio más pequeño, --baño completo y segundo baño con ducha--. Excelente ubicación, próximo a la --estación Los Incas del Subte Línea B--, con fácil acceso a medios de transporte y servicios. Bajas expensas. apto profesional. lepore propiedades. Ver datos. Ver datos / C. 11 Ver datos. lepore Propiedades S. A. Cuit: Ver datos-9 C. U. C. I. C. B. A. Matrícula Nº 1207 (Sucursal Recoleta) aviso legal: Las descripciones arquitectónicas y funcionales, valores de expensas, impuestos y servicios, fotos y medidas de este inmueble son aproximados. Los datos fueron proporcionados por el propietario y pueden no estar actualizados a la hora de la visualización de este aviso por lo cual pueden arrojar inexactitudes y discordancias con las que surgen de los las facturas, títulos y planos legales del inmueble. El interesado deberá realizar las verificaciones respectivas previamente a la realización de cualquier operación, requiriendo por sí o sus profesionales las copias necesarias de la documentación que corresponda. Venta supeditada al cumplimiento por parte del propietario de los requisitos de la resolución general Nº 2371 de la afip (pedido de coti) xintel(lep-le8-Ver datos)",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 99.000",
+      "price_val": 99000,
+      "currency": "USD",
+      "expenses_raw": "$ 128.750 Expensas",
+      "expenses_val": 128750,
+      "user_views": 25,
+      "features_raw": "95 m² tot. | 3 amb. | 2 dorm. | 2 baños",
+      "m2_tot": 95,
+      "m2_cub": null,
+      "ambientes": 3,
+      "dormitorios": 2,
+      "banos": 2,
+      "cocheras": null,
+      "location": "Villa Urquiza, Capital Federal",
+      "address": "Avalos 1347. Entre Los Incas y Arismendi",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/18/91/63/360x266/2079368516.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-3-ambientes.-avalos-al-1300-60189163.html",
+      "is_development": false,
+      "barrio": "Villa Urquiza",
+      "barrio_benchmark_m2": 2350,
+      "usd_m2": 1042,
+      "discount_pct": 55.7,
+      "opportunity_score": 74,
+      "user_views_formatted": "25",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 99.000",
+      "usd_m2_formatted": "USD 1.042/m²",
+      "benchmark_formatted": "USD 2.350/m²",
+      "first_seen_date": "2026-09-18",
+      "days_ago": 0,
+      "last_synced": "2026-09-18T21:25:20.190773"
     }
   }
 }
