@@ -5749,7 +5749,7 @@
       "barrio": "Saavedra"
     }
   },
-  "last_run": "2026-09-21T09:33:20.445367",
+  "last_run": "2026-09-21T12:00:15.415607",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -5918,7 +5918,7 @@
     },
     {
       "date": "2026-09-21",
-      "timestamp": "2026-09-21T09:33:20.507860",
+      "timestamp": "2026-09-21T12:00:15.445143",
       "total_properties": 24,
       "new_today": 24,
       "avg_usd_m2": 1662,
@@ -6911,7 +6911,7 @@
       "benchmark_formatted": "USD 2.000/m²",
       "first_seen_date": "2026-09-21",
       "days_ago": 0,
-      "last_synced": "2026-09-21T09:33:20.445367"
+      "last_synced": "2026-09-21T12:00:15.415607"
     }
   }
 }
