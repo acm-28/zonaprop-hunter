@@ -5742,9 +5742,14 @@
       "first_seen": "2026-09-18",
       "last_price": 99000,
       "barrio": "Villa Urquiza"
+    },
+    "ZPROP-60201169": {
+      "first_seen": "2026-09-21",
+      "last_price": 95000,
+      "barrio": "Saavedra"
     }
   },
-  "last_run": "2026-09-19T14:00:07.615356",
+  "last_run": "2026-09-21T09:33:20.445367",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -5910,132 +5915,20 @@
       "median_price": 90500,
       "super_deals_count": 7,
       "top_neighborhoods": []
+    },
+    {
+      "date": "2026-09-21",
+      "timestamp": "2026-09-21T09:33:20.507860",
+      "total_properties": 24,
+      "new_today": 24,
+      "avg_usd_m2": 1662,
+      "min_price": 46000,
+      "median_price": 94000,
+      "super_deals_count": 5,
+      "top_neighborhoods": []
     }
   ],
   "active_deals": {
-    "ZPROP-60117686": {
-      "id": "ZPROP-60117686",
-      "title": "Departamento de 3 Ambientes al Frente con Balcón, 2do. Piso por Escalera. Living-Comedor con Piso de Parquet, Hall de Distribución, 2 Dormitorios, Ambos con Placard y Pisos de Parquet, Baño Completo con Vanitory, Cocina Con Mubles de Cocina Completos, bajo y Sobre Mesada, Lavadero separado y Balcón al Frente. Muy Luminoso, Excelente Ubicación: Juramento al 4500 Entre Miller y Lugones, a Una Cuadra de Av. Alvarez Thomas, a Dos Cuadras de Av. Olazabal y a Una Cuadra de la Plaza Brigadier Gral. J. M. Zapiola. - Transportes Cercanos: Colectivos: 90, 93, 107, 113, 114, 133, 140 y 176. venta directa. aviso legal: Las descripciones arquitectónicas y funcionales, valores de expensas, impuestos y servicios, fotos y medidas de este inmueble son aproximados. Los datos fueron proporcionados por el propietario y pueden no estar actualizados a la hora de la visualización de este aviso por lo cual pueden arrojar inexactitudes y discordancias con las que surgen de los las facturas, títulos y planos legales del inmueble. El interesado deberá realizar las verificaciones respectivas previamente a la realización de cualquier operación, requiriendo por sí o sus profesionales las copias necesarias de la documentación que corresponda. Fotografías no vinculantes ni contractuales. Dando cumplimiento a la Ley 5115, esta propiedad no cuenta con acceso para discapacitados.",
-      "description": "Departamento de 3 Ambientes al Frente con Balcón, 2do. Piso por Escalera. Living-Comedor con Piso de Parquet, Hall de Distribución, 2 Dormitorios, Ambos con Placard y Pisos de Parquet, Baño Completo con Vanitory, Cocina Con Mubles de Cocina Completos, bajo y Sobre Mesada, Lavadero separado y Balcón al Frente. Muy Luminoso, Excelente Ubicación: Juramento al 4500 Entre Miller y Lugones, a Una Cuadra de Av. Alvarez Thomas, a Dos Cuadras de Av. Olazabal y a Una Cuadra de la Plaza Brigadier Gral. J. M. Zapiola. - Transportes Cercanos: Colectivos: 90, 93, 107, 113, 114, 133, 140 y 176. venta directa. aviso legal: Las descripciones arquitectónicas y funcionales, valores de expensas, impuestos y servicios, fotos y medidas de este inmueble son aproximados. Los datos fueron proporcionados por el propietario y pueden no estar actualizados a la hora de la visualización de este aviso por lo cual pueden arrojar inexactitudes y discordancias con las que surgen de los las facturas, títulos y planos legales del inmueble. El interesado deberá realizar las verificaciones respectivas previamente a la realización de cualquier operación, requiriendo por sí o sus profesionales las copias necesarias de la documentación que corresponda. Fotografías no vinculantes ni contractuales. Dando cumplimiento a la Ley 5115, esta propiedad no cuenta con acceso para discapacitados.",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 72.000",
-      "price_val": 72000,
-      "currency": "USD",
-      "expenses_raw": "$ 190.000 Expensas",
-      "expenses_val": 190000,
-      "user_views": 162,
-      "features_raw": "48 m² tot. | 3 amb. | 2 dorm. | 1 baño",
-      "m2_tot": 48,
-      "m2_cub": null,
-      "ambientes": 3,
-      "dormitorios": 2,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Villa Urquiza, Capital Federal",
-      "address": "Avenida Juramento 4500",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/11/76/86/360x266/2077600719.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-depto.-3-amb.-al-frente-con-balcon-60117686.html",
-      "is_development": false,
-      "barrio": "Villa Urquiza",
-      "barrio_benchmark_m2": 2350,
-      "usd_m2": 1500,
-      "discount_pct": 36.2,
-      "opportunity_score": 71,
-      "user_views_formatted": "162",
-      "badge_text": "🔥 Super Oportunidad",
-      "badge_class": "badge-super",
-      "price_usd_formatted": "USD 72.000",
-      "usd_m2_formatted": "USD 1.500/m²",
-      "benchmark_formatted": "USD 2.350/m²",
-      "first_seen_date": "2026-09-10",
-      "days_ago": 9,
-      "last_synced": "2026-09-10T19:31:36.731628"
-    },
-    "ZPROP-60126680": {
-      "id": "ZPROP-60126680",
-      "title": "Av Roosevelt 5271 Uf 14 03. Excelente Proyecto de arquitecto Berdichevsky. Edificio de pb y 15 pisos. Listo para entregar. Muy buena entrada de recepción de categoría. Local en pb, laundry, Sum, Quincho, parrilla y pileta, 2 ascensores de acero inoxidable, Apto profesional y vivienda",
-      "description": "Av Roosevelt 5271 Uf 14 03. Excelente Proyecto de arquitecto Berdichevsky. Edificio de pb y 15 pisos. Listo para entregar. Muy buena entrada de recepción de categoría. Local en pb, laundry, Sum, Quincho, parrilla y pileta, 2 ascensores de acero inoxidable, Apto profesional y vivienda",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 75.800",
-      "price_val": 75800,
-      "currency": "USD",
-      "expenses_raw": "$ 140.000 Expensas",
-      "expenses_val": 140000,
-      "user_views": 73,
-      "features_raw": "48 m² tot. | 1 amb. | 1 baño",
-      "m2_tot": 48,
-      "m2_cub": null,
-      "ambientes": 1,
-      "dormitorios": null,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Villa Urquiza, Capital Federal",
-      "address": "Franklin Roosevelt 5267",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/12/66/80/360x266/2077831665.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-roosevelt-5267-60126680.html",
-      "is_development": false,
-      "barrio": "Villa Urquiza",
-      "barrio_benchmark_m2": 2350,
-      "usd_m2": 1579,
-      "discount_pct": 32.8,
-      "opportunity_score": 65,
-      "user_views_formatted": "73",
-      "badge_text": "🔥 Super Oportunidad",
-      "badge_class": "badge-super",
-      "price_usd_formatted": "USD 75.800",
-      "usd_m2_formatted": "USD 1.579/m²",
-      "benchmark_formatted": "USD 2.350/m²",
-      "first_seen_date": "2026-09-11",
-      "days_ago": 8,
-      "last_synced": "2026-09-11T12:00:52.767181"
-    },
-    "ZPROP-60127206": {
-      "id": "ZPROP-60127206",
-      "title": "Unidad 3 ambientes con balcón al frente en un primer piso en el corazón de Capital Federal. La misma esta compuesta por living comedor, cocina, un dormitorio y un baño completo. El edificio cuenta con acceso por rampa para personas con movilidad reducida. Karina Curotto cucicba Matricula - 671- Tº1 - Fº26Las superficies indicadas son a mero título informativo. No reflejan necesariamente con precisión la realidad “de hecho” del inmueble ni las que surgen de los títulos y planos correspondientes",
-      "description": "Unidad 3 ambientes con balcón al frente en un primer piso en el corazón de Capital Federal. La misma esta compuesta por living comedor, cocina, un dormitorio y un baño completo. El edificio cuenta con acceso por rampa para personas con movilidad reducida. Karina Curotto cucicba Matricula - 671- Tº1 - Fº26Las superficies indicadas son a mero título informativo. No reflejan necesariamente con precisión la realidad “de hecho” del inmueble ni las que surgen de los títulos y planos correspondientes",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 75.000",
-      "price_val": 75000,
-      "currency": "USD",
-      "expenses_raw": "$ 130.000 Expensas",
-      "expenses_val": 130000,
-      "user_views": 206,
-      "features_raw": "50 m² tot. | 3 amb. | 2 dorm. | 1 baño",
-      "m2_tot": 50,
-      "m2_cub": null,
-      "ambientes": 3,
-      "dormitorios": 2,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Almagro, Capital Federal",
-      "address": "Hipolito Yrigoyen  al 3300",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/12/72/06/360x266/2077844144.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-departamento-3-ambientes-con-balcon-en-capital-60127206.html",
-      "is_development": false,
-      "barrio": "Almagro",
-      "barrio_benchmark_m2": 1850,
-      "usd_m2": 1500,
-      "discount_pct": 18.9,
-      "opportunity_score": 44,
-      "user_views_formatted": "206",
-      "badge_text": "💎 Gran Oportunidad",
-      "badge_class": "badge-great",
-      "price_usd_formatted": "USD 75.000",
-      "usd_m2_formatted": "USD 1.500/m²",
-      "benchmark_formatted": "USD 1.850/m²",
-      "first_seen_date": "2026-09-11",
-      "days_ago": 8,
-      "last_synced": "2026-09-11T12:00:52.767181"
-    },
     "ZPROP-60148868": {
       "id": "ZPROP-60148868",
       "title": "[mchbroker-2096] Planta baja con patio, canchero, living comedor con pisos flotantes, dormitorio de buen tamaño 4 x 3. 5, baño mejorado completo, cocina refaccionada con lavadero incorporado, escritorio, patio con pisos damero, aire acondicionado frio calor grande, agua caliente central, el patio es de 17 m2, 2 encargados con alta carga horaria y tambien 4 hs sabados y domingos. Superficie total 52 m2, cubiertos 36 m2 muy bien distribuidos. Las medidas son aprox. Y orientativas. Las medidas exactas surgirían del titulo de propiedad. Cucicba 6419 | Mónica Chiaramonte. Servicios: Agua Corriente, Electricidad, Gas, Pavimento",
@@ -6074,7 +5967,7 @@
       "usd_m2_formatted": "USD 1.537/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-09-14",
-      "days_ago": 5,
+      "days_ago": 7,
       "last_synced": "2026-09-14T16:01:16.656639"
     },
     "ZPROP-60156737": {
@@ -6115,7 +6008,7 @@
       "usd_m2_formatted": "USD 760/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 4,
+      "days_ago": 6,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60154052": {
@@ -6156,7 +6049,7 @@
       "usd_m2_formatted": "USD 1.308/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 4,
+      "days_ago": 6,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60157595": {
@@ -6197,7 +6090,7 @@
       "usd_m2_formatted": "USD 1.782/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 4,
+      "days_ago": 6,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60156230": {
@@ -6238,7 +6131,7 @@
       "usd_m2_formatted": "USD 1.700/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 4,
+      "days_ago": 6,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60153525": {
@@ -6279,7 +6172,7 @@
       "usd_m2_formatted": "USD 1.854/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 4,
+      "days_ago": 6,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60160241": {
@@ -6320,7 +6213,7 @@
       "usd_m2_formatted": "USD 1.678/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 4,
+      "days_ago": 6,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60155634": {
@@ -6361,7 +6254,7 @@
       "usd_m2_formatted": "USD 2.010/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 4,
+      "days_ago": 6,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60157959": {
@@ -6402,7 +6295,7 @@
       "usd_m2_formatted": "USD 1.722/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 4,
+      "days_ago": 6,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60166525": {
@@ -6443,7 +6336,7 @@
       "usd_m2_formatted": "USD 902/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 3,
+      "days_ago": 5,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60165783": {
@@ -6484,7 +6377,7 @@
       "usd_m2_formatted": "USD 1.917/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 3,
+      "days_ago": 5,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60168778": {
@@ -6525,7 +6418,7 @@
       "usd_m2_formatted": "USD 1.868/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 3,
+      "days_ago": 5,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60169549": {
@@ -6566,7 +6459,7 @@
       "usd_m2_formatted": "USD 1.792/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 3,
+      "days_ago": 5,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60170848": {
@@ -6607,7 +6500,7 @@
       "usd_m2_formatted": "USD 1.854/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 3,
+      "days_ago": 5,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60171512": {
@@ -6648,7 +6541,7 @@
       "usd_m2_formatted": "USD 1.980/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 3,
+      "days_ago": 5,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60176834": {
@@ -6689,7 +6582,7 @@
       "usd_m2_formatted": "USD 1.633/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-17",
-      "days_ago": 2,
+      "days_ago": 4,
       "last_synced": "2026-09-17T16:00:28.857921"
     },
     "ZPROP-60176841": {
@@ -6730,7 +6623,7 @@
       "usd_m2_formatted": "USD 1.824/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-17",
-      "days_ago": 2,
+      "days_ago": 4,
       "last_synced": "2026-09-17T16:00:28.857921"
     },
     "ZPROP-60176611": {
@@ -6771,7 +6664,7 @@
       "usd_m2_formatted": "USD 1.500/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-09-17",
-      "days_ago": 2,
+      "days_ago": 4,
       "last_synced": "2026-09-17T16:00:28.857921"
     },
     "ZPROP-60178252": {
@@ -6812,7 +6705,7 @@
       "usd_m2_formatted": "USD 1.707/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-17",
-      "days_ago": 2,
+      "days_ago": 4,
       "last_synced": "2026-09-17T16:00:28.857921"
     },
     "ZPROP-60187891": {
@@ -6853,7 +6746,7 @@
       "usd_m2_formatted": "USD 2.052/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-09-18",
-      "days_ago": 1,
+      "days_ago": 3,
       "last_synced": "2026-09-18T16:00:26.571151"
     },
     "ZPROP-60189729": {
@@ -6894,7 +6787,7 @@
       "usd_m2_formatted": "USD 1.868/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-09-18",
-      "days_ago": 1,
+      "days_ago": 3,
       "last_synced": "2026-09-18T21:25:20.190773"
     },
     "ZPROP-60188726": {
@@ -6935,7 +6828,7 @@
       "usd_m2_formatted": "USD 1.800/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-18",
-      "days_ago": 1,
+      "days_ago": 3,
       "last_synced": "2026-09-18T16:00:26.571151"
     },
     "ZPROP-60189163": {
@@ -6976,8 +6869,49 @@
       "usd_m2_formatted": "USD 1.042/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-09-18",
-      "days_ago": 1,
+      "days_ago": 3,
       "last_synced": "2026-09-18T21:25:20.190773"
+    },
+    "ZPROP-60201169": {
+      "id": "ZPROP-60201169",
+      "title": "Amplio monoambiente apto profesional al frente en Planta Baja. Excelente ubicación: a 4 cuadras de General Paz, a 3 cuadras de Av. Donado y 4 Cuadras del Parque Sarmiento. El departamento tiene terminaciones de calidad, pisos de porcellanato, portero visor y Aire Acondicionado Frío Calor. Ambiente único con cocina integrada con cocina a gas, Alacenas bajo y sobre mesada. Termotanque eléctrico. El baño tiene vanitory con griferías de calidad. El edificio tiene en el cuarto piso una sala sum equipada con cocina equipada con heladera y una parrilla con salida a un balcón con vista abierta. En el último piso una amplia piscina con Solarium. Hay cocheras cubiertas en Planta Baja disponibles para venta, fuera del precio de publicación de este departamento. Valor de venta de la cochera U$S 25. 000. Digno de visitar!.",
+      "description": "Amplio monoambiente apto profesional al frente en Planta Baja. Excelente ubicación: a 4 cuadras de General Paz, a 3 cuadras de Av. Donado y 4 Cuadras del Parque Sarmiento. El departamento tiene terminaciones de calidad, pisos de porcellanato, portero visor y Aire Acondicionado Frío Calor. Ambiente único con cocina integrada con cocina a gas, Alacenas bajo y sobre mesada. Termotanque eléctrico. El baño tiene vanitory con griferías de calidad. El edificio tiene en el cuarto piso una sala sum equipada con cocina equipada con heladera y una parrilla con salida a un balcón con vista abierta. En el último piso una amplia piscina con Solarium. Hay cocheras cubiertas en Planta Baja disponibles para venta, fuera del precio de publicación de este departamento. Valor de venta de la cochera U$S 25. 000. Digno de visitar!.",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 95.000",
+      "price_val": 95000,
+      "currency": "USD",
+      "expenses_raw": "$ 90.000 Expensas",
+      "expenses_val": 90000,
+      "user_views": 35,
+      "features_raw": "53 m² tot. | 1 amb. | 1 baño",
+      "m2_tot": 53,
+      "m2_cub": null,
+      "ambientes": 1,
+      "dormitorios": null,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Saavedra, Capital Federal",
+      "address": "Lugones al 4600",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/20/11/69/360x266/2079692884.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-departamento-monoambiente-apto-profesional-en-60201169.html",
+      "is_development": false,
+      "barrio": "Saavedra",
+      "barrio_benchmark_m2": 2000,
+      "usd_m2": 1792,
+      "discount_pct": 10.4,
+      "opportunity_score": 34,
+      "user_views_formatted": "35",
+      "badge_text": "🏷️ Buen Precio",
+      "badge_class": "badge-good",
+      "price_usd_formatted": "USD 95.000",
+      "usd_m2_formatted": "USD 1.792/m²",
+      "benchmark_formatted": "USD 2.000/m²",
+      "first_seen_date": "2026-09-21",
+      "days_ago": 0,
+      "last_synced": "2026-09-21T09:33:20.445367"
     }
   }
 }
