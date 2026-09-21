@@ -5762,9 +5762,14 @@
       "first_seen": "2026-09-21",
       "last_price": 92000,
       "barrio": "Caballito"
+    },
+    "ZPROP-60206288": {
+      "first_seen": "2026-09-21",
+      "last_price": 92000,
+      "barrio": "Caballito"
     }
   },
-  "last_run": "2026-09-21T16:00:29.800883",
+  "last_run": "2026-09-21T19:30:28.792412",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -5933,12 +5938,12 @@
     },
     {
       "date": "2026-09-21",
-      "timestamp": "2026-09-21T16:00:29.837178",
-      "total_properties": 27,
-      "new_today": 27,
+      "timestamp": "2026-09-21T19:30:28.828392",
+      "total_properties": 28,
+      "new_today": 28,
       "avg_usd_m2": 1662,
       "min_price": 46000,
-      "median_price": 93000,
+      "median_price": 92500,
       "super_deals_count": 6,
       "top_neighborhoods": []
     }
@@ -6900,7 +6905,7 @@
       "currency": "USD",
       "expenses_raw": "$ 90.000 Expensas",
       "expenses_val": 90000,
-      "user_views": 17,
+      "user_views": 20,
       "features_raw": "53 m² tot. | 1 amb. | 1 baño",
       "m2_tot": 53,
       "m2_cub": null,
@@ -6918,7 +6923,7 @@
       "usd_m2": 1792,
       "discount_pct": 10.4,
       "opportunity_score": 34,
-      "user_views_formatted": "17",
+      "user_views_formatted": "20",
       "badge_text": "🏷️ Buen Precio",
       "badge_class": "badge-good",
       "price_usd_formatted": "USD 95.000",
@@ -6926,7 +6931,7 @@
       "benchmark_formatted": "USD 2.000/m²",
       "first_seen_date": "2026-09-21",
       "days_ago": 0,
-      "last_synced": "2026-09-21T16:00:29.800883"
+      "last_synced": "2026-09-21T19:30:28.792412"
     },
     "ZPROP-60203734": {
       "id": "ZPROP-60203734",
@@ -6941,7 +6946,7 @@
       "currency": "USD",
       "expenses_raw": "$ 52.000 Expensas",
       "expenses_val": 52000,
-      "user_views": 62,
+      "user_views": 96,
       "features_raw": "63 m² tot. | 2 amb. | 1 dorm. | 1 baño",
       "m2_tot": 63,
       "m2_cub": null,
@@ -6959,7 +6964,7 @@
       "usd_m2": 1587,
       "discount_pct": 33.9,
       "opportunity_score": 65,
-      "user_views_formatted": "62",
+      "user_views_formatted": "96",
       "badge_text": "🔥 Super Oportunidad",
       "badge_class": "badge-super",
       "price_usd_formatted": "USD 100.000",
@@ -6967,12 +6972,12 @@
       "benchmark_formatted": "USD 2.400/m²",
       "first_seen_date": "2026-09-21",
       "days_ago": 0,
-      "last_synced": "2026-09-21T16:00:29.800883"
+      "last_synced": "2026-09-21T19:30:28.792412"
     },
     "ZPROP-60188961": {
       "id": "ZPROP-60188961",
-      "title": "Amplísimo departamento de 2 ambientes, interno a patio de aire y luz, primer piso por escalera. Cocina separada, pequeño lavadero en cocina. Ambientes amplios y ventilados. Aire frio calor. Edificio antiguo en muy buen estado, en una lindísima zona residencial, a una cuadra de la estación de Coghlan. Hall de entrada: 1, 40 x 0, 98. living comedor: 4, 80 x 3, 25. cocina: 1, 90 x 1, 46. lavadero: En cocina. dormitorio: 3, 57 x 3, 40. baño completo: 1. agua caliente: Termotanque. calefacción: Aire frio calor. expesnas: $ 150. 000. - abl: $ 13. 300. - Más información: 4781 - 4525/ mat. Cucicba: 1689. //Las medidas y superficies expresadas en el presente aviso son aproximadas, a solo efecto orientativo. Las definitivas surgirán del correspondiente título de propiedad//",
-      "description": "Amplísimo departamento de 2 ambientes, interno a patio de aire y luz, primer piso por escalera. Cocina separada, pequeño lavadero en cocina. Ambientes amplios y ventilados. Aire frio calor. Edificio antiguo en muy buen estado, en una lindísima zona residencial, a una cuadra de la estación de Coghlan. Hall de entrada: 1, 40 x 0, 98. living comedor: 4, 80 x 3, 25. cocina: 1, 90 x 1, 46. lavadero: En cocina. dormitorio: 3, 57 x 3, 40. baño completo: 1. agua caliente: Termotanque. calefacción: Aire frio calor. expesnas: $ 150. 000. - abl: $ 13. 300. - Más información: 4781 - 4525/ mat. Cucicba: 1689. //Las medidas y superficies expresadas en el presente aviso son aproximadas, a solo efecto orientativo. Las definitivas surgirán del correspondiente título de propiedad//",
+      "title": "Amplísimo departamento de 2 ambientes, interno a patio de aire y luz, primer piso por escalera. Cocina separada, pequeño lavadero en cocina. Ambientes amplios y ventilados. Aire frio calor. Edificio antiguo en muy buen estado, en una lindísima zona residencial, a una cuadra de la estación de Coghlan. Hall de entrada: 1, 40 x 0, 98. living comedor: 4, 80 x 3, 25. cocina: 1, 90 x 1, 46. lavadero: En cocina. dormitorio: 3, 57 x 3, 40. baño completo: 1. agua caliente: Termotanque. calefacción: Aire frio calor. expensas: $ 150. 000. - abl: $ 13. 300. - Más información: 4781 - 4525/ mat. Cucicba: 1689. //Las medidas y superficies expresadas en el presente aviso son aproximadas, a solo efecto orientativo. Las definitivas surgirán del correspondiente título de propiedad//",
+      "description": "Amplísimo departamento de 2 ambientes, interno a patio de aire y luz, primer piso por escalera. Cocina separada, pequeño lavadero en cocina. Ambientes amplios y ventilados. Aire frio calor. Edificio antiguo en muy buen estado, en una lindísima zona residencial, a una cuadra de la estación de Coghlan. Hall de entrada: 1, 40 x 0, 98. living comedor: 4, 80 x 3, 25. cocina: 1, 90 x 1, 46. lavadero: En cocina. dormitorio: 3, 57 x 3, 40. baño completo: 1. agua caliente: Termotanque. calefacción: Aire frio calor. expensas: $ 150. 000. - abl: $ 13. 300. - Más información: 4781 - 4525/ mat. Cucicba: 1689. //Las medidas y superficies expresadas en el presente aviso son aproximadas, a solo efecto orientativo. Las definitivas surgirán del correspondiente título de propiedad//",
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
@@ -6982,7 +6987,7 @@
       "currency": "USD",
       "expenses_raw": "$ 150.000 Expensas",
       "expenses_val": 150000,
-      "user_views": 17,
+      "user_views": 32,
       "features_raw": "49 m² tot. | 2 amb. | 1 dorm. | 1 baño",
       "m2_tot": 49,
       "m2_cub": null,
@@ -6993,14 +6998,14 @@
       "location": "Villa Urquiza, Capital Federal",
       "address": "Tronador 2600",
       "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/18/89/61/360x266/2079363609.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-2-ambientes-49-m-cuadrados-60188961.html",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-amplio-2-ambientes-49-m-cuadrados-60188961.html",
       "is_development": false,
       "barrio": "Villa Urquiza",
       "barrio_benchmark_m2": 2350,
       "usd_m2": 1735,
       "discount_pct": 26.2,
       "opportunity_score": 60,
-      "user_views_formatted": "17",
+      "user_views_formatted": "32",
       "badge_text": "💎 Gran Oportunidad",
       "badge_class": "badge-great",
       "price_usd_formatted": "USD 85.000",
@@ -7008,7 +7013,7 @@
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-09-21",
       "days_ago": 0,
-      "last_synced": "2026-09-21T16:00:29.800883"
+      "last_synced": "2026-09-21T19:30:28.792412"
     },
     "ZPROP-60205733": {
       "id": "ZPROP-60205733",
@@ -7050,6 +7055,47 @@
       "first_seen_date": "2026-09-21",
       "days_ago": 0,
       "last_synced": "2026-09-21T16:00:29.800883"
+    },
+    "ZPROP-60206288": {
+      "id": "ZPROP-60206288",
+      "title": "Excelente departamento en venta 2 Ambientes en CaballitoSemi PisoAmplio Balcón Tipo Aterrazado al Contrafrente de 4, 50m x 1, 10mLiving 3, 5m x 5mDormitorio 3m x 3m más placard Orientación Este, Todos los Ambientes Externos al contrafrenteMuy Luminoso, vista abiertaGran Living Comedor con Salida al Balcón Calefacción por tiro balanceado Habitación con Placard Calefacción tiro balanceado en Living comedorBaño Completo con Bañera y ventilación naturalAmplia Cocina Independiente, con Lavadero independiente y patioPatio Privado propioMúltiples Medios de Locomoción, a 100mts de Av. Diaz Velez, Cercano a Av. Rivadavia, Subte afrente escuela ort consúltenosjumo inmobiliariatelf: Ver datos - Ver datos - Ver datos Corredor Responsable, Juliano Montalto, Matricula Cucciba 2394",
+      "description": "Excelente departamento en venta 2 Ambientes en CaballitoSemi PisoAmplio Balcón Tipo Aterrazado al Contrafrente de 4, 50m x 1, 10mLiving 3, 5m x 5mDormitorio 3m x 3m más placard Orientación Este, Todos los Ambientes Externos al contrafrenteMuy Luminoso, vista abiertaGran Living Comedor con Salida al Balcón Calefacción por tiro balanceado Habitación con Placard Calefacción tiro balanceado en Living comedorBaño Completo con Bañera y ventilación naturalAmplia Cocina Independiente, con Lavadero independiente y patioPatio Privado propioMúltiples Medios de Locomoción, a 100mts de Av. Diaz Velez, Cercano a Av. Rivadavia, Subte afrente escuela ort consúltenosjumo inmobiliariatelf: Ver datos - Ver datos - Ver datos Corredor Responsable, Juliano Montalto, Matricula Cucciba 2394",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 92.000",
+      "price_val": 92000,
+      "currency": "USD",
+      "expenses_raw": "$ 195.000 Expensas",
+      "expenses_val": 195000,
+      "user_views": 55,
+      "features_raw": "55 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 55,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Caballito, Capital Federal",
+      "address": "Rio de Janeiro al 500",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/20/62/88/360x266/2079828926.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-rio-de-janeiro-500-departamento-2-ambientes-con-60206288.html",
+      "is_development": false,
+      "barrio": "Caballito",
+      "barrio_benchmark_m2": 2150,
+      "usd_m2": 1673,
+      "discount_pct": 22.2,
+      "opportunity_score": 51,
+      "user_views_formatted": "55",
+      "badge_text": "💎 Gran Oportunidad",
+      "badge_class": "badge-great",
+      "price_usd_formatted": "USD 92.000",
+      "usd_m2_formatted": "USD 1.673/m²",
+      "benchmark_formatted": "USD 2.150/m²",
+      "first_seen_date": "2026-09-21",
+      "days_ago": 0,
+      "last_synced": "2026-09-21T19:30:28.792412"
     }
   }
 }
