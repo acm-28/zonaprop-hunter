@@ -5767,9 +5767,14 @@
       "first_seen": "2026-09-21",
       "last_price": 92000,
       "barrio": "Caballito"
+    },
+    "ZPROP-60209555": {
+      "first_seen": "2026-09-22",
+      "last_price": 81000,
+      "barrio": "Almagro"
     }
   },
-  "last_run": "2026-09-21T19:30:28.792412",
+  "last_run": "2026-09-22T12:00:18.437796",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -5946,6 +5951,17 @@
       "median_price": 92500,
       "super_deals_count": 6,
       "top_neighborhoods": []
+    },
+    {
+      "date": "2026-09-22",
+      "timestamp": "2026-09-22T12:00:18.480148",
+      "total_properties": 29,
+      "new_today": 29,
+      "avg_usd_m2": 1655,
+      "min_price": 46000,
+      "median_price": 92000,
+      "super_deals_count": 6,
+      "top_neighborhoods": []
     }
   ],
   "active_deals": {
@@ -5987,7 +6003,7 @@
       "usd_m2_formatted": "USD 1.537/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-09-14",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-09-14T16:01:16.656639"
     },
     "ZPROP-60156737": {
@@ -6028,7 +6044,7 @@
       "usd_m2_formatted": "USD 760/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60154052": {
@@ -6069,7 +6085,7 @@
       "usd_m2_formatted": "USD 1.308/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60157595": {
@@ -6110,7 +6126,7 @@
       "usd_m2_formatted": "USD 1.782/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60156230": {
@@ -6151,7 +6167,7 @@
       "usd_m2_formatted": "USD 1.700/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60153525": {
@@ -6192,7 +6208,7 @@
       "usd_m2_formatted": "USD 1.854/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60160241": {
@@ -6233,7 +6249,7 @@
       "usd_m2_formatted": "USD 1.678/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60155634": {
@@ -6274,7 +6290,7 @@
       "usd_m2_formatted": "USD 2.010/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60157959": {
@@ -6315,7 +6331,7 @@
       "usd_m2_formatted": "USD 1.722/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60166525": {
@@ -6356,7 +6372,7 @@
       "usd_m2_formatted": "USD 902/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60165783": {
@@ -6397,7 +6413,7 @@
       "usd_m2_formatted": "USD 1.917/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60168778": {
@@ -6438,7 +6454,7 @@
       "usd_m2_formatted": "USD 1.868/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60169549": {
@@ -6479,7 +6495,7 @@
       "usd_m2_formatted": "USD 1.792/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60170848": {
@@ -6520,7 +6536,7 @@
       "usd_m2_formatted": "USD 1.854/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60171512": {
@@ -6561,7 +6577,7 @@
       "usd_m2_formatted": "USD 1.980/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60176834": {
@@ -6602,7 +6618,7 @@
       "usd_m2_formatted": "USD 1.633/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-17",
-      "days_ago": 4,
+      "days_ago": 5,
       "last_synced": "2026-09-17T16:00:28.857921"
     },
     "ZPROP-60176841": {
@@ -6643,7 +6659,7 @@
       "usd_m2_formatted": "USD 1.824/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-17",
-      "days_ago": 4,
+      "days_ago": 5,
       "last_synced": "2026-09-17T16:00:28.857921"
     },
     "ZPROP-60176611": {
@@ -6684,7 +6700,7 @@
       "usd_m2_formatted": "USD 1.500/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-09-17",
-      "days_ago": 4,
+      "days_ago": 5,
       "last_synced": "2026-09-17T16:00:28.857921"
     },
     "ZPROP-60178252": {
@@ -6725,7 +6741,7 @@
       "usd_m2_formatted": "USD 1.707/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-17",
-      "days_ago": 4,
+      "days_ago": 5,
       "last_synced": "2026-09-17T16:00:28.857921"
     },
     "ZPROP-60187891": {
@@ -6766,7 +6782,7 @@
       "usd_m2_formatted": "USD 2.052/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-09-18",
-      "days_ago": 3,
+      "days_ago": 4,
       "last_synced": "2026-09-18T16:00:26.571151"
     },
     "ZPROP-60189729": {
@@ -6807,7 +6823,7 @@
       "usd_m2_formatted": "USD 1.868/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-09-18",
-      "days_ago": 3,
+      "days_ago": 4,
       "last_synced": "2026-09-18T21:25:20.190773"
     },
     "ZPROP-60188726": {
@@ -6848,7 +6864,7 @@
       "usd_m2_formatted": "USD 1.800/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-18",
-      "days_ago": 3,
+      "days_ago": 4,
       "last_synced": "2026-09-18T16:00:26.571151"
     },
     "ZPROP-60189163": {
@@ -6889,7 +6905,7 @@
       "usd_m2_formatted": "USD 1.042/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-09-18",
-      "days_ago": 3,
+      "days_ago": 4,
       "last_synced": "2026-09-18T21:25:20.190773"
     },
     "ZPROP-60201169": {
@@ -6899,7 +6915,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 95.000",
       "price_val": 95000,
       "currency": "USD",
@@ -6930,7 +6946,7 @@
       "usd_m2_formatted": "USD 1.792/m²",
       "benchmark_formatted": "USD 2.000/m²",
       "first_seen_date": "2026-09-21",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-21T19:30:28.792412"
     },
     "ZPROP-60203734": {
@@ -6940,7 +6956,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 100.000",
       "price_val": 100000,
       "currency": "USD",
@@ -6971,7 +6987,7 @@
       "usd_m2_formatted": "USD 1.587/m²",
       "benchmark_formatted": "USD 2.400/m²",
       "first_seen_date": "2026-09-21",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-21T19:30:28.792412"
     },
     "ZPROP-60188961": {
@@ -6981,7 +6997,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 85.000",
       "price_val": 85000,
       "currency": "USD",
@@ -7012,7 +7028,7 @@
       "usd_m2_formatted": "USD 1.735/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-09-21",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-21T19:30:28.792412"
     },
     "ZPROP-60205733": {
@@ -7022,7 +7038,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 92.000",
       "price_val": 92000,
       "currency": "USD",
@@ -7053,7 +7069,7 @@
       "usd_m2_formatted": "USD 1.673/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-21",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-21T16:00:29.800883"
     },
     "ZPROP-60206288": {
@@ -7063,7 +7079,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 92.000",
       "price_val": 92000,
       "currency": "USD",
@@ -7094,8 +7110,49 @@
       "usd_m2_formatted": "USD 1.673/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-21",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-21T19:30:28.792412"
+    },
+    "ZPROP-60209555": {
+      "id": "ZPROP-60209555",
+      "title": "Tres ambientes y medio en piso alto luminoso en Almagro! Descripción: *Living comedor*Cocina independiente*Dos dormitorios*Baño completo*EscritorioCocina a gas y termotanque eléctrico. Es un edificio de 16 pisos con 2 departamentos por piso. Valor venta expresado en dólares. cucicba Mat N° 6950Las medidas y superficies expuestas surgen de la información suministrada por el propietario, la empresa no se responsabiliza por la exactitud de las mismas. La publicación de este inmueble es a solo título informativo, pues la venta de la propiedad está supeditada a que el propietario cumplimente el trámite ante la afip para la obtención del Número de coti correspondiente. Instagram: @gruporock. okValor venta expresado en dólares. Nota importante/relevante: Toda la información y las medidas proveídas son sólo estimativas y deberán corroborarse con la documentación oportuna y no compromete contractualmente a nuestra compañía. Los gastos indicados (Expensas y abl), se refieren a la última información obtenida y deberán ratificarse. Las imágenes publicadas son meramente ilustrativas no vinculantes y no contractuales. grupo rockcucicba Mat. Nº 6950cmcsi Mat. Nº 6981",
+      "description": "Tres ambientes y medio en piso alto luminoso en Almagro! Descripción: *Living comedor*Cocina independiente*Dos dormitorios*Baño completo*EscritorioCocina a gas y termotanque eléctrico. Es un edificio de 16 pisos con 2 departamentos por piso. Valor venta expresado en dólares. cucicba Mat N° 6950Las medidas y superficies expuestas surgen de la información suministrada por el propietario, la empresa no se responsabiliza por la exactitud de las mismas. La publicación de este inmueble es a solo título informativo, pues la venta de la propiedad está supeditada a que el propietario cumplimente el trámite ante la afip para la obtención del Número de coti correspondiente. Instagram: @gruporock. okValor venta expresado en dólares. Nota importante/relevante: Toda la información y las medidas proveídas son sólo estimativas y deberán corroborarse con la documentación oportuna y no compromete contractualmente a nuestra compañía. Los gastos indicados (Expensas y abl), se refieren a la última información obtenida y deberán ratificarse. Las imágenes publicadas son meramente ilustrativas no vinculantes y no contractuales. grupo rockcucicba Mat. Nº 6950cmcsi Mat. Nº 6981",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 81.000",
+      "price_val": 81000,
+      "currency": "USD",
+      "expenses_raw": "$ 376.000 Expensas",
+      "expenses_val": 376000,
+      "user_views": 42,
+      "features_raw": "56 m² tot. | 3 amb. | 2 dorm. | 1 baño",
+      "m2_tot": 56,
+      "m2_cub": null,
+      "ambientes": 3,
+      "dormitorios": 2,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Almagro, Capital Federal",
+      "address": "Av Rivadavia al 3200",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/20/95/55/360x266/2079917046.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-tres-ambientes-y-medio-en-piso-alto-luminoso-en-60209555.html",
+      "is_development": false,
+      "barrio": "Almagro",
+      "barrio_benchmark_m2": 1850,
+      "usd_m2": 1446,
+      "discount_pct": 21.8,
+      "opportunity_score": 52,
+      "user_views_formatted": "42",
+      "badge_text": "💎 Gran Oportunidad",
+      "badge_class": "badge-great",
+      "price_usd_formatted": "USD 81.000",
+      "usd_m2_formatted": "USD 1.446/m²",
+      "benchmark_formatted": "USD 1.850/m²",
+      "first_seen_date": "2026-09-22",
+      "days_ago": 0,
+      "last_synced": "2026-09-22T12:00:18.437796"
     }
   }
 }
