@@ -5787,9 +5787,19 @@
       "first_seen": "2026-09-22",
       "last_price": 79000,
       "barrio": "Parque Chacabuco"
+    },
+    "ZPROP-60218709": {
+      "first_seen": "2026-09-22",
+      "last_price": 65000,
+      "barrio": "Caballito"
+    },
+    "ZPROP-60217343": {
+      "first_seen": "2026-09-22",
+      "last_price": 83000,
+      "barrio": "Villa Urquiza"
     }
   },
-  "last_run": "2026-09-22T16:00:28.273286",
+  "last_run": "2026-09-22T19:30:29.428687",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -5969,13 +5979,13 @@
     },
     {
       "date": "2026-09-22",
-      "timestamp": "2026-09-22T16:00:28.304361",
-      "total_properties": 32,
-      "new_today": 32,
-      "avg_usd_m2": 1640,
+      "timestamp": "2026-09-22T19:30:29.464677",
+      "total_properties": 34,
+      "new_today": 34,
+      "avg_usd_m2": 1607,
       "min_price": 46000,
-      "median_price": 92000,
-      "super_deals_count": 8,
+      "median_price": 91000,
+      "super_deals_count": 10,
       "top_neighborhoods": []
     }
   ],
@@ -7182,7 +7192,7 @@
       "currency": "USD",
       "expenses_raw": "$ 289.000 Expensas",
       "expenses_val": 289000,
-      "user_views": 63,
+      "user_views": 111,
       "features_raw": "58 m² tot. | 3 amb. | 2 dorm. | 1 baño",
       "m2_tot": 58,
       "m2_cub": null,
@@ -7200,7 +7210,7 @@
       "usd_m2": 1552,
       "discount_pct": 48.3,
       "opportunity_score": 78,
-      "user_views_formatted": "63",
+      "user_views_formatted": "111",
       "badge_text": "🔥 Super Oportunidad",
       "badge_class": "badge-super",
       "price_usd_formatted": "USD 90.000",
@@ -7208,7 +7218,7 @@
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-09-22",
       "days_ago": 0,
-      "last_synced": "2026-09-22T16:00:28.273286"
+      "last_synced": "2026-09-22T19:30:29.428687"
     },
     "ZPROP-60216447": {
       "id": "ZPROP-60216447",
@@ -7249,7 +7259,7 @@
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-09-22",
       "days_ago": 0,
-      "last_synced": "2026-09-22T16:00:28.273286"
+      "last_synced": "2026-09-22T19:30:29.428687"
     },
     "ZPROP-60214652": {
       "id": "ZPROP-60214652",
@@ -7290,7 +7300,89 @@
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-09-22",
       "days_ago": 0,
-      "last_synced": "2026-09-22T16:00:28.273286"
+      "last_synced": "2026-09-22T19:30:29.428687"
+    },
+    "ZPROP-60218709": {
+      "id": "ZPROP-60218709",
+      "title": "Cómodo departamento de 2 ambientes, 2° piso por escalera. Luminoso, cocina integrada con barra desayunadora. Amplio dormitorio con importante placard. Baño completo, Edificio antiguo bien conservado. Muy buena ubicación, con muchos medios de transporte. Ley 5115: excepto que en la descripción de la propiedad se indique lo contrario, el edificio puede no contar con rampa para personas con movilidad reducida, y no ser Accesible para personas con discapacidades físicas. -Se deja constancia que las medidas, superficies y m2 consignados son aproximados, sujetos a verificación y/o ajuste. El precio del inmueble puede ser modificado sin previo aviso. vremont pisanimatricula cucicba N° 3747cpi Nicolás Pisani",
+      "description": "Cómodo departamento de 2 ambientes, 2° piso por escalera. Luminoso, cocina integrada con barra desayunadora. Amplio dormitorio con importante placard. Baño completo, Edificio antiguo bien conservado. Muy buena ubicación, con muchos medios de transporte. Ley 5115: excepto que en la descripción de la propiedad se indique lo contrario, el edificio puede no contar con rampa para personas con movilidad reducida, y no ser Accesible para personas con discapacidades físicas. -Se deja constancia que las medidas, superficies y m2 consignados son aproximados, sujetos a verificación y/o ajuste. El precio del inmueble puede ser modificado sin previo aviso. vremont pisanimatricula cucicba N° 3747cpi Nicolás Pisani",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 65.000",
+      "price_val": 65000,
+      "currency": "USD",
+      "expenses_raw": "$ 210.000 Expensas",
+      "expenses_val": 210000,
+      "user_views": 55,
+      "features_raw": "50 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 50,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Caballito Norte, Caballito",
+      "address": "Acoyte al 600",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/21/87/09/360x266/2080116954.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-acoyte-600-departamento-2-ambientes-en-caballito-venta-60218709.html",
+      "is_development": false,
+      "barrio": "Caballito",
+      "barrio_benchmark_m2": 2150,
+      "usd_m2": 1300,
+      "discount_pct": 39.5,
+      "opportunity_score": 83,
+      "user_views_formatted": "55",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 65.000",
+      "usd_m2_formatted": "USD 1.300/m²",
+      "benchmark_formatted": "USD 2.150/m²",
+      "first_seen_date": "2026-09-22",
+      "days_ago": 0,
+      "last_synced": "2026-09-22T19:30:29.428687"
+    },
+    "ZPROP-60217343": {
+      "id": "ZPROP-60217343",
+      "title": "Ph (de un total de 4 unidades), en planta baja al fondo con pisos de parquet en living y comer diario, cocina independiente con salida a patio interno que da luz tanto al living comedor como a la habitación, amplio baño con aire y luz. Cuenta con A/C y termotanque. La posibilidad de armar una terraza social en una azotea descubierta que cuenta con 38 mts. Todas las medidas indicadas son aproximadas y pueden llegar a diferir de aquellas expresadas en la documentación de la propiedad. Cada Oficina de la Red de servicios para Inmobiliarias Mudafy es de gestión independiente y autónoma. Todas las propiedades publicadas en el perfil de Mudafy Net se encuentran a cargo del corredor inmobiliario responsable de la oficina Santiago Feraboli Matrícula: cucicba 8180. Toda intermediación y conclusión de las operaciones serán realizadas exclusivamente por el Corredor Inmobiliario Responsable de la oficina.",
+      "description": "Ph (de un total de 4 unidades), en planta baja al fondo con pisos de parquet en living y comer diario, cocina independiente con salida a patio interno que da luz tanto al living comedor como a la habitación, amplio baño con aire y luz. Cuenta con A/C y termotanque. La posibilidad de armar una terraza social en una azotea descubierta que cuenta con 38 mts. Todas las medidas indicadas son aproximadas y pueden llegar a diferir de aquellas expresadas en la documentación de la propiedad. Cada Oficina de la Red de servicios para Inmobiliarias Mudafy es de gestión independiente y autónoma. Todas las propiedades publicadas en el perfil de Mudafy Net se encuentran a cargo del corredor inmobiliario responsable de la oficina Santiago Feraboli Matrícula: cucicba 8180. Toda intermediación y conclusión de las operaciones serán realizadas exclusivamente por el Corredor Inmobiliario Responsable de la oficina.",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 83.000",
+      "price_val": 83000,
+      "currency": "USD",
+      "expenses_raw": "",
+      "expenses_val": null,
+      "user_views": 83,
+      "features_raw": "96 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 96,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Villa Urquiza, Capital Federal",
+      "address": "Nahuel Huapi 4700",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/21/73/43/360x266/2080086185.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclphin-ph-dos-ambientes-con-terraza-propia-todo-luz-60217343.html",
+      "is_development": false,
+      "barrio": "Villa Urquiza",
+      "barrio_benchmark_m2": 2350,
+      "usd_m2": 865,
+      "discount_pct": 63.2,
+      "opportunity_score": 79,
+      "user_views_formatted": "83",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 83.000",
+      "usd_m2_formatted": "USD 865/m²",
+      "benchmark_formatted": "USD 2.350/m²",
+      "first_seen_date": "2026-09-22",
+      "days_ago": 0,
+      "last_synced": "2026-09-22T19:30:29.428687"
     }
   }
 }
