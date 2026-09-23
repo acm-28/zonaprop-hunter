@@ -5797,9 +5797,14 @@
       "first_seen": "2026-09-22",
       "last_price": 83000,
       "barrio": "Villa Urquiza"
+    },
+    "ZPROP-60227593": {
+      "first_seen": "2026-09-23",
+      "last_price": 95000,
+      "barrio": "Recoleta"
     }
   },
-  "last_run": "2026-09-23T12:00:16.826379",
+  "last_run": "2026-09-23T16:00:21.676848",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -5990,12 +5995,12 @@
     },
     {
       "date": "2026-09-23",
-      "timestamp": "2026-09-23T12:00:16.861089",
-      "total_properties": 34,
-      "new_today": 34,
-      "avg_usd_m2": 1607,
+      "timestamp": "2026-09-23T16:00:21.715380",
+      "total_properties": 35,
+      "new_today": 35,
+      "avg_usd_m2": 1615,
       "min_price": 46000,
-      "median_price": 91000,
+      "median_price": 92000,
       "super_deals_count": 10,
       "top_neighborhoods": []
     }
@@ -7394,6 +7399,47 @@
       "first_seen_date": "2026-09-22",
       "days_ago": 1,
       "last_synced": "2026-09-22T19:30:29.428687"
+    },
+    "ZPROP-60227593": {
+      "id": "ZPROP-60227593",
+      "title": "Rba Inmobiliaria Ver datos Whatsapp Ver datos tasaciones en el dia, Departamento de 3 ambientes. Living comedor, hall de distribución, dos dormitorios, el principal con placard empotrado, baño completo. Excelente ubicación en Barrio Norte! - Pisos de parquet- Servicios individuales- Cocina separada con bajo mesada y alacena, lugar para el lavarropas, artefacto de cocina a gas con 4 hornallas y horno- Opcional comprarlo amoblado y equipadoZona inmejorable: a 1 cuadra de Av Santa Fe Village Recoleta, Subte linea D y H. Faculatdes Recoleta Av Las Heras ideal inversión! Se puede alquilara turistas en U$S! Impecable oportunidad excelente inversion, ultimo precio!",
+      "description": "Rba Inmobiliaria Ver datos Whatsapp Ver datos tasaciones en el dia, Departamento de 3 ambientes. Living comedor, hall de distribución, dos dormitorios, el principal con placard empotrado, baño completo. Excelente ubicación en Barrio Norte! - Pisos de parquet- Servicios individuales- Cocina separada con bajo mesada y alacena, lugar para el lavarropas, artefacto de cocina a gas con 4 hornallas y horno- Opcional comprarlo amoblado y equipadoZona inmejorable: a 1 cuadra de Av Santa Fe Village Recoleta, Subte linea D y H. Faculatdes Recoleta Av Las Heras ideal inversión! Se puede alquilara turistas en U$S! Impecable oportunidad excelente inversion, ultimo precio!",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 95.000",
+      "price_val": 95000,
+      "currency": "USD",
+      "expenses_raw": "$ 90.000 Expensas",
+      "expenses_val": 90000,
+      "user_views": 55,
+      "features_raw": "50 m² tot. | 3 amb. | 2 dorm. | 1 baño",
+      "m2_tot": 50,
+      "m2_cub": null,
+      "ambientes": 3,
+      "dormitorios": 2,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Recoleta, Capital Federal",
+      "address": "Larrea al 1300",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/22/75/93/360x266/2080358238.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-3-amb-barrio-norte-oportunidad!-60227593.html",
+      "is_development": false,
+      "barrio": "Recoleta",
+      "barrio_benchmark_m2": 2600,
+      "usd_m2": 1900,
+      "discount_pct": 26.9,
+      "opportunity_score": 59,
+      "user_views_formatted": "55",
+      "badge_text": "💎 Gran Oportunidad",
+      "badge_class": "badge-great",
+      "price_usd_formatted": "USD 95.000",
+      "usd_m2_formatted": "USD 1.900/m²",
+      "benchmark_formatted": "USD 2.600/m²",
+      "first_seen_date": "2026-09-23",
+      "days_ago": 0,
+      "last_synced": "2026-09-23T16:00:21.676848"
     }
   }
 }
