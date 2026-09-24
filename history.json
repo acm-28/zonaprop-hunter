@@ -5812,9 +5812,34 @@
       "first_seen": "2026-09-23",
       "last_price": 95000,
       "barrio": "Palermo"
+    },
+    "ZPROP-60236301": {
+      "first_seen": "2026-09-24",
+      "last_price": 95000,
+      "barrio": "Palermo"
+    },
+    "ZPROP-60235584": {
+      "first_seen": "2026-09-24",
+      "last_price": 87000,
+      "barrio": "Villa Urquiza"
+    },
+    "ZPROP-60236295": {
+      "first_seen": "2026-09-24",
+      "last_price": 95000,
+      "barrio": "Barrio Norte"
+    },
+    "ZPROP-60236143": {
+      "first_seen": "2026-09-24",
+      "last_price": 90000,
+      "barrio": "Colegiales"
+    },
+    "ZPROP-60236228": {
+      "first_seen": "2026-09-24",
+      "last_price": 100000,
+      "barrio": "Caballito"
     }
   },
-  "last_run": "2026-09-23T19:30:22.490531",
+  "last_run": "2026-09-24T12:00:25.152939",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -6013,50 +6038,20 @@
       "median_price": 92000,
       "super_deals_count": 12,
       "top_neighborhoods": []
+    },
+    {
+      "date": "2026-09-24",
+      "timestamp": "2026-09-24T12:00:25.184248",
+      "total_properties": 41,
+      "new_today": 41,
+      "avg_usd_m2": 1629,
+      "min_price": 46000,
+      "median_price": 92000,
+      "super_deals_count": 12,
+      "top_neighborhoods": []
     }
   ],
   "active_deals": {
-    "ZPROP-60148868": {
-      "id": "ZPROP-60148868",
-      "title": "[mchbroker-2096] Planta baja con patio, canchero, living comedor con pisos flotantes, dormitorio de buen tamaño 4 x 3. 5, baño mejorado completo, cocina refaccionada con lavadero incorporado, escritorio, patio con pisos damero, aire acondicionado frio calor grande, agua caliente central, el patio es de 17 m2, 2 encargados con alta carga horaria y tambien 4 hs sabados y domingos. Superficie total 52 m2, cubiertos 36 m2 muy bien distribuidos. Las medidas son aprox. Y orientativas. Las medidas exactas surgirían del titulo de propiedad. Cucicba 6419 | Mónica Chiaramonte. Servicios: Agua Corriente, Electricidad, Gas, Pavimento",
-      "description": "[mchbroker-2096] Planta baja con patio, canchero, living comedor con pisos flotantes, dormitorio de buen tamaño 4 x 3. 5, baño mejorado completo, cocina refaccionada con lavadero incorporado, escritorio, patio con pisos damero, aire acondicionado frio calor grande, agua caliente central, el patio es de 17 m2, 2 encargados con alta carga horaria y tambien 4 hs sabados y domingos. Superficie total 52 m2, cubiertos 36 m2 muy bien distribuidos. Las medidas son aprox. Y orientativas. Las medidas exactas surgirían del titulo de propiedad. Cucicba 6419 | Mónica Chiaramonte. Servicios: Agua Corriente, Electricidad, Gas, Pavimento",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 79.900",
-      "price_val": 79900,
-      "currency": "USD",
-      "expenses_raw": "$ 125.000 Expensas",
-      "expenses_val": 125000,
-      "user_views": 41,
-      "features_raw": "52 m² tot. | 2 amb. | 1 dorm. | 1 baño",
-      "m2_tot": 52,
-      "m2_cub": null,
-      "ambientes": 2,
-      "dormitorios": 1,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Recoleta, Capital Federal",
-      "address": "Av Cordoba 1500",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/14/88/68/360x266/2078374924.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-canchero-2-1-2-amb-con-patio-60148868.html",
-      "is_development": false,
-      "barrio": "Recoleta",
-      "barrio_benchmark_m2": 2600,
-      "usd_m2": 1537,
-      "discount_pct": 40.9,
-      "opportunity_score": 75,
-      "user_views_formatted": "41",
-      "badge_text": "🔥 Super Oportunidad",
-      "badge_class": "badge-super",
-      "price_usd_formatted": "USD 79.900",
-      "usd_m2_formatted": "USD 1.537/m²",
-      "benchmark_formatted": "USD 2.600/m²",
-      "first_seen_date": "2026-09-14",
-      "days_ago": 9,
-      "last_synced": "2026-09-14T16:01:16.656639"
-    },
     "ZPROP-60156737": {
       "id": "ZPROP-60156737",
       "title": "¡ph Único a Reciclar en el Corazón de Parque Patricios! Gran Potencial de Inversión. Ubicado en planta baja. No paga expensas. ¡Atención inversores y buscadores de proyectos! Presentamos este increíble ph de 4 ambientes ubicado en la mejor zona de Parque Patricios, a solo media cuadra del Parque de los Patricios y de la estación de subte Línea H. Una ubicación inmejorable con gran afluencia de comercios y propuestas gastronómicas. Esta propiedad se encuentra a reciclar, lo que te brinda la oportunidad de diseñar y personalizar tu hogar a tu gusto o de realizar una inversión rentable. Su distribución es ideal: un patio descubierto central actúa como pulmón de la casa, conectando todos los ambientes y proporcionando luz natural y ventilación cruzada. Distribución Destacada: Gran Ambiente Multifuncional: Espacio versátil ideal para un amplio living comedor con acceso directo al patio y a la cocina. 3 Dormitorios Espaciosos: Habitaciones luminosas, todas conectadas al patio para una ventilación óptima. Patio Descubierto: Espacio al aire libre que conecta y da vida a toda la propiedad y con acceso a una baulera propia del ph. Cocina Independiente con Lavadero y Baño Completo. Ingreso por Pasillo que brinda privacidad y tranquilidad incluso estando en plena zona comercial. Ubicación Privilegiada, a pasos del Parque Patricios y del Subte H, con excelente conectividad y servicios. Gran potencial de reciclado. Distribución Funcional: Espacios bien aprovechados y conectados por un patio central. ¡No dejes pasar esta oportunidad! Contactanos para más información y agendar una visita.",
@@ -6095,7 +6090,7 @@
       "usd_m2_formatted": "USD 760/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60154052": {
@@ -6136,7 +6131,7 @@
       "usd_m2_formatted": "USD 1.308/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60157595": {
@@ -6177,7 +6172,7 @@
       "usd_m2_formatted": "USD 1.782/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60156230": {
@@ -6218,7 +6213,7 @@
       "usd_m2_formatted": "USD 1.700/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60153525": {
@@ -6259,7 +6254,7 @@
       "usd_m2_formatted": "USD 1.854/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60160241": {
@@ -6300,7 +6295,7 @@
       "usd_m2_formatted": "USD 1.678/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60155634": {
@@ -6341,7 +6336,7 @@
       "usd_m2_formatted": "USD 2.010/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60157959": {
@@ -6382,7 +6377,7 @@
       "usd_m2_formatted": "USD 1.722/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-15",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-09-15T20:04:38.675768"
     },
     "ZPROP-60166525": {
@@ -6423,7 +6418,7 @@
       "usd_m2_formatted": "USD 902/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60165783": {
@@ -6464,7 +6459,7 @@
       "usd_m2_formatted": "USD 1.917/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60168778": {
@@ -6505,7 +6500,7 @@
       "usd_m2_formatted": "USD 1.868/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60169549": {
@@ -6546,7 +6541,7 @@
       "usd_m2_formatted": "USD 1.792/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60170848": {
@@ -6587,7 +6582,7 @@
       "usd_m2_formatted": "USD 1.854/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60171512": {
@@ -6628,7 +6623,7 @@
       "usd_m2_formatted": "USD 1.980/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-16",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-09-16T19:30:32.121648"
     },
     "ZPROP-60176834": {
@@ -6669,7 +6664,7 @@
       "usd_m2_formatted": "USD 1.633/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-17",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-09-17T16:00:28.857921"
     },
     "ZPROP-60176841": {
@@ -6710,7 +6705,7 @@
       "usd_m2_formatted": "USD 1.824/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-09-17",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-09-17T16:00:28.857921"
     },
     "ZPROP-60176611": {
@@ -6751,7 +6746,7 @@
       "usd_m2_formatted": "USD 1.500/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-09-17",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-09-17T16:00:28.857921"
     },
     "ZPROP-60178252": {
@@ -6792,7 +6787,7 @@
       "usd_m2_formatted": "USD 1.707/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-17",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-09-17T16:00:28.857921"
     },
     "ZPROP-60187891": {
@@ -6833,7 +6828,7 @@
       "usd_m2_formatted": "USD 2.052/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-09-18",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-09-18T16:00:26.571151"
     },
     "ZPROP-60189729": {
@@ -6874,7 +6869,7 @@
       "usd_m2_formatted": "USD 1.868/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-09-18",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-09-18T21:25:20.190773"
     },
     "ZPROP-60188726": {
@@ -6915,7 +6910,7 @@
       "usd_m2_formatted": "USD 1.800/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-18",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-09-18T16:00:26.571151"
     },
     "ZPROP-60189163": {
@@ -6956,7 +6951,7 @@
       "usd_m2_formatted": "USD 1.042/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-09-18",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-09-18T21:25:20.190773"
     },
     "ZPROP-60201169": {
@@ -6997,7 +6992,7 @@
       "usd_m2_formatted": "USD 1.792/m²",
       "benchmark_formatted": "USD 2.000/m²",
       "first_seen_date": "2026-09-21",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-09-21T19:30:28.792412"
     },
     "ZPROP-60203734": {
@@ -7038,7 +7033,7 @@
       "usd_m2_formatted": "USD 1.587/m²",
       "benchmark_formatted": "USD 2.400/m²",
       "first_seen_date": "2026-09-21",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-09-21T19:30:28.792412"
     },
     "ZPROP-60188961": {
@@ -7079,7 +7074,7 @@
       "usd_m2_formatted": "USD 1.735/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-09-21",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-09-21T19:30:28.792412"
     },
     "ZPROP-60205733": {
@@ -7120,7 +7115,7 @@
       "usd_m2_formatted": "USD 1.673/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-21",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-09-21T16:00:29.800883"
     },
     "ZPROP-60206288": {
@@ -7161,7 +7156,7 @@
       "usd_m2_formatted": "USD 1.673/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-21",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-09-21T19:30:28.792412"
     },
     "ZPROP-60209555": {
@@ -7202,7 +7197,7 @@
       "usd_m2_formatted": "USD 1.446/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-22",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-09-22T16:00:28.273286"
     },
     "ZPROP-60212151": {
@@ -7243,7 +7238,7 @@
       "usd_m2_formatted": "USD 1.552/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-09-22",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-09-22T19:30:29.428687"
     },
     "ZPROP-60216447": {
@@ -7284,7 +7279,7 @@
       "usd_m2_formatted": "USD 1.667/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-09-22",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-09-22T19:30:29.428687"
     },
     "ZPROP-60214652": {
@@ -7325,7 +7320,7 @@
       "usd_m2_formatted": "USD 1.254/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-09-22",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-09-22T19:30:29.428687"
     },
     "ZPROP-60218709": {
@@ -7366,7 +7361,7 @@
       "usd_m2_formatted": "USD 1.300/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-22",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-09-22T19:30:29.428687"
     },
     "ZPROP-60217343": {
@@ -7407,7 +7402,7 @@
       "usd_m2_formatted": "USD 865/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-09-22",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-09-22T19:30:29.428687"
     },
     "ZPROP-60227593": {
@@ -7417,7 +7412,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 95.000",
       "price_val": 95000,
       "currency": "USD",
@@ -7448,7 +7443,7 @@
       "usd_m2_formatted": "USD 1.900/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-09-23",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-23T16:00:21.676848"
     },
     "ZPROP-60230505": {
@@ -7458,7 +7453,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 79.000",
       "price_val": 79000,
       "currency": "USD",
@@ -7489,7 +7484,7 @@
       "usd_m2_formatted": "USD 940/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-09-23",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-23T19:30:22.490531"
     },
     "ZPROP-60231385": {
@@ -7499,7 +7494,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 95.000",
       "price_val": 95000,
       "currency": "USD",
@@ -7530,8 +7525,213 @@
       "usd_m2_formatted": "USD 1.727/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-09-23",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-09-23T19:30:22.490531"
+    },
+    "ZPROP-60236301": {
+      "id": "ZPROP-60236301",
+      "title": "Rba inmobiliaria vende hacemos tasaciones en el dia, consultanos!! Vendemos Departamento de 3 ambientes en barrio norte - Larrea al 1300-Cuenta con Living comedor, hall de distribución, -Dos dormitorios, el principal con placard empotrado, baño completo- Pisos de parquet en buen estado -Baño completo - Servicios individuales - Cocina separada con bajo mesada y alacena, lugar para el lavarropas, artefacto de cocina a gas con 4 hornallas y horno- Opcional comprarlo amoblado y equipado - Ideal primera vivienda, estudiantes o renta Zona inmejorable: a 1 cuadra de Av Santa Fe Village Recoleta, Subte linea D y H. Facultades Recoleta Av Las Heras ideal inversión! Se puede alquilara turistas en U$S! Impecable oportunidad excelente inversion, ultimo precio!",
+      "description": "Rba inmobiliaria vende hacemos tasaciones en el dia, consultanos!! Vendemos Departamento de 3 ambientes en barrio norte - Larrea al 1300-Cuenta con Living comedor, hall de distribución, -Dos dormitorios, el principal con placard empotrado, baño completo- Pisos de parquet en buen estado -Baño completo - Servicios individuales - Cocina separada con bajo mesada y alacena, lugar para el lavarropas, artefacto de cocina a gas con 4 hornallas y horno- Opcional comprarlo amoblado y equipado - Ideal primera vivienda, estudiantes o renta Zona inmejorable: a 1 cuadra de Av Santa Fe Village Recoleta, Subte linea D y H. Facultades Recoleta Av Las Heras ideal inversión! Se puede alquilara turistas en U$S! Impecable oportunidad excelente inversion, ultimo precio!",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 95.000",
+      "price_val": 95000,
+      "currency": "USD",
+      "expenses_raw": "$ 120.000 Expensas",
+      "expenses_val": 120000,
+      "user_views": 65,
+      "features_raw": "50 m² tot. | 3 amb. | 2 dorm. | 1 baño",
+      "m2_tot": 50,
+      "m2_cub": null,
+      "ambientes": 3,
+      "dormitorios": 2,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Palermo, Capital Federal",
+      "address": "Larrea al 1300",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/23/63/01/360x266/2080584044.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-3-amb-barrio-norte-oportunidad!-60236301.html",
+      "is_development": false,
+      "barrio": "Palermo",
+      "barrio_benchmark_m2": 3000,
+      "usd_m2": 1900,
+      "discount_pct": 36.7,
+      "opportunity_score": 72,
+      "user_views_formatted": "65",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 95.000",
+      "usd_m2_formatted": "USD 1.900/m²",
+      "benchmark_formatted": "USD 3.000/m²",
+      "first_seen_date": "2026-09-24",
+      "days_ago": 0,
+      "last_synced": "2026-09-24T12:00:25.152939"
+    },
+    "ZPROP-60235584": {
+      "id": "ZPROP-60235584",
+      "title": "Ph en venta en villa urquiza – planta baja al frentesin expensas | apto profesionalcómodo ph de dos ambientes en planta baja al frente, con entrada independiente y ubicado en Villa Urquiza. Se encuentra en excelente estado de conservación, ofreciendo una distribución funcional y espacios que se adaptan a diferentes necesidades. La propiedad cuenta con: Living comedor con ventana al frente, que aporta luz natural. Cocina con espacio y conexión para lavarropas. Dormitorio. Baño completo. Pequeño patio de uso exclusivo, con entrada independiente. Baulera, ideal para almacenamiento. Apto profesional. Sin expensas. Una excelente alternativa tanto para quienes buscan su primera vivienda como para aquellos que necesitan una propiedad con potencial para uso profesional. ubicación – villa urquizavilla Urquiza se caracteriza por su entorno residencial, sus calles arboladas y una amplia oferta comercial y gastronómica. El barrio cuenta con excelentes opciones de transporte público, incluyendo el subte, tren y diversas líneas de colectivos, lo que facilita la conexión con otros puntos de la ciudad. Las medidas y superficies aportadas en esta publicación son aproximadas, las medidas exactas surgirán de los respectivos planos y/o escritura del inmueble. El importe de expensas e impuestos es a título orientativo ya que, al igual que las imágenes, renders y memorias descriptivas, pudieron haber sufrido alguna modificación a la hora de la visualización del presente aviso, debiendo realizar las verificaciones respectivas en forma previa a la realización de cualquier operaciónCorredor interviniente caba y pba: Juan Pablo Sanguinetti cmcpsi 6449 - cucicba 6630. La tasación, intermediación y la conclusión de las operaciones sobre esta propiedad son actividades exclusivas de este corredor matriculado, conforme las previsiones de la ley 20. 266, la ley caba 2340, la ley provincial 10. 973 y sus modif. Y las normas reglamentarias dictadas por los colegios departamentales. Las oficinas asociadas a la red Keller Williams actúan en forma independiente, brindando servicios a corredores, agentes y al público en general, y suintervención se limita a la prestación de servicios inmobiliarios que no incluyen actos de corretaje ni intermediación inmobiliaria.",
+      "description": "Ph en venta en villa urquiza – planta baja al frentesin expensas | apto profesionalcómodo ph de dos ambientes en planta baja al frente, con entrada independiente y ubicado en Villa Urquiza. Se encuentra en excelente estado de conservación, ofreciendo una distribución funcional y espacios que se adaptan a diferentes necesidades. La propiedad cuenta con: Living comedor con ventana al frente, que aporta luz natural. Cocina con espacio y conexión para lavarropas. Dormitorio. Baño completo. Pequeño patio de uso exclusivo, con entrada independiente. Baulera, ideal para almacenamiento. Apto profesional. Sin expensas. Una excelente alternativa tanto para quienes buscan su primera vivienda como para aquellos que necesitan una propiedad con potencial para uso profesional. ubicación – villa urquizavilla Urquiza se caracteriza por su entorno residencial, sus calles arboladas y una amplia oferta comercial y gastronómica. El barrio cuenta con excelentes opciones de transporte público, incluyendo el subte, tren y diversas líneas de colectivos, lo que facilita la conexión con otros puntos de la ciudad. Las medidas y superficies aportadas en esta publicación son aproximadas, las medidas exactas surgirán de los respectivos planos y/o escritura del inmueble. El importe de expensas e impuestos es a título orientativo ya que, al igual que las imágenes, renders y memorias descriptivas, pudieron haber sufrido alguna modificación a la hora de la visualización del presente aviso, debiendo realizar las verificaciones respectivas en forma previa a la realización de cualquier operaciónCorredor interviniente caba y pba: Juan Pablo Sanguinetti cmcpsi 6449 - cucicba 6630. La tasación, intermediación y la conclusión de las operaciones sobre esta propiedad son actividades exclusivas de este corredor matriculado, conforme las previsiones de la ley 20. 266, la ley caba 2340, la ley provincial 10. 973 y sus modif. Y las normas reglamentarias dictadas por los colegios departamentales. Las oficinas asociadas a la red Keller Williams actúan en forma independiente, brindando servicios a corredores, agentes y al público en general, y suintervención se limita a la prestación de servicios inmobiliarios que no incluyen actos de corretaje ni intermediación inmobiliaria.",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 87.000",
+      "price_val": 87000,
+      "currency": "USD",
+      "expenses_raw": "",
+      "expenses_val": null,
+      "user_views": 48,
+      "features_raw": "50 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 50,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Villa Urquiza, Capital Federal",
+      "address": "PH en Venta dos Ambientes en Villa Urquiza en Planta Baja sin Expensas",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/23/55/84/360x266/2080565347.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclphin-ph-en-venta-dos-ambientes-en-villa-urquiza-en-planta-60235584.html",
+      "is_development": false,
+      "barrio": "Villa Urquiza",
+      "barrio_benchmark_m2": 2350,
+      "usd_m2": 1740,
+      "discount_pct": 26.0,
+      "opportunity_score": 59,
+      "user_views_formatted": "48",
+      "badge_text": "💎 Gran Oportunidad",
+      "badge_class": "badge-great",
+      "price_usd_formatted": "USD 87.000",
+      "usd_m2_formatted": "USD 1.740/m²",
+      "benchmark_formatted": "USD 2.350/m²",
+      "first_seen_date": "2026-09-24",
+      "days_ago": 0,
+      "last_synced": "2026-09-24T12:00:25.152939"
+    },
+    "ZPROP-60236295": {
+      "id": "ZPROP-60236295",
+      "title": "Rba inmobiliaria vende hacemos tasaciones en el dia, consultanos!! Vendemos Departamento de 3 ambientes en barrio norte - Larrea al 1300-Cuenta con Living comedor, hall de distribución, -Dos dormitorios, el principal con placard empotrado, baño completo- Pisos de parquet en buen estado -Baño completo - Servicios individuales - Cocina separada con bajo mesada y alacena, lugar para el lavarropas, artefacto de cocina a gas con 4 hornallas y horno- Opcional comprarlo amoblado y equipado - Ideal primera vivienda, estudiantes o renta Zona inmejorable: a 1 cuadra de Av Santa Fe Village Recoleta, Subte linea D y H. Facultades Recoleta Av Las Heras ideal inversión! Se puede alquilara turistas en U$S! Impecable oportunidad excelente inversion, ultimo precio!",
+      "description": "Rba inmobiliaria vende hacemos tasaciones en el dia, consultanos!! Vendemos Departamento de 3 ambientes en barrio norte - Larrea al 1300-Cuenta con Living comedor, hall de distribución, -Dos dormitorios, el principal con placard empotrado, baño completo- Pisos de parquet en buen estado -Baño completo - Servicios individuales - Cocina separada con bajo mesada y alacena, lugar para el lavarropas, artefacto de cocina a gas con 4 hornallas y horno- Opcional comprarlo amoblado y equipado - Ideal primera vivienda, estudiantes o renta Zona inmejorable: a 1 cuadra de Av Santa Fe Village Recoleta, Subte linea D y H. Facultades Recoleta Av Las Heras ideal inversión! Se puede alquilara turistas en U$S! Impecable oportunidad excelente inversion, ultimo precio!",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 95.000",
+      "price_val": 95000,
+      "currency": "USD",
+      "expenses_raw": "$ 120.000 Expensas",
+      "expenses_val": 120000,
+      "user_views": 32,
+      "features_raw": "50 m² tot. | 3 amb. | 2 dorm. | 1 baño",
+      "m2_tot": 50,
+      "m2_cub": null,
+      "ambientes": 3,
+      "dormitorios": 2,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Barrio Norte, Capital Federal",
+      "address": "Larrea al 1300",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/23/62/95/360x266/2080583849.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-3-amb-barrio-norte-oportunidad!-60236295.html",
+      "is_development": false,
+      "barrio": "Barrio Norte",
+      "barrio_benchmark_m2": 2600,
+      "usd_m2": 1900,
+      "discount_pct": 26.9,
+      "opportunity_score": 59,
+      "user_views_formatted": "32",
+      "badge_text": "💎 Gran Oportunidad",
+      "badge_class": "badge-great",
+      "price_usd_formatted": "USD 95.000",
+      "usd_m2_formatted": "USD 1.900/m²",
+      "benchmark_formatted": "USD 2.600/m²",
+      "first_seen_date": "2026-09-24",
+      "days_ago": 0,
+      "last_synced": "2026-09-24T12:00:25.152939"
+    },
+    "ZPROP-60236143": {
+      "id": "ZPROP-60236143",
+      "title": "Departamento de 2 Ambientes con 2 Patios, Bajas expensas – Apto credito ColegialesEl living comedor cuenta con salida al patio principal, amplio y luminoso, perfecto para sumar una mesa o plantas y extender el área social. El dormitorio, con placard empotrado de piso a techo, tiene salida a un segundo patio techado, que aporta privacidad y ventilación cruzada. Baño completo. La cocina, independiente, se conecta con el lavadero, es importante destacar que todo lo que es instalaciones de cañerías de baño y cocina se actualizaron. El edificio se desarrolla en 6 pisos, con 5 unidades por piso, terraza de uso común y cocheras en planta baja (la unidad no posee cochera). Bajas expensas. Ubicación: Av. Álvarez Thomas y Estomba – Colegiales. Zona residencial tranquila, con excelente conectividad, cercanía a medios de transporte, comercios y propuestas gastronómicas. Visitá la propiedad con el recorrido virtual 360°Contactanos para coordinar una visita. importante: El presente inmueble ha sido decorado y amoblado virtualmente mediante el uso de inteligencia artificial, con fines exclusivamente comerciales e ilustrativos. Dichas representaciones de amoblamiento y/o decoración no forman parte de la oferta contractual ni del precio de venta, y no constituyen obligación alguna para la parte vendedora. El único propósito de estas imágenes es brindar un ejemplo visual de cómo podrían presentarse los ambientes, pudiendo diferir de la situación real de la propiedad al momento de su visita. Constructora e Inmobiliaria Crecer S. A. Héctor Gonzalez - Matricula Cucicba 5189.",
+      "description": "Departamento de 2 Ambientes con 2 Patios, Bajas expensas – Apto credito ColegialesEl living comedor cuenta con salida al patio principal, amplio y luminoso, perfecto para sumar una mesa o plantas y extender el área social. El dormitorio, con placard empotrado de piso a techo, tiene salida a un segundo patio techado, que aporta privacidad y ventilación cruzada. Baño completo. La cocina, independiente, se conecta con el lavadero, es importante destacar que todo lo que es instalaciones de cañerías de baño y cocina se actualizaron. El edificio se desarrolla en 6 pisos, con 5 unidades por piso, terraza de uso común y cocheras en planta baja (la unidad no posee cochera). Bajas expensas. Ubicación: Av. Álvarez Thomas y Estomba – Colegiales. Zona residencial tranquila, con excelente conectividad, cercanía a medios de transporte, comercios y propuestas gastronómicas. Visitá la propiedad con el recorrido virtual 360°Contactanos para coordinar una visita. importante: El presente inmueble ha sido decorado y amoblado virtualmente mediante el uso de inteligencia artificial, con fines exclusivamente comerciales e ilustrativos. Dichas representaciones de amoblamiento y/o decoración no forman parte de la oferta contractual ni del precio de venta, y no constituyen obligación alguna para la parte vendedora. El único propósito de estas imágenes es brindar un ejemplo visual de cómo podrían presentarse los ambientes, pudiendo diferir de la situación real de la propiedad al momento de su visita. Constructora e Inmobiliaria Crecer S. A. Héctor Gonzalez - Matricula Cucicba 5189.",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 90.000",
+      "price_val": 90000,
+      "currency": "USD",
+      "expenses_raw": "$ 160.000 Expensas",
+      "expenses_val": 160000,
+      "user_views": 45,
+      "features_raw": "48 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 48,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Colegiales, Capital Federal",
+      "address": "Av. A. Thomas al 1500 y Estomba",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/23/61/43/360x266/2080581266.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-departamento-dos-ambientes-con-dos-patios-bajas-60236143.html",
+      "is_development": false,
+      "barrio": "Colegiales",
+      "barrio_benchmark_m2": 2400,
+      "usd_m2": 1875,
+      "discount_pct": 21.9,
+      "opportunity_score": 53,
+      "user_views_formatted": "45",
+      "badge_text": "💎 Gran Oportunidad",
+      "badge_class": "badge-great",
+      "price_usd_formatted": "USD 90.000",
+      "usd_m2_formatted": "USD 1.875/m²",
+      "benchmark_formatted": "USD 2.400/m²",
+      "first_seen_date": "2026-09-24",
+      "days_ago": 0,
+      "last_synced": "2026-09-24T12:00:25.152939"
+    },
+    "ZPROP-60236228": {
+      "id": "ZPROP-60236228",
+      "title": "A pocas cuadras del Hospital Italiano de Buenos Aires, sale a la venta este cómodo y luminoso departamento de 2 ambientes. Ubicado en planta baja de un edificio de 9 pisos, este inmueble al frente, con orientación norte, se destaca por la excelente distribución de sus ambientes y por contar con un amplio patio pulmón, ideal para generar un espacio verde, un rincón de relax o incluso un sector de guardado y lavado más funcional. El hall de entrada conecta con un amplio y luminoso living comedor con ventana al exterior, el pasillo de distribución y la cocina completa, equipada con mobiliario de época y salida directa al patio, donde se encuentra un espacio cubierto con pileta de lavado. A través del pasillo se accede a una cómoda habitación con placard empotrado y ventana al exterior, además de un baño completo en muy buen estado de conservación. El hall, el pasillo, el living y la habitación cuentan con impecables pisos de parquet, aportando calidez y personalidad a todos los ambientes. Es una propiedad ideal para quienes buscan su primera vivienda, para quienes priorizan una ubicación tranquila y bien conectada, o para quienes desean realizar una inversión con excelente potencial de renta. Medidas aproximadas de los ambientes: * Hall de entrada: 1. 70 x 1. 80. * Living/comedor: 3 x 4. 50. * Habitación: 3 x 4. 50. * Baño: 2 x 2. 10. * Cocina: 2. 20 x 2. 90. * Patio: 1. 80 x 4. 50 + espacio de lavadero. Ubicación estratégica: * Salud: cercanía a Hospital Italiano de Buenos Aires, Hospital Naval Dr. Pedro Mallo y Hospital Durand. * Espacios verdes: próximo a Parque Centenario. * Transporte y arterias: a pocas cuadras de Avenida Corrientes, en una zona con gran cantidad de líneas de colectivos, comercios y servicios. Líneas de colectivo: 15, 19, 24, 26, 36, 65, 71, 90, 92, 99, 105, 109, 119, 124, 127, 141, 146, 151, 160 y 168. Las medidas son estimativas y pueden sufrir modificaciones. Los datos definitivos son los que surgirán del título de la propiedad, planos y/o comprobantes respaldatorios. El valor de las expensas puede sufrir variciones que deben ser consultadas por el comprador al momento de cerrar la operación. Todas las medidas indicadas son aproximadas y pueden llegar a diferir de aquellas expresadas en la documentación de la propiedad. Cada Oficina de la Red de servicios para Inmobiliarias Mudafy es de gestión independiente y autónoma. Todas las propiedades publicadas en el perfil de Platino se encuentran a cargo del corredor inmobiliario responsable de la oficina Julio Lopez Figueroa (caba) Matrícula: cucicba 514. Toda intermediación y conclusión de las operaciones serán realizadas exclusivamente por el Corredor Inmobiliario Responsable de la oficina.",
+      "description": "A pocas cuadras del Hospital Italiano de Buenos Aires, sale a la venta este cómodo y luminoso departamento de 2 ambientes. Ubicado en planta baja de un edificio de 9 pisos, este inmueble al frente, con orientación norte, se destaca por la excelente distribución de sus ambientes y por contar con un amplio patio pulmón, ideal para generar un espacio verde, un rincón de relax o incluso un sector de guardado y lavado más funcional. El hall de entrada conecta con un amplio y luminoso living comedor con ventana al exterior, el pasillo de distribución y la cocina completa, equipada con mobiliario de época y salida directa al patio, donde se encuentra un espacio cubierto con pileta de lavado. A través del pasillo se accede a una cómoda habitación con placard empotrado y ventana al exterior, además de un baño completo en muy buen estado de conservación. El hall, el pasillo, el living y la habitación cuentan con impecables pisos de parquet, aportando calidez y personalidad a todos los ambientes. Es una propiedad ideal para quienes buscan su primera vivienda, para quienes priorizan una ubicación tranquila y bien conectada, o para quienes desean realizar una inversión con excelente potencial de renta. Medidas aproximadas de los ambientes: * Hall de entrada: 1. 70 x 1. 80. * Living/comedor: 3 x 4. 50. * Habitación: 3 x 4. 50. * Baño: 2 x 2. 10. * Cocina: 2. 20 x 2. 90. * Patio: 1. 80 x 4. 50 + espacio de lavadero. Ubicación estratégica: * Salud: cercanía a Hospital Italiano de Buenos Aires, Hospital Naval Dr. Pedro Mallo y Hospital Durand. * Espacios verdes: próximo a Parque Centenario. * Transporte y arterias: a pocas cuadras de Avenida Corrientes, en una zona con gran cantidad de líneas de colectivos, comercios y servicios. Líneas de colectivo: 15, 19, 24, 26, 36, 65, 71, 90, 92, 99, 105, 109, 119, 124, 127, 141, 146, 151, 160 y 168. Las medidas son estimativas y pueden sufrir modificaciones. Los datos definitivos son los que surgirán del título de la propiedad, planos y/o comprobantes respaldatorios. El valor de las expensas puede sufrir variciones que deben ser consultadas por el comprador al momento de cerrar la operación. Todas las medidas indicadas son aproximadas y pueden llegar a diferir de aquellas expresadas en la documentación de la propiedad. Cada Oficina de la Red de servicios para Inmobiliarias Mudafy es de gestión independiente y autónoma. Todas las propiedades publicadas en el perfil de Platino se encuentran a cargo del corredor inmobiliario responsable de la oficina Julio Lopez Figueroa (caba) Matrícula: cucicba 514. Toda intermediación y conclusión de las operaciones serán realizadas exclusivamente por el Corredor Inmobiliario Responsable de la oficina.",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 100.000",
+      "price_val": 100000,
+      "currency": "USD",
+      "expenses_raw": "$ 87.000 Expensas",
+      "expenses_val": 87000,
+      "user_views": 55,
+      "features_raw": "58 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 58,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Caballito, Capital Federal",
+      "address": "Avenida Díaz Vélez 4200",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/23/62/28/360x266/2080582001.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-departamento-dos-ambientes-con-patio.-a-la-60236228.html",
+      "is_development": false,
+      "barrio": "Caballito",
+      "barrio_benchmark_m2": 2150,
+      "usd_m2": 1724,
+      "discount_pct": 19.8,
+      "opportunity_score": 45,
+      "user_views_formatted": "55",
+      "badge_text": "💎 Gran Oportunidad",
+      "badge_class": "badge-great",
+      "price_usd_formatted": "USD 100.000",
+      "usd_m2_formatted": "USD 1.724/m²",
+      "benchmark_formatted": "USD 2.150/m²",
+      "first_seen_date": "2026-09-24",
+      "days_ago": 0,
+      "last_synced": "2026-09-24T12:00:25.152939"
     }
   }
 }
