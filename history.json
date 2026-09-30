@@ -5972,9 +5972,14 @@
       "first_seen": "2026-09-30",
       "last_price": 92000,
       "barrio": "Almagro"
+    },
+    "ZPROP-60294352": {
+      "first_seen": "2026-09-30",
+      "last_price": 99900,
+      "barrio": "Parque Chacabuco"
     }
   },
-  "last_run": "2026-09-30T16:00:28.929768",
+  "last_run": "2026-09-30T19:30:26.242432",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -6231,13 +6236,13 @@
     },
     {
       "date": "2026-09-30",
-      "timestamp": "2026-09-30T16:00:28.962074",
-      "total_properties": 46,
-      "new_today": 46,
-      "avg_usd_m2": 1599,
+      "timestamp": "2026-09-30T19:30:26.276309",
+      "total_properties": 47,
+      "new_today": 47,
+      "avg_usd_m2": 1587,
       "min_price": 65000,
       "median_price": 90000,
-      "super_deals_count": 20,
+      "super_deals_count": 21,
       "top_neighborhoods": []
     }
   ],
@@ -8059,7 +8064,7 @@
       "currency": "USD",
       "expenses_raw": "$ 196.000 Expensas",
       "expenses_val": 196000,
-      "user_views": 23,
+      "user_views": 44,
       "features_raw": "50 m² tot. | 2 amb. | 1 dorm. | 1 baño",
       "m2_tot": 50,
       "m2_cub": null,
@@ -8077,7 +8082,7 @@
       "usd_m2": 1960,
       "discount_pct": 34.7,
       "opportunity_score": 68,
-      "user_views_formatted": "23",
+      "user_views_formatted": "44",
       "badge_text": "🔥 Super Oportunidad",
       "badge_class": "badge-super",
       "price_usd_formatted": "USD 98.000",
@@ -8085,7 +8090,7 @@
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-09-30",
       "days_ago": 0,
-      "last_synced": "2026-09-30T16:00:28.929768"
+      "last_synced": "2026-09-30T19:30:26.242432"
     },
     "ZPROP-60293234": {
       "id": "ZPROP-60293234",
@@ -8126,7 +8131,48 @@
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-30",
       "days_ago": 0,
-      "last_synced": "2026-09-30T16:00:28.929768"
+      "last_synced": "2026-09-30T19:30:26.242432"
+    },
+    "ZPROP-60294352": {
+      "id": "ZPROP-60294352",
+      "title": "Presentamos este encantador ph de 40 años de antigÜedad que destaca por su solidez estructural, privacidad, excelente distribución Y luminosidad. Al ingresar por una cómoda escalera Y compartir el lote con solo dos unidades funcionales más (3 en total), la propiedad ofrece la tranquilidad típica de una casa, sumado al gran beneficio económico de no pagar expensas. Características principales: presentamos este encantador ph de 40 años de antigÜedad que destaca por su solidez estructural, privacidad, excelente distribución Y luminosidad. Al ingresar por una cómoda escalera Y compartir el lote con solo dos unidades funcionales más (3 en total), la propiedad ofrece la tranquilidad típica de una casa, sumado al gran beneficio económico de no pagar expensas. Distribución de superficies: * superficie cubierta: 72 M² * superficie semicubierta: 2 M² (balcón secundario) * superficie descubierta (actualmente semicubierta): 20 M² (amplio sector de balcones techados) * superficie total: 94 M² características principales: * acceso: entrada por una escalera cómoda Y segura que brinda independencia al ingresar. * área social: cómodo comedor con cocina integrada, un espacio moderno Y funcional que optimiza al máximo los metros. Este ambiente cuenta con una hermosa salida directa al balcón, garantizando luz natural durante todo el día Y excelente ventilación cruzada. * dormitorios Y dependencia: posee dos habitaciones principales amplias, cómodas Y con buena luz, más una práctica dependencia de servicio ideal para ser utilizada como tercer dormitorio, escritorio de home office O vestidor. * baños: un baño completo principal Y un cómodo toilette de recepción. * espacio destacado: cuenta con un espectacular sector de balcones que suman 20 M² (por plano descubiertos Y hoy semicubiertos/techados), convirtiéndose en una extensión perfecta de los ambientes, ideal para armar un sector de relax, poner plantas O una mesa exterior protegida del clima. * lavadero: sector de lavadero independiente, muy práctico Y funcional. * detalles de terminación: los pisos combinan la calidez del parquet original en los sectores de descanso con la practicidad de la baldosa en las zonas de alto tránsito. * climatización: equipado con aire acondicionado Y calefacción por estufa A gas. Resumen de la propiedad: * ubicación: beauchef al 1400, parque chacabuco. * complejo: solo 3 unidades funcionales en total. Entrada por escalera. * ambientes: comedor con cocina integrada, 2 dormitorios, dependencia, lavadero independiente Y balcones techados. * baños: 1 completo + 1 toilette. * acceso: entrada por una escalera cómoda Y segura que brinda independencia al ingresar. * área social: cómodo comedor con cocina integrada, un espacio moderno Y funcional que optimiza al máximo los metros. Este ambiente cuenta con una hermosa salida directa al balcón, garantizando luz natural durante todo el día Y excelente ventilación cruzada. * dormitorios Y dependencia: posee dos habitaciones principales amplias, cómodas Y con buena luz, más una práctica dependencia de servicio ideal para ser utilizada como tercer dormitorio, escritorio de home office O vestidor. * baños: un baño completo principal Y un cómodo toilette de recepción. * espacio destacado: cuenta con un espectacular sector de balcones que suman 20 M² (por plano descubiertos Y hoy semicubiertos/techados), convirtiéndose en una extensión perfecta de los ambientes, ideal para armar un sector de relax, poner plantas O una mesa exterior protegida del clima. * lavadero: sector de lavadero independiente, muy práctico Y funcional. * detalles de terminación: los pisos combinan la calidez del parquet original en los sectores de descanso con la practicidad de la baldosa en las zonas de alto tránsito. * climatización: equipado con aire acondicionado Y calefacción por estufa A gas. Resumen de la propiedad: * ubicación: beauchef al 1400, parque chacabuco. * complejo: solo 3 unidades funcionales en total. Entrada por escalera. * ambientes: comedor con cocina integrada, 2 dormitorios, dependencia, lavadero independiente Y balcones techados. * baños: 1 completo + 1 toilette.",
+      "description": "Presentamos este encantador ph de 40 años de antigÜedad que destaca por su solidez estructural, privacidad, excelente distribución Y luminosidad. Al ingresar por una cómoda escalera Y compartir el lote con solo dos unidades funcionales más (3 en total), la propiedad ofrece la tranquilidad típica de una casa, sumado al gran beneficio económico de no pagar expensas. Características principales: presentamos este encantador ph de 40 años de antigÜedad que destaca por su solidez estructural, privacidad, excelente distribución Y luminosidad. Al ingresar por una cómoda escalera Y compartir el lote con solo dos unidades funcionales más (3 en total), la propiedad ofrece la tranquilidad típica de una casa, sumado al gran beneficio económico de no pagar expensas. Distribución de superficies: * superficie cubierta: 72 M² * superficie semicubierta: 2 M² (balcón secundario) * superficie descubierta (actualmente semicubierta): 20 M² (amplio sector de balcones techados) * superficie total: 94 M² características principales: * acceso: entrada por una escalera cómoda Y segura que brinda independencia al ingresar. * área social: cómodo comedor con cocina integrada, un espacio moderno Y funcional que optimiza al máximo los metros. Este ambiente cuenta con una hermosa salida directa al balcón, garantizando luz natural durante todo el día Y excelente ventilación cruzada. * dormitorios Y dependencia: posee dos habitaciones principales amplias, cómodas Y con buena luz, más una práctica dependencia de servicio ideal para ser utilizada como tercer dormitorio, escritorio de home office O vestidor. * baños: un baño completo principal Y un cómodo toilette de recepción. * espacio destacado: cuenta con un espectacular sector de balcones que suman 20 M² (por plano descubiertos Y hoy semicubiertos/techados), convirtiéndose en una extensión perfecta de los ambientes, ideal para armar un sector de relax, poner plantas O una mesa exterior protegida del clima. * lavadero: sector de lavadero independiente, muy práctico Y funcional. * detalles de terminación: los pisos combinan la calidez del parquet original en los sectores de descanso con la practicidad de la baldosa en las zonas de alto tránsito. * climatización: equipado con aire acondicionado Y calefacción por estufa A gas. Resumen de la propiedad: * ubicación: beauchef al 1400, parque chacabuco. * complejo: solo 3 unidades funcionales en total. Entrada por escalera. * ambientes: comedor con cocina integrada, 2 dormitorios, dependencia, lavadero independiente Y balcones techados. * baños: 1 completo + 1 toilette. * acceso: entrada por una escalera cómoda Y segura que brinda independencia al ingresar. * área social: cómodo comedor con cocina integrada, un espacio moderno Y funcional que optimiza al máximo los metros. Este ambiente cuenta con una hermosa salida directa al balcón, garantizando luz natural durante todo el día Y excelente ventilación cruzada. * dormitorios Y dependencia: posee dos habitaciones principales amplias, cómodas Y con buena luz, más una práctica dependencia de servicio ideal para ser utilizada como tercer dormitorio, escritorio de home office O vestidor. * baños: un baño completo principal Y un cómodo toilette de recepción. * espacio destacado: cuenta con un espectacular sector de balcones que suman 20 M² (por plano descubiertos Y hoy semicubiertos/techados), convirtiéndose en una extensión perfecta de los ambientes, ideal para armar un sector de relax, poner plantas O una mesa exterior protegida del clima. * lavadero: sector de lavadero independiente, muy práctico Y funcional. * detalles de terminación: los pisos combinan la calidez del parquet original en los sectores de descanso con la practicidad de la baldosa en las zonas de alto tránsito. * climatización: equipado con aire acondicionado Y calefacción por estufa A gas. Resumen de la propiedad: * ubicación: beauchef al 1400, parque chacabuco. * complejo: solo 3 unidades funcionales en total. Entrada por escalera. * ambientes: comedor con cocina integrada, 2 dormitorios, dependencia, lavadero independiente Y balcones techados. * baños: 1 completo + 1 toilette.",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 99.900",
+      "price_val": 99900,
+      "currency": "USD",
+      "expenses_raw": "",
+      "expenses_val": null,
+      "user_views": 19,
+      "features_raw": "94 m² tot. | 3 amb. | 2 dorm. | 1 baño",
+      "m2_tot": 94,
+      "m2_cub": null,
+      "ambientes": 3,
+      "dormitorios": 2,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Parque Chacabuco, Capital Federal",
+      "address": "Beauchef 1471",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/29/43/52/360x266/2082065627.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclphin--oportunidad!-ph-de-94-m-sup2--sin-expensas-con-60294352.html",
+      "is_development": false,
+      "barrio": "Parque Chacabuco",
+      "barrio_benchmark_m2": 1750,
+      "usd_m2": 1063,
+      "discount_pct": 39.3,
+      "opportunity_score": 69,
+      "user_views_formatted": "19",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 99.900",
+      "usd_m2_formatted": "USD 1.063/m²",
+      "benchmark_formatted": "USD 1.750/m²",
+      "first_seen_date": "2026-09-30",
+      "days_ago": 0,
+      "last_synced": "2026-09-30T19:30:26.242432"
     }
   }
 }
