@@ -6007,9 +6007,14 @@
       "first_seen": "2026-10-01",
       "last_price": 95000,
       "barrio": "Caballito"
+    },
+    "ZPROP-60304832": {
+      "first_seen": "2026-10-01",
+      "last_price": 87000,
+      "barrio": "Villa Urquiza"
     }
   },
-  "last_run": "2026-10-01T16:00:32.325791",
+  "last_run": "2026-10-01T19:30:27.516100",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -6277,10 +6282,10 @@
     },
     {
       "date": "2026-10-01",
-      "timestamp": "2026-10-01T16:00:32.359994",
-      "total_properties": 48,
-      "new_today": 48,
-      "avg_usd_m2": 1578,
+      "timestamp": "2026-10-01T19:30:27.556999",
+      "total_properties": 49,
+      "new_today": 49,
+      "avg_usd_m2": 1581,
       "min_price": 65000,
       "median_price": 90000,
       "super_deals_count": 22,
@@ -8131,7 +8136,7 @@
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-10-01",
       "days_ago": 0,
-      "last_synced": "2026-10-01T16:00:32.325791"
+      "last_synced": "2026-10-01T19:30:27.516100"
     },
     "ZPROP-60304623": {
       "id": "ZPROP-60304623",
@@ -8213,7 +8218,7 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-01",
       "days_ago": 0,
-      "last_synced": "2026-10-01T16:00:32.325791"
+      "last_synced": "2026-10-01T19:30:27.516100"
     },
     "ZPROP-60303889": {
       "id": "ZPROP-60303889",
@@ -8228,7 +8233,7 @@
       "currency": "USD",
       "expenses_raw": "$ 220.000 Expensas",
       "expenses_val": 220000,
-      "user_views": 55,
+      "user_views": 26,
       "features_raw": "54 m² tot. | 3 amb. | 2 dorm. | 1 baño",
       "m2_tot": 54,
       "m2_cub": null,
@@ -8246,7 +8251,7 @@
       "usd_m2": 1759,
       "discount_pct": 18.2,
       "opportunity_score": 45,
-      "user_views_formatted": "55",
+      "user_views_formatted": "26",
       "badge_text": "💎 Gran Oportunidad",
       "badge_class": "badge-great",
       "price_usd_formatted": "USD 95.000",
@@ -8254,7 +8259,48 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-01",
       "days_ago": 0,
-      "last_synced": "2026-10-01T16:00:32.325791"
+      "last_synced": "2026-10-01T19:30:27.516100"
+    },
+    "ZPROP-60304832": {
+      "id": "ZPROP-60304832",
+      "title": "Ph en venta en villa urquiza – planta baja al frenteno apto creditosin expensas apto profesional (Ideal oficina o consultorio) Tomas Le Breton al 4600Cómodo ph de dos ambientes en planta baja al frente, ubicado en Villa Urquiza. Se encuentra en excelente estado de conservación, ofreciendo una distribución funcional y espacios que se adaptan a diferentes necesidades. La propiedad cuenta con: Living comedor con ventana al frente, que aporta luz natural. Cocina con espacio y conexión para lavarropas. Dormitorio. Baño completo. Pequeño patio de uso exclusivo, con entrada independiente. Baulera, ideal para almacenamiento. Apto profesional. Sin expensas. Una excelente alternativa tanto para quienes buscan su primera vivienda como para aquellos que necesitan una propiedad con potencial para uso profesional. ubicación – villa urquizavilla Urquiza se caracteriza por su entorno residencial, sus calles arboladas y una amplia oferta comercial y gastronómica. El barrio cuenta con excelentes opciones de transporte público, incluyendo el subte, tren y diversas líneas de colectivos, lo que facilita la conexión con otros puntos de la ciudad. Las medidas y superficies aportadas en esta publicación son aproximadas, las medidas exactas surgirán de los respectivos planos y/o escritura del inmueble. El importe de expensas e impuestos es a título orientativo ya que, al igual que las imágenes, renders y memorias descriptivas, pudieron haber sufrido alguna modificación a la hora de la visualización del presente aviso, debiendo realizar las verificaciones respectivas en forma previa a la realización de cualquier operaciónCorredor interviniente caba y pba: Juan Pablo Sanguinetti cmcpsi 6449 - cucicba 6630. La tasación, intermediación y la conclusión de las operaciones sobre esta propiedad son actividades exclusivas de este corredor matriculado, conforme las previsiones de la ley 20. 266, la ley caba 2340, la ley provincial 10. 973 y sus modif. Y las normas reglamentarias dictadas por los colegios departamentales. Las oficinas asociadas a la red Keller Williams actúan en forma independiente, brindando servicios a corredores, agentes y al público en general, y suintervención se limita a la prestación de servicios inmobiliarios que no incluyen actos de corretaje ni intermediación inmobiliaria.",
+      "description": "Ph en venta en villa urquiza – planta baja al frenteno apto creditosin expensas apto profesional (Ideal oficina o consultorio) Tomas Le Breton al 4600Cómodo ph de dos ambientes en planta baja al frente, ubicado en Villa Urquiza. Se encuentra en excelente estado de conservación, ofreciendo una distribución funcional y espacios que se adaptan a diferentes necesidades. La propiedad cuenta con: Living comedor con ventana al frente, que aporta luz natural. Cocina con espacio y conexión para lavarropas. Dormitorio. Baño completo. Pequeño patio de uso exclusivo, con entrada independiente. Baulera, ideal para almacenamiento. Apto profesional. Sin expensas. Una excelente alternativa tanto para quienes buscan su primera vivienda como para aquellos que necesitan una propiedad con potencial para uso profesional. ubicación – villa urquizavilla Urquiza se caracteriza por su entorno residencial, sus calles arboladas y una amplia oferta comercial y gastronómica. El barrio cuenta con excelentes opciones de transporte público, incluyendo el subte, tren y diversas líneas de colectivos, lo que facilita la conexión con otros puntos de la ciudad. Las medidas y superficies aportadas en esta publicación son aproximadas, las medidas exactas surgirán de los respectivos planos y/o escritura del inmueble. El importe de expensas e impuestos es a título orientativo ya que, al igual que las imágenes, renders y memorias descriptivas, pudieron haber sufrido alguna modificación a la hora de la visualización del presente aviso, debiendo realizar las verificaciones respectivas en forma previa a la realización de cualquier operaciónCorredor interviniente caba y pba: Juan Pablo Sanguinetti cmcpsi 6449 - cucicba 6630. La tasación, intermediación y la conclusión de las operaciones sobre esta propiedad son actividades exclusivas de este corredor matriculado, conforme las previsiones de la ley 20. 266, la ley caba 2340, la ley provincial 10. 973 y sus modif. Y las normas reglamentarias dictadas por los colegios departamentales. Las oficinas asociadas a la red Keller Williams actúan en forma independiente, brindando servicios a corredores, agentes y al público en general, y suintervención se limita a la prestación de servicios inmobiliarios que no incluyen actos de corretaje ni intermediación inmobiliaria.",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 87.000",
+      "price_val": 87000,
+      "currency": "USD",
+      "expenses_raw": "",
+      "expenses_val": null,
+      "user_views": 35,
+      "features_raw": "50 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 50,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Villa Urquiza, Capital Federal",
+      "address": "PH en Venta Villa Urquiza, dos Ambientes, Planta Baja, sin Expensas",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/30/48/32/360x266/2082306604.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclphin-ph-en-venta-dos-ambientes-en-villa-urquiza-en-planta-60304832.html",
+      "is_development": false,
+      "barrio": "Villa Urquiza",
+      "barrio_benchmark_m2": 2350,
+      "usd_m2": 1740,
+      "discount_pct": 26.0,
+      "opportunity_score": 59,
+      "user_views_formatted": "35",
+      "badge_text": "💎 Gran Oportunidad",
+      "badge_class": "badge-great",
+      "price_usd_formatted": "USD 87.000",
+      "usd_m2_formatted": "USD 1.740/m²",
+      "benchmark_formatted": "USD 2.350/m²",
+      "first_seen_date": "2026-10-01",
+      "days_ago": 0,
+      "last_synced": "2026-10-01T19:30:27.516100"
     }
   }
 }
