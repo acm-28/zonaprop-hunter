@@ -6027,9 +6027,14 @@
       "first_seen": "2026-10-02",
       "last_price": 93000,
       "barrio": "Almagro"
+    },
+    "ZPROP-60316930": {
+      "first_seen": "2026-10-02",
+      "last_price": 75000,
+      "barrio": "Parque Chacabuco"
     }
   },
-  "last_run": "2026-10-02T16:00:27.802476",
+  "last_run": "2026-10-02T19:30:28.247762",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -6308,10 +6313,10 @@
     },
     {
       "date": "2026-10-02",
-      "timestamp": "2026-10-02T16:00:27.835926",
-      "total_properties": 46,
-      "new_today": 46,
-      "avg_usd_m2": 1607,
+      "timestamp": "2026-10-02T19:30:28.329472",
+      "total_properties": 47,
+      "new_today": 47,
+      "avg_usd_m2": 1604,
       "min_price": 69000,
       "median_price": 90000,
       "super_deals_count": 19,
@@ -8095,7 +8100,7 @@
       "currency": "USD",
       "expenses_raw": "$ 190.000 Expensas",
       "expenses_val": 190000,
-      "user_views": 36,
+      "user_views": 54,
       "features_raw": "49 m² tot. | 2 amb. | 1 dorm. | 1 baño",
       "m2_tot": 49,
       "m2_cub": null,
@@ -8113,7 +8118,7 @@
       "usd_m2": 1735,
       "discount_pct": 19.3,
       "opportunity_score": 49,
-      "user_views_formatted": "36",
+      "user_views_formatted": "54",
       "badge_text": "💎 Gran Oportunidad",
       "badge_class": "badge-great",
       "price_usd_formatted": "USD 85.000",
@@ -8121,7 +8126,7 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-02",
       "days_ago": 0,
-      "last_synced": "2026-10-02T16:00:27.802476"
+      "last_synced": "2026-10-02T19:30:28.247762"
     },
     "ZPROP-60315657": {
       "id": "ZPROP-60315657",
@@ -8203,7 +8208,48 @@
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-02",
       "days_ago": 0,
-      "last_synced": "2026-10-02T16:00:27.802476"
+      "last_synced": "2026-10-02T19:30:28.247762"
+    },
+    "ZPROP-60316930": {
+      "id": "ZPROP-60316930",
+      "title": "Ph 3 ambientes en planta baja con terraza de uso exclusivo – Sin expensas – Parque ChacabucoExcelente oportunidad para quienes buscan una propiedad con potencial de actualización en una muy buena ubicación. ph ubicado al fondo y en planta baja, brindando privacidad y tranquilidad. Al ingresar, la propiedad cuenta con un patio techado con toldo rebatible, actualmente utilizado como living-comedor, generando un ambiente funcional y aprovechable durante todo el año. Dispone de dos amplias habitaciones, con cómodas dimensiones y buena distribución. La propiedad cuenta además con cocina semiintegrada y lavadero bajo escalera, optimizando el uso de los espacios. En el sector de escalera se encuentra una pequeña habitación de servicio o espacio multipropósito, ideal como guardado, escritorio o dependencia según necesidad. A través de una segunda escalera de pocos escalones se accede a uno de sus grandes diferenciales: una amplia terraza de uso exclusivo, con muy buena ventilación y excelente espacio exterior, ideal para disfrutar del aire libre, sumar un sector de parrilla, plantas o generar un espacio de encuentro y relax. La unidad se encuentra habitable para actualizar o reciclar, ofreciendo múltiples posibilidades para adaptarla al gusto y potenciar su valor. Sin expensas, una característica cada vez más buscada. Ubicado en el barrio de Parque Chacabuco sobre Avenida, con cercanía a medios de transporte, comercios y principales accesos. Ideal para quienes buscan un ph con potencial, ambientes cómodos y gran espacio exterior. Consultanos para más información y coordiná tu visita al 11Ver datos Silvana de ar Negocios Inmobiliarios. ar Negocios Inmobiliarios srl” cucicba 7307 / cmzc 573 (act. 3 - F3 - Lib. soc) Todas las propiedades publicadas están a cargo del profesional matriculado, la intermediación y la conclusión de las operaciones serán llevadas exclusivamente por él. Ley 5115: excepto que en la descripción de la propiedad se indique lo contrario, el edificio puede no contar con rampa para personas con movilidad reducida, y no ser Accesible para personas con discapacidades físicas. Ley 5859, Art. 4°, se deja constancia que “Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede requerir a los propietarios será el equivalente al 4, 15% del valor total del respectivo contrato. Se encuentra prohibido cobrar a los inquilinos que sean personas físicas comisiones inmobiliarias. Las medidas consignadas en la publicación son aproximadas, las reales surgirán del título de propiedad y no comprometen contractualmente a nuestra empresa. Los gastos y valores de expensas expresados se deben a la última información recabada y deberán confirmarse. Fotografías no vinculantes ni contractuales. Con el objetivo de mantener una colaboración equitativa y clara en nuestros procesos, les informamos que compartiremos con ustedes las mismas condiciones de honorarios que ofrece la otra inmobiliaria. Específicamente, compartiremos la operacion a aquellos colegas que realicen la consulta, acompañen a sus clientes en las visitas a las propiedades y participen activamente en todas las instancias posteriores que involucran la venta de la propiedad. En el caso de que no se ponga en contacto el colega con nosotros, ni brinde acompañamiento en las visitas, reserva y escritura, no se compartiran honorarios.",
+      "description": "Ph 3 ambientes en planta baja con terraza de uso exclusivo – Sin expensas – Parque ChacabucoExcelente oportunidad para quienes buscan una propiedad con potencial de actualización en una muy buena ubicación. ph ubicado al fondo y en planta baja, brindando privacidad y tranquilidad. Al ingresar, la propiedad cuenta con un patio techado con toldo rebatible, actualmente utilizado como living-comedor, generando un ambiente funcional y aprovechable durante todo el año. Dispone de dos amplias habitaciones, con cómodas dimensiones y buena distribución. La propiedad cuenta además con cocina semiintegrada y lavadero bajo escalera, optimizando el uso de los espacios. En el sector de escalera se encuentra una pequeña habitación de servicio o espacio multipropósito, ideal como guardado, escritorio o dependencia según necesidad. A través de una segunda escalera de pocos escalones se accede a uno de sus grandes diferenciales: una amplia terraza de uso exclusivo, con muy buena ventilación y excelente espacio exterior, ideal para disfrutar del aire libre, sumar un sector de parrilla, plantas o generar un espacio de encuentro y relax. La unidad se encuentra habitable para actualizar o reciclar, ofreciendo múltiples posibilidades para adaptarla al gusto y potenciar su valor. Sin expensas, una característica cada vez más buscada. Ubicado en el barrio de Parque Chacabuco sobre Avenida, con cercanía a medios de transporte, comercios y principales accesos. Ideal para quienes buscan un ph con potencial, ambientes cómodos y gran espacio exterior. Consultanos para más información y coordiná tu visita al 11Ver datos Silvana de ar Negocios Inmobiliarios. ar Negocios Inmobiliarios srl” cucicba 7307 / cmzc 573 (act. 3 - F3 - Lib. soc) Todas las propiedades publicadas están a cargo del profesional matriculado, la intermediación y la conclusión de las operaciones serán llevadas exclusivamente por él. Ley 5115: excepto que en la descripción de la propiedad se indique lo contrario, el edificio puede no contar con rampa para personas con movilidad reducida, y no ser Accesible para personas con discapacidades físicas. Ley 5859, Art. 4°, se deja constancia que “Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede requerir a los propietarios será el equivalente al 4, 15% del valor total del respectivo contrato. Se encuentra prohibido cobrar a los inquilinos que sean personas físicas comisiones inmobiliarias. Las medidas consignadas en la publicación son aproximadas, las reales surgirán del título de propiedad y no comprometen contractualmente a nuestra empresa. Los gastos y valores de expensas expresados se deben a la última información recabada y deberán confirmarse. Fotografías no vinculantes ni contractuales. Con el objetivo de mantener una colaboración equitativa y clara en nuestros procesos, les informamos que compartiremos con ustedes las mismas condiciones de honorarios que ofrece la otra inmobiliaria. Específicamente, compartiremos la operacion a aquellos colegas que realicen la consulta, acompañen a sus clientes en las visitas a las propiedades y participen activamente en todas las instancias posteriores que involucran la venta de la propiedad. En el caso de que no se ponga en contacto el colega con nosotros, ni brinde acompañamiento en las visitas, reserva y escritura, no se compartiran honorarios.",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 75.000",
+      "price_val": 75000,
+      "currency": "USD",
+      "expenses_raw": "",
+      "expenses_val": null,
+      "user_views": 32,
+      "features_raw": "52 m² tot. | 3 amb. | 3 dorm. | 1 baño",
+      "m2_tot": 52,
+      "m2_cub": null,
+      "ambientes": 3,
+      "dormitorios": 3,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Parque Chacabuco, Capital Federal",
+      "address": "Avda Cobo  al 1300",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/31/69/30/360x266/2082598584.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclphin-ph-3-amb.-sin-expensas-con-terraza-60316930.html",
+      "is_development": false,
+      "barrio": "Parque Chacabuco",
+      "barrio_benchmark_m2": 1750,
+      "usd_m2": 1442,
+      "discount_pct": 17.6,
+      "opportunity_score": 48,
+      "user_views_formatted": "32",
+      "badge_text": "🏷️ Buen Precio",
+      "badge_class": "badge-good",
+      "price_usd_formatted": "USD 75.000",
+      "usd_m2_formatted": "USD 1.442/m²",
+      "benchmark_formatted": "USD 1.750/m²",
+      "first_seen_date": "2026-10-02",
+      "days_ago": 0,
+      "last_synced": "2026-10-02T19:30:28.247762"
     }
   }
 }
