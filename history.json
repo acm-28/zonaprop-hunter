@@ -6062,9 +6062,14 @@
       "first_seen": "2026-10-06",
       "last_price": 100000,
       "barrio": "Almagro"
+    },
+    "ZPROP-60364123": {
+      "first_seen": "2026-10-06",
+      "last_price": 79000,
+      "barrio": "Recoleta"
     }
   },
-  "last_run": "2026-10-06T12:00:26.367127",
+  "last_run": "2026-10-06T16:00:26.511837",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -6376,13 +6381,13 @@
     },
     {
       "date": "2026-10-06",
-      "timestamp": "2026-10-06T12:00:26.399240",
-      "total_properties": 34,
-      "new_today": 34,
-      "avg_usd_m2": 1631,
+      "timestamp": "2026-10-06T16:00:26.545853",
+      "total_properties": 35,
+      "new_today": 35,
+      "avg_usd_m2": 1611,
       "min_price": 75000,
-      "median_price": 91000,
-      "super_deals_count": 10,
+      "median_price": 90000,
+      "super_deals_count": 11,
       "top_neighborhoods": []
     }
   ],
@@ -7671,7 +7676,7 @@
       "currency": "USD",
       "expenses_raw": "$ 120.000 Expensas",
       "expenses_val": 120000,
-      "user_views": 65,
+      "user_views": 24,
       "features_raw": "51 m² tot. | 2 amb. | 1 dorm. | 1 baño",
       "m2_tot": 51,
       "m2_cub": null,
@@ -7680,7 +7685,7 @@
       "banos": 1,
       "cocheras": null,
       "location": "Palermo Soho, Palermo",
-      "address": "Paraguay al 4200",
+      "address": "Paraguay al",
       "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/36/11/58/360x266/2083554906.jpg?isFirstImage=true",
       "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-vende-2-ambientes-en-palermo-soho-en-pb-con-patio-60361158.html",
       "is_development": false,
@@ -7689,7 +7694,7 @@
       "usd_m2": 1763,
       "discount_pct": 41.2,
       "opportunity_score": 78,
-      "user_views_formatted": "65",
+      "user_views_formatted": "24",
       "badge_text": "🔥 Super Oportunidad",
       "badge_class": "badge-super",
       "price_usd_formatted": "USD 89.900",
@@ -7697,7 +7702,7 @@
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-10-06",
       "days_ago": 0,
-      "last_synced": "2026-10-06T12:00:26.367127"
+      "last_synced": "2026-10-06T16:00:26.511837"
     },
     "ZPROP-60360350": {
       "id": "ZPROP-60360350",
@@ -7712,7 +7717,7 @@
       "currency": "USD",
       "expenses_raw": "$ 228.860 Expensas",
       "expenses_val": 228860,
-      "user_views": 35,
+      "user_views": 21,
       "features_raw": "51 m² tot. | 3 amb. | 2 dorm. | 1 baño",
       "m2_tot": 51,
       "m2_cub": null,
@@ -7730,7 +7735,7 @@
       "usd_m2": 1804,
       "discount_pct": 14.1,
       "opportunity_score": 40,
-      "user_views_formatted": "35",
+      "user_views_formatted": "21",
       "badge_text": "🏷️ Buen Precio",
       "badge_class": "badge-good",
       "price_usd_formatted": "USD 92.000",
@@ -7738,7 +7743,7 @@
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-10-06",
       "days_ago": 0,
-      "last_synced": "2026-10-06T12:00:26.367127"
+      "last_synced": "2026-10-06T16:00:26.511837"
     },
     "ZPROP-60360070": {
       "id": "ZPROP-60360070",
@@ -7753,7 +7758,7 @@
       "currency": "USD",
       "expenses_raw": "$ 165.000 Expensas",
       "expenses_val": 165000,
-      "user_views": 18,
+      "user_views": 37,
       "features_raw": "57 m² tot. | 3 amb. | 2 dorm. | 1 baño",
       "m2_tot": 57,
       "m2_cub": null,
@@ -7771,7 +7776,7 @@
       "usd_m2": 1754,
       "discount_pct": 5.2,
       "opportunity_score": 30,
-      "user_views_formatted": "18",
+      "user_views_formatted": "37",
       "badge_text": "🏷️ Buen Precio",
       "badge_class": "badge-good",
       "price_usd_formatted": "USD 100.000",
@@ -7779,7 +7784,48 @@
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-06",
       "days_ago": 0,
-      "last_synced": "2026-10-06T12:00:26.367127"
+      "last_synced": "2026-10-06T16:00:26.511837"
+    },
+    "ZPROP-60364123": {
+      "id": "ZPROP-60364123",
+      "title": "Monoambiente en pb, con exclusivo jardín en Recoleta!. Expensas: $238. 000. (Incluye aysa y calefacción). No apto crédito. Superficie cubierta: 38 m2. Superficie total: 84 m2. Apto profesional. Departamento en pb. Hall de ingreso con placard de recepción. Ambiente con posibilidad de dividirlo. Cocina independiente con salida al jardín. Lavadero independiente. Baño completo. Calefacción individual y agua caliente por calefón. El edificio cuenta con 13 pisos. Excelente ubicación en el barrio de Recoleta. Sobre la Av. Córdoba a dos cuadras de Av. Callao y de Av. Santa Fe. A minutos de la Av. 9 de julio y del Teatro Colon. Rodeado de locales comerciales y gastronómicos. Excelente conectividad con variedad de líneas de colectivo y subte linea D. Matias Psevoznik matrícula cucicba N° 7733Aviso legal: Las medidas, superficies y proporciones consignadas son aproximadas y al sólo efecto orientativo y pueden variar respecto del plano y titulo de propiedad respectivos, al igual que las medidas parciales y/o de los ambientes que están sujetas a verificación y/o ajuste. - El valor indicado de expensas, si las hubiere, está sujeto a variación. - Los valores pueden ser modificados sin previo aviso. - Las fotos publicadas son ilustrativas, no contractuales y propiedad de Tovado Propiedades. -.",
+      "description": "Monoambiente en pb, con exclusivo jardín en Recoleta!. Expensas: $238. 000. (Incluye aysa y calefacción). No apto crédito. Superficie cubierta: 38 m2. Superficie total: 84 m2. Apto profesional. Departamento en pb. Hall de ingreso con placard de recepción. Ambiente con posibilidad de dividirlo. Cocina independiente con salida al jardín. Lavadero independiente. Baño completo. Calefacción individual y agua caliente por calefón. El edificio cuenta con 13 pisos. Excelente ubicación en el barrio de Recoleta. Sobre la Av. Córdoba a dos cuadras de Av. Callao y de Av. Santa Fe. A minutos de la Av. 9 de julio y del Teatro Colon. Rodeado de locales comerciales y gastronómicos. Excelente conectividad con variedad de líneas de colectivo y subte linea D. Matias Psevoznik matrícula cucicba N° 7733Aviso legal: Las medidas, superficies y proporciones consignadas son aproximadas y al sólo efecto orientativo y pueden variar respecto del plano y titulo de propiedad respectivos, al igual que las medidas parciales y/o de los ambientes que están sujetas a verificación y/o ajuste. - El valor indicado de expensas, si las hubiere, está sujeto a variación. - Los valores pueden ser modificados sin previo aviso. - Las fotos publicadas son ilustrativas, no contractuales y propiedad de Tovado Propiedades. -.",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 79.000",
+      "price_val": 79000,
+      "currency": "USD",
+      "expenses_raw": "$ 200.000 Expensas",
+      "expenses_val": 200000,
+      "user_views": 55,
+      "features_raw": "84 m² tot. | 1 amb. | 1 baño",
+      "m2_tot": 84,
+      "m2_cub": null,
+      "ambientes": 1,
+      "dormitorios": null,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Recoleta, Capital Federal",
+      "address": "Av. Cordoba 1500",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/36/41/23/360x266/2083626302.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-monoambiente-con-jardin-en-recoleta-60364123.html",
+      "is_development": false,
+      "barrio": "Recoleta",
+      "barrio_benchmark_m2": 2600,
+      "usd_m2": 940,
+      "discount_pct": 63.8,
+      "opportunity_score": 82,
+      "user_views_formatted": "55",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 79.000",
+      "usd_m2_formatted": "USD 940/m²",
+      "benchmark_formatted": "USD 2.600/m²",
+      "first_seen_date": "2026-10-06",
+      "days_ago": 0,
+      "last_synced": "2026-10-06T16:00:26.511837"
     }
   }
 }
