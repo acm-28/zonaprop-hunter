@@ -6124,7 +6124,7 @@
       "barrio": "Villa Crespo"
     }
   },
-  "last_run": "2026-10-07T16:00:37.728464",
+  "last_run": "2026-10-08T07:10:12.109463",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -6455,296 +6455,20 @@
       "median_price": 90000,
       "super_deals_count": 14,
       "top_neighborhoods": []
+    },
+    {
+      "date": "2026-10-08",
+      "timestamp": "2026-10-08T07:10:12.144208",
+      "total_properties": 39,
+      "new_today": 39,
+      "avg_usd_m2": 1603,
+      "min_price": 75000,
+      "median_price": 90000,
+      "super_deals_count": 13,
+      "top_neighborhoods": []
     }
   ],
   "active_deals": {
-    "ZPROP-60264132": {
-      "id": "ZPROP-60264132",
-      "title": "Oportunidad! Departamento tipo ph con patio, con una ubicacion unica en el barrio de villa crespo, A metros del subte B. estrategicamente ubicado con cercanias de transporte, parque centenario, plaza serrano, Y toda la vida de la calle corrientes, un departameto muy comodo, reciclado para mudarse ya mismo! Un comedor muy amplio, cocina concepto abierto dando iluminacion Y amplitud, un espacio para lavadero. un patio amplio para todo tipo de usos. expensas bajas, sin encargado! no dudes en contactarnos para una visita! sapVer datos",
-      "description": "Oportunidad! Departamento tipo ph con patio, con una ubicacion unica en el barrio de villa crespo, A metros del subte B. estrategicamente ubicado con cercanias de transporte, parque centenario, plaza serrano, Y toda la vida de la calle corrientes, un departameto muy comodo, reciclado para mudarse ya mismo! Un comedor muy amplio, cocina concepto abierto dando iluminacion Y amplitud, un espacio para lavadero. un patio amplio para todo tipo de usos. expensas bajas, sin encargado! no dudes en contactarnos para una visita! sapVer datos",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 99.000",
-      "price_val": 99000,
-      "currency": "USD",
-      "expenses_raw": "",
-      "expenses_val": null,
-      "user_views": 28,
-      "features_raw": "61 m² tot. | 2 amb. | 1 baño",
-      "m2_tot": 61,
-      "m2_cub": null,
-      "ambientes": 2,
-      "dormitorios": null,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Villa Crespo, Capital Federal",
-      "address": "Serrano al 400",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/26/41/32/360x266/2081290484.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-tipo-ph-con-patio-60264132.html",
-      "is_development": false,
-      "barrio": "Villa Crespo",
-      "barrio_benchmark_m2": 2100,
-      "usd_m2": 1623,
-      "discount_pct": 22.7,
-      "opportunity_score": 49,
-      "user_views_formatted": "28",
-      "badge_text": "💎 Gran Oportunidad",
-      "badge_class": "badge-great",
-      "price_usd_formatted": "USD 99.000",
-      "usd_m2_formatted": "USD 1.623/m²",
-      "benchmark_formatted": "USD 2.100/m²",
-      "first_seen_date": "2026-09-28",
-      "days_ago": 9,
-      "last_synced": "2026-09-28T19:30:29.983607"
-    },
-    "ZPROP-60266502": {
-      "id": "ZPROP-60266502",
-      "title": "Ph en Parque Chacabuco no paga expensasdescubra esta encantadora propiedad tipo ph ubicada en el corazón de Parque Chacabuco, en la dirección Zuviria 909, Piso 1. Con una antigüedad de 51 años, esta residencia ofrece una combinación perfecta de confort y funcionalidad en una de las zonas más buscadas de Capital Federal. La propiedad cuenta con una superficie cubierta de 46. 56 m² y una superficie descubierta de 26. 36 m², lo que proporciona un espacio total ideal para disfrutar del aire libre. Incluye un dormitorio y un baño, distribuidos en dos ambientes que aseguran un ambiente cálido y acogedor. Cuenta con una comoda cocina. Además, cuenta con un patio y una terraza, espacios ideales para el esparcimiento y reuniones al aire libre. La ubicación en Parque Chacabuco ofrece proximidad a una variedad de servicios, transporte público y espacios verdes, lo que hace de este ph una opción atractiva para aquellos que buscan calidad de vida en la ciudad. Esta propiedad está lista para recibir a sus nuevos dueños. No se pierda la oportunidad de vivir en un barrio con tanto encanto y facilidad de acceso a todas las comodidades urbanas. Medidas: Dormitorio: 5x 3, 5Living comedor: 5, 08 x 3, 30Baño: 2, 5 x 2pasillo: 3, 5 x 1, 20Cocina y: 5 x 1, 50patio: 4, 55 x 2, 60 (11, 37) Terraza: 14, 99Se deja constancia que las medidas, superficies, m2 y proporciones consignadas son aproximados, al igual que las medidas parciales y/o de los ambientes esta sujeto a verificación y/o ajuste. El valor indicado de expensas esta sujeto a variación. El precio del inmueble puede ser modificado sin previo aviso. Fotos de carácter no contractual. Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede requerir a los propietarios será el equivalente al cuatro con quince centésimos por ciento (4, 15%) del valor total del respectivo contrato. Matias kluk corredor inmobiliario, C. U. C. I. C. B. A 9688. Kluk soluciones inmobiliariascontáctenos: Oficina: 11 Ver datosE-mail: Ver datos",
-      "description": "Ph en Parque Chacabuco no paga expensasdescubra esta encantadora propiedad tipo ph ubicada en el corazón de Parque Chacabuco, en la dirección Zuviria 909, Piso 1. Con una antigüedad de 51 años, esta residencia ofrece una combinación perfecta de confort y funcionalidad en una de las zonas más buscadas de Capital Federal. La propiedad cuenta con una superficie cubierta de 46. 56 m² y una superficie descubierta de 26. 36 m², lo que proporciona un espacio total ideal para disfrutar del aire libre. Incluye un dormitorio y un baño, distribuidos en dos ambientes que aseguran un ambiente cálido y acogedor. Cuenta con una comoda cocina. Además, cuenta con un patio y una terraza, espacios ideales para el esparcimiento y reuniones al aire libre. La ubicación en Parque Chacabuco ofrece proximidad a una variedad de servicios, transporte público y espacios verdes, lo que hace de este ph una opción atractiva para aquellos que buscan calidad de vida en la ciudad. Esta propiedad está lista para recibir a sus nuevos dueños. No se pierda la oportunidad de vivir en un barrio con tanto encanto y facilidad de acceso a todas las comodidades urbanas. Medidas: Dormitorio: 5x 3, 5Living comedor: 5, 08 x 3, 30Baño: 2, 5 x 2pasillo: 3, 5 x 1, 20Cocina y: 5 x 1, 50patio: 4, 55 x 2, 60 (11, 37) Terraza: 14, 99Se deja constancia que las medidas, superficies, m2 y proporciones consignadas son aproximados, al igual que las medidas parciales y/o de los ambientes esta sujeto a verificación y/o ajuste. El valor indicado de expensas esta sujeto a variación. El precio del inmueble puede ser modificado sin previo aviso. Fotos de carácter no contractual. Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede requerir a los propietarios será el equivalente al cuatro con quince centésimos por ciento (4, 15%) del valor total del respectivo contrato. Matias kluk corredor inmobiliario, C. U. C. I. C. B. A 9688. Kluk soluciones inmobiliariascontáctenos: Oficina: 11 Ver datosE-mail: Ver datos",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 97.000",
-      "price_val": 97000,
-      "currency": "USD",
-      "expenses_raw": "",
-      "expenses_val": null,
-      "user_views": 25,
-      "features_raw": "72 m² tot. | 2 amb. | 1 dorm. | 1 baño",
-      "m2_tot": 72,
-      "m2_cub": null,
-      "ambientes": 2,
-      "dormitorios": 1,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Parque Chacabuco, Capital Federal",
-      "address": "Zuviria  al 900",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/26/65/02/360x266/2081348102.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclphin-ph-2-ambientes-con-patio-y-terraza-en-parque-chacabuco-60266502.html",
-      "is_development": false,
-      "barrio": "Parque Chacabuco",
-      "barrio_benchmark_m2": 1750,
-      "usd_m2": 1347,
-      "discount_pct": 23.0,
-      "opportunity_score": 48,
-      "user_views_formatted": "25",
-      "badge_text": "💎 Gran Oportunidad",
-      "badge_class": "badge-great",
-      "price_usd_formatted": "USD 97.000",
-      "usd_m2_formatted": "USD 1.347/m²",
-      "benchmark_formatted": "USD 1.750/m²",
-      "first_seen_date": "2026-09-28",
-      "days_ago": 9,
-      "last_synced": "2026-09-28T19:30:29.983607"
-    },
-    "ZPROP-60267388": {
-      "id": "ZPROP-60267388",
-      "title": "Ubicado en el corazón de Caballito, este encantador departamento en Yerbal 727, Piso 18, Departamento F, ofrece una oportunidad única de inversión con potencial alto para alquilar y escritura inmediata. Con una antigüedad de 50 años, esta propiedad habitada presenta un diseño funcional y acogedor, ideal para familias o profesionales que buscan un espacio cómodo y bien ubicado. El departamento cuenta con un total de 55 m2, de los cuales 50 m2 están cubiertos. Su orientación sudeste asegura una excelente iluminación natural que resalta sus espacios interiores cálidos y acogedores. La propiedad se compone de 2 habitaciones, y un baño completo. La sala de estar se integra perfectamente con el comedor, creando un ambiente amplio y versátil. Entre las comodidades, destacan el balcón, baulera, cocina totalmente equipada, lavadero independiente, y un living comedor espacioso. Los servicios incluyen agua corriente, cloaca, gas natural, electricidad, pavimento, cable, y agua potable. Además, el edificio cuenta con 5 ascensores y servicio de encargado, asegurando comodidad y accesibilidad. El departamento está equipado con aire acondicionado individual, calefacción por tiro balanceado, persianas, y armarios empotrados. Es apto para mascotas y profesionales, y video cámaras de seguridad. Con gastos mensuales de $450. 000, esta propiedad es una excelente opción para quienes buscan un hogar en una zona céntrica y bien conectada, con todos los servicios y comodidades necesarias para una vida moderna y confortable. A metros del shopping caballito y de una gran variedad de medos de transporte, generando uan gran conectividad con toda la ciudad.",
-      "description": "Ubicado en el corazón de Caballito, este encantador departamento en Yerbal 727, Piso 18, Departamento F, ofrece una oportunidad única de inversión con potencial alto para alquilar y escritura inmediata. Con una antigüedad de 50 años, esta propiedad habitada presenta un diseño funcional y acogedor, ideal para familias o profesionales que buscan un espacio cómodo y bien ubicado. El departamento cuenta con un total de 55 m2, de los cuales 50 m2 están cubiertos. Su orientación sudeste asegura una excelente iluminación natural que resalta sus espacios interiores cálidos y acogedores. La propiedad se compone de 2 habitaciones, y un baño completo. La sala de estar se integra perfectamente con el comedor, creando un ambiente amplio y versátil. Entre las comodidades, destacan el balcón, baulera, cocina totalmente equipada, lavadero independiente, y un living comedor espacioso. Los servicios incluyen agua corriente, cloaca, gas natural, electricidad, pavimento, cable, y agua potable. Además, el edificio cuenta con 5 ascensores y servicio de encargado, asegurando comodidad y accesibilidad. El departamento está equipado con aire acondicionado individual, calefacción por tiro balanceado, persianas, y armarios empotrados. Es apto para mascotas y profesionales, y video cámaras de seguridad. Con gastos mensuales de $450. 000, esta propiedad es una excelente opción para quienes buscan un hogar en una zona céntrica y bien conectada, con todos los servicios y comodidades necesarias para una vida moderna y confortable. A metros del shopping caballito y de una gran variedad de medos de transporte, generando uan gran conectividad con toda la ciudad.",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 95.000",
-      "price_val": 95000,
-      "currency": "USD",
-      "expenses_raw": "$ 450.000 Expensas",
-      "expenses_val": 450000,
-      "user_views": 40,
-      "features_raw": "55 m² tot. | 3 amb. | 2 dorm. | 1 baño",
-      "m2_tot": 55,
-      "m2_cub": null,
-      "ambientes": 3,
-      "dormitorios": 2,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Caballito, Capital Federal",
-      "address": "Yerbal al 700",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/26/73/88/360x266/2081370535.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-en-caballito-60267388.html",
-      "is_development": false,
-      "barrio": "Caballito",
-      "barrio_benchmark_m2": 2150,
-      "usd_m2": 1727,
-      "discount_pct": 19.7,
-      "opportunity_score": 47,
-      "user_views_formatted": "40",
-      "badge_text": "💎 Gran Oportunidad",
-      "badge_class": "badge-great",
-      "price_usd_formatted": "USD 95.000",
-      "usd_m2_formatted": "USD 1.727/m²",
-      "benchmark_formatted": "USD 2.150/m²",
-      "first_seen_date": "2026-09-28",
-      "days_ago": 9,
-      "last_synced": "2026-09-28T19:30:29.983607"
-    },
-    "ZPROP-60267940": {
-      "id": "ZPROP-60267940",
-      "title": "Venta Departamento Caballito Monoambiente Frente Balcón Pileta Parrilla Sum apto credito. -Ubicado en el 8. º piso, 48 m² totales, 28 m² cubiertos, balcón de 20 m². -La unidad se encuentra vacía y lista para la venta, ofreciendo la posibilidad de crear y ambientar el espacio completamente a gusto de su nuevo propietario. -Vista abierta, cocina integrada y baño completo con bañera. -Edificio de 8 plantas, 2 departamentos por piso. -Cuenta con pileta, parrilla y solárium descubierto, espacios ideales para disfrutar y aprovechar durante todo el año. - kpVer datos - TVer datos- - Publicado usando KiteProp crm Inmobiliario",
-      "description": "Venta Departamento Caballito Monoambiente Frente Balcón Pileta Parrilla Sum apto credito. -Ubicado en el 8. º piso, 48 m² totales, 28 m² cubiertos, balcón de 20 m². -La unidad se encuentra vacía y lista para la venta, ofreciendo la posibilidad de crear y ambientar el espacio completamente a gusto de su nuevo propietario. -Vista abierta, cocina integrada y baño completo con bañera. -Edificio de 8 plantas, 2 departamentos por piso. -Cuenta con pileta, parrilla y solárium descubierto, espacios ideales para disfrutar y aprovechar durante todo el año. - kpVer datos - TVer datos- - Publicado usando KiteProp crm Inmobiliario",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 89.000",
-      "price_val": 89000,
-      "currency": "USD",
-      "expenses_raw": "$ 160.000 Expensas",
-      "expenses_val": 160000,
-      "user_views": 55,
-      "features_raw": "48 m² tot. | 1 amb. | 1 baño",
-      "m2_tot": 48,
-      "m2_cub": null,
-      "ambientes": 1,
-      "dormitorios": null,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Caballito, Capital Federal",
-      "address": "Paysandú 401",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/26/79/40/360x266/2081384486.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-departamento-caballito-monoambiente-frente-60267940.html",
-      "is_development": false,
-      "barrio": "Caballito",
-      "barrio_benchmark_m2": 2150,
-      "usd_m2": 1854,
-      "discount_pct": 13.8,
-      "opportunity_score": 41,
-      "user_views_formatted": "55",
-      "badge_text": "🏷️ Buen Precio",
-      "badge_class": "badge-good",
-      "price_usd_formatted": "USD 89.000",
-      "usd_m2_formatted": "USD 1.854/m²",
-      "benchmark_formatted": "USD 2.150/m²",
-      "first_seen_date": "2026-09-28",
-      "days_ago": 9,
-      "last_synced": "2026-09-28T19:30:29.983607"
-    },
-    "ZPROP-60266062": {
-      "id": "ZPROP-60266062",
-      "title": "Departamento tres ambientes ubicado en Caballito. (Cid Campeador) Al frente, con balcón, muy luminoso, vista abierta, living-comedor, 2 dormitorios con placard, baño completo, cocina comedor y lavadero independientes, pisos de parquet, servicios individuales, Excelente Ubicación. - Zona con excelente acceso a espacio verde, Parque Centenario, acceso al transporte publico, Diaz Velez y Acoyte. Consulte para coordinar visitas, de lunes a viernes a partir de las 10: 00hs",
-      "description": "Departamento tres ambientes ubicado en Caballito. (Cid Campeador) Al frente, con balcón, muy luminoso, vista abierta, living-comedor, 2 dormitorios con placard, baño completo, cocina comedor y lavadero independientes, pisos de parquet, servicios individuales, Excelente Ubicación. - Zona con excelente acceso a espacio verde, Parque Centenario, acceso al transporte publico, Diaz Velez y Acoyte. Consulte para coordinar visitas, de lunes a viernes a partir de las 10: 00hs",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 95.000",
-      "price_val": 95000,
-      "currency": "USD",
-      "expenses_raw": "$ 170.000 Expensas",
-      "expenses_val": 170000,
-      "user_views": 50,
-      "features_raw": "52 m² tot. | 3 amb. | 2 dorm. | 1 baño",
-      "m2_tot": 52,
-      "m2_cub": null,
-      "ambientes": 3,
-      "dormitorios": 2,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Cid Campeador, Caballito",
-      "address": "Planes 895",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/26/60/62/360x266/2081337445.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-oportunidad-3-amb-cercania-a-parque-centenario-60266062.html",
-      "is_development": false,
-      "barrio": "Caballito",
-      "barrio_benchmark_m2": 2150,
-      "usd_m2": 1827,
-      "discount_pct": 15.0,
-      "opportunity_score": 40,
-      "user_views_formatted": "50",
-      "badge_text": "🏷️ Buen Precio",
-      "badge_class": "badge-good",
-      "price_usd_formatted": "USD 95.000",
-      "usd_m2_formatted": "USD 1.827/m²",
-      "benchmark_formatted": "USD 2.150/m²",
-      "first_seen_date": "2026-09-28",
-      "days_ago": 9,
-      "last_synced": "2026-09-28T16:00:30.449624"
-    },
-    "ZPROP-60268643": {
-      "id": "ZPROP-60268643",
-      "title": "Departamento en venta en Almagro, ideal para vivienda o uso profesional. Cuenta con 49 m² de superficie construida, distribuidos en 3 ambientes. Dispone de living comedor, cocina y lavadero independiente. Posee 2 dormitorios y 1 baño completo. El departamento es muy luminoso y cuenta con estufa tiro balanceado. Además, tiene una amplia baulera para almacenamiento extra. Se admiten mascotas. Ubicado en una zona residencial y comercial de Almagro, con fácil acceso a transporte público, justo en frente del hospital Italiano. Visitas A coordinar de 11 A 17hs de lunes A jueves. (Consultar horarios del dia viernes)",
-      "description": "Departamento en venta en Almagro, ideal para vivienda o uso profesional. Cuenta con 49 m² de superficie construida, distribuidos en 3 ambientes. Dispone de living comedor, cocina y lavadero independiente. Posee 2 dormitorios y 1 baño completo. El departamento es muy luminoso y cuenta con estufa tiro balanceado. Además, tiene una amplia baulera para almacenamiento extra. Se admiten mascotas. Ubicado en una zona residencial y comercial de Almagro, con fácil acceso a transporte público, justo en frente del hospital Italiano. Visitas A coordinar de 11 A 17hs de lunes A jueves. (Consultar horarios del dia viernes)",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 85.000",
-      "price_val": 85000,
-      "currency": "USD",
-      "expenses_raw": "$ 260.000 Expensas",
-      "expenses_val": 260000,
-      "user_views": 17,
-      "features_raw": "50 m² tot. | 3 amb. | 2 dorm. | 1 baño",
-      "m2_tot": 50,
-      "m2_cub": null,
-      "ambientes": 3,
-      "dormitorios": 2,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Almagro, Capital Federal",
-      "address": "Tte. Gral. Juan Domingo Perón 4189",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/26/86/43/360x266/2081407224.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-luminoso-3-amb.-ideal-inversion-ascensor-y-escalera-60268643.html",
-      "is_development": false,
-      "barrio": "Almagro",
-      "barrio_benchmark_m2": 1850,
-      "usd_m2": 1700,
-      "discount_pct": 8.1,
-      "opportunity_score": 33,
-      "user_views_formatted": "17",
-      "badge_text": "🏷️ Buen Precio",
-      "badge_class": "badge-good",
-      "price_usd_formatted": "USD 85.000",
-      "usd_m2_formatted": "USD 1.700/m²",
-      "benchmark_formatted": "USD 1.850/m²",
-      "first_seen_date": "2026-09-28",
-      "days_ago": 9,
-      "last_synced": "2026-09-28T19:30:29.983607"
-    },
-    "ZPROP-60269148": {
-      "id": "ZPROP-60269148",
-      "title": "Departamento de 3 ambientes en Belgrano, Apto profesional, por lo tanto sirve tanto para poner un consultorio como también para vivienda residencial. Al ingresar encontramos un living comedor que se conecta con la cocina independiente, la cual cuenta además con lavadero. Luego se ubican los dos dormitorios, ambos con placard, y un baño completo. El edificio, por su parte, cuenta con ascensores. El departamento está ubicadon a solo una cuadra de Av. Monroe, lo que le brinda una gran variedad de transportes y accesos en pleno corazón de Belgrano. Toda la información del aviso, incluyendo medidas, precio, impuestos, servicios, etc. Son estimativos, sujetos a modificación y no vinculantes, según lo dispuesto en el art. 973, Cód. Civ. Y Com. - kpVer datos - TVer datos- - Publicado usando KiteProp crm Inmobiliario",
-      "description": "Departamento de 3 ambientes en Belgrano, Apto profesional, por lo tanto sirve tanto para poner un consultorio como también para vivienda residencial. Al ingresar encontramos un living comedor que se conecta con la cocina independiente, la cual cuenta además con lavadero. Luego se ubican los dos dormitorios, ambos con placard, y un baño completo. El edificio, por su parte, cuenta con ascensores. El departamento está ubicadon a solo una cuadra de Av. Monroe, lo que le brinda una gran variedad de transportes y accesos en pleno corazón de Belgrano. Toda la información del aviso, incluyendo medidas, precio, impuestos, servicios, etc. Son estimativos, sujetos a modificación y no vinculantes, según lo dispuesto en el art. 973, Cód. Civ. Y Com. - kpVer datos - TVer datos- - Publicado usando KiteProp crm Inmobiliario",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 92.000",
-      "price_val": 92000,
-      "currency": "USD",
-      "expenses_raw": "$ 228.860 Expensas",
-      "expenses_val": 228860,
-      "user_views": 50,
-      "features_raw": "51 m² tot. | 3 amb. | 2 dorm. | 1 baño",
-      "m2_tot": 51,
-      "m2_cub": null,
-      "ambientes": 3,
-      "dormitorios": 2,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Belgrano, Capital Federal",
-      "address": "Rómulo Naón 2387",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/26/91/48/360x266/2081418429.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento.-3-ambientes.-apto-profesional.-belgrano-60269148.html",
-      "is_development": false,
-      "barrio": "Belgrano",
-      "barrio_benchmark_m2": 2650,
-      "usd_m2": 1804,
-      "discount_pct": 31.9,
-      "opportunity_score": 66,
-      "user_views_formatted": "50",
-      "badge_text": "🔥 Super Oportunidad",
-      "badge_class": "badge-super",
-      "price_usd_formatted": "USD 92.000",
-      "usd_m2_formatted": "USD 1.804/m²",
-      "benchmark_formatted": "USD 2.650/m²",
-      "first_seen_date": "2026-09-28",
-      "days_ago": 9,
-      "last_synced": "2026-09-28T19:30:29.983607"
-    },
     "ZPROP-60280066": {
       "id": "ZPROP-60280066",
       "title": "Departamento en venta Barrio Norte, caba. Departamento en venta de tres ambientes, contra frente con balcón. Baño y cocina eléctrica. Piso de parquet en excelente estado. Puerta de ingreso de alta seguridad. Equipo de calefacción central. Venta: usd 85. 000Expensas: (a confirmar) aviso legal: Las descripciones arquitectónicas y funcionales, valores de expensas, impuestos y servicios, fotos y medidas de este inmueble son aproximados. Los datos fueron proporcionados por el propietario y pueden no estar actualizados a la hora de la visualización de este aviso por lo cual pueden arrojar inexactitudes y discordancias con las que surgen de las facturas, títulos y planos legales del inmueble. El interesado deberá realizar las verificaciones respectivas previamente a la realización de cualquier operación, requiriendo por si o sus profesionales las copias necesarias de la documentación que corresponda. Auge Propiedades Av. Córdoba 1698. C. A. B. A. cucicba Matricula: 1263cmcpsi Matricula: 6827Telefono: Ver datos - Ver datos ley 5859 – art. 4“Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede requerir a los propietarios será el equivalente al cuatro con quince centésimos por ciento (4, 15%) del valor total del respectivo contrato. &quot;",
@@ -6783,7 +6507,7 @@
       "usd_m2_formatted": "USD 1.417/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-09-29",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-09-29T19:30:35.346086"
     },
     "ZPROP-60277492": {
@@ -6824,7 +6548,7 @@
       "usd_m2_formatted": "USD 1.667/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-29",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-09-29T19:30:35.346086"
     },
     "ZPROP-60281158": {
@@ -6865,7 +6589,7 @@
       "usd_m2_formatted": "USD 1.552/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-09-29",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-09-29T19:30:35.346086"
     },
     "ZPROP-60281559": {
@@ -6906,7 +6630,7 @@
       "usd_m2_formatted": "USD 1.673/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-09-29",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-09-29T19:30:35.346086"
     },
     "ZPROP-60284510": {
@@ -6947,7 +6671,7 @@
       "usd_m2_formatted": "USD 1.343/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-09-29",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-09-29T19:30:35.346086"
     },
     "ZPROP-60282862": {
@@ -6988,7 +6712,7 @@
       "usd_m2_formatted": "USD 1.707/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-29",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-09-29T19:30:35.346086"
     },
     "ZPROP-60289825": {
@@ -7029,7 +6753,7 @@
       "usd_m2_formatted": "USD 1.667/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-09-30",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-09-30T16:00:28.929768"
     },
     "ZPROP-60290905": {
@@ -7070,7 +6794,7 @@
       "usd_m2_formatted": "USD 1.960/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-09-30",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-09-30T19:30:26.242432"
     },
     "ZPROP-60293234": {
@@ -7111,7 +6835,7 @@
       "usd_m2_formatted": "USD 1.673/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-09-30",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-09-30T19:30:26.242432"
     },
     "ZPROP-60294352": {
@@ -7152,7 +6876,7 @@
       "usd_m2_formatted": "USD 1.063/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-09-30",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-09-30T19:30:26.242432"
     },
     "ZPROP-60301086": {
@@ -7193,7 +6917,7 @@
       "usd_m2_formatted": "USD 1.076/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-10-01",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-10-01T16:00:32.325791"
     },
     "ZPROP-60281374": {
@@ -7234,7 +6958,7 @@
       "usd_m2_formatted": "USD 1.590/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-01",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-10-01T16:00:32.325791"
     },
     "ZPROP-60301857": {
@@ -7275,7 +6999,7 @@
       "usd_m2_formatted": "USD 1.673/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-10-01",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-10-01T19:30:27.516100"
     },
     "ZPROP-60304623": {
@@ -7316,7 +7040,7 @@
       "usd_m2_formatted": "USD 1.740/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-10-01",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-10-01T16:00:32.325791"
     },
     "ZPROP-60302685": {
@@ -7357,7 +7081,7 @@
       "usd_m2_formatted": "USD 1.765/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-01",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-10-01T19:30:27.516100"
     },
     "ZPROP-60303889": {
@@ -7398,7 +7122,7 @@
       "usd_m2_formatted": "USD 1.759/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-01",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-10-01T19:30:27.516100"
     },
     "ZPROP-60304832": {
@@ -7439,7 +7163,7 @@
       "usd_m2_formatted": "USD 1.740/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-10-01",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-10-01T19:30:27.516100"
     },
     "ZPROP-60309607": {
@@ -7480,7 +7204,7 @@
       "usd_m2_formatted": "USD 1.735/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-02",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-10-02T19:30:28.247762"
     },
     "ZPROP-60315657": {
@@ -7521,7 +7245,7 @@
       "usd_m2_formatted": "USD 1.087/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-10-02",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-10-02T16:00:27.802476"
     },
     "ZPROP-60315814": {
@@ -7562,7 +7286,7 @@
       "usd_m2_formatted": "USD 1.722/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-02",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-10-02T19:30:28.247762"
     },
     "ZPROP-60316930": {
@@ -7603,7 +7327,7 @@
       "usd_m2_formatted": "USD 1.442/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-10-02",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-10-02T19:30:28.247762"
     },
     "ZPROP-60320753": {
@@ -7644,7 +7368,7 @@
       "usd_m2_formatted": "USD 1.520/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-03",
-      "days_ago": 4,
+      "days_ago": 5,
       "last_synced": "2026-10-03T14:00:20.430801"
     },
     "ZPROP-60321202": {
@@ -7685,7 +7409,7 @@
       "usd_m2_formatted": "USD 1.843/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-03",
-      "days_ago": 4,
+      "days_ago": 5,
       "last_synced": "2026-10-03T14:00:20.430801"
     },
     "ZPROP-60321209": {
@@ -7726,7 +7450,7 @@
       "usd_m2_formatted": "USD 1.843/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-03",
-      "days_ago": 4,
+      "days_ago": 5,
       "last_synced": "2026-10-03T14:00:20.430801"
     },
     "ZPROP-60361158": {
@@ -7767,7 +7491,7 @@
       "usd_m2_formatted": "USD 1.763/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-10-06",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-10-06T16:00:26.511837"
     },
     "ZPROP-60360350": {
@@ -7808,7 +7532,7 @@
       "usd_m2_formatted": "USD 1.804/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-10-06",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-10-06T19:30:28.080765"
     },
     "ZPROP-60360070": {
@@ -7849,7 +7573,7 @@
       "usd_m2_formatted": "USD 1.754/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-06",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-10-06T19:30:28.080765"
     },
     "ZPROP-60364123": {
@@ -7890,7 +7614,7 @@
       "usd_m2_formatted": "USD 940/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-10-06",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-10-06T19:30:28.080765"
     },
     "ZPROP-60366295": {
@@ -7931,7 +7655,7 @@
       "usd_m2_formatted": "USD 1.472/m²",
       "benchmark_formatted": "USD 2.400/m²",
       "first_seen_date": "2026-10-06",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-10-06T19:30:28.080765"
     },
     "ZPROP-60367540": {
@@ -7972,7 +7696,7 @@
       "usd_m2_formatted": "USD 1.531/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-06",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-10-07T12:00:29.317490"
     },
     "ZPROP-60373672": {
@@ -7982,7 +7706,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 85.000",
       "price_val": 85000,
       "currency": "USD",
@@ -8013,7 +7737,7 @@
       "usd_m2_formatted": "USD 1.349/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-10-07",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-10-07T12:00:29.317490"
     },
     "ZPROP-60372810": {
@@ -8023,7 +7747,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 98.000",
       "price_val": 98000,
       "currency": "USD",
@@ -8054,7 +7778,7 @@
       "usd_m2_formatted": "USD 1.126/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-10-07",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-10-07T16:00:37.728464"
     },
     "ZPROP-60374157": {
@@ -8064,7 +7788,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 90.000",
       "price_val": 90000,
       "currency": "USD",
@@ -8095,7 +7819,7 @@
       "usd_m2_formatted": "USD 1.636/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-10-07",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-10-07T16:00:37.728464"
     },
     "ZPROP-60375691": {
@@ -8105,7 +7829,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 79.000",
       "price_val": 79000,
       "currency": "USD",
@@ -8136,7 +7860,7 @@
       "usd_m2_formatted": "USD 1.646/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-07",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-10-07T16:00:37.728464"
     },
     "ZPROP-60375759": {
@@ -8146,7 +7870,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 99.000",
       "price_val": 99000,
       "currency": "USD",
@@ -8177,7 +7901,7 @@
       "usd_m2_formatted": "USD 1.980/m²",
       "benchmark_formatted": "USD 2.400/m²",
       "first_seen_date": "2026-10-07",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-10-07T16:00:37.728464"
     },
     "ZPROP-60378857": {
@@ -8187,7 +7911,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 90.000",
       "price_val": 90000,
       "currency": "USD",
@@ -8218,7 +7942,7 @@
       "usd_m2_formatted": "USD 1.475/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-10-07",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-10-07T16:00:37.728464"
     },
     "ZPROP-60379367": {
@@ -8228,7 +7952,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 98.000",
       "price_val": 98000,
       "currency": "USD",
@@ -8259,7 +7983,7 @@
       "usd_m2_formatted": "USD 1.922/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-07",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-10-07T16:00:37.728464"
     },
     "ZPROP-60378304": {
@@ -8269,7 +7993,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 99.000",
       "price_val": 99000,
       "currency": "USD",
@@ -8300,7 +8024,7 @@
       "usd_m2_formatted": "USD 1.904/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-10-07",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-10-07T16:00:37.728464"
     },
     "ZPROP-60375661": {
@@ -8310,7 +8034,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 99.000",
       "price_val": 99000,
       "currency": "USD",
@@ -8341,7 +8065,7 @@
       "usd_m2_formatted": "USD 1.941/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-10-07",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-10-07T16:00:37.728464"
     }
   }
