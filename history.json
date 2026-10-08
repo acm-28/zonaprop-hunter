@@ -6124,7 +6124,7 @@
       "barrio": "Villa Crespo"
     }
   },
-  "last_run": "2026-10-08T07:10:12.109463",
+  "last_run": "2026-10-08T12:00:15.481128",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -6458,7 +6458,7 @@
     },
     {
       "date": "2026-10-08",
-      "timestamp": "2026-10-08T07:10:12.144208",
+      "timestamp": "2026-10-08T12:00:15.518287",
       "total_properties": 39,
       "new_today": 39,
       "avg_usd_m2": 1603,
@@ -7835,7 +7835,7 @@
       "currency": "USD",
       "expenses_raw": "$ 140.000 Expensas",
       "expenses_val": 140000,
-      "user_views": 55,
+      "user_views": 37,
       "features_raw": "48 m² tot. | 2 amb. | 1 dorm. | 1 baño",
       "m2_tot": 48,
       "m2_cub": null,
@@ -7844,7 +7844,7 @@
       "banos": 1,
       "cocheras": null,
       "location": "Caballito, Capital Federal",
-      "address": "Yerbal al 800",
+      "address": "Yerbal al",
       "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/37/56/91/360x266/2083906784.jpg?isFirstImage=true",
       "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-2-ambientes-con-patio-en-caballito.-60375691.html",
       "is_development": false,
@@ -7853,7 +7853,7 @@
       "usd_m2": 1646,
       "discount_pct": 23.4,
       "opportunity_score": 57,
-      "user_views_formatted": "55",
+      "user_views_formatted": "37",
       "badge_text": "💎 Gran Oportunidad",
       "badge_class": "badge-great",
       "price_usd_formatted": "USD 79.000",
@@ -7861,7 +7861,7 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-07",
       "days_ago": 1,
-      "last_synced": "2026-10-07T16:00:37.728464"
+      "last_synced": "2026-10-08T12:00:15.481128"
     },
     "ZPROP-60375759": {
       "id": "ZPROP-60375759",
