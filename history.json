@@ -6307,9 +6307,14 @@
       "first_seen": "2026-10-09",
       "last_price": 68000,
       "barrio": "Villa Crespo"
+    },
+    "ZPROP-60399643": {
+      "first_seen": "2026-10-09",
+      "last_price": 89000,
+      "barrio": "Caballito"
     }
   },
-  "last_run": "2026-10-09T12:00:19.503895",
+  "last_run": "2026-10-09T16:00:21.886029",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -6654,10 +6659,10 @@
     },
     {
       "date": "2026-10-09",
-      "timestamp": "2026-10-09T12:00:19.561860",
-      "total_properties": 78,
-      "new_today": 21,
-      "avg_usd_m2": 1520,
+      "timestamp": "2026-10-09T16:00:21.950416",
+      "total_properties": 79,
+      "new_today": 22,
+      "avg_usd_m2": 1523,
       "min_price": 68000,
       "median_price": 90000,
       "super_deals_count": 34,
@@ -9820,7 +9825,7 @@
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-10-09",
       "days_ago": 0,
-      "last_synced": "2026-10-09T12:00:19.503895"
+      "last_synced": "2026-10-09T16:00:21.886029"
     },
     "ZPROP-60396677": {
       "id": "ZPROP-60396677",
@@ -9861,7 +9866,48 @@
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-10-09",
       "days_ago": 0,
-      "last_synced": "2026-10-09T12:00:19.503895"
+      "last_synced": "2026-10-09T16:00:21.886029"
+    },
+    "ZPROP-60399643": {
+      "id": "ZPROP-60399643",
+      "title": "-Excelente departamento de un ambiente (Apaisado, doble ventanal) divisible a dos ambientes. Balcón terraza. -Impecable living con cocina integrada al ambiente, con bajo mesada y cocina a gas. Agua caliente individual por termotanque. -Espacio para dormitorio con ventanal y salida a balcón terraza de corrido. Placard empotrado con puertas corredizas. -Baño completo, con bañera, bidet y vanitory. Griferías y sanitarios de primera línea. -Edificio de primera categoría, con terraza, solárium, parrilla y piscina. -Ubicación de privilegio, cerca de todos los medios de transporte (Subte, tren y colectivos). -Cancha de ferrocarril oeste (Ferro), próximo a colegios/comercios. -Zona muy segura y residencial. -Entrevistas sin compromiso de compra.",
+      "description": "-Excelente departamento de un ambiente (Apaisado, doble ventanal) divisible a dos ambientes. Balcón terraza. -Impecable living con cocina integrada al ambiente, con bajo mesada y cocina a gas. Agua caliente individual por termotanque. -Espacio para dormitorio con ventanal y salida a balcón terraza de corrido. Placard empotrado con puertas corredizas. -Baño completo, con bañera, bidet y vanitory. Griferías y sanitarios de primera línea. -Edificio de primera categoría, con terraza, solárium, parrilla y piscina. -Ubicación de privilegio, cerca de todos los medios de transporte (Subte, tren y colectivos). -Cancha de ferrocarril oeste (Ferro), próximo a colegios/comercios. -Zona muy segura y residencial. -Entrevistas sin compromiso de compra.",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 89.000",
+      "price_val": 89000,
+      "currency": "USD",
+      "expenses_raw": "",
+      "expenses_val": null,
+      "user_views": 55,
+      "features_raw": "50 m² tot. | 1 amb. | 1 baño",
+      "m2_tot": 50,
+      "m2_cub": null,
+      "ambientes": 1,
+      "dormitorios": null,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Caballito Norte, Caballito",
+      "address": "Paysandú",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/39/96/43/360x266/2084496206.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-paysandu-400-venta-departamento-de-un-ambiente-60399643.html",
+      "is_development": false,
+      "barrio": "Caballito",
+      "barrio_benchmark_m2": 2150,
+      "usd_m2": 1780,
+      "discount_pct": 17.2,
+      "opportunity_score": 47,
+      "user_views_formatted": "55",
+      "badge_text": "🏷️ Buen Precio",
+      "badge_class": "badge-good",
+      "price_usd_formatted": "USD 89.000",
+      "usd_m2_formatted": "USD 1.780/m²",
+      "benchmark_formatted": "USD 2.150/m²",
+      "first_seen_date": "2026-10-09",
+      "days_ago": 0,
+      "last_synced": "2026-10-09T16:00:21.886029"
     }
   }
 }
