@@ -122,7 +122,7 @@ def evaluate_property(raw_prop: Dict[str, Any], config: Dict[str, Any]) -> Optio
     benchmarks = config.get("neighborhood_benchmarks_usd_m2", {})
     
     min_price = search_cfg.get("min_price_usd", 25000)
-    max_price = search_cfg.get("max_price_usd", 100000)
+    max_price = search_cfg.get("max_price_usd", 108000)
     min_m2 = search_cfg.get("min_m2", 48)
     max_usd_m2_limit = search_cfg.get("max_usd_m2", 2100)
     include_devs = search_cfg.get("include_developments", False)

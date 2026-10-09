@@ -2,14 +2,14 @@
   "search": {
     "property_type": "departamentos-ph",
     "location": "capital-federal",
-    "max_price_usd": 100000,
+    "max_price_usd": 108000,
     "min_price_usd": 25000,
     "min_m2": 48,
     "max_usd_m2": 2100,
     "sort_by": "orden-publicado-descendente",
     "pages_to_scrape": 6,
     "only_published_today": true,
-    "history_retention_days": 10,
+    "history_retention_days": 14,
     "include_developments": false,
     "allowed_barrios": [
       "Recoleta", "Barrio Norte", "Retiro",

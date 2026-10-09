@@ -7,9 +7,26 @@ opciones de compra detectadas recientemente.
 
 import json
 import os
+import re
 import unicodedata
 from datetime import datetime, timedelta
 from typing import Dict, Any, Tuple, List
+
+def extract_days_ago_from_text(pub_text: str) -> int:
+    if not pub_text:
+        return 0
+    t = pub_text.lower().strip()
+    if "hoy" in t or "hora" in t or "minuto" in t or "segundo" in t:
+        return 0
+    if "ayer" in t:
+        return 1
+    m = re.search(r'hace\s+(\d+)\s+d[ií]as', t)
+    if m:
+        return int(m.group(1))
+    m = re.search(r'(\d+)\s+d[ií]as', t)
+    if m:
+        return int(m.group(1))
+    return 0
 
 HISTORY_FILE = os.path.join(os.path.dirname(__file__), "history.json")
 
@@ -136,14 +153,23 @@ def merge_and_sync_history(today_properties: List[Dict[str, Any]], retention_day
             prop_copy["last_synced"] = now.isoformat()
             active_deals[prop_id] = prop_copy
         else:
-            # Nueva oportunidad detectada hoy
+            # Nueva oportunidad detectada
+            days_ago = extract_days_ago_from_text(prop.get("publication_date_text", ""))
+            pub_dt = now - timedelta(days=days_ago)
+            pub_date_str = pub_dt.strftime("%Y-%m-%d")
+            
+            # Si la publicación es anterior al corte histórico, descartar
+            if pub_dt < cutoff_date:
+                continue
+
             prop_copy = dict(prop)
-            prop_copy["first_seen_date"] = today_str
-            prop_copy["days_ago"] = 0
-            prop_copy["is_new"] = True
+            prop_copy["first_seen_date"] = pub_date_str
+            prop_copy["days_ago"] = days_ago
+            prop_copy["is_new"] = (days_ago == 0)
             prop_copy["last_synced"] = now.isoformat()
             active_deals[prop_id] = prop_copy
-            new_today_count += 1
+            if days_ago == 0:
+                new_today_count += 1
 
         # Mantener registro de vistos para deduplicación histórica
         seen_legacy[prop_id] = {

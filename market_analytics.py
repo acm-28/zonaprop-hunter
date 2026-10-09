@@ -185,12 +185,12 @@ def compute_market_analytics(properties: List[Dict[str, Any]], config: Dict[str,
             "sales_speed": v["sales_speed"]
         }
 
-    # 4. Distribución de Precios (Rangos hasta 100k USD)
+    # 4. Distribución de Precios (Rangos hasta 108k USD)
     price_ranges = {
         "under_60k": {"label": "< USD 60.000", "count": 0, "pct": 0.0, "color": "#10b981"},
         "60k_to_75k": {"label": "USD 60k - 75k", "count": 0, "pct": 0.0, "color": "#38bdf8"},
         "75k_to_90k": {"label": "USD 75k - 90k", "count": 0, "pct": 0.0, "color": "#818cf8"},
-        "above_90k": {"label": "USD 90k - 100k", "count": 0, "pct": 0.0, "color": "#f97316"}
+        "above_90k": {"label": "USD 90k - 108k", "count": 0, "pct": 0.0, "color": "#f97316"}
     }
 
     for p in properties:

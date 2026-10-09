@@ -21,7 +21,7 @@ import argparse
 import webbrowser
 from datetime import datetime
 
-from scraper import ZonapropScraper
+from scraper import ZonapropScraper, TARGET_BARRIO_SLUGS
 from evaluator import evaluate_and_rank_properties, NEIGHBORHOOD_DEMAND_VIEWS
 from storage import merge_and_sync_history, record_daily_market_snapshot, load_history
 from market_analytics import compute_market_analytics
@@ -74,6 +74,8 @@ def main():
     parser.add_argument("--sort", type=str, choices=["orden-publicado-descendente", "orden-precio-menor"], help="Criterio de ordenamiento en Zonaprop")
     parser.add_argument("--no-browser", action="store_true", help="No abrir automaticamente el navegador al finalizar")
     parser.add_argument("--output", type=str, help="Ruta de guardado del archivo HTML de reporte")
+    parser.add_argument("--since", type=str, help="Fecha minima de publicacion YYYY-MM-DD (ej: 2026-09-28)")
+    parser.add_argument("--scan-barrios", action="store_true", help="Escanear individualmente cada uno de los barrios objetivo")
     
     args = parser.parse_args()
 
@@ -98,25 +100,49 @@ def main():
     if args.barrios:
         search_cfg["filter_barrios"] = [b.strip() for b in args.barrios.split(",") if b.strip()]
 
-    only_today = search_cfg.get("only_published_today", True)
-    retention_days = search_cfg.get("history_retention_days", 10)
+    max_days_ago = None
+    if args.since:
+        try:
+            target_dt = datetime.strptime(args.since, "%Y-%m-%d")
+            diff = (datetime.now() - target_dt).days
+            max_days_ago = max(0, diff)
+            search_cfg["only_published_today"] = False
+            search_cfg["history_retention_days"] = max(search_cfg.get("history_retention_days", 10), max_days_ago + 3)
+        except Exception as e:
+            print(f"[Aviso] Formato de fecha invalido para --since: {e}")
+
+    # Determinar si se escanea por barrios objetivo o general
+    if args.scan_barrios or args.since:
+        target_locations = TARGET_BARRIO_SLUGS + ["capital-federal"]
+    elif search_cfg.get("filter_barrios"):
+        target_locations = [b.lower().replace(" ", "-") for b in search_cfg["filter_barrios"]]
+    else:
+        target_locations = [search_cfg.get("location", "capital-federal")]
+
+    only_today = search_cfg.get("only_published_today", True) if max_days_ago is None else False
+    retention_days = search_cfg.get("history_retention_days", 14)
     output_file = args.output or DEFAULT_OUTPUT_HTML
 
     print("=" * 68)
     print(" [ZONAPROP HUNTER & MARKET INTELLIGENCE CABA]")
     print(f" Fecha y Hora:        {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f" Filtro Precio Max:   USD {search_cfg.get('max_price_usd', 80000):,}")
-    print(f" Tope USD/m2:         USD {search_cfg.get('max_usd_m2', 2200):,}")
-    print(f" Modo Publicados Hoy: {' ACTIVADO (Solo avisos de hoy)' if only_today else ' Todos los recientes'}")
+    print(f" Filtro Precio Max:   USD {search_cfg.get('max_price_usd', 108000):,}")
+    print(f" Tope USD/m2:         USD {search_cfg.get('max_usd_m2', 2100):,}")
+    if max_days_ago is not None:
+        print(f" Rango de Fecha:      Desde {args.since} (≤ {max_days_ago} días)")
+    else:
+        print(f" Modo Publicados Hoy: {' ACTIVADO (Solo avisos de hoy)' if only_today else ' Todos los recientes'}")
     print(f" Histórico en cartera:{retention_days} días de retención continua")
-    print(f" Paginas a explorar:  {search_cfg.get('pages_to_scrape', 5)}")
-    if search_cfg.get("filter_barrios"):
-        print(f" Barrios filtrados:   {', '.join(search_cfg['filter_barrios'])}")
+    print(f" Zonas a explorar:    {len(target_locations)} zona(s)")
     print("=" * 68)
 
     # 1. Scrapear propiedades de Zonaprop
     scraper = ZonapropScraper(config)
-    raw_properties = scraper.scrape(max_pages=search_cfg.get("pages_to_scrape", 5))
+    raw_properties = scraper.scrape(
+        max_pages=search_cfg.get("pages_to_scrape", 5),
+        locations=target_locations,
+        max_days_ago=max_days_ago
+    )
 
     if not raw_properties:
         print("\n[Aviso] No se encontraron avisos nuevos en Zonaprop en esta corrida.")
@@ -129,8 +155,15 @@ def main():
 
         # 2.1 Enriquecer con vistas REALES de cada ficha en Zonaprop
         if ranked_properties:
+            history_data = load_history()
+            existing_deals = history_data.get("active_deals", {})
             print(f"[Scraper Zonaprop] Extrayendo vistas reales de Zonaprop para {len(ranked_properties)} oportunidades calificadas...")
             for p in ranked_properties:
+                prop_id = str(p.get("id"))
+                if prop_id in existing_deals and existing_deals[prop_id].get("user_views", 0) > 0:
+                    p["user_views"] = existing_deals[prop_id]["user_views"]
+                    p["user_views_formatted"] = existing_deals[prop_id].get("user_views_formatted", f"{p['user_views']:,}".replace(",", "."))
+                    continue
                 link = p.get("link")
                 if link:
                     real_views = scraper.fetch_property_views(link)

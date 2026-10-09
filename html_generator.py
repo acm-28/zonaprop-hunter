@@ -1153,7 +1153,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     <span>🏢 Zonaprop Hunter CABA</span>
                     <span class="brand-badge">Deptos & PHs ≥ 48 m²</span>
                 </div>
-                <div class="header-meta" id="headerMeta">Cartera Activa de Departamentos y PHs (≥ 48 m² hasta USD 100k) en Zonas Seguras y Conectadas de CABA</div>
+                <div class="header-meta" id="headerMeta">Cartera Activa de Departamentos y PHs (≥ 48 m² hasta USD 108k) en Zonas Seguras y Conectadas de CABA</div>
             </div>
             <div class="action-buttons">
                 <button class="btn" onclick="exportToCSV()">📥 Exportar CSV</button>
@@ -1222,7 +1222,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
                     </div>
                     <div class="filter-group">
                         <label>Precio Máximo (USD)</label>
-                        <input type="number" id="filterMaxPrice" class="input-control" placeholder="Ej: 100000" step="5000">
+                        <input type="number" id="filterMaxPrice" class="input-control" placeholder="Ej: 108000" step="5000">
                     </div>
                     <div class="filter-group">
                         <label>Máximo USD / m²</label>

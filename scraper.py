@@ -17,6 +17,29 @@ USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0",
 ]
 
+TARGET_BARRIO_SLUGS = [
+    "recoleta", "palermo", "belgrano", "caballito", "colegiales",
+    "villa-crespo", "almagro", "chacarita", "villa-urquiza", "nunez",
+    "coghlan", "saavedra", "villa-ortuzar", "retiro",
+    "parque-patricios", "parque-chacabuco"
+]
+
+def extract_days_ago_from_text(pub_text: str) -> int:
+    if not pub_text:
+        return 0
+    t = pub_text.lower().strip()
+    if "hoy" in t or "hora" in t or "minuto" in t or "segundo" in t:
+        return 0
+    if "ayer" in t:
+        return 1
+    m = re.search(r'hace\s+(\d+)\s+d[ií]as', t)
+    if m:
+        return int(m.group(1))
+    m = re.search(r'(\d+)\s+d[ií]as', t)
+    if m:
+        return int(m.group(1))
+    return 0
+
 class ZonapropScraper:
     def __init__(self, config: Dict[str, Any]):
         self.config = config
@@ -264,57 +287,75 @@ class ZonapropScraper:
         except Exception:
             return None
 
-    def scrape(self, max_pages: Optional[int] = None) -> List[Dict[str, Any]]:
+    def scrape(
+        self,
+        max_pages: Optional[int] = None,
+        locations: Optional[List[str]] = None,
+        max_days_ago: Optional[int] = None
+    ) -> List[Dict[str, Any]]:
         """
-        Ejecuta el rastreo de Zonaprop de avisos publicados HOY.
+        Ejecuta el rastreo de Zonaprop.
+        Soporta rastreo de avisos de HOY o de un rango de días (max_days_ago)
+        a través de una lista de zonas/barrios o en CABA general.
         """
         pages = max_pages or self.search_cfg.get("pages_to_scrape", 5)
-        location = self.search_cfg.get("location", "capital-federal")
-        only_today = self.search_cfg.get("only_published_today", True)
+        only_today = self.search_cfg.get("only_published_today", True) if max_days_ago is None else False
         
+        target_locations = locations or [self.search_cfg.get("location", "capital-federal")]
         all_raw_properties = []
         seen_ids = set()
 
-        print(f"\n[Scraper Zonaprop] Iniciando rastreo para: {location.upper()} (Publicados HOY)...")
+        mode_desc = f"≤ {max_days_ago} días (desde 28/09)" if max_days_ago is not None else ("Publicados HOY" if only_today else "Todos los recientes")
+        print(f"\n[Scraper Zonaprop] Iniciando rastreo ({mode_desc}) en {len(target_locations)} zona(s)...")
 
-        for page in range(1, pages + 1):
-            url = self.build_url(location=location, page=page)
-            html = self.fetch_page(url)
-            if not html:
-                break
+        for loc_idx, location in enumerate(target_locations, 1):
+            print(f"\n  📍 Explorando zona [{loc_idx}/{len(target_locations)}]: {location.upper()}")
+            for page in range(1, pages + 1):
+                url = self.build_url(location=location, page=page)
+                html = self.fetch_page(url)
+                if not html:
+                    break
 
-            soup = BeautifulSoup(html, "html.parser")
-            cards = soup.select('div[data-id][data-to-posting]')
-            
-            if not cards:
-                cards = soup.find_all(attrs={"data-qa": lambda x: x and "posting" in x.lower()})
-
-            page_count = 0
-            reached_older_ads = False
-
-            for card in cards:
-                prop = self.parse_card(card)
-                if not prop or prop["id"] in seen_ids:
-                    continue
-
-                seen_ids.add(prop["id"])
+                soup = BeautifulSoup(html, "html.parser")
+                cards = soup.select('div[data-id][data-to-posting]')
                 
-                pub_text = prop.get("publication_date_text", "").lower()
-                is_today = "hoy" in pub_text or "hora" in pub_text or "minuto" in pub_text or "segundo" in pub_text
-                
-                # Filtro estricto: descartar si no es de hoy
-                if only_today and not is_today:
-                    reached_older_ads = True
-                    continue
+                if not cards:
+                    cards = soup.find_all(attrs={"data-qa": lambda x: x and "posting" in x.lower()})
 
-                all_raw_properties.append(prop)
-                page_count += 1
+                if not cards:
+                    break
 
-            print(f"    [Zonaprop] Página {page}: {len(cards)} avisos ({page_count} publicados hoy)")
+                page_count = 0
+                reached_older_ads = False
 
-            if only_today and reached_older_ads and page_count == 0:
-                print("    [Info] Fin de las publicaciones de hoy en Zonaprop.")
-                break
+                for card in cards:
+                    prop = self.parse_card(card)
+                    if not prop or prop["id"] in seen_ids:
+                        continue
 
-        print(f"[Scraper Zonaprop] Finalizado. Total de avisos de HOY: {len(all_raw_properties)}")
+                    seen_ids.add(prop["id"])
+                    
+                    pub_text = prop.get("publication_date_text", "").lower()
+                    days_ago = extract_days_ago_from_text(pub_text)
+                    is_today = "hoy" in pub_text or "hora" in pub_text or "minuto" in pub_text or "segundo" in pub_text
+                    
+                    # Filtro de fecha
+                    if max_days_ago is not None:
+                        if days_ago > max_days_ago:
+                            reached_older_ads = True
+                            continue
+                    elif only_today and not is_today:
+                        reached_older_ads = True
+                        continue
+
+                    all_raw_properties.append(prop)
+                    page_count += 1
+
+                print(f"      [Zonaprop] Página {page}: {len(cards)} avisos ({page_count} válidos en fecha)")
+
+                if reached_older_ads and page_count == 0:
+                    print(f"      [Info] Se alcanzaron publicaciones anteriores a la fecha límite en {location}.")
+                    break
+
+        print(f"\n[Scraper Zonaprop] Finalizado. Total de avisos recolectados: {len(all_raw_properties)}")
         return all_raw_properties
