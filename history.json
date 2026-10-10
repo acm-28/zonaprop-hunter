@@ -6312,9 +6312,14 @@
       "first_seen": "2026-10-09",
       "last_price": 89000,
       "barrio": "Caballito"
+    },
+    "ZPROP-60409100": {
+      "first_seen": "2026-10-10",
+      "last_price": 84900,
+      "barrio": "Almagro"
     }
   },
-  "last_run": "2026-10-10T08:45:53.236304",
+  "last_run": "2026-10-10T14:00:13.145633",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -6670,13 +6675,13 @@
     },
     {
       "date": "2026-10-10",
-      "timestamp": "2026-10-10T08:45:53.284527",
-      "total_properties": 79,
-      "new_today": 22,
-      "avg_usd_m2": 1523,
+      "timestamp": "2026-10-10T14:00:13.190663",
+      "total_properties": 80,
+      "new_today": 23,
+      "avg_usd_m2": 1518,
       "min_price": 68000,
       "median_price": 90000,
-      "super_deals_count": 34,
+      "super_deals_count": 35,
       "top_neighborhoods": []
     }
   ],
@@ -9919,6 +9924,47 @@
       "first_seen_date": "2026-10-09",
       "days_ago": 1,
       "last_synced": "2026-10-09T16:00:21.886029"
+    },
+    "ZPROP-60409100": {
+      "id": "ZPROP-60409100",
+      "title": "Venta hermoso ph 3 ambientes con terraza en almagro - capital federal. Hermoso ph desarrollado en tres niveles, con terraza propia y un pequeño patio de ingreso que funciona como recepción. La propiedad cuenta con cocina, living comedor, dos dormitorios, una gran baulera y dos baños (uno de ellos actualmente utilizado como depósito). Su distribución permite una buena separación de los espacios, con ambientes funcionales y bien definidos, conectados entre sí mediante escaleras caracol. Ubicado sobre Bartolomé Mitre 3600, a tan solo una cuadra de Avenida Rivadavia y a metros del subte, rápido acceso a múltiples puntos de la ciudad, en una zona con amplia oferta comercial y servicios. Características. y distribución: Planta baja: Cocina, baño completo y living comedor. Planta 1: Dormitorio con gran baulera. Planta 2: Dormitorio, toilette (actualmente utilizado como depósito) y salida a terraza. Superficie Cubierta 62 m2. Superficie Descubierta 15m2. Y la baulera de 9. 59 m2. aclaracion: no es apto credito. Avisos legales: Las descripciones arquitectónicas y funcionales, valores de expensas, impuestos y servicios, fotos y medidas de este inmueble son aproximados. Los datos fueron proporcionados por el propietario y pueden no estar actualizados a la hora de la visualización de este aviso por lo cual puede arrojar inexactitudes y discordancias con las que surgen de las facturas, títulos y planos legales del inmueble. El interesado debe realizar las verificaciones respectivas previamente a la realización de cualquier operación, requiriendo por si o sus profesionales las copias necesarias de la documentación que corresponda. Algunas imágenes han sido retocadas mediante inteligencia artificial con fines ilustrativos, eliminando elementos personales y objetos, sin modificar dimensiones, distribución ni características reales del inmueble. Corredores inmobiliarios: Juan Carlos Sardi Cucicba 2174 Luciano Lance Cucicba 2173. Este inmueble es comercializado en conjunto por Estudio Elkous y Mil Uno Propiedades. xintel(mup-mup-1919)",
+      "description": "Venta hermoso ph 3 ambientes con terraza en almagro - capital federal. Hermoso ph desarrollado en tres niveles, con terraza propia y un pequeño patio de ingreso que funciona como recepción. La propiedad cuenta con cocina, living comedor, dos dormitorios, una gran baulera y dos baños (uno de ellos actualmente utilizado como depósito). Su distribución permite una buena separación de los espacios, con ambientes funcionales y bien definidos, conectados entre sí mediante escaleras caracol. Ubicado sobre Bartolomé Mitre 3600, a tan solo una cuadra de Avenida Rivadavia y a metros del subte, rápido acceso a múltiples puntos de la ciudad, en una zona con amplia oferta comercial y servicios. Características. y distribución: Planta baja: Cocina, baño completo y living comedor. Planta 1: Dormitorio con gran baulera. Planta 2: Dormitorio, toilette (actualmente utilizado como depósito) y salida a terraza. Superficie Cubierta 62 m2. Superficie Descubierta 15m2. Y la baulera de 9. 59 m2. aclaracion: no es apto credito. Avisos legales: Las descripciones arquitectónicas y funcionales, valores de expensas, impuestos y servicios, fotos y medidas de este inmueble son aproximados. Los datos fueron proporcionados por el propietario y pueden no estar actualizados a la hora de la visualización de este aviso por lo cual puede arrojar inexactitudes y discordancias con las que surgen de las facturas, títulos y planos legales del inmueble. El interesado debe realizar las verificaciones respectivas previamente a la realización de cualquier operación, requiriendo por si o sus profesionales las copias necesarias de la documentación que corresponda. Algunas imágenes han sido retocadas mediante inteligencia artificial con fines ilustrativos, eliminando elementos personales y objetos, sin modificar dimensiones, distribución ni características reales del inmueble. Corredores inmobiliarios: Juan Carlos Sardi Cucicba 2174 Luciano Lance Cucicba 2173. Este inmueble es comercializado en conjunto por Estudio Elkous y Mil Uno Propiedades. xintel(mup-mup-1919)",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 84.900",
+      "price_val": 84900,
+      "currency": "USD",
+      "expenses_raw": "",
+      "expenses_val": null,
+      "user_views": 30,
+      "features_raw": "77 m² tot. | 3 amb. | 2 dorm. | 2 baños",
+      "m2_tot": 77,
+      "m2_cub": null,
+      "ambientes": 3,
+      "dormitorios": 2,
+      "banos": 2,
+      "cocheras": null,
+      "location": "Almagro, Capital Federal",
+      "address": "BARTOLOME MITRE 3600. Entre Bulnes y Bravo, Mario",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/40/91/00/360x266/2084736857.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclphin-ph-3-amb-con-terraza-en-3-niveles-en-almagro-60409100.html",
+      "is_development": false,
+      "barrio": "Almagro",
+      "barrio_benchmark_m2": 1850,
+      "usd_m2": 1103,
+      "discount_pct": 40.4,
+      "opportunity_score": 78,
+      "user_views_formatted": "30",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 84.900",
+      "usd_m2_formatted": "USD 1.103/m²",
+      "benchmark_formatted": "USD 1.850/m²",
+      "first_seen_date": "2026-10-10",
+      "days_ago": 0,
+      "last_synced": "2026-10-10T14:00:13.145633"
     }
   }
 }
