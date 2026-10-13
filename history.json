@@ -6327,9 +6327,14 @@
       "first_seen": "2026-10-13",
       "last_price": 81000,
       "barrio": "Almagro"
+    },
+    "ZPROP-60424555": {
+      "first_seen": "2026-10-13",
+      "last_price": 79500,
+      "barrio": "Caballito"
     }
   },
-  "last_run": "2026-10-13T12:00:18.813487",
+  "last_run": "2026-10-13T16:00:22.474169",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -6718,10 +6723,10 @@
     },
     {
       "date": "2026-10-13",
-      "timestamp": "2026-10-13T12:00:18.859431",
-      "total_properties": 73,
-      "new_today": 20,
-      "avg_usd_m2": 1513,
+      "timestamp": "2026-10-13T16:00:22.522302",
+      "total_properties": 74,
+      "new_today": 21,
+      "avg_usd_m2": 1514,
       "min_price": 68000,
       "median_price": 90000,
       "super_deals_count": 32,
@@ -9720,7 +9725,48 @@
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-13",
       "days_ago": 0,
-      "last_synced": "2026-10-13T12:00:18.813487"
+      "last_synced": "2026-10-13T16:00:22.474169"
+    },
+    "ZPROP-60424555": {
+      "id": "ZPROP-60424555",
+      "title": "Departamento de 2 ambientes de 50 m² en Planta Baja al frente con patio techado con lavadero - Caballito. Excelente departamento de 2 ambientes en venta, de 49, 89 m² totales (43, 91 m² cubiertos y 5, 98 m² de patio techado), ubicado en la planta baja al frente de un edificio sobre una de las calles más importantes del barrio de Caballito. Su ubicación ofrece una inmejorable conectividad, situándose a pocas cuadras de la red de subte y de numerosas líneas de colectivo. La propiedad se encuentra en un edificio de 35 años de antigüedad, de escala residencial tranquila con solo 7 pisos y 2 departamentos por piso, lo que garantiza bajas expensas. La unidad destaca por su luminosidad ya que tanto el living-comedor como el dormitorio dan directamente a la calle. Es apto crédito, admite mascotas y se encuentra completamente vacío, listo para habitar. Su distribución comprende un cálido living-comedor al frente, 1 dormitorio confortable al frente, cocina independiente, 1 baño completo y un patio techado con lavadero. “El inmueble cuenta con condiciones de accesibilidad para personas con movilidad reducida (Ley 5115). ” L. A. Propiedades. Contactanos para coordinar una visita! / *Las descripciones arquitectónicas, valores de expensas, impuestos o servicios, fotos y medidas de las propiedades son aproximados. Los datos fueron proporcionados por el propietario y pueden no estar actualizados a la hora de la visualización de este aviso por lo cual pueden arrojar inexactitudes o discordancias con las que surjan de los las facturas, títulos o planos legales del inmueble. Se pondrá a disposición del interesado la documentación necesaria a fin de realizar las verificaciones respectivas previamente a la realización de cualquier operación, requiriendo por sí o sus profesionales la documentación que corresponda. *Inciso 8 del artículo 10 de la Ley 2340 (texto consolidado según Ley N° 5666). Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede requerir a los propietarios será el equivalente al cuatro con quince centésimos por ciento (4, 15%) del valor total del respectivo contrato. Se encuentra prohibido cobrar a los inquilinos que sean personas físicas comisiones inmobiliarias y gastos de gestoría de informes\", segun Art. 4 de la Ley 5. 859 de C. A. B. A. Todas las operaciones están a cargo de la martillera pública Jorgelina Bonetto Guerrero. Cucicba8780 - caba. Nancy Moscovich cmcpsi 1083 - Pcia de Buenos Aires",
+      "description": "Departamento de 2 ambientes de 50 m² en Planta Baja al frente con patio techado con lavadero - Caballito. Excelente departamento de 2 ambientes en venta, de 49, 89 m² totales (43, 91 m² cubiertos y 5, 98 m² de patio techado), ubicado en la planta baja al frente de un edificio sobre una de las calles más importantes del barrio de Caballito. Su ubicación ofrece una inmejorable conectividad, situándose a pocas cuadras de la red de subte y de numerosas líneas de colectivo. La propiedad se encuentra en un edificio de 35 años de antigüedad, de escala residencial tranquila con solo 7 pisos y 2 departamentos por piso, lo que garantiza bajas expensas. La unidad destaca por su luminosidad ya que tanto el living-comedor como el dormitorio dan directamente a la calle. Es apto crédito, admite mascotas y se encuentra completamente vacío, listo para habitar. Su distribución comprende un cálido living-comedor al frente, 1 dormitorio confortable al frente, cocina independiente, 1 baño completo y un patio techado con lavadero. “El inmueble cuenta con condiciones de accesibilidad para personas con movilidad reducida (Ley 5115). ” L. A. Propiedades. Contactanos para coordinar una visita! / *Las descripciones arquitectónicas, valores de expensas, impuestos o servicios, fotos y medidas de las propiedades son aproximados. Los datos fueron proporcionados por el propietario y pueden no estar actualizados a la hora de la visualización de este aviso por lo cual pueden arrojar inexactitudes o discordancias con las que surjan de los las facturas, títulos o planos legales del inmueble. Se pondrá a disposición del interesado la documentación necesaria a fin de realizar las verificaciones respectivas previamente a la realización de cualquier operación, requiriendo por sí o sus profesionales la documentación que corresponda. *Inciso 8 del artículo 10 de la Ley 2340 (texto consolidado según Ley N° 5666). Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede requerir a los propietarios será el equivalente al cuatro con quince centésimos por ciento (4, 15%) del valor total del respectivo contrato. Se encuentra prohibido cobrar a los inquilinos que sean personas físicas comisiones inmobiliarias y gastos de gestoría de informes\", segun Art. 4 de la Ley 5. 859 de C. A. B. A. Todas las operaciones están a cargo de la martillera pública Jorgelina Bonetto Guerrero. Cucicba8780 - caba. Nancy Moscovich cmcpsi 1083 - Pcia de Buenos Aires",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 79.500",
+      "price_val": 79500,
+      "currency": "USD",
+      "expenses_raw": "$ 100.000 Expensas",
+      "expenses_val": 100000,
+      "user_views": 55,
+      "features_raw": "49 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 49,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Caballito, Capital Federal",
+      "address": "Otamendi 300",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/42/45/55/360x266/2085120722.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-en-venta-en-caballito-capital-federal-60424555.html",
+      "is_development": false,
+      "barrio": "Caballito",
+      "barrio_benchmark_m2": 2150,
+      "usd_m2": 1622,
+      "discount_pct": 24.6,
+      "opportunity_score": 60,
+      "user_views_formatted": "55",
+      "badge_text": "💎 Gran Oportunidad",
+      "badge_class": "badge-great",
+      "price_usd_formatted": "USD 79.500",
+      "usd_m2_formatted": "USD 1.622/m²",
+      "benchmark_formatted": "USD 2.150/m²",
+      "first_seen_date": "2026-10-13",
+      "days_ago": 0,
+      "last_synced": "2026-10-13T16:00:22.474169"
     }
   }
 }
