@@ -6369,7 +6369,7 @@
       "barrio": "Caballito"
     }
   },
-  "last_run": "2026-10-14T16:00:28.613368",
+  "last_run": "2026-10-14T19:30:21.762846",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -6769,7 +6769,7 @@
     },
     {
       "date": "2026-10-14",
-      "timestamp": "2026-10-14T16:00:29.245759",
+      "timestamp": "2026-10-14T19:30:21.808624",
       "total_properties": 75,
       "new_today": 25,
       "avg_usd_m2": 1519,
@@ -9730,7 +9730,7 @@
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-10-14",
       "days_ago": 0,
-      "last_synced": "2026-10-14T16:00:28.613368"
+      "last_synced": "2026-10-14T19:30:21.762846"
     },
     "ZPROP-60433295": {
       "id": "ZPROP-60433295",
@@ -9771,7 +9771,7 @@
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-14",
       "days_ago": 0,
-      "last_synced": "2026-10-14T16:00:28.613368"
+      "last_synced": "2026-10-14T19:30:21.762846"
     },
     "ZPROP-60435214": {
       "id": "ZPROP-60435214",
@@ -9853,7 +9853,7 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-14",
       "days_ago": 0,
-      "last_synced": "2026-10-14T16:00:28.613368"
+      "last_synced": "2026-10-14T19:30:21.762846"
     }
   }
 }
