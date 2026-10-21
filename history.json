@@ -6552,9 +6552,14 @@
       "first_seen": "2026-10-20",
       "last_price": 85000,
       "barrio": "Caballito"
+    },
+    "ZPROP-60486237": {
+      "first_seen": "2026-10-20",
+      "last_price": 95000,
+      "barrio": "Retiro"
     }
   },
-  "last_run": "2026-10-20T16:00:27.707665",
+  "last_run": "2026-10-20T21:00:01.159764",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -7020,13 +7025,13 @@
     },
     {
       "date": "2026-10-20",
-      "timestamp": "2026-10-20T16:00:27.753438",
-      "total_properties": 71,
-      "new_today": 51,
-      "avg_usd_m2": 1496,
+      "timestamp": "2026-10-20T21:00:01.204158",
+      "total_properties": 72,
+      "new_today": 52,
+      "avg_usd_m2": 1497,
       "min_price": 68000,
       "median_price": 92000,
-      "super_deals_count": 29,
+      "super_deals_count": 30,
       "top_neighborhoods": []
     }
   ],
@@ -9735,7 +9740,7 @@
       "benchmark_formatted": "USD 2.050/m²",
       "first_seen_date": "2026-10-20",
       "days_ago": 0,
-      "last_synced": "2026-10-20T16:00:27.707665"
+      "last_synced": "2026-10-20T21:00:01.159764"
     },
     "ZPROP-60480176": {
       "id": "ZPROP-60480176",
@@ -9776,7 +9781,7 @@
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-20",
       "days_ago": 0,
-      "last_synced": "2026-10-20T16:00:27.707665"
+      "last_synced": "2026-10-20T21:00:01.159764"
     },
     "ZPROP-60480614": {
       "id": "ZPROP-60480614",
@@ -9817,7 +9822,7 @@
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-20",
       "days_ago": 0,
-      "last_synced": "2026-10-20T16:00:27.707665"
+      "last_synced": "2026-10-20T21:00:01.159764"
     },
     "ZPROP-60484209": {
       "id": "ZPROP-60484209",
@@ -9899,7 +9904,7 @@
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-10-20",
       "days_ago": 0,
-      "last_synced": "2026-10-20T16:00:27.707665"
+      "last_synced": "2026-10-20T21:00:01.159764"
     },
     "ZPROP-60484103": {
       "id": "ZPROP-60484103",
@@ -9940,7 +9945,48 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-20",
       "days_ago": 0,
-      "last_synced": "2026-10-20T16:00:27.707665"
+      "last_synced": "2026-10-20T21:00:01.159764"
+    },
+    "ZPROP-60486237": {
+      "id": "ZPROP-60486237",
+      "title": "* oportunidad *depto dos ambientes Y medio (dependencia O escritorio) 60 M2 cubiertosreciclado A nuevo (faltan terminaciones) mucho lugar de guardadoambientes amplios Y doble alturaliving comedor 6, 15 X 3, 40cocina 2 X 3, 70lavadero independientedependencia O escritorio 2, 40 X 1, 90 con bañodespensa en cocinaluminososeg. 24hno accesible ley 5115Esta Oficina Inmobiliaria se encuentra a cargo de Estela Garian, Matrícula N. º 6819 – C. M. C. P. S. I. Folio 144, Libro 10 y C. U. C. I. C. B. A. Número 5617, Tomo 1 Folio 210, Lavalle 1290, 7mo Piso oficina 701 Ciudad de Buenos Aires.",
+      "description": "* oportunidad *depto dos ambientes Y medio (dependencia O escritorio) 60 M2 cubiertosreciclado A nuevo (faltan terminaciones) mucho lugar de guardadoambientes amplios Y doble alturaliving comedor 6, 15 X 3, 40cocina 2 X 3, 70lavadero independientedependencia O escritorio 2, 40 X 1, 90 con bañodespensa en cocinaluminososeg. 24hno accesible ley 5115Esta Oficina Inmobiliaria se encuentra a cargo de Estela Garian, Matrícula N. º 6819 – C. M. C. P. S. I. Folio 144, Libro 10 y C. U. C. I. C. B. A. Número 5617, Tomo 1 Folio 210, Lavalle 1290, 7mo Piso oficina 701 Ciudad de Buenos Aires.",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 95.000",
+      "price_val": 95000,
+      "currency": "USD",
+      "expenses_raw": "$ 300.000 Expensas",
+      "expenses_val": 300000,
+      "user_views": 32,
+      "features_raw": "60 m² tot. | 3 amb. | 1 dorm. | 2 baños",
+      "m2_tot": 60,
+      "m2_cub": null,
+      "ambientes": 3,
+      "dormitorios": 1,
+      "banos": 2,
+      "cocheras": null,
+      "location": "Retiro, Capital Federal",
+      "address": "Av. Cordoba al 400",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/48/62/37/360x266/2086676378.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-2-amb-y-1-2-oportunidad-60486237.html",
+      "is_development": false,
+      "barrio": "Retiro",
+      "barrio_benchmark_m2": 2300,
+      "usd_m2": 1583,
+      "discount_pct": 31.2,
+      "opportunity_score": 65,
+      "user_views_formatted": "32",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 95.000",
+      "usd_m2_formatted": "USD 1.583/m²",
+      "benchmark_formatted": "USD 2.300/m²",
+      "first_seen_date": "2026-10-20",
+      "days_ago": 0,
+      "last_synced": "2026-10-20T21:00:01.159764"
     }
   }
 }
