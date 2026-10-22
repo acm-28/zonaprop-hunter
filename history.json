@@ -6597,9 +6597,14 @@
       "first_seen": "2026-10-21",
       "last_price": 90000,
       "barrio": "Parque Patricios"
+    },
+    "ZPROP-60504011": {
+      "first_seen": "2026-10-22",
+      "last_price": 95000,
+      "barrio": "Villa Crespo"
     }
   },
-  "last_run": "2026-10-21T19:30:37.357585",
+  "last_run": "2026-10-22T12:00:15.432681",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -7084,337 +7089,20 @@
       "median_price": 92000,
       "super_deals_count": 31,
       "top_neighborhoods": []
+    },
+    {
+      "date": "2026-10-22",
+      "timestamp": "2026-10-22T12:00:15.478750",
+      "total_properties": 61,
+      "new_today": 61,
+      "avg_usd_m2": 1485,
+      "min_price": 50000,
+      "median_price": 92000,
+      "super_deals_count": 28,
+      "top_neighborhoods": []
     }
   ],
   "active_deals": {
-    "ZPROP-60390712": {
-      "id": "ZPROP-60390712",
-      "title": "Este departamento de 2 ambientes y 1 dormitorio se encuentra en venta en una de las zonas residenciales más consolidadas de Recoleta. Con una superficie construida y total de 75 m², el inmueble se ubica en el contrafrente del edificio, brindando una excelente tranquilidad. La planta única cuenta con un living comedor amplio, cocina independiente, lavadero y 1 baño. Destaca un patio privado que aporta espacio al aire libre y abundante luz natural en todos sus ambientes. El edificio tiene 45 años de antigüedad, posee ascensor, encargado permanente y admite mascotas. Ubicado en un entorno distinguido, el sector ofrece cercanía a parques, universidades, variados comercios y múltiples líneas de colectivos.",
-      "description": "Este departamento de 2 ambientes y 1 dormitorio se encuentra en venta en una de las zonas residenciales más consolidadas de Recoleta. Con una superficie construida y total de 75 m², el inmueble se ubica en el contrafrente del edificio, brindando una excelente tranquilidad. La planta única cuenta con un living comedor amplio, cocina independiente, lavadero y 1 baño. Destaca un patio privado que aporta espacio al aire libre y abundante luz natural en todos sus ambientes. El edificio tiene 45 años de antigüedad, posee ascensor, encargado permanente y admite mascotas. Ubicado en un entorno distinguido, el sector ofrece cercanía a parques, universidades, variados comercios y múltiples líneas de colectivos.",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado desde ayer",
-      "is_new": false,
-      "price_raw": "USD 98.500",
-      "price_val": 98500,
-      "currency": "USD",
-      "expenses_raw": "$ 330.000 Expensas",
-      "expenses_val": 330000,
-      "user_views": 40,
-      "features_raw": "75 m² tot. | 2 amb. | 1 dorm. | 1 baño",
-      "m2_tot": 75,
-      "m2_cub": null,
-      "ambientes": 2,
-      "dormitorios": 1,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Recoleta, Capital Federal",
-      "address": "Laprida & Charcas",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/39/07/12/360x266/2084268926.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-2-amb-con-2-patios-laprida-y-charcas-60390712.html",
-      "is_development": false,
-      "barrio": "Recoleta",
-      "barrio_benchmark_m2": 2600,
-      "usd_m2": 1313,
-      "discount_pct": 49.5,
-      "opportunity_score": 78,
-      "user_views_formatted": "40",
-      "badge_text": "🔥 Super Oportunidad",
-      "badge_class": "badge-super",
-      "price_usd_formatted": "USD 98.500",
-      "usd_m2_formatted": "USD 1.313/m²",
-      "benchmark_formatted": "USD 2.600/m²",
-      "first_seen_date": "2026-10-08",
-      "days_ago": 13,
-      "last_synced": "2026-10-09T10:10:43.934416"
-    },
-    "ZPROP-60388075": {
-      "id": "ZPROP-60388075",
-      "title": "Excelente monoambiente con patio. Apto profesional super luminoso! Ideal oficina, estudio, consultorio, con patio propio para usar todo el día! 35 mts cubiertos + 22 mts descubiertosCocina incorporada, baño completo y placard. Edificio de 10 años de antigüedad. Ideal para vivir o para trabajar. Muy buenos accesos para entrar y salir con auto, cerca de muchos medios de transporte por Cabildo, Libertador, Barrancas. Cochera en 1er ss, acceso por Montacargas. Edificio ubicado en una de las zonas mas buscadas de Nuñez. Cerca de los mejores colegios, universidades y a pocas cuadras del Parque de la Innovacion, el barrio Premium de la Ciudad de Buenos Aires. Se vende con cochera. Cochera no incluida en el valor de la publicación. Orwel Real Estateseguinos en nuestras redes! Orwelseguinos en nuestras redes! &quot;Las medidas, superficies y expensas consignadas en la presente son aproximadas; y al solo efecto orientativo. Los datos definitivos son los que surgirán del titulo de la propiedad y de los comprobantes respaldatorios. &quot;&quot;Para los casos de alquiler de vivienda, el monto maximo de comision que se le puede requerir a los propietarios sera el equivalente al cuatro con quince centesimos por ciento (4, 15%) del valor total del respectivo contrato. Se encuentra prohibido cobrar a los inquilinos que sean personas fisicas comisiones inmobiliarias y gastos de gestoria de informes&quot;. La propiedad cuenta con Accesibilidad para personas con movilidad reducidaci: 905 cmcpsi: 7246",
-      "description": "Excelente monoambiente con patio. Apto profesional super luminoso! Ideal oficina, estudio, consultorio, con patio propio para usar todo el día! 35 mts cubiertos + 22 mts descubiertosCocina incorporada, baño completo y placard. Edificio de 10 años de antigüedad. Ideal para vivir o para trabajar. Muy buenos accesos para entrar y salir con auto, cerca de muchos medios de transporte por Cabildo, Libertador, Barrancas. Cochera en 1er ss, acceso por Montacargas. Edificio ubicado en una de las zonas mas buscadas de Nuñez. Cerca de los mejores colegios, universidades y a pocas cuadras del Parque de la Innovacion, el barrio Premium de la Ciudad de Buenos Aires. Se vende con cochera. Cochera no incluida en el valor de la publicación. Orwel Real Estateseguinos en nuestras redes! Orwelseguinos en nuestras redes! &quot;Las medidas, superficies y expensas consignadas en la presente son aproximadas; y al solo efecto orientativo. Los datos definitivos son los que surgirán del titulo de la propiedad y de los comprobantes respaldatorios. &quot;&quot;Para los casos de alquiler de vivienda, el monto maximo de comision que se le puede requerir a los propietarios sera el equivalente al cuatro con quince centesimos por ciento (4, 15%) del valor total del respectivo contrato. Se encuentra prohibido cobrar a los inquilinos que sean personas fisicas comisiones inmobiliarias y gastos de gestoria de informes&quot;. La propiedad cuenta con Accesibilidad para personas con movilidad reducidaci: 905 cmcpsi: 7246",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado desde ayer",
-      "is_new": false,
-      "price_raw": "USD 95.000",
-      "price_val": 95000,
-      "currency": "USD",
-      "expenses_raw": "$ 130.000 Expensas",
-      "expenses_val": 130000,
-      "user_views": 29,
-      "features_raw": "57 m² tot. | 1 amb. | 1 baño | 1 coch.",
-      "m2_tot": 57,
-      "m2_cub": null,
-      "ambientes": 1,
-      "dormitorios": null,
-      "banos": 1,
-      "cocheras": 1,
-      "location": "Belgrano, Capital Federal",
-      "address": "3 de Febrero 2700",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/38/80/75/360x266/2084205625.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-monoambiente-en-venta-con-patio-y-cochera.-nunez-60388075.html",
-      "is_development": false,
-      "barrio": "Belgrano",
-      "barrio_benchmark_m2": 2650,
-      "usd_m2": 1667,
-      "discount_pct": 37.1,
-      "opportunity_score": 74,
-      "user_views_formatted": "29",
-      "badge_text": "🔥 Super Oportunidad",
-      "badge_class": "badge-super",
-      "price_usd_formatted": "USD 95.000",
-      "usd_m2_formatted": "USD 1.667/m²",
-      "benchmark_formatted": "USD 2.650/m²",
-      "first_seen_date": "2026-10-08",
-      "days_ago": 13,
-      "last_synced": "2026-10-09T10:10:43.934416"
-    },
-    "ZPROP-60377121": {
-      "id": "ZPROP-60377121",
-      "title": "**piso 14 | 2 dormitorios | balcón | vista abierta | apto crédito** dueño directo. Departamento de 2 dormitorios ubicado en un **piso 14 al contrafrente**, con vista abierta, muy buena luminosidad natural. La propiedad cuenta con **55, 91 m² totales**, distribuidos en ambientes cómodos y funcionales, con un balcón de casi 6 m² al que tiene salida el dormitorio principal. El departamento conserva una distribución práctica y ofrece **gran potencial para actualizarlo y adaptarlo a tu estilo**, especialmente en la cocina, que requiere refacción. # características principales. • **55, 91 m² totales** • 49, 96 m² cubiertos. • 5, 95 m² de balcón. • 2 dormitorios. • Dormitorio principal con salida al balcón. • Living comedor muy luminoso. • Cocina separada. • 1 baño completo. • Grandes espacios de guardado. • Agua caliente por calefón. • Calefacción por estufa a gas. • Contrafrente, con vista abierta. • **Apto crédito** • **Apto profesional** # edificio Y extras. • Edificio de aproximadamente 60 años. • 15 pisos. • 3 ascensores. • Encargado. • Ingreso al edificio recientemente reciclado. • **Cocheras disponibles en el edificio**, con posibilidad de compra o alquiler por separado. # una propiedad con potencial. Si buscás un departamento de 2 dormitorios con buena superficie, luminosidad y la tranquilidad de un piso alto, esta propiedad es para vos. Dueño directo",
-      "description": "**piso 14 | 2 dormitorios | balcón | vista abierta | apto crédito** dueño directo. Departamento de 2 dormitorios ubicado en un **piso 14 al contrafrente**, con vista abierta, muy buena luminosidad natural. La propiedad cuenta con **55, 91 m² totales**, distribuidos en ambientes cómodos y funcionales, con un balcón de casi 6 m² al que tiene salida el dormitorio principal. El departamento conserva una distribución práctica y ofrece **gran potencial para actualizarlo y adaptarlo a tu estilo**, especialmente en la cocina, que requiere refacción. # características principales. • **55, 91 m² totales** • 49, 96 m² cubiertos. • 5, 95 m² de balcón. • 2 dormitorios. • Dormitorio principal con salida al balcón. • Living comedor muy luminoso. • Cocina separada. • 1 baño completo. • Grandes espacios de guardado. • Agua caliente por calefón. • Calefacción por estufa a gas. • Contrafrente, con vista abierta. • **Apto crédito** • **Apto profesional** # edificio Y extras. • Edificio de aproximadamente 60 años. • 15 pisos. • 3 ascensores. • Encargado. • Ingreso al edificio recientemente reciclado. • **Cocheras disponibles en el edificio**, con posibilidad de compra o alquiler por separado. # una propiedad con potencial. Si buscás un departamento de 2 dormitorios con buena superficie, luminosidad y la tranquilidad de un piso alto, esta propiedad es para vos. Dueño directo",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado desde ayer",
-      "is_new": false,
-      "price_raw": "USD 77.000",
-      "price_val": 77000,
-      "currency": "USD",
-      "expenses_raw": "",
-      "expenses_val": null,
-      "user_views": 26,
-      "features_raw": "56 m² tot. | 3 amb. | 2 dorm. | 1 baño",
-      "m2_tot": 56,
-      "m2_cub": null,
-      "ambientes": 3,
-      "dormitorios": 2,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Parque Patricios, Capital Federal",
-      "address": "Salcedo 3115",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/37/71/21/360x266/2084206556.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclappa-dueno-directo-piso-14-2-dorm.-balcon-apto-60377121.html",
-      "is_development": false,
-      "barrio": "Parque Patricios",
-      "barrio_benchmark_m2": 1550,
-      "usd_m2": 1375,
-      "discount_pct": 11.3,
-      "opportunity_score": 40,
-      "user_views_formatted": "26",
-      "badge_text": "🏷️ Buen Precio",
-      "badge_class": "badge-good",
-      "price_usd_formatted": "USD 77.000",
-      "usd_m2_formatted": "USD 1.375/m²",
-      "benchmark_formatted": "USD 1.550/m²",
-      "first_seen_date": "2026-10-08",
-      "days_ago": 13,
-      "last_synced": "2026-10-09T10:10:43.934416"
-    },
-    "ZPROP-60390928": {
-      "id": "ZPROP-60390928",
-      "title": "Departamento luminoso de 3 ambientes y medio con balcón al frente – Barrio de Parque PatriciosUbicado sobre Av. La Plata, en una zona de muy buena conectividad, este departamento se destaca por su luminosidad, su balcón al frente y una distribución funcional que permite aprovechar cada ambiente. Distribución y ambientesLa propiedad cuenta con 3 ambientes y medio, con espacios cómodos y versátiles que se adaptan a distintas necesidades. El living comedor es amplio y luminoso, con aberturas de época, hogar a gas y pisos cerámicos de fácil mantenimiento. El balcón corrido al frente aporta amplitud, luz natural y un agradable espacio exterior. El dormitorio principal dispone de placard, aire acondicionado frío/calor y pisos de pinotea. Además, cuenta con un segundo dormitorio con ventana al contrafrente y espacio de guardado. La cocina integrada, con barra desayunadora, resulta cómoda y funcional. El baño cuenta con bañera, y fue reciclado. El ambiente adicional se comunica con el lavadero, ofreciendo múltiples posibilidades de uso e incluso la opción de reformar para ampliar algún espacio, se puede hacer un dormitorio en suite. Características destacadasOrientación oeste, con excelente entrada de luz natural. Balcón corrido al frente con vista a la calle y rejas de protección. Living comedor con hogar a gas. Dormitorio principal con placard y aire acondicionado frío/calor. Ambiente extra con conexión al lavadero y potencial de reforma. Instalaciones eléctricas nuevas a la vista estilo industrial. Edificio y ubicaciónEl edificio cuenta con terraza de uso compartido y el acceso al departamento es por escalera hacia el primer piso. Las expensas son de aproximadamente $73. 000. Su ubicación sobre una importante avenida permite acceder rápidamente a medios de transporte, comercios, servicios y principales vías de circulación, facilitando los traslados hacia distintos puntos de la ciudad. Una oportunidad con excelente potencialUna propiedad ideal para quienes buscan luminosidad, buena distribución y una ubicación estratégica en Parque Patriciosno cuenta con acceso para personas con movilidad reducida. Agostina Garofalo Bienes RaícesCorredor inombiliario: Agostina Garofalocucicba: 6591",
-      "description": "Departamento luminoso de 3 ambientes y medio con balcón al frente – Barrio de Parque PatriciosUbicado sobre Av. La Plata, en una zona de muy buena conectividad, este departamento se destaca por su luminosidad, su balcón al frente y una distribución funcional que permite aprovechar cada ambiente. Distribución y ambientesLa propiedad cuenta con 3 ambientes y medio, con espacios cómodos y versátiles que se adaptan a distintas necesidades. El living comedor es amplio y luminoso, con aberturas de época, hogar a gas y pisos cerámicos de fácil mantenimiento. El balcón corrido al frente aporta amplitud, luz natural y un agradable espacio exterior. El dormitorio principal dispone de placard, aire acondicionado frío/calor y pisos de pinotea. Además, cuenta con un segundo dormitorio con ventana al contrafrente y espacio de guardado. La cocina integrada, con barra desayunadora, resulta cómoda y funcional. El baño cuenta con bañera, y fue reciclado. El ambiente adicional se comunica con el lavadero, ofreciendo múltiples posibilidades de uso e incluso la opción de reformar para ampliar algún espacio, se puede hacer un dormitorio en suite. Características destacadasOrientación oeste, con excelente entrada de luz natural. Balcón corrido al frente con vista a la calle y rejas de protección. Living comedor con hogar a gas. Dormitorio principal con placard y aire acondicionado frío/calor. Ambiente extra con conexión al lavadero y potencial de reforma. Instalaciones eléctricas nuevas a la vista estilo industrial. Edificio y ubicaciónEl edificio cuenta con terraza de uso compartido y el acceso al departamento es por escalera hacia el primer piso. Las expensas son de aproximadamente $73. 000. Su ubicación sobre una importante avenida permite acceder rápidamente a medios de transporte, comercios, servicios y principales vías de circulación, facilitando los traslados hacia distintos puntos de la ciudad. Una oportunidad con excelente potencialUna propiedad ideal para quienes buscan luminosidad, buena distribución y una ubicación estratégica en Parque Patriciosno cuenta con acceso para personas con movilidad reducida. Agostina Garofalo Bienes RaícesCorredor inombiliario: Agostina Garofalocucicba: 6591",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado desde ayer",
-      "is_new": false,
-      "price_raw": "USD 95.000",
-      "price_val": 95000,
-      "currency": "USD",
-      "expenses_raw": "$ 73.000 Expensas",
-      "expenses_val": 73000,
-      "user_views": 32,
-      "features_raw": "72 m² tot. | 3 amb. | 2 dorm. | 1 baño",
-      "m2_tot": 72,
-      "m2_cub": null,
-      "ambientes": 3,
-      "dormitorios": 2,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Parque Patricios, Capital Federal",
-      "address": "Av. La Plata al 2400",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/39/09/28/360x266/2084273792.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-de-3-ambientes-y-medio-con-balcon-a-la-60390928.html",
-      "is_development": false,
-      "barrio": "Parque Patricios",
-      "barrio_benchmark_m2": 1550,
-      "usd_m2": 1319,
-      "discount_pct": 14.9,
-      "opportunity_score": 39,
-      "user_views_formatted": "32",
-      "badge_text": "🏷️ Buen Precio",
-      "badge_class": "badge-good",
-      "price_usd_formatted": "USD 95.000",
-      "usd_m2_formatted": "USD 1.319/m²",
-      "benchmark_formatted": "USD 1.550/m²",
-      "first_seen_date": "2026-10-08",
-      "days_ago": 13,
-      "last_synced": "2026-10-09T10:10:43.934416"
-    },
-    "ZPROP-60390890": {
-      "id": "ZPROP-60390890",
-      "title": "Ubicado en la calle Rondeau, en el corazón de Parque Patricios, este atractivo ph en venta ofrece una excelente oportunidad de inversión a un precio de U$D 95. 000. Con una superficie total de 71 m², de los cuales 65 m² son cubiertos y 6 m² descubiertos de balcón, este inmueble se presenta como una opción ideal tanto para quienes buscan un nuevo hogar como para aquellos interesados en el mercado de alquileres. El ph cuenta con tres ambientes bien distribuidos, incluyendo dos cómodos dormitorios, un baño funcional y una cocina equipada que se integra al living-comedor, creando un espacio acogedor y luminoso. Además, disfrutarás de un balcón privado que permite apreciar la vista y aprovechar el aire fresco. La propiedad se encuentra en buen estado y está lista para ser habitada, con servicios de agua corriente, gas natural y luz disponibles. Con disposición frente, 2do piso, este inmueble no solo brinda comodidad y funcionalidad, sino que también es apto para crédito, facilitando su adquisición. La ausencia de gastos adicionales y la accesibilidad del lugar son características que suman valor a esta oferta. No dejes pasar la oportunidad de invertir en esta propiedad en una de las zonas más prometedoras de la capital.",
-      "description": "Ubicado en la calle Rondeau, en el corazón de Parque Patricios, este atractivo ph en venta ofrece una excelente oportunidad de inversión a un precio de U$D 95. 000. Con una superficie total de 71 m², de los cuales 65 m² son cubiertos y 6 m² descubiertos de balcón, este inmueble se presenta como una opción ideal tanto para quienes buscan un nuevo hogar como para aquellos interesados en el mercado de alquileres. El ph cuenta con tres ambientes bien distribuidos, incluyendo dos cómodos dormitorios, un baño funcional y una cocina equipada que se integra al living-comedor, creando un espacio acogedor y luminoso. Además, disfrutarás de un balcón privado que permite apreciar la vista y aprovechar el aire fresco. La propiedad se encuentra en buen estado y está lista para ser habitada, con servicios de agua corriente, gas natural y luz disponibles. Con disposición frente, 2do piso, este inmueble no solo brinda comodidad y funcionalidad, sino que también es apto para crédito, facilitando su adquisición. La ausencia de gastos adicionales y la accesibilidad del lugar son características que suman valor a esta oferta. No dejes pasar la oportunidad de invertir en esta propiedad en una de las zonas más prometedoras de la capital.",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado desde ayer",
-      "is_new": false,
-      "price_raw": "USD 95.000",
-      "price_val": 95000,
-      "currency": "USD",
-      "expenses_raw": "",
-      "expenses_val": null,
-      "user_views": 15,
-      "features_raw": "65 m² tot. | 3 amb. | 2 dorm. | 1 baño",
-      "m2_tot": 65,
-      "m2_cub": null,
-      "ambientes": 3,
-      "dormitorios": 2,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Parque Patricios, Capital Federal",
-      "address": "Rondeau 2750",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/39/08/90/360x266/2084274258.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclphin-ph-en-venta-con-2-dorm.-y-balcon-en-parque-patricios-60390890.html",
-      "is_development": false,
-      "barrio": "Parque Patricios",
-      "barrio_benchmark_m2": 1550,
-      "usd_m2": 1462,
-      "discount_pct": 5.7,
-      "opportunity_score": 30,
-      "user_views_formatted": "15",
-      "badge_text": "🏷️ Buen Precio",
-      "badge_class": "badge-good",
-      "price_usd_formatted": "USD 95.000",
-      "usd_m2_formatted": "USD 1.462/m²",
-      "benchmark_formatted": "USD 1.550/m²",
-      "first_seen_date": "2026-10-08",
-      "days_ago": 13,
-      "last_synced": "2026-10-09T10:10:43.934416"
-    },
-    "ZPROP-60391386": {
-      "id": "ZPROP-60391386",
-      "title": "Esta es una visualización conceptual generada por Inteligencia Artificial. No es una fotografía real del espacio final, sino un modelo digital diseñado para previsualizar y planificar la distribución, el mobiliario y la decoración de un ambiente antes de su ejecución. Sirve como una guía visual precisa del potencial del diseñoDepartamento 2 ambientes en Villa Urquiza Escucha Oferta! Con margen de negociaciónOportunidad para Inversión o ViviendaPrimer piso por escalera A refaccionar! Digno de ver! Cuenta con: - Cocina integrada - Amplio living comedor- Baño completo con bañera y bidé- Placard abierto estilo vestidor- Habitación principal con placard Contactanos para coordinar una visita. Tu nuevo hogar te está esperando. Curcio Colegiales srlmatrícula cucicba 7338",
-      "description": "Esta es una visualización conceptual generada por Inteligencia Artificial. No es una fotografía real del espacio final, sino un modelo digital diseñado para previsualizar y planificar la distribución, el mobiliario y la decoración de un ambiente antes de su ejecución. Sirve como una guía visual precisa del potencial del diseñoDepartamento 2 ambientes en Villa Urquiza Escucha Oferta! Con margen de negociaciónOportunidad para Inversión o ViviendaPrimer piso por escalera A refaccionar! Digno de ver! Cuenta con: - Cocina integrada - Amplio living comedor- Baño completo con bañera y bidé- Placard abierto estilo vestidor- Habitación principal con placard Contactanos para coordinar una visita. Tu nuevo hogar te está esperando. Curcio Colegiales srlmatrícula cucicba 7338",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado desde ayer",
-      "is_new": false,
-      "price_raw": "USD 90.000",
-      "price_val": 90000,
-      "currency": "USD",
-      "expenses_raw": "$ 70.000 Expensas",
-      "expenses_val": 70000,
-      "user_views": 23,
-      "features_raw": "56 m² tot. | 2 amb. | 1 dorm. | 1 baño",
-      "m2_tot": 56,
-      "m2_cub": null,
-      "ambientes": 2,
-      "dormitorios": 1,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Villa Urquiza, Capital Federal",
-      "address": "Dr. Pedro Ignacio Rivera al 5200",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/39/13/86/360x266/2084284333.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-departamento-2-ambientes-a-refaccionar-en-villa-60391386.html",
-      "is_development": false,
-      "barrio": "Villa Urquiza",
-      "barrio_benchmark_m2": 2350,
-      "usd_m2": 1607,
-      "discount_pct": 31.6,
-      "opportunity_score": 67,
-      "user_views_formatted": "23",
-      "badge_text": "🔥 Super Oportunidad",
-      "badge_class": "badge-super",
-      "price_usd_formatted": "USD 90.000",
-      "usd_m2_formatted": "USD 1.607/m²",
-      "benchmark_formatted": "USD 2.350/m²",
-      "first_seen_date": "2026-10-08",
-      "days_ago": 13,
-      "last_synced": "2026-10-09T10:10:43.934416"
-    },
-    "ZPROP-60392425": {
-      "id": "ZPROP-60392425",
-      "title": "Ph de 2 ambientes con patio en belgrano rvalor: usd 92. 500Excelente departamento tipo ph en planta baja, ubicado sobre Conesa al 2200, en una zona tranquila y arbolada de Belgrano R. Cuenta con living-comedordormitorio amplio con placard de piso a techococina independientebaño completopatio propio con deck de madera y toldo rebatible. * 57 m² totales* 38 m² cubiertos* Patio de 4 × 2, 43 m* Pisos de parquet y techos altos* Aire acondicionado frío/calor* Conexión para lavarropas* Apto profesional* Apto crédito* Admite mascotas* Bajas expensasExcelente ubicación, cerca de Av. Crámer, Av. Olazábal, la estación Belgrano R y el Subte D. Ideal para vivienda, uso profesional o inversión. Consultanos para coordinar una visita. bienvende amelia claro maria fernanda fernandez claro cucicba 3235* Toda la información y medidas provistas son aproximadas y deberán ratificarse con la documentación pertinente y no compromete contractualmente a nuestra empresa. Los gastos expresados (expensas, abl, Aysa, entre otros) se refieren a la última información recabada y podrán ser revisados y confirmados a solicitud del interesado ante cualquier negociación *• no accesible personas con movilidad reducida (ley 511",
-      "description": "Ph de 2 ambientes con patio en belgrano rvalor: usd 92. 500Excelente departamento tipo ph en planta baja, ubicado sobre Conesa al 2200, en una zona tranquila y arbolada de Belgrano R. Cuenta con living-comedordormitorio amplio con placard de piso a techococina independientebaño completopatio propio con deck de madera y toldo rebatible. * 57 m² totales* 38 m² cubiertos* Patio de 4 × 2, 43 m* Pisos de parquet y techos altos* Aire acondicionado frío/calor* Conexión para lavarropas* Apto profesional* Apto crédito* Admite mascotas* Bajas expensasExcelente ubicación, cerca de Av. Crámer, Av. Olazábal, la estación Belgrano R y el Subte D. Ideal para vivienda, uso profesional o inversión. Consultanos para coordinar una visita. bienvende amelia claro maria fernanda fernandez claro cucicba 3235* Toda la información y medidas provistas son aproximadas y deberán ratificarse con la documentación pertinente y no compromete contractualmente a nuestra empresa. Los gastos expresados (expensas, abl, Aysa, entre otros) se refieren a la última información recabada y podrán ser revisados y confirmados a solicitud del interesado ante cualquier negociación *• no accesible personas con movilidad reducida (ley 511",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado desde ayer",
-      "is_new": false,
-      "price_raw": "USD 89.900",
-      "price_val": 89900,
-      "currency": "USD",
-      "expenses_raw": "$ 90.000 Expensas",
-      "expenses_val": 90000,
-      "user_views": 50,
-      "features_raw": "48 m² tot. | 2 amb. | 1 dorm. | 1 baño",
-      "m2_tot": 48,
-      "m2_cub": null,
-      "ambientes": 2,
-      "dormitorios": 1,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Belgrano, Capital Federal",
-      "address": "Conesa al 2200",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/39/24/25/360x266/2084310274.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclphin-ph-en-belgrano-60392425.html",
-      "is_development": false,
-      "barrio": "Belgrano",
-      "barrio_benchmark_m2": 2650,
-      "usd_m2": 1873,
-      "discount_pct": 29.3,
-      "opportunity_score": 66,
-      "user_views_formatted": "50",
-      "badge_text": "💎 Gran Oportunidad",
-      "badge_class": "badge-great",
-      "price_usd_formatted": "USD 89.900",
-      "usd_m2_formatted": "USD 1.873/m²",
-      "benchmark_formatted": "USD 2.650/m²",
-      "first_seen_date": "2026-10-08",
-      "days_ago": 13,
-      "last_synced": "2026-10-09T10:10:43.934416"
-    },
-    "ZPROP-60392154": {
-      "id": "ZPROP-60392154",
-      "title": "Departamento 3 ambientes en venta - 68 M2 - almagro - capital federal apto creditodepartamento de 3 ambientes ubicado en Mario Bravo 40, Almagro, CapitalFederal. Emplazado en el tercer piso de un edificio de siete niveles, con una superficie total de 68 m2 y disposición de contrafrente. La propiedad presenta una distribución funcional que optimiza cadaespacio. El living comedor, amplio y luminoso, se destaca por sus ventanales que permiten el ingreso de luz natural y conectan directamente con un balcón exterior. La cocina, independiente, cuenta con muebles de bajo mesada y alacena, mesada de acero y bacha, con acceso directo a un lavadero interno estratégicamente ubicado. Este sector aporta funcionalidad y optimización del espacio. El dormitorio principal ofrece características destacables: piso de madera, placard embutido, ventilador de techo y ventana que garantiza ventilaciónnatural. La habitación secundaria mantiene características similares, con piso de madera, placard y ventana al contrafrente. El baño completo incluye ducha y bañera, completando la distribucióninterior. El balcón con vista al contrafrente representa un espacio adicional para disfrute. El departamento se encuentra en estado original pero habitable, representando una oportunidad para quienes desean imprimir su estilo personal. Cuenta con servicios de electricidad, gas y desagüe cloacal. Características principales: - Ambientes: 3- Living- Cocina- Lavadero- Habitaciones: 2- Baños: 1- Orientación: Contrafrente- Estado general: BuenoUbicación estratégica en Almagro, zona con excelente conectividad yservicios urbanos. cercano A: -Lineas de colectivos: 132-8-Ver datos- 150 metros Av. Diaz Velez- 50 metros Av. Rivadavia-250metros Estacion loria Subte- 850 metros estación Oncellamanos Y vamos A verla!",
-      "description": "Departamento 3 ambientes en venta - 68 M2 - almagro - capital federal apto creditodepartamento de 3 ambientes ubicado en Mario Bravo 40, Almagro, CapitalFederal. Emplazado en el tercer piso de un edificio de siete niveles, con una superficie total de 68 m2 y disposición de contrafrente. La propiedad presenta una distribución funcional que optimiza cadaespacio. El living comedor, amplio y luminoso, se destaca por sus ventanales que permiten el ingreso de luz natural y conectan directamente con un balcón exterior. La cocina, independiente, cuenta con muebles de bajo mesada y alacena, mesada de acero y bacha, con acceso directo a un lavadero interno estratégicamente ubicado. Este sector aporta funcionalidad y optimización del espacio. El dormitorio principal ofrece características destacables: piso de madera, placard embutido, ventilador de techo y ventana que garantiza ventilaciónnatural. La habitación secundaria mantiene características similares, con piso de madera, placard y ventana al contrafrente. El baño completo incluye ducha y bañera, completando la distribucióninterior. El balcón con vista al contrafrente representa un espacio adicional para disfrute. El departamento se encuentra en estado original pero habitable, representando una oportunidad para quienes desean imprimir su estilo personal. Cuenta con servicios de electricidad, gas y desagüe cloacal. Características principales: - Ambientes: 3- Living- Cocina- Lavadero- Habitaciones: 2- Baños: 1- Orientación: Contrafrente- Estado general: BuenoUbicación estratégica en Almagro, zona con excelente conectividad yservicios urbanos. cercano A: -Lineas de colectivos: 132-8-Ver datos- 150 metros Av. Diaz Velez- 50 metros Av. Rivadavia-250metros Estacion loria Subte- 850 metros estación Oncellamanos Y vamos A verla!",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado desde ayer",
-      "is_new": false,
-      "price_raw": "USD 105.000",
-      "price_val": 105000,
-      "currency": "USD",
-      "expenses_raw": "$ 186.000 Expensas",
-      "expenses_val": 186000,
-      "user_views": 35,
-      "features_raw": "67 m² tot. | 3 amb. | 2 dorm. | 1 baño",
-      "m2_tot": 67,
-      "m2_cub": null,
-      "ambientes": 3,
-      "dormitorios": 2,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Almagro, Capital Federal",
-      "address": "Mario Bravo 40",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/39/21/54/360x266/2084303508.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-departamento-3-ambientes-con-balcon-almagro-60392154.html",
-      "is_development": false,
-      "barrio": "Almagro",
-      "barrio_benchmark_m2": 1850,
-      "usd_m2": 1567,
-      "discount_pct": 15.3,
-      "opportunity_score": 38,
-      "user_views_formatted": "35",
-      "badge_text": "🏷️ Buen Precio",
-      "badge_class": "badge-good",
-      "price_usd_formatted": "USD 105.000",
-      "usd_m2_formatted": "USD 1.567/m²",
-      "benchmark_formatted": "USD 1.850/m²",
-      "first_seen_date": "2026-10-08",
-      "days_ago": 13,
-      "last_synced": "2026-10-09T10:10:43.934416"
-    },
     "ZPROP-60396430": {
       "id": "ZPROP-60396430",
       "title": "2 ambientes! /2 50 m2 antiguo piso parquet baño completo reciclado cocina y un ambiente mas bajas expensas 2 º piso por escalera terraza excelente ubicación 1 cuadra botanico oportunidad",
@@ -7453,7 +7141,7 @@
       "usd_m2_formatted": "USD 1.500/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-10-09",
-      "days_ago": 12,
+      "days_ago": 13,
       "last_synced": "2026-10-09T16:00:21.886029"
     },
     "ZPROP-60396677": {
@@ -7494,7 +7182,7 @@
       "usd_m2_formatted": "USD 1.030/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-10-09",
-      "days_ago": 12,
+      "days_ago": 13,
       "last_synced": "2026-10-09T16:00:21.886029"
     },
     "ZPROP-60399643": {
@@ -7535,7 +7223,7 @@
       "usd_m2_formatted": "USD 1.780/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-09",
-      "days_ago": 12,
+      "days_ago": 13,
       "last_synced": "2026-10-09T16:00:21.886029"
     },
     "ZPROP-60409100": {
@@ -7576,7 +7264,7 @@
       "usd_m2_formatted": "USD 1.103/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-10",
-      "days_ago": 11,
+      "days_ago": 12,
       "last_synced": "2026-10-10T14:00:13.145633"
     },
     "ZPROP-60422609": {
@@ -7617,7 +7305,7 @@
       "usd_m2_formatted": "USD 1.532/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-10-13",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-10-13T12:00:18.813487"
     },
     "ZPROP-60420000": {
@@ -7658,7 +7346,7 @@
       "usd_m2_formatted": "USD 1.446/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-13",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-10-13T16:00:22.474169"
     },
     "ZPROP-60424555": {
@@ -7699,7 +7387,7 @@
       "usd_m2_formatted": "USD 1.622/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-13",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-10-13T19:30:28.380095"
     },
     "ZPROP-60427838": {
@@ -7740,7 +7428,7 @@
       "usd_m2_formatted": "USD 1.667/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-10-13",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-10-13T19:30:28.380095"
     },
     "ZPROP-60427806": {
@@ -7781,7 +7469,7 @@
       "usd_m2_formatted": "USD 2.062/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-10-13",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-10-13T19:30:28.380095"
     },
     "ZPROP-60428566": {
@@ -7822,7 +7510,7 @@
       "usd_m2_formatted": "USD 1.421/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-13",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-10-13T19:30:28.380095"
     },
     "ZPROP-60432768": {
@@ -7863,7 +7551,7 @@
       "usd_m2_formatted": "USD 878/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-10-14",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-10-14T19:30:21.762846"
     },
     "ZPROP-60433295": {
@@ -7904,7 +7592,7 @@
       "usd_m2_formatted": "USD 1.431/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-14",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-10-14T19:30:21.762846"
     },
     "ZPROP-60435214": {
@@ -7945,7 +7633,7 @@
       "usd_m2_formatted": "USD 1.909/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-10-14",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-10-14T16:00:28.613368"
     },
     "ZPROP-60435344": {
@@ -7986,7 +7674,7 @@
       "usd_m2_formatted": "USD 1.811/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-14",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-10-14T19:30:21.762846"
     },
     "ZPROP-60442575": {
@@ -8027,7 +7715,7 @@
       "usd_m2_formatted": "USD 1.187/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-15",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-10-15T20:09:37.890840"
     },
     "ZPROP-60441589": {
@@ -8068,7 +7756,7 @@
       "usd_m2_formatted": "USD 1.694/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-15",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-10-15T20:09:37.890840"
     },
     "ZPROP-60447174": {
@@ -8109,7 +7797,7 @@
       "usd_m2_formatted": "USD 1.103/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-15",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-10-15T20:09:37.890840"
     },
     "ZPROP-60447316": {
@@ -8150,7 +7838,7 @@
       "usd_m2_formatted": "USD 1.250/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-10-15",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-10-15T16:47:45.176316"
     },
     "ZPROP-60444208": {
@@ -8191,7 +7879,7 @@
       "usd_m2_formatted": "USD 1.188/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-10-15",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-10-15T20:09:37.890840"
     },
     "ZPROP-60446718": {
@@ -8232,7 +7920,7 @@
       "usd_m2_formatted": "USD 1.780/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-15",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-10-15T16:47:45.176316"
     },
     "ZPROP-60445752": {
@@ -8273,7 +7961,7 @@
       "usd_m2_formatted": "USD 1.647/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-10-15",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-10-15T20:09:37.890840"
     },
     "ZPROP-60449051": {
@@ -8314,7 +8002,7 @@
       "usd_m2_formatted": "USD 958/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-15",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-10-15T20:09:37.890840"
     },
     "ZPROP-60454357": {
@@ -8355,7 +8043,7 @@
       "usd_m2_formatted": "USD 1.959/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-10-16",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-10-16T20:15:09.300531"
     },
     "ZPROP-60453212": {
@@ -8396,7 +8084,7 @@
       "usd_m2_formatted": "USD 1.431/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-16",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-10-16T16:00:30.096532"
     },
     "ZPROP-60457744": {
@@ -8437,7 +8125,7 @@
       "usd_m2_formatted": "USD 1.962/m²",
       "benchmark_formatted": "USD 2.650/m²",
       "first_seen_date": "2026-10-16",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-10-16T20:15:09.300531"
     },
     "ZPROP-60455238": {
@@ -8478,7 +8166,7 @@
       "usd_m2_formatted": "USD 1.636/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-10-16",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-10-16T16:00:30.096532"
     },
     "ZPROP-60455987": {
@@ -8519,7 +8207,7 @@
       "usd_m2_formatted": "USD 2.052/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-10-16",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-10-16T16:00:30.096532"
     },
     "ZPROP-60457146": {
@@ -8560,7 +8248,7 @@
       "usd_m2_formatted": "USD 1.722/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-16",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-10-16T20:15:09.300531"
     },
     "ZPROP-60459962": {
@@ -8601,7 +8289,7 @@
       "usd_m2_formatted": "USD 1.941/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-10-16",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-10-16T20:15:09.300531"
     },
     "ZPROP-60459626": {
@@ -8642,7 +8330,7 @@
       "usd_m2_formatted": "USD 1.792/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-10-16",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-10-16T20:15:09.300531"
     },
     "ZPROP-60458848": {
@@ -8683,7 +8371,7 @@
       "usd_m2_formatted": "USD 1.750/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-16",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-10-16T20:15:09.300531"
     },
     "ZPROP-60469376": {
@@ -8724,7 +8412,7 @@
       "usd_m2_formatted": "USD 1.458/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-10-19",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-10-19T12:00:25.320916"
     },
     "ZPROP-60468652": {
@@ -8765,7 +8453,7 @@
       "usd_m2_formatted": "USD 1.240/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-10-19",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-10-19T19:30:27.094390"
     },
     "ZPROP-60469923": {
@@ -8806,7 +8494,7 @@
       "usd_m2_formatted": "USD 1.590/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-19",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-10-19T19:30:27.094390"
     },
     "ZPROP-60469115": {
@@ -8847,7 +8535,7 @@
       "usd_m2_formatted": "USD 1.667/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-19",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-10-19T16:00:32.257476"
     },
     "ZPROP-60472596": {
@@ -8888,7 +8576,7 @@
       "usd_m2_formatted": "USD 932/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-10-19",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-10-19T19:30:27.094390"
     },
     "ZPROP-60473005": {
@@ -8929,7 +8617,7 @@
       "usd_m2_formatted": "USD 941/m²",
       "benchmark_formatted": "USD 2.050/m²",
       "first_seen_date": "2026-10-19",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-10-19T16:00:32.257476"
     },
     "ZPROP-60473142": {
@@ -8970,7 +8658,7 @@
       "usd_m2_formatted": "USD 908/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-19",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-10-19T16:00:32.257476"
     },
     "ZPROP-60474430": {
@@ -9011,7 +8699,7 @@
       "usd_m2_formatted": "USD 1.188/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-10-19",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-10-19T19:30:27.094390"
     },
     "ZPROP-60473332": {
@@ -9052,7 +8740,7 @@
       "usd_m2_formatted": "USD 1.143/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-10-19",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-10-19T19:30:27.094390"
     },
     "ZPROP-60473599": {
@@ -9093,7 +8781,7 @@
       "usd_m2_formatted": "USD 1.241/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-10-19",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-10-19T19:30:27.094390"
     },
     "ZPROP-60474293": {
@@ -9134,7 +8822,7 @@
       "usd_m2_formatted": "USD 1.491/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-10-19",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-10-19T19:30:27.094390"
     },
     "ZPROP-60476379": {
@@ -9175,7 +8863,7 @@
       "usd_m2_formatted": "USD 1.673/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-19",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-10-19T19:30:27.094390"
     },
     "ZPROP-60476356": {
@@ -9216,7 +8904,7 @@
       "usd_m2_formatted": "USD 1.759/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-10-19",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-10-19T19:30:27.094390"
     },
     "ZPROP-60474812": {
@@ -9257,7 +8945,7 @@
       "usd_m2_formatted": "USD 2.000/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-19",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-10-19T19:30:27.094390"
     },
     "ZPROP-60480148": {
@@ -9298,7 +8986,7 @@
       "usd_m2_formatted": "USD 941/m²",
       "benchmark_formatted": "USD 2.050/m²",
       "first_seen_date": "2026-10-20",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-10-20T21:00:01.159764"
     },
     "ZPROP-60480176": {
@@ -9339,7 +9027,7 @@
       "usd_m2_formatted": "USD 908/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-20",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-10-20T21:00:01.159764"
     },
     "ZPROP-60480614": {
@@ -9380,7 +9068,7 @@
       "usd_m2_formatted": "USD 1.327/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-20",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-10-20T21:00:01.159764"
     },
     "ZPROP-60484209": {
@@ -9421,7 +9109,7 @@
       "usd_m2_formatted": "USD 1.583/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-10-20",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-10-20T16:00:27.707665"
     },
     "ZPROP-60484574": {
@@ -9462,7 +9150,7 @@
       "usd_m2_formatted": "USD 1.878/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-10-20",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-10-20T21:00:01.159764"
     },
     "ZPROP-60484103": {
@@ -9503,7 +9191,7 @@
       "usd_m2_formatted": "USD 1.635/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-20",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-10-20T21:00:01.159764"
     },
     "ZPROP-60486237": {
@@ -9544,7 +9232,7 @@
       "usd_m2_formatted": "USD 1.583/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-10-20",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-10-20T21:00:01.159764"
     },
     "ZPROP-60491403": {
@@ -9554,7 +9242,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 80.000",
       "price_val": 80000,
       "currency": "USD",
@@ -9585,7 +9273,7 @@
       "usd_m2_formatted": "USD 899/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-10-21",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-10-21T12:00:29.257738"
     },
     "ZPROP-60497834": {
@@ -9595,7 +9283,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 105.000",
       "price_val": 105000,
       "currency": "USD",
@@ -9626,7 +9314,7 @@
       "usd_m2_formatted": "USD 1.500/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-10-21",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-10-21T16:00:28.131228"
     },
     "ZPROP-60496392": {
@@ -9636,7 +9324,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 99.900",
       "price_val": 99900,
       "currency": "USD",
@@ -9667,7 +9355,7 @@
       "usd_m2_formatted": "USD 1.959/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-10-21",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-10-21T16:00:28.131228"
     },
     "ZPROP-60496423": {
@@ -9677,7 +9365,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 84.500",
       "price_val": 84500,
       "currency": "USD",
@@ -9708,7 +9396,7 @@
       "usd_m2_formatted": "USD 1.536/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-10-21",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-10-21T19:30:37.357585"
     },
     "ZPROP-60476838": {
@@ -9718,7 +9406,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 95.000",
       "price_val": 95000,
       "currency": "USD",
@@ -9749,7 +9437,7 @@
       "usd_m2_formatted": "USD 1.939/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-10-21",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-10-21T19:30:37.357585"
     },
     "ZPROP-60500596": {
@@ -9759,7 +9447,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 50.000",
       "price_val": 50000,
       "currency": "USD",
@@ -9790,7 +9478,7 @@
       "usd_m2_formatted": "USD 926/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-21",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-10-21T19:30:37.357585"
     },
     "ZPROP-60499865": {
@@ -9800,7 +9488,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 105.000",
       "price_val": 105000,
       "currency": "USD",
@@ -9831,7 +9519,7 @@
       "usd_m2_formatted": "USD 1.810/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-10-21",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-10-21T19:30:37.357585"
     },
     "ZPROP-60498555": {
@@ -9841,7 +9529,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 90.000",
       "price_val": 90000,
       "currency": "USD",
@@ -9872,8 +9560,49 @@
       "usd_m2_formatted": "USD 1.071/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-10-21",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-10-21T19:30:37.357585"
+    },
+    "ZPROP-60504011": {
+      "id": "ZPROP-60504011",
+      "title": "V. Crespo triplex 2 amb. A estrenar con terraza propia - próximo av. Córdoba - metrobus distrito arcos Y futuro corredor verde de la ciudad! Triplex 2 amb. + terraza propia, ubicado en un 3° piso al frente, con ascensor. Ideal Vivienda - airbnb. # Planta 1: Living comedor a la calle. con cocina (electrica) integrada y baño. # Planta 2: Dormitorio vista a la calle. con baño completo. # Planta 3: Hermosa terraza con. vista abierta de 6, 50 x 3, 30, ideal. para 2°dormit., quincho, solárium. Sup. Aprox. Total 58 M2. Muy bajas expensas! No es apto crédito - 1° Escritura. Castillo 1273 a pasos Metrobus, próximo a numerosos locales gastronómicos, Sanatorio de los Arcos, Distrito Arcos, Plaza Serrano. 1 cuadra de Av. Córdoba y Juan B Justo. Cohenca Propiedades. Matricula Cucicba 7019",
+      "description": "V. Crespo triplex 2 amb. A estrenar con terraza propia - próximo av. Córdoba - metrobus distrito arcos Y futuro corredor verde de la ciudad! Triplex 2 amb. + terraza propia, ubicado en un 3° piso al frente, con ascensor. Ideal Vivienda - airbnb. # Planta 1: Living comedor a la calle. con cocina (electrica) integrada y baño. # Planta 2: Dormitorio vista a la calle. con baño completo. # Planta 3: Hermosa terraza con. vista abierta de 6, 50 x 3, 30, ideal. para 2°dormit., quincho, solárium. Sup. Aprox. Total 58 M2. Muy bajas expensas! No es apto crédito - 1° Escritura. Castillo 1273 a pasos Metrobus, próximo a numerosos locales gastronómicos, Sanatorio de los Arcos, Distrito Arcos, Plaza Serrano. 1 cuadra de Av. Córdoba y Juan B Justo. Cohenca Propiedades. Matricula Cucicba 7019",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 95.000",
+      "price_val": 95000,
+      "currency": "USD",
+      "expenses_raw": "$ 130.000 Expensas",
+      "expenses_val": 130000,
+      "user_views": 45,
+      "features_raw": "58 m² tot. | 2 amb. | 1 dorm. | 2 baños",
+      "m2_tot": 58,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 2,
+      "cocheras": null,
+      "location": "Villa Crespo, Capital Federal",
+      "address": "Castillo 1273",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/50/40/11/360x266/2087092769.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-v.-crespo-triplex-en-venta-2-amb-con-amplia-terraza-60504011.html",
+      "is_development": false,
+      "barrio": "Villa Crespo",
+      "barrio_benchmark_m2": 2100,
+      "usd_m2": 1638,
+      "discount_pct": 22.0,
+      "opportunity_score": 52,
+      "user_views_formatted": "45",
+      "badge_text": "💎 Gran Oportunidad",
+      "badge_class": "badge-great",
+      "price_usd_formatted": "USD 95.000",
+      "usd_m2_formatted": "USD 1.638/m²",
+      "benchmark_formatted": "USD 2.100/m²",
+      "first_seen_date": "2026-10-22",
+      "days_ago": 0,
+      "last_synced": "2026-10-22T12:00:15.432681"
     }
   }
 }
