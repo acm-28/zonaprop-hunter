@@ -6772,9 +6772,14 @@
       "first_seen": "2026-10-28",
       "last_price": 83000,
       "barrio": "Parque Patricios"
+    },
+    "ZPROP-60575015": {
+      "first_seen": "2026-10-29",
+      "last_price": 93500,
+      "barrio": "Villa Crespo"
     }
   },
-  "last_run": "2026-10-29T12:00:21.576965",
+  "last_run": "2026-10-29T18:35:37.713927",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -7328,13 +7333,13 @@
     },
     {
       "date": "2026-10-29",
-      "timestamp": "2026-10-29T12:00:21.618218",
-      "total_properties": 73,
-      "new_today": 73,
-      "avg_usd_m2": 1514,
+      "timestamp": "2026-10-29T18:35:37.758325",
+      "total_properties": 74,
+      "new_today": 74,
+      "avg_usd_m2": 1510,
       "min_price": 50000,
       "median_price": 93000,
-      "super_deals_count": 36,
+      "super_deals_count": 37,
       "top_neighborhoods": []
     }
   ],
@@ -10331,6 +10336,47 @@
       "first_seen_date": "2026-10-28",
       "days_ago": 1,
       "last_synced": "2026-10-28T19:30:21.642199"
+    },
+    "ZPROP-60575015": {
+      "id": "ZPROP-60575015",
+      "title": "Ph de 3 ambientes con escritorio O espacio recibidor Y patio internoph con entrada independiente A la calle - 70. 26 mts mas 5. 99 mts de patio - total de 76. 26 metros la unidad se encuentra en esquina - super bien ubicada en el barrio de villa crespotodos los ambientes con ventilacion propiaacceso A varias lineas de colectivo - metrobus muy cercano - zona en crecimientoph sin expensas - se entregara recien pintado de blancono tiene gas - tiene termo electrico Y anafe - luz esta pidiendoseamplios ambientes - listo para ser diseñado A gusto Y crear tu proximo hogar agenda tu visita!! Las medidas son aproximadas y al solo efecto orientativo. “Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede requerir a los propietarios será el equivalente al cuatro con quince centésimos por ciento (4, 15%) del valor total del respectivo contrato. Se encuentra prohibido cobrar a los inquilinos que sean personas físicas comisiones inmobiliarias y gastos de gestoría de informes”. Inmobiliaria mirta gilman, Matricula C. I. N°1026",
+      "description": "Ph de 3 ambientes con escritorio O espacio recibidor Y patio internoph con entrada independiente A la calle - 70. 26 mts mas 5. 99 mts de patio - total de 76. 26 metros la unidad se encuentra en esquina - super bien ubicada en el barrio de villa crespotodos los ambientes con ventilacion propiaacceso A varias lineas de colectivo - metrobus muy cercano - zona en crecimientoph sin expensas - se entregara recien pintado de blancono tiene gas - tiene termo electrico Y anafe - luz esta pidiendoseamplios ambientes - listo para ser diseñado A gusto Y crear tu proximo hogar agenda tu visita!! Las medidas son aproximadas y al solo efecto orientativo. “Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede requerir a los propietarios será el equivalente al cuatro con quince centésimos por ciento (4, 15%) del valor total del respectivo contrato. Se encuentra prohibido cobrar a los inquilinos que sean personas físicas comisiones inmobiliarias y gastos de gestoría de informes”. Inmobiliaria mirta gilman, Matricula C. I. N°1026",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 93.500",
+      "price_val": 93500,
+      "currency": "USD",
+      "expenses_raw": "",
+      "expenses_val": null,
+      "user_views": 45,
+      "features_raw": "76 m² tot. | 3 amb. | 2 dorm. | 1 baño",
+      "m2_tot": 76,
+      "m2_cub": null,
+      "ambientes": 3,
+      "dormitorios": 2,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Villa Crespo, Capital Federal",
+      "address": "Rojas 1906 PB UF 2 - Esquina Juan B Justo",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/57/50/15/360x266/2088866808.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclphin-ph-de-3-ambientes-con-escritorio-a-refaccionar-en-60575015.html",
+      "is_development": false,
+      "barrio": "Villa Crespo",
+      "barrio_benchmark_m2": 2100,
+      "usd_m2": 1230,
+      "discount_pct": 41.4,
+      "opportunity_score": 76,
+      "user_views_formatted": "45",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 93.500",
+      "usd_m2_formatted": "USD 1.230/m²",
+      "benchmark_formatted": "USD 2.100/m²",
+      "first_seen_date": "2026-10-29",
+      "days_ago": 0,
+      "last_synced": "2026-10-29T18:35:37.713927"
     }
   }
 }
