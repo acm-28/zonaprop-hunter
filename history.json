@@ -6837,9 +6837,19 @@
       "first_seen": "2026-10-30",
       "last_price": 93000,
       "barrio": "Almagro"
+    },
+    "ZPROP-60584743": {
+      "first_seen": "2026-10-30",
+      "last_price": 99000,
+      "barrio": "Retiro"
+    },
+    "ZPROP-60585184": {
+      "first_seen": "2026-10-30",
+      "last_price": 95000,
+      "barrio": "Saavedra"
     }
   },
-  "last_run": "2026-10-30T16:00:28.664081",
+  "last_run": "2026-10-30T19:30:22.615659",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -7404,13 +7414,13 @@
     },
     {
       "date": "2026-10-30",
-      "timestamp": "2026-10-30T16:00:28.741211",
-      "total_properties": 77,
-      "new_today": 77,
-      "avg_usd_m2": 1477,
+      "timestamp": "2026-10-30T19:30:22.724868",
+      "total_properties": 79,
+      "new_today": 79,
+      "avg_usd_m2": 1480,
       "min_price": 50000,
-      "median_price": 92999,
-      "super_deals_count": 42,
+      "median_price": 93000,
+      "super_deals_count": 43,
       "top_neighborhoods": []
     }
   ],
@@ -10324,7 +10334,7 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-30",
       "days_ago": 0,
-      "last_synced": "2026-10-30T16:00:28.664081"
+      "last_synced": "2026-10-30T19:30:22.615659"
     },
     "ZPROP-60579998": {
       "id": "ZPROP-60579998",
@@ -10365,7 +10375,7 @@
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-10-30",
       "days_ago": 0,
-      "last_synced": "2026-10-30T16:00:28.664081"
+      "last_synced": "2026-10-30T19:30:22.615659"
     },
     "ZPROP-60580136": {
       "id": "ZPROP-60580136",
@@ -10406,7 +10416,7 @@
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-30",
       "days_ago": 0,
-      "last_synced": "2026-10-30T16:00:28.664081"
+      "last_synced": "2026-10-30T19:30:22.615659"
     },
     "ZPROP-60581554": {
       "id": "ZPROP-60581554",
@@ -10447,7 +10457,7 @@
       "benchmark_formatted": "USD 2.650/m²",
       "first_seen_date": "2026-10-30",
       "days_ago": 0,
-      "last_synced": "2026-10-30T16:00:28.664081"
+      "last_synced": "2026-10-30T19:30:22.615659"
     },
     "ZPROP-60581706": {
       "id": "ZPROP-60581706",
@@ -10488,7 +10498,7 @@
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-10-30",
       "days_ago": 0,
-      "last_synced": "2026-10-30T16:00:28.664081"
+      "last_synced": "2026-10-30T19:30:22.615659"
     },
     "ZPROP-60581903": {
       "id": "ZPROP-60581903",
@@ -10529,7 +10539,7 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-30",
       "days_ago": 0,
-      "last_synced": "2026-10-30T16:00:28.664081"
+      "last_synced": "2026-10-30T19:30:22.615659"
     },
     "ZPROP-60583794": {
       "id": "ZPROP-60583794",
@@ -10570,7 +10580,89 @@
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-30",
       "days_ago": 0,
-      "last_synced": "2026-10-30T16:00:28.664081"
+      "last_synced": "2026-10-30T19:30:22.615659"
+    },
+    "ZPROP-60584743": {
+      "id": "ZPROP-60584743",
+      "title": "Departamento de 2 ambientes reciclado a nuevo, en 3er piso contrafrente, sobre la peatonal Florida a metros de Av. Córdoba, Galerías Pacífico y Plaza San Martín. Su gran diferencial: un patio propio de casi 45 m², con sector semicubierto y sector descubierto, algo muy poco habitual en el centro porteño. Ideal para sumar verde, armar un espacio de estar al aire libre o un lugar de trabajo distinto. La unidad. - Living comedor y dormitorio. - Refaccionado a nuevo, listo para habitar. - Aire acondicionado incluido. - Contrafrente: silencioso y con privacidad. superficies. - Cubierta: 30, 99 m² - Semicubierta: 22, 75 m² - Descubierta: 21, 90 m² - Total: 75, 64 m² el edificio. - Seguridad 24 hs (muy práctico para la recepción de paquetería) - Agua caliente central. ideal para. - Vivienda en pleno centro. - Inversión para renta tradicional o temporaria. - Uso profesional: consultorio, estudio u oficina (apto profesional) ubicación. Excelente conectividad: subte (líneas C, B y D a pocas cuadras), múltiples líneas de colectivo y estación Retiro cerca. Entorno comercial, gastronómico y corporativo. Escritura al día. Consultanos y coordinamos una visita. Barrio Uno Propiedades –. ar. Las medidas y expensas son aproximadas y al solo efecto orientativo; los datos definitivos surgirán del título de propiedad.",
+      "description": "Departamento de 2 ambientes reciclado a nuevo, en 3er piso contrafrente, sobre la peatonal Florida a metros de Av. Córdoba, Galerías Pacífico y Plaza San Martín. Su gran diferencial: un patio propio de casi 45 m², con sector semicubierto y sector descubierto, algo muy poco habitual en el centro porteño. Ideal para sumar verde, armar un espacio de estar al aire libre o un lugar de trabajo distinto. La unidad. - Living comedor y dormitorio. - Refaccionado a nuevo, listo para habitar. - Aire acondicionado incluido. - Contrafrente: silencioso y con privacidad. superficies. - Cubierta: 30, 99 m² - Semicubierta: 22, 75 m² - Descubierta: 21, 90 m² - Total: 75, 64 m² el edificio. - Seguridad 24 hs (muy práctico para la recepción de paquetería) - Agua caliente central. ideal para. - Vivienda en pleno centro. - Inversión para renta tradicional o temporaria. - Uso profesional: consultorio, estudio u oficina (apto profesional) ubicación. Excelente conectividad: subte (líneas C, B y D a pocas cuadras), múltiples líneas de colectivo y estación Retiro cerca. Entorno comercial, gastronómico y corporativo. Escritura al día. Consultanos y coordinamos una visita. Barrio Uno Propiedades –. ar. Las medidas y expensas son aproximadas y al solo efecto orientativo; los datos definitivos surgirán del título de propiedad.",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 99.000",
+      "price_val": 99000,
+      "currency": "USD",
+      "expenses_raw": "$ 460.000 Expensas",
+      "expenses_val": 460000,
+      "user_views": 32,
+      "features_raw": "75 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 75,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Retiro, Capital Federal",
+      "address": "Florida 868",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/58/47/43/360x266/2089118469.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-2-ambientes-reciclado-a-nuevo-con-patio-de-44-m-sup2-60584743.html",
+      "is_development": false,
+      "barrio": "Retiro",
+      "barrio_benchmark_m2": 2300,
+      "usd_m2": 1320,
+      "discount_pct": 42.6,
+      "opportunity_score": 76,
+      "user_views_formatted": "32",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 99.000",
+      "usd_m2_formatted": "USD 1.320/m²",
+      "benchmark_formatted": "USD 2.300/m²",
+      "first_seen_date": "2026-10-30",
+      "days_ago": 0,
+      "last_synced": "2026-10-30T19:30:22.615659"
+    },
+    "ZPROP-60585184": {
+      "id": "ZPROP-60585184",
+      "title": "Amplio monoambiente en saavedra en P. B. Al frente con patio con parrilla. Excelente ubicacion; a mtrs de las Av Ruiz Huidobro y Dr. Ricardo Balbín y a escasas cuadras de la Av Gral. Paz. Rodeada de los espacios verdes que brindan los Parques Sarmiento y Saavedra, cercanía con Dot Baires Shopping, y el polo gastronómico que renovó el barrio de Saavedra. El edificio cuenta con solarium e incluye baulera. La propiedad cumple con los requisitos para gente con capacidad de movilidad reducida. (Ley 5115). La información descripta en el siguiente aviso es meramente orientativa y no forma parte de ningún tipo de información contractual. Los datos enunciados fueron proporcionados por los propietarios y pueden arrojar inexactitudes. Las superficies definitivas surgirán del título de propiedad del inmueble referido. Se deja constancia de que los valores y/o expensas pueden estar sujetas a verificacion o ajustes. Corredor Responsable ignacio curatcucigba 9299 Consultanos para coordinar una visita. we sell prop La información descripta en el siguiente aviso es meramente orientativa y no forma parte de ningún tipo de información contractual. Los datos enunciados fueron proporcionados por los propietarios y pueden arrojar inexactitudes. Las superficies definitivas surgirán del título de propiedad del inmueble referido. Se deja constancia de que los valores y/o expensas pueden estar sujetas a verificación o ajustes. Corredor responsable ignacio curatcucicba 9299cmcpsi 7286",
+      "description": "Amplio monoambiente en saavedra en P. B. Al frente con patio con parrilla. Excelente ubicacion; a mtrs de las Av Ruiz Huidobro y Dr. Ricardo Balbín y a escasas cuadras de la Av Gral. Paz. Rodeada de los espacios verdes que brindan los Parques Sarmiento y Saavedra, cercanía con Dot Baires Shopping, y el polo gastronómico que renovó el barrio de Saavedra. El edificio cuenta con solarium e incluye baulera. La propiedad cumple con los requisitos para gente con capacidad de movilidad reducida. (Ley 5115). La información descripta en el siguiente aviso es meramente orientativa y no forma parte de ningún tipo de información contractual. Los datos enunciados fueron proporcionados por los propietarios y pueden arrojar inexactitudes. Las superficies definitivas surgirán del título de propiedad del inmueble referido. Se deja constancia de que los valores y/o expensas pueden estar sujetas a verificacion o ajustes. Corredor Responsable ignacio curatcucigba 9299 Consultanos para coordinar una visita. we sell prop La información descripta en el siguiente aviso es meramente orientativa y no forma parte de ningún tipo de información contractual. Los datos enunciados fueron proporcionados por los propietarios y pueden arrojar inexactitudes. Las superficies definitivas surgirán del título de propiedad del inmueble referido. Se deja constancia de que los valores y/o expensas pueden estar sujetas a verificación o ajustes. Corredor responsable ignacio curatcucicba 9299cmcpsi 7286",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 95.000",
+      "price_val": 95000,
+      "currency": "USD",
+      "expenses_raw": "$ 285.000 Expensas",
+      "expenses_val": 285000,
+      "user_views": 35,
+      "features_raw": "51 m² tot. | 1 amb. | 1 baño",
+      "m2_tot": 51,
+      "m2_cub": null,
+      "ambientes": 1,
+      "dormitorios": null,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Saavedra, Capital Federal",
+      "address": "Lugones  al 4300",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/58/51/84/360x266/2089126537.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-de-amplio-monoambiente-con-patio-y-parrilla-60585184.html",
+      "is_development": false,
+      "barrio": "Saavedra",
+      "barrio_benchmark_m2": 2000,
+      "usd_m2": 1863,
+      "discount_pct": 6.9,
+      "opportunity_score": 31,
+      "user_views_formatted": "35",
+      "badge_text": "🏷️ Buen Precio",
+      "badge_class": "badge-good",
+      "price_usd_formatted": "USD 95.000",
+      "usd_m2_formatted": "USD 1.863/m²",
+      "benchmark_formatted": "USD 2.000/m²",
+      "first_seen_date": "2026-10-30",
+      "days_ago": 0,
+      "last_synced": "2026-10-30T19:30:22.615659"
     }
   }
 }
