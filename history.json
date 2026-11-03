@@ -6917,9 +6917,14 @@
       "first_seen": "2026-11-03",
       "last_price": 95000,
       "barrio": "Caballito"
+    },
+    "ZPROP-60615307": {
+      "first_seen": "2026-11-03",
+      "last_price": 72000,
+      "barrio": "Parque Patricios"
     }
   },
-  "last_run": "2026-11-03T12:00:26.995283",
+  "last_run": "2026-11-03T16:00:24.501554",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -7528,13 +7533,13 @@
     },
     {
       "date": "2026-11-03",
-      "timestamp": "2026-11-03T12:00:27.044475",
-      "total_properties": 72,
-      "new_today": 72,
-      "avg_usd_m2": 1532,
+      "timestamp": "2026-11-03T16:00:24.551699",
+      "total_properties": 73,
+      "new_today": 73,
+      "avg_usd_m2": 1523,
       "min_price": 50000,
-      "median_price": 93250,
-      "super_deals_count": 38,
+      "median_price": 93000,
+      "super_deals_count": 39,
       "top_neighborhoods": []
     }
   ],
@@ -10325,7 +10330,7 @@
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-11-03",
       "days_ago": 0,
-      "last_synced": "2026-11-03T12:00:26.995283"
+      "last_synced": "2026-11-03T16:00:24.501554"
     },
     "ZPROP-60611650": {
       "id": "ZPROP-60611650",
@@ -10366,7 +10371,7 @@
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-11-03",
       "days_ago": 0,
-      "last_synced": "2026-11-03T12:00:26.995283"
+      "last_synced": "2026-11-03T16:00:24.501554"
     },
     "ZPROP-60610527": {
       "id": "ZPROP-60610527",
@@ -10448,7 +10453,7 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-03",
       "days_ago": 0,
-      "last_synced": "2026-11-03T12:00:26.995283"
+      "last_synced": "2026-11-03T16:00:24.501554"
     },
     "ZPROP-60610911": {
       "id": "ZPROP-60610911",
@@ -10489,7 +10494,48 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-03",
       "days_ago": 0,
-      "last_synced": "2026-11-03T12:00:26.995283"
+      "last_synced": "2026-11-03T16:00:24.501554"
+    },
+    "ZPROP-60615307": {
+      "id": "ZPROP-60615307",
+      "title": "Ph de 3 ambientes en dos plantas. Dos terrazas propias, muy luminoso, a refaccionar. Ubicado a metros de Av Juan de Garay, de Av. Chiclana, y de Av. Pavón. Con acceso a subte, medios de transporte y comercios. * ver video * Edificio antiguo con entrada por pasillo común. Pb: Living comedor, cocina, baño y un dormitorio. Pa: Dormitorio principal con salida a las dos terrazas. Cocina completa con conexión para lavarropas. Baño completo. Sin expensas. - Superficie: 82 m2 totales. 30 m2 superficie descubierta. se toma permuta por menor valor. - Esta propiedad posee autorización de venta, la documentación verificada e informe de dominio a disposición. - Las medidas de este inmueble son aproximadas. Las definitivas surgirán del título de propiedad. - Todas las operaciones son llevadas a cabo por el martillero y corredor inmobiliario Sebastián Dbsie, matricula cpi 7828. Coordinar visita! Vende. sd propiedades. mat 7828",
+      "description": "Ph de 3 ambientes en dos plantas. Dos terrazas propias, muy luminoso, a refaccionar. Ubicado a metros de Av Juan de Garay, de Av. Chiclana, y de Av. Pavón. Con acceso a subte, medios de transporte y comercios. * ver video * Edificio antiguo con entrada por pasillo común. Pb: Living comedor, cocina, baño y un dormitorio. Pa: Dormitorio principal con salida a las dos terrazas. Cocina completa con conexión para lavarropas. Baño completo. Sin expensas. - Superficie: 82 m2 totales. 30 m2 superficie descubierta. se toma permuta por menor valor. - Esta propiedad posee autorización de venta, la documentación verificada e informe de dominio a disposición. - Las medidas de este inmueble son aproximadas. Las definitivas surgirán del título de propiedad. - Todas las operaciones son llevadas a cabo por el martillero y corredor inmobiliario Sebastián Dbsie, matricula cpi 7828. Coordinar visita! Vende. sd propiedades. mat 7828",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 72.000",
+      "price_val": 72000,
+      "currency": "USD",
+      "expenses_raw": "",
+      "expenses_val": null,
+      "user_views": 32,
+      "features_raw": "82 m² tot. | 3 amb. | 2 dorm. | 1 baño",
+      "m2_tot": 82,
+      "m2_cub": null,
+      "ambientes": 3,
+      "dormitorios": 2,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Parque Patricios, Capital Federal",
+      "address": "Pasaje Oruro 1500",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/61/53/07/360x266/2089887740.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclphin-venta-parque-patricios-3-ambientes-ph-sin-60615307.html",
+      "is_development": false,
+      "barrio": "Parque Patricios",
+      "barrio_benchmark_m2": 1550,
+      "usd_m2": 878,
+      "discount_pct": 43.4,
+      "opportunity_score": 80,
+      "user_views_formatted": "32",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 72.000",
+      "usd_m2_formatted": "USD 878/m²",
+      "benchmark_formatted": "USD 1.550/m²",
+      "first_seen_date": "2026-11-03",
+      "days_ago": 0,
+      "last_synced": "2026-11-03T16:00:24.501554"
     }
   }
 }
