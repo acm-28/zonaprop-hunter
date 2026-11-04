@@ -6937,9 +6937,14 @@
       "first_seen": "2026-11-04",
       "last_price": 99000,
       "barrio": "Villa Crespo"
+    },
+    "ZPROP-60628455": {
+      "first_seen": "2026-11-04",
+      "last_price": 94000,
+      "barrio": "Villa Urquiza"
     }
   },
-  "last_run": "2026-11-04T12:00:19.409387",
+  "last_run": "2026-11-04T16:01:04.944805",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -7559,10 +7564,10 @@
     },
     {
       "date": "2026-11-04",
-      "timestamp": "2026-11-04T12:00:19.454589",
-      "total_properties": 68,
-      "new_today": 68,
-      "avg_usd_m2": 1533,
+      "timestamp": "2026-11-04T16:01:04.991753",
+      "total_properties": 69,
+      "new_today": 69,
+      "avg_usd_m2": 1538,
       "min_price": 63000,
       "median_price": 93000,
       "super_deals_count": 33,
@@ -10315,7 +10320,7 @@
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-04",
       "days_ago": 0,
-      "last_synced": "2026-11-04T12:00:19.409387"
+      "last_synced": "2026-11-04T16:01:04.944805"
     },
     "ZPROP-60624432": {
       "id": "ZPROP-60624432",
@@ -10356,7 +10361,48 @@
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-11-04",
       "days_ago": 0,
-      "last_synced": "2026-11-04T12:00:19.409387"
+      "last_synced": "2026-11-04T16:01:04.944805"
+    },
+    "ZPROP-60628455": {
+      "id": "ZPROP-60628455",
+      "title": "Depto 2A | Pedraza 6074. Departamentos disponibles: manuela pedraza 6074 - A estrenar. Edificio con terraza general, jacuzzi, parrilla y portero visor. Guardia inmobiliaria: lunes a viernes de 8 a 17 hs, sábados y domingos de 14 a 17 hs. * pb 2B - u$s 82. 000 - 2 amb - 47 m² con patio propio. * 3° 10B - u$s 94. 000 - 2 amb - 43 m² con balcón aterrazado y parrilla propia. * pb 2A - u$s 94. 000 - 2 amb - 49 m² con patio propio y parrilla. * 3° 10A - u$s 104. 000 - 2 amb - 45 m² al frente con balcón. ceretti 3153 - A estrenar. Edificio de pb y 2 pisos con jacuzzi, parrilla y portero visor. Guardia inmobiliaria: lunes a viernes de 8 a 17 hs. * pb uf 1 - u$s 94. 000 - 2 amb - 32 m² al frente, portero visor, horno empotrado y silestone. * pb uf 2 - u$s 94. 000 - 2 amb - 44 m² con patio, parrilla, portero visor y horno empotrado. ibera 5453 (Villa Urquiza) - A estrenar. * 2° uf 8 - u$s 84. 000 - 2 amb - 30 m² con terraza chica. Y también tenemos estos monoambientes disponibles: manuela pedraza 6074 - A estrenar. * 4° 12A - u$s 76. 000 - 1 amb - 36 m² con balcón aterrazado y parrilla. * pb 3B - u$s 76. 000 - 1 amb - 45 m² con patio propio. * pb 2B - u$s 82. 000 - 1 amb - 47 m² con patio propio. * pb 2A - u$s 94. 000 - 1 amb - 49 m² con patio propio. ceretti 3153 - A estrenar. * 1° uf 6 - u$s 69. 000 - 1 amb - 26 m², portero visor, cerradura biométrica y horno empotrado. * 2° uf 9 - u$s 79. 000 - 1 amb - 26 m² * 1° uf 4 - u$s 84. 000 - 1 amb - 35 m² al frente con balcón, silestone. * 1° uf 5 - u$s 84. 000 - 1 amb - 39 m² al frente con balcón, silestone. zado 3619 (Villa Urquiza) - semi estrenar, pb frente, luminoso. * pb Zado 3619 - u$s 46. 000 - 1 amb - 22 m² semi a estrenar, luminoso. tomamos tu propiedad como parte de pago. Solicita tu tasacion sin cargo. Sabrina Ver datos. Cristina Ver datos. leonides Inmuebles. de Sabrina Tozzelli. Mat. 6687 cucicba",
+      "description": "Depto 2A | Pedraza 6074. Departamentos disponibles: manuela pedraza 6074 - A estrenar. Edificio con terraza general, jacuzzi, parrilla y portero visor. Guardia inmobiliaria: lunes a viernes de 8 a 17 hs, sábados y domingos de 14 a 17 hs. * pb 2B - u$s 82. 000 - 2 amb - 47 m² con patio propio. * 3° 10B - u$s 94. 000 - 2 amb - 43 m² con balcón aterrazado y parrilla propia. * pb 2A - u$s 94. 000 - 2 amb - 49 m² con patio propio y parrilla. * 3° 10A - u$s 104. 000 - 2 amb - 45 m² al frente con balcón. ceretti 3153 - A estrenar. Edificio de pb y 2 pisos con jacuzzi, parrilla y portero visor. Guardia inmobiliaria: lunes a viernes de 8 a 17 hs. * pb uf 1 - u$s 94. 000 - 2 amb - 32 m² al frente, portero visor, horno empotrado y silestone. * pb uf 2 - u$s 94. 000 - 2 amb - 44 m² con patio, parrilla, portero visor y horno empotrado. ibera 5453 (Villa Urquiza) - A estrenar. * 2° uf 8 - u$s 84. 000 - 2 amb - 30 m² con terraza chica. Y también tenemos estos monoambientes disponibles: manuela pedraza 6074 - A estrenar. * 4° 12A - u$s 76. 000 - 1 amb - 36 m² con balcón aterrazado y parrilla. * pb 3B - u$s 76. 000 - 1 amb - 45 m² con patio propio. * pb 2B - u$s 82. 000 - 1 amb - 47 m² con patio propio. * pb 2A - u$s 94. 000 - 1 amb - 49 m² con patio propio. ceretti 3153 - A estrenar. * 1° uf 6 - u$s 69. 000 - 1 amb - 26 m², portero visor, cerradura biométrica y horno empotrado. * 2° uf 9 - u$s 79. 000 - 1 amb - 26 m² * 1° uf 4 - u$s 84. 000 - 1 amb - 35 m² al frente con balcón, silestone. * 1° uf 5 - u$s 84. 000 - 1 amb - 39 m² al frente con balcón, silestone. zado 3619 (Villa Urquiza) - semi estrenar, pb frente, luminoso. * pb Zado 3619 - u$s 46. 000 - 1 amb - 22 m² semi a estrenar, luminoso. tomamos tu propiedad como parte de pago. Solicita tu tasacion sin cargo. Sabrina Ver datos. Cristina Ver datos. leonides Inmuebles. de Sabrina Tozzelli. Mat. 6687 cucicba",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 94.000",
+      "price_val": 94000,
+      "currency": "USD",
+      "expenses_raw": "",
+      "expenses_val": null,
+      "user_views": 48,
+      "features_raw": "49 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 49,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Villa Urquiza, Capital Federal",
+      "address": "Calle Manuela Pedraza 6074",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/62/84/55/360x266/2090205685.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-2a-2-ambientes-49-m-sup2--espacioso-patio-propio-60628455.html",
+      "is_development": false,
+      "barrio": "Villa Urquiza",
+      "barrio_benchmark_m2": 2350,
+      "usd_m2": 1918,
+      "discount_pct": 18.4,
+      "opportunity_score": 49,
+      "user_views_formatted": "48",
+      "badge_text": "💎 Gran Oportunidad",
+      "badge_class": "badge-great",
+      "price_usd_formatted": "USD 94.000",
+      "usd_m2_formatted": "USD 1.918/m²",
+      "benchmark_formatted": "USD 2.350/m²",
+      "first_seen_date": "2026-11-04",
+      "days_ago": 0,
+      "last_synced": "2026-11-04T16:01:04.944805"
     }
   }
 }
