@@ -6942,9 +6942,19 @@
       "first_seen": "2026-11-04",
       "last_price": 94000,
       "barrio": "Villa Urquiza"
+    },
+    "ZPROP-60630630": {
+      "first_seen": "2026-11-04",
+      "last_price": 95000,
+      "barrio": "Almagro"
+    },
+    "ZPROP-60629086": {
+      "first_seen": "2026-11-04",
+      "last_price": 100000,
+      "barrio": "Villa Ortúzar"
     }
   },
-  "last_run": "2026-11-04T16:01:04.944805",
+  "last_run": "2026-11-04T19:30:22.340859",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -7564,13 +7574,13 @@
     },
     {
       "date": "2026-11-04",
-      "timestamp": "2026-11-04T16:01:04.991753",
-      "total_properties": 69,
-      "new_today": 69,
-      "avg_usd_m2": 1538,
+      "timestamp": "2026-11-04T19:30:22.385618",
+      "total_properties": 71,
+      "new_today": 71,
+      "avg_usd_m2": 1537,
       "min_price": 63000,
-      "median_price": 93000,
-      "super_deals_count": 33,
+      "median_price": 93500,
+      "super_deals_count": 34,
       "top_neighborhoods": []
     }
   ],
@@ -10320,7 +10330,7 @@
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-04",
       "days_ago": 0,
-      "last_synced": "2026-11-04T16:01:04.944805"
+      "last_synced": "2026-11-04T19:30:22.340859"
     },
     "ZPROP-60624432": {
       "id": "ZPROP-60624432",
@@ -10361,7 +10371,7 @@
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-11-04",
       "days_ago": 0,
-      "last_synced": "2026-11-04T16:01:04.944805"
+      "last_synced": "2026-11-04T19:30:22.340859"
     },
     "ZPROP-60628455": {
       "id": "ZPROP-60628455",
@@ -10403,6 +10413,88 @@
       "first_seen_date": "2026-11-04",
       "days_ago": 0,
       "last_synced": "2026-11-04T16:01:04.944805"
+    },
+    "ZPROP-60630630": {
+      "id": "ZPROP-60630630",
+      "title": "# amplio 3 ambientes de 83 m² en edificio de estilo frances del año 1931 # - apto credito bancario. - Sobre Av. Rivadavia próximo a 150 mts. De la Estación Loria del subte A y con acceso infinidad de medios de transportes de colectivos. - Edificio construido por el Arq. Albertolli, en muy buen estado de conservación y ascensor jaula. - Semipiso con pisos de pinotea, techos altos, baño estilo vintage, cocina con servicio de gas natural y arreglos para hacerle. distribucion y medidas: - Hall de entrada: 1, 75 x 3, 90. - Living-Comedor: 4, 00 x 7, 05. - Cocina-comedor diario: 3, 08 x 3, 85. - Hall distribuidor: 1, 05 x 1, 75. - Dormitorio principal: 3, 15 x 4, 15 + placard. - Dormitorio secundario: 3, 00 x 3, 60 + placard. - Baño: 1, 70 x 2, 25. oferta provista por topinmobiliario. com - codigo: tpe1207",
+      "description": "# amplio 3 ambientes de 83 m² en edificio de estilo frances del año 1931 # - apto credito bancario. - Sobre Av. Rivadavia próximo a 150 mts. De la Estación Loria del subte A y con acceso infinidad de medios de transportes de colectivos. - Edificio construido por el Arq. Albertolli, en muy buen estado de conservación y ascensor jaula. - Semipiso con pisos de pinotea, techos altos, baño estilo vintage, cocina con servicio de gas natural y arreglos para hacerle. distribucion y medidas: - Hall de entrada: 1, 75 x 3, 90. - Living-Comedor: 4, 00 x 7, 05. - Cocina-comedor diario: 3, 08 x 3, 85. - Hall distribuidor: 1, 05 x 1, 75. - Dormitorio principal: 3, 15 x 4, 15 + placard. - Dormitorio secundario: 3, 00 x 3, 60 + placard. - Baño: 1, 70 x 2, 25. oferta provista por topinmobiliario. com - codigo: tpe1207",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 95.000",
+      "price_val": 95000,
+      "currency": "USD",
+      "expenses_raw": "$ 220.000 Expensas",
+      "expenses_val": 220000,
+      "user_views": 42,
+      "features_raw": "82 m² tot. | 3 amb. | 2 dorm. | 1 baño",
+      "m2_tot": 82,
+      "m2_cub": null,
+      "ambientes": 3,
+      "dormitorios": 2,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Almagro, Capital Federal",
+      "address": "RIVADAVIA AV. 3200",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/63/06/30/360x266/2090278010.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-amplio-3-ambientes-de-83-m-sup2--en-edificio-de-estilo-60630630.html",
+      "is_development": false,
+      "barrio": "Almagro",
+      "barrio_benchmark_m2": 1850,
+      "usd_m2": 1159,
+      "discount_pct": 37.4,
+      "opportunity_score": 71,
+      "user_views_formatted": "42",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 95.000",
+      "usd_m2_formatted": "USD 1.159/m²",
+      "benchmark_formatted": "USD 1.850/m²",
+      "first_seen_date": "2026-11-04",
+      "days_ago": 0,
+      "last_synced": "2026-11-04T19:30:22.340859"
+    },
+    "ZPROP-60629086": {
+      "id": "ZPROP-60629086",
+      "title": "Amplio departamento de 2 ambientes con patio, ubicado A metros de la plaza 25 de agosto, en zona residencial, cercano A av. Alvarez thomas Y av. El cano. el departamentose desarrolla totalmente en Planta Baja, con un amplio living-comedor con pisos de parquet en muy buen estado, techos altos y mucha luz natural. La cocina se encuentra semi-incorporada, separada del living por una barra que le otorga más espacio de guardado. Posee un baño completo y ventilado, dormitorio amplio con placard y un patio que otorga más luz y ventilación a todos los ambientes. - muy bajas expensas- apto creditotodo el departamento es eléctrico, tanto la cocina como el termotanque individual. el edificiocon una antigüedad de 50 años, con 2 Pisos y 4 Departamentos por piso, siendo éste el ante último de la planta baja. Ideal para vivienda o para renta, debido a su excelente ubicación. guirod Propiedades - Martillero Responsable: Guillermo Martin Rodriguez (Matr. Cucicba 5812) Todas las medidas, montos de expensas y demás características enunciadas son meramente orientativas, Los datos exactos serán las que se expresen en el respectivo título de propiedad de cada inmueble. Todas las fotos, imagenes y videos son meramente ilustrativos y no contractuales. Los precios enunciados son meramente orientativos y no contractuales. ley 5859: “Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede requerir a los propietarios será el equivalente al cuatro con quince centésimos por ciento (4, 15%) del valor total del respectivo contrato. Se encuentra prohibido cobrar a los inquilinos que sean personas físicas comisiones inmobiliarias y gastos de gestoría de informes”. -",
+      "description": "Amplio departamento de 2 ambientes con patio, ubicado A metros de la plaza 25 de agosto, en zona residencial, cercano A av. Alvarez thomas Y av. El cano. el departamentose desarrolla totalmente en Planta Baja, con un amplio living-comedor con pisos de parquet en muy buen estado, techos altos y mucha luz natural. La cocina se encuentra semi-incorporada, separada del living por una barra que le otorga más espacio de guardado. Posee un baño completo y ventilado, dormitorio amplio con placard y un patio que otorga más luz y ventilación a todos los ambientes. - muy bajas expensas- apto creditotodo el departamento es eléctrico, tanto la cocina como el termotanque individual. el edificiocon una antigüedad de 50 años, con 2 Pisos y 4 Departamentos por piso, siendo éste el ante último de la planta baja. Ideal para vivienda o para renta, debido a su excelente ubicación. guirod Propiedades - Martillero Responsable: Guillermo Martin Rodriguez (Matr. Cucicba 5812) Todas las medidas, montos de expensas y demás características enunciadas son meramente orientativas, Los datos exactos serán las que se expresen en el respectivo título de propiedad de cada inmueble. Todas las fotos, imagenes y videos son meramente ilustrativos y no contractuales. Los precios enunciados son meramente orientativos y no contractuales. ley 5859: “Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede requerir a los propietarios será el equivalente al cuatro con quince centésimos por ciento (4, 15%) del valor total del respectivo contrato. Se encuentra prohibido cobrar a los inquilinos que sean personas físicas comisiones inmobiliarias y gastos de gestoría de informes”. -",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 100.000",
+      "price_val": 100000,
+      "currency": "USD",
+      "expenses_raw": "$ 48.000 Expensas",
+      "expenses_val": 48000,
+      "user_views": 32,
+      "features_raw": "55 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 55,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Villa Ortuzar, Capital Federal",
+      "address": "Heredia al 1000, PB",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/62/90/86/360x266/2090220789.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-2-ambientes-con-patio-y-bajas-expensas-60629086.html",
+      "is_development": false,
+      "barrio": "Villa Ortúzar",
+      "barrio_benchmark_m2": 2100,
+      "usd_m2": 1818,
+      "discount_pct": 13.4,
+      "opportunity_score": 39,
+      "user_views_formatted": "32",
+      "badge_text": "🏷️ Buen Precio",
+      "badge_class": "badge-good",
+      "price_usd_formatted": "USD 100.000",
+      "usd_m2_formatted": "USD 1.818/m²",
+      "benchmark_formatted": "USD 2.100/m²",
+      "first_seen_date": "2026-11-04",
+      "days_ago": 0,
+      "last_synced": "2026-11-04T19:30:22.340859"
     }
   }
 }
