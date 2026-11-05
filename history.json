@@ -6992,9 +6992,19 @@
       "first_seen": "2026-11-05",
       "last_price": 95000,
       "barrio": "Almagro"
+    },
+    "ZPROP-60640362": {
+      "first_seen": "2026-11-05",
+      "last_price": 98000,
+      "barrio": "Palermo"
+    },
+    "ZPROP-60639425": {
+      "first_seen": "2026-11-05",
+      "last_price": 90000,
+      "barrio": "Caballito"
     }
   },
-  "last_run": "2026-11-05T16:00:27.018376",
+  "last_run": "2026-11-05T19:30:22.540435",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -7625,13 +7635,13 @@
     },
     {
       "date": "2026-11-05",
-      "timestamp": "2026-11-05T16:00:27.102311",
-      "total_properties": 71,
-      "new_today": 71,
-      "avg_usd_m2": 1535,
+      "timestamp": "2026-11-05T19:30:22.587651",
+      "total_properties": 73,
+      "new_today": 73,
+      "avg_usd_m2": 1531,
       "min_price": 56000,
       "median_price": 93000,
-      "super_deals_count": 34,
+      "super_deals_count": 36,
       "top_neighborhoods": []
     }
   ],
@@ -10258,7 +10268,7 @@
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-11-05",
       "days_ago": 0,
-      "last_synced": "2026-11-05T16:00:27.018376"
+      "last_synced": "2026-11-05T19:30:22.540435"
     },
     "ZPROP-60635110": {
       "id": "ZPROP-60635110",
@@ -10299,7 +10309,7 @@
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-05",
       "days_ago": 0,
-      "last_synced": "2026-11-05T16:00:27.018376"
+      "last_synced": "2026-11-05T19:30:22.540435"
     },
     "ZPROP-60635476": {
       "id": "ZPROP-60635476",
@@ -10340,7 +10350,7 @@
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-11-05",
       "days_ago": 0,
-      "last_synced": "2026-11-05T16:00:27.018376"
+      "last_synced": "2026-11-05T19:30:22.540435"
     },
     "ZPROP-60633449": {
       "id": "ZPROP-60633449",
@@ -10422,7 +10432,7 @@
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-11-05",
       "days_ago": 0,
-      "last_synced": "2026-11-05T16:00:27.018376"
+      "last_synced": "2026-11-05T19:30:22.540435"
     },
     "ZPROP-60637132": {
       "id": "ZPROP-60637132",
@@ -10463,7 +10473,7 @@
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-11-05",
       "days_ago": 0,
-      "last_synced": "2026-11-05T16:00:27.018376"
+      "last_synced": "2026-11-05T19:30:22.540435"
     },
     "ZPROP-60636172": {
       "id": "ZPROP-60636172",
@@ -10504,7 +10514,7 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-05",
       "days_ago": 0,
-      "last_synced": "2026-11-05T16:00:27.018376"
+      "last_synced": "2026-11-05T19:30:22.540435"
     },
     "ZPROP-60638686": {
       "id": "ZPROP-60638686",
@@ -10545,7 +10555,89 @@
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-05",
       "days_ago": 0,
-      "last_synced": "2026-11-05T16:00:27.018376"
+      "last_synced": "2026-11-05T19:30:22.540435"
+    },
+    "ZPROP-60640362": {
+      "id": "ZPROP-60640362",
+      "title": "Excelente depto con balcon terraza Y patio, cuenta con un living comedor dividido en dos ambientes, amplio Y luminoso, de 3, 90 X 3, 50 Y 3X3, cocina completa de 2, 30X2, baño completo, balcon de 6X5 Y patio de 2, 50X2, 50. La ubicacion es excelente, A 1 cuadra de boulevard charcas, A tres cuadras de avenida santa fe, shopping alto palermo, subte linea \"D\", colectivos, restaurantes, etc.",
+      "description": "Excelente depto con balcon terraza Y patio, cuenta con un living comedor dividido en dos ambientes, amplio Y luminoso, de 3, 90 X 3, 50 Y 3X3, cocina completa de 2, 30X2, baño completo, balcon de 6X5 Y patio de 2, 50X2, 50. La ubicacion es excelente, A 1 cuadra de boulevard charcas, A tres cuadras de avenida santa fe, shopping alto palermo, subte linea \"D\", colectivos, restaurantes, etc.",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 98.000",
+      "price_val": 98000,
+      "currency": "USD",
+      "expenses_raw": "$ 300.000 Expensas",
+      "expenses_val": 300000,
+      "user_views": 65,
+      "features_raw": "71 m² tot. | 1 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 71,
+      "m2_cub": null,
+      "ambientes": 1,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Palermo, Capital Federal",
+      "address": "General Lucio Norberto Mansilla 3560",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/64/03/62/360x266/2090531214.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-mansilla-y-bulnes-venta-con-renta-excelente-depto-60640362.html",
+      "is_development": false,
+      "barrio": "Palermo",
+      "barrio_benchmark_m2": 3000,
+      "usd_m2": 1380,
+      "discount_pct": 54.0,
+      "opportunity_score": 78,
+      "user_views_formatted": "65",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 98.000",
+      "usd_m2_formatted": "USD 1.380/m²",
+      "benchmark_formatted": "USD 3.000/m²",
+      "first_seen_date": "2026-11-05",
+      "days_ago": 0,
+      "last_synced": "2026-11-05T19:30:22.540435"
+    },
+    "ZPROP-60639425": {
+      "id": "ZPROP-60639425",
+      "title": "Venta de Departamento 3 Ambientes en Caballito, Capital Federal. Cocina independiente a gas. Comedor diario. Baño completo con Bañera. Dos Dormitorios. lepore Propiedades S. A. Cuit: Ver datos-9 C. U. C. I. C. B. A. Matrícula Nº 931 (Sucursales Caballito - Palermo - Centro) aviso legal: Las descripciones arquitectónicas y funcionales, valores de expensas, impuestos y servicios, fotos y medidas de este inmueble son aproximados. Los datos fueron proporcionados por el propietario y pueden no estar actualizados a la hora de la visualización de este aviso por lo cual pueden arrojar inexactitudes y discordancias con las que surgen de los las facturas, títulos y planos legales del inmueble. El interesado deberá realizar las verificaciones respectivas previamente a la realización de cualquier operación, requiriendo por sí o sus profesionales las copias necesarias de la documentación que corresponda. Venta supeditada al cumplimiento por parte del propietario de los requisitos de la resolución general Nº 2371 de la afip (pedido de coti) xintel(lep-lep-Ver datos)",
+      "description": "Venta de Departamento 3 Ambientes en Caballito, Capital Federal. Cocina independiente a gas. Comedor diario. Baño completo con Bañera. Dos Dormitorios. lepore Propiedades S. A. Cuit: Ver datos-9 C. U. C. I. C. B. A. Matrícula Nº 931 (Sucursales Caballito - Palermo - Centro) aviso legal: Las descripciones arquitectónicas y funcionales, valores de expensas, impuestos y servicios, fotos y medidas de este inmueble son aproximados. Los datos fueron proporcionados por el propietario y pueden no estar actualizados a la hora de la visualización de este aviso por lo cual pueden arrojar inexactitudes y discordancias con las que surgen de los las facturas, títulos y planos legales del inmueble. El interesado deberá realizar las verificaciones respectivas previamente a la realización de cualquier operación, requiriendo por sí o sus profesionales las copias necesarias de la documentación que corresponda. Venta supeditada al cumplimiento por parte del propietario de los requisitos de la resolución general Nº 2371 de la afip (pedido de coti) xintel(lep-lep-Ver datos)",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 90.000",
+      "price_val": 90000,
+      "currency": "USD",
+      "expenses_raw": "$ 250.000 Expensas",
+      "expenses_val": 250000,
+      "user_views": 55,
+      "features_raw": "65 m² tot. | 3 amb. | 2 dorm.",
+      "m2_tot": 65,
+      "m2_cub": null,
+      "ambientes": 3,
+      "dormitorios": 2,
+      "banos": null,
+      "cocheras": null,
+      "location": "Caballito, Capital Federal",
+      "address": "DOBLAS 650. Entre Valle y Pedro goyena",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/63/94/25/360x266/2090507345.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-de-departamento-3-ambientes-en-caballito-60639425.html",
+      "is_development": false,
+      "barrio": "Caballito",
+      "barrio_benchmark_m2": 2150,
+      "usd_m2": 1385,
+      "discount_pct": 35.6,
+      "opportunity_score": 71,
+      "user_views_formatted": "55",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 90.000",
+      "usd_m2_formatted": "USD 1.385/m²",
+      "benchmark_formatted": "USD 2.150/m²",
+      "first_seen_date": "2026-11-05",
+      "days_ago": 0,
+      "last_synced": "2026-11-05T19:30:22.540435"
     }
   }
 }
