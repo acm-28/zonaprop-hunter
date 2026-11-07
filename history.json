@@ -7032,9 +7032,19 @@
       "first_seen": "2026-11-06",
       "last_price": 98500,
       "barrio": "Recoleta"
+    },
+    "ZPROP-60656333": {
+      "first_seen": "2026-11-07",
+      "last_price": 99000,
+      "barrio": "Recoleta"
+    },
+    "ZPROP-60656388": {
+      "first_seen": "2026-11-07",
+      "last_price": 95000,
+      "barrio": "Palermo"
     }
   },
-  "last_run": "2026-11-06T19:30:18.693476",
+  "last_run": "2026-11-07T14:00:15.334408",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -7684,6 +7694,17 @@
       "median_price": 93750,
       "super_deals_count": 34,
       "top_neighborhoods": []
+    },
+    {
+      "date": "2026-11-07",
+      "timestamp": "2026-11-07T14:00:15.379381",
+      "total_properties": 74,
+      "new_today": 74,
+      "avg_usd_m2": 1534,
+      "min_price": 56000,
+      "median_price": 94000,
+      "super_deals_count": 36,
+      "top_neighborhoods": []
     }
   ],
   "active_deals": {
@@ -7725,7 +7746,7 @@
       "usd_m2_formatted": "USD 1.333/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-10-26",
-      "days_ago": 11,
+      "days_ago": 12,
       "last_synced": "2026-10-26T12:56:12.392256"
     },
     "ZPROP-60531827": {
@@ -7766,7 +7787,7 @@
       "usd_m2_formatted": "USD 1.750/m²",
       "benchmark_formatted": "USD 2.050/m²",
       "first_seen_date": "2026-10-26",
-      "days_ago": 11,
+      "days_ago": 12,
       "last_synced": "2026-10-26T19:30:29.772374"
     },
     "ZPROP-60537947": {
@@ -7807,7 +7828,7 @@
       "usd_m2_formatted": "USD 862/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-26",
-      "days_ago": 11,
+      "days_ago": 12,
       "last_synced": "2026-10-26T19:30:29.772374"
     },
     "ZPROP-60538780": {
@@ -7848,7 +7869,7 @@
       "usd_m2_formatted": "USD 1.161/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-26",
-      "days_ago": 11,
+      "days_ago": 12,
       "last_synced": "2026-10-26T16:00:29.135551"
     },
     "ZPROP-60536949": {
@@ -7889,7 +7910,7 @@
       "usd_m2_formatted": "USD 1.385/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-26",
-      "days_ago": 11,
+      "days_ago": 12,
       "last_synced": "2026-10-26T19:30:29.772374"
     },
     "ZPROP-60533870": {
@@ -7930,7 +7951,7 @@
       "usd_m2_formatted": "USD 1.441/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-26",
-      "days_ago": 11,
+      "days_ago": 12,
       "last_synced": "2026-10-26T16:00:29.135551"
     },
     "ZPROP-60540603": {
@@ -7971,7 +7992,7 @@
       "usd_m2_formatted": "USD 1.764/m²",
       "benchmark_formatted": "USD 2.650/m²",
       "first_seen_date": "2026-10-26",
-      "days_ago": 11,
+      "days_ago": 12,
       "last_synced": "2026-10-26T19:30:29.772374"
     },
     "ZPROP-60540733": {
@@ -8012,7 +8033,7 @@
       "usd_m2_formatted": "USD 1.824/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-10-26",
-      "days_ago": 11,
+      "days_ago": 12,
       "last_synced": "2026-10-26T19:30:29.772374"
     },
     "ZPROP-60539446": {
@@ -8053,7 +8074,7 @@
       "usd_m2_formatted": "USD 1.600/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-26",
-      "days_ago": 11,
+      "days_ago": 12,
       "last_synced": "2026-10-26T19:30:29.772374"
     },
     "ZPROP-60544479": {
@@ -8094,7 +8115,7 @@
       "usd_m2_formatted": "USD 1.981/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-10-27",
-      "days_ago": 10,
+      "days_ago": 11,
       "last_synced": "2026-10-27T16:00:28.989512"
     },
     "ZPROP-60544559": {
@@ -8135,7 +8156,7 @@
       "usd_m2_formatted": "USD 1.854/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-10-27",
-      "days_ago": 10,
+      "days_ago": 11,
       "last_synced": "2026-10-27T12:00:23.357225"
     },
     "ZPROP-60545380": {
@@ -8176,7 +8197,7 @@
       "usd_m2_formatted": "USD 1.141/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-10-27",
-      "days_ago": 10,
+      "days_ago": 11,
       "last_synced": "2026-10-27T16:00:28.989512"
     },
     "ZPROP-60548392": {
@@ -8217,7 +8238,7 @@
       "usd_m2_formatted": "USD 1.880/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-10-27",
-      "days_ago": 10,
+      "days_ago": 11,
       "last_synced": "2026-10-27T16:00:28.989512"
     },
     "ZPROP-60546452": {
@@ -8258,7 +8279,7 @@
       "usd_m2_formatted": "USD 1.880/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-10-27",
-      "days_ago": 10,
+      "days_ago": 11,
       "last_synced": "2026-10-27T16:00:28.989512"
     },
     "ZPROP-60546385": {
@@ -8299,7 +8320,7 @@
       "usd_m2_formatted": "USD 1.570/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-27",
-      "days_ago": 10,
+      "days_ago": 11,
       "last_synced": "2026-10-27T16:00:28.989512"
     },
     "ZPROP-60553617": {
@@ -8340,7 +8361,7 @@
       "usd_m2_formatted": "USD 1.849/m²",
       "benchmark_formatted": "USD 2.650/m²",
       "first_seen_date": "2026-10-28",
-      "days_ago": 9,
+      "days_ago": 10,
       "last_synced": "2026-10-28T12:00:22.866857"
     },
     "ZPROP-60558707": {
@@ -8381,7 +8402,7 @@
       "usd_m2_formatted": "USD 1.039/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-28",
-      "days_ago": 9,
+      "days_ago": 10,
       "last_synced": "2026-10-28T16:00:27.456904"
     },
     "ZPROP-60558625": {
@@ -8422,7 +8443,7 @@
       "usd_m2_formatted": "USD 1.209/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-28",
-      "days_ago": 9,
+      "days_ago": 10,
       "last_synced": "2026-10-28T16:00:27.456904"
     },
     "ZPROP-60559329": {
@@ -8463,7 +8484,7 @@
       "usd_m2_formatted": "USD 1.329/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-28",
-      "days_ago": 9,
+      "days_ago": 10,
       "last_synced": "2026-10-28T19:30:21.642199"
     },
     "ZPROP-60560853": {
@@ -8504,7 +8525,7 @@
       "usd_m2_formatted": "USD 1.383/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-10-28",
-      "days_ago": 9,
+      "days_ago": 10,
       "last_synced": "2026-10-28T19:30:21.642199"
     },
     "ZPROP-60575015": {
@@ -8545,7 +8566,7 @@
       "usd_m2_formatted": "USD 1.230/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-10-29",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-10-29T19:30:21.540949"
     },
     "ZPROP-60570884": {
@@ -8586,7 +8607,7 @@
       "usd_m2_formatted": "USD 1.667/m²",
       "benchmark_formatted": "USD 2.650/m²",
       "first_seen_date": "2026-10-29",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-10-29T19:30:21.540949"
     },
     "ZPROP-60579450": {
@@ -8627,7 +8648,7 @@
       "usd_m2_formatted": "USD 940/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-10-30",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-10-30T16:00:28.664081"
     },
     "ZPROP-60577692": {
@@ -8668,7 +8689,7 @@
       "usd_m2_formatted": "USD 955/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-30",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-10-30T12:00:34.905289"
     },
     "ZPROP-60579911": {
@@ -8709,7 +8730,7 @@
       "usd_m2_formatted": "USD 1.877/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-10-30",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-10-30T16:00:28.664081"
     },
     "ZPROP-60577015": {
@@ -8750,7 +8771,7 @@
       "usd_m2_formatted": "USD 1.462/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-30",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-10-30T12:00:34.905289"
     },
     "ZPROP-60579956": {
@@ -8791,7 +8812,7 @@
       "usd_m2_formatted": "USD 1.673/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-30",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-10-30T19:30:22.615659"
     },
     "ZPROP-60579998": {
@@ -8832,7 +8853,7 @@
       "usd_m2_formatted": "USD 1.840/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-10-30",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-10-30T19:30:22.615659"
     },
     "ZPROP-60580136": {
@@ -8873,7 +8894,7 @@
       "usd_m2_formatted": "USD 1.673/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-30",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-10-30T19:30:22.615659"
     },
     "ZPROP-60581554": {
@@ -8914,7 +8935,7 @@
       "usd_m2_formatted": "USD 1.292/m²",
       "benchmark_formatted": "USD 2.650/m²",
       "first_seen_date": "2026-10-30",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-10-30T19:30:22.615659"
     },
     "ZPROP-60581706": {
@@ -8955,7 +8976,7 @@
       "usd_m2_formatted": "USD 1.438/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-10-30",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-10-30T19:30:22.615659"
     },
     "ZPROP-60581903": {
@@ -8996,7 +9017,7 @@
       "usd_m2_formatted": "USD 1.693/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-10-30",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-10-30T19:30:22.615659"
     },
     "ZPROP-60583794": {
@@ -9037,7 +9058,7 @@
       "usd_m2_formatted": "USD 1.722/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-10-30",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-10-30T19:30:22.615659"
     },
     "ZPROP-60584743": {
@@ -9078,7 +9099,7 @@
       "usd_m2_formatted": "USD 1.320/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-10-30",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-10-30T19:30:22.615659"
     },
     "ZPROP-60585184": {
@@ -9119,7 +9140,7 @@
       "usd_m2_formatted": "USD 1.863/m²",
       "benchmark_formatted": "USD 2.000/m²",
       "first_seen_date": "2026-10-30",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-10-30T19:30:22.615659"
     },
     "ZPROP-60590311": {
@@ -9160,7 +9181,7 @@
       "usd_m2_formatted": "USD 1.544/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-10-31",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-10-31T14:00:12.439653"
     },
     "ZPROP-60598907": {
@@ -9201,7 +9222,7 @@
       "usd_m2_formatted": "USD 1.783/m²",
       "benchmark_formatted": "USD 2.400/m²",
       "first_seen_date": "2026-11-02",
-      "days_ago": 4,
+      "days_ago": 5,
       "last_synced": "2026-11-02T12:00:22.262544"
     },
     "ZPROP-60599072": {
@@ -9242,7 +9263,7 @@
       "usd_m2_formatted": "USD 1.613/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-02",
-      "days_ago": 4,
+      "days_ago": 5,
       "last_synced": "2026-11-02T16:00:34.619830"
     },
     "ZPROP-60604615": {
@@ -9283,7 +9304,7 @@
       "usd_m2_formatted": "USD 1.750/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-11-02",
-      "days_ago": 4,
+      "days_ago": 5,
       "last_synced": "2026-11-02T16:00:34.619830"
     },
     "ZPROP-60602007": {
@@ -9324,7 +9345,7 @@
       "usd_m2_formatted": "USD 1.531/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-02",
-      "days_ago": 4,
+      "days_ago": 5,
       "last_synced": "2026-11-02T16:00:34.619830"
     },
     "ZPROP-60602776": {
@@ -9365,7 +9386,7 @@
       "usd_m2_formatted": "USD 1.212/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-02",
-      "days_ago": 4,
+      "days_ago": 5,
       "last_synced": "2026-11-02T16:00:34.619830"
     },
     "ZPROP-60600804": {
@@ -9406,7 +9427,7 @@
       "usd_m2_formatted": "USD 1.854/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-11-02",
-      "days_ago": 4,
+      "days_ago": 5,
       "last_synced": "2026-11-02T16:00:34.619830"
     },
     "ZPROP-60602021": {
@@ -9447,7 +9468,7 @@
       "usd_m2_formatted": "USD 1.900/m²",
       "benchmark_formatted": "USD 2.000/m²",
       "first_seen_date": "2026-11-02",
-      "days_ago": 4,
+      "days_ago": 5,
       "last_synced": "2026-11-02T16:00:34.619830"
     },
     "ZPROP-60601421": {
@@ -9488,7 +9509,7 @@
       "usd_m2_formatted": "USD 1.900/m²",
       "benchmark_formatted": "USD 2.000/m²",
       "first_seen_date": "2026-11-02",
-      "days_ago": 4,
+      "days_ago": 5,
       "last_synced": "2026-11-02T16:00:34.619830"
     },
     "ZPROP-60610755": {
@@ -9529,7 +9550,7 @@
       "usd_m2_formatted": "USD 739/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-11-03",
-      "days_ago": 3,
+      "days_ago": 4,
       "last_synced": "2026-11-03T16:00:24.501554"
     },
     "ZPROP-60611650": {
@@ -9570,7 +9591,7 @@
       "usd_m2_formatted": "USD 1.058/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-11-03",
-      "days_ago": 3,
+      "days_ago": 4,
       "last_synced": "2026-11-03T19:30:22.293425"
     },
     "ZPROP-60610527": {
@@ -9611,7 +9632,7 @@
       "usd_m2_formatted": "USD 1.792/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-11-03",
-      "days_ago": 3,
+      "days_ago": 4,
       "last_synced": "2026-11-03T12:00:26.995283"
     },
     "ZPROP-60611731": {
@@ -9652,7 +9673,7 @@
       "usd_m2_formatted": "USD 1.840/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-03",
-      "days_ago": 3,
+      "days_ago": 4,
       "last_synced": "2026-11-03T19:30:22.293425"
     },
     "ZPROP-60610911": {
@@ -9693,7 +9714,7 @@
       "usd_m2_formatted": "USD 1.979/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-03",
-      "days_ago": 3,
+      "days_ago": 4,
       "last_synced": "2026-11-03T19:30:22.293425"
     },
     "ZPROP-60615307": {
@@ -9734,7 +9755,7 @@
       "usd_m2_formatted": "USD 878/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-03",
-      "days_ago": 3,
+      "days_ago": 4,
       "last_synced": "2026-11-03T19:30:22.293425"
     },
     "ZPROP-60618114": {
@@ -9775,7 +9796,7 @@
       "usd_m2_formatted": "USD 1.520/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-11-03",
-      "days_ago": 3,
+      "days_ago": 4,
       "last_synced": "2026-11-03T19:30:22.293425"
     },
     "ZPROP-60624953": {
@@ -9816,7 +9837,7 @@
       "usd_m2_formatted": "USD 1.211/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-04",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-11-04T19:30:22.340859"
     },
     "ZPROP-60624432": {
@@ -9857,7 +9878,7 @@
       "usd_m2_formatted": "USD 1.941/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-11-04",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-11-04T19:30:22.340859"
     },
     "ZPROP-60628455": {
@@ -9898,7 +9919,7 @@
       "usd_m2_formatted": "USD 1.918/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-11-04",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-11-04T16:01:04.944805"
     },
     "ZPROP-60630630": {
@@ -9939,7 +9960,7 @@
       "usd_m2_formatted": "USD 1.159/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-04",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-11-04T19:30:22.340859"
     },
     "ZPROP-60629086": {
@@ -9980,7 +10001,7 @@
       "usd_m2_formatted": "USD 1.818/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-11-04",
-      "days_ago": 2,
+      "days_ago": 3,
       "last_synced": "2026-11-04T19:30:22.340859"
     },
     "ZPROP-60635151": {
@@ -10021,7 +10042,7 @@
       "usd_m2_formatted": "USD 1.800/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-11-05",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-11-05T19:30:22.540435"
     },
     "ZPROP-60635110": {
@@ -10062,7 +10083,7 @@
       "usd_m2_formatted": "USD 1.018/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-05",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-11-05T19:30:22.540435"
     },
     "ZPROP-60635476": {
@@ -10103,7 +10124,7 @@
       "usd_m2_formatted": "USD 1.561/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-11-05",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-11-05T19:30:22.540435"
     },
     "ZPROP-60633449": {
@@ -10144,7 +10165,7 @@
       "usd_m2_formatted": "USD 1.446/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-05",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-11-05T16:00:27.018376"
     },
     "ZPROP-60637668": {
@@ -10185,7 +10206,7 @@
       "usd_m2_formatted": "USD 1.800/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-11-05",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-11-05T19:30:22.540435"
     },
     "ZPROP-60637132": {
@@ -10226,7 +10247,7 @@
       "usd_m2_formatted": "USD 1.250/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-11-05",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-11-05T19:30:22.540435"
     },
     "ZPROP-60636172": {
@@ -10267,7 +10288,7 @@
       "usd_m2_formatted": "USD 1.693/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-05",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-11-05T19:30:22.540435"
     },
     "ZPROP-60638686": {
@@ -10308,7 +10329,7 @@
       "usd_m2_formatted": "USD 1.696/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-05",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-11-05T19:30:22.540435"
     },
     "ZPROP-60640362": {
@@ -10349,7 +10370,7 @@
       "usd_m2_formatted": "USD 1.380/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-11-05",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-11-05T19:30:22.540435"
     },
     "ZPROP-60639425": {
@@ -10390,7 +10411,7 @@
       "usd_m2_formatted": "USD 1.385/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-05",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-11-05T19:30:22.540435"
     },
     "ZPROP-60642999": {
@@ -10400,7 +10421,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 64.900",
       "price_val": 64900,
       "currency": "USD",
@@ -10431,7 +10452,7 @@
       "usd_m2_formatted": "USD 941/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-11-06",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-11-06T18:32:41.672715"
     },
     "ZPROP-60642991": {
@@ -10441,7 +10462,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 76.000",
       "price_val": 76000,
       "currency": "USD",
@@ -10472,7 +10493,7 @@
       "usd_m2_formatted": "USD 1.551/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-06",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-11-06T12:00:22.768913"
     },
     "ZPROP-60644691": {
@@ -10482,7 +10503,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 84.000",
       "price_val": 84000,
       "currency": "USD",
@@ -10513,7 +10534,7 @@
       "usd_m2_formatted": "USD 1.500/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-06",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-11-06T19:30:18.693476"
     },
     "ZPROP-60650418": {
@@ -10523,7 +10544,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 99.900",
       "price_val": 99900,
       "currency": "USD",
@@ -10554,7 +10575,7 @@
       "usd_m2_formatted": "USD 1.427/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-11-06",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-11-06T19:30:18.693476"
     },
     "ZPROP-60646468": {
@@ -10564,7 +10585,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 105.000",
       "price_val": 105000,
       "currency": "USD",
@@ -10595,7 +10616,7 @@
       "usd_m2_formatted": "USD 1.810/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-11-06",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-11-06T19:30:18.693476"
     },
     "ZPROP-60647479": {
@@ -10605,7 +10626,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 98.500",
       "price_val": 98500,
       "currency": "USD",
@@ -10636,8 +10657,90 @@
       "usd_m2_formatted": "USD 2.052/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-11-06",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-11-06T18:32:41.672715"
+    },
+    "ZPROP-60656333": {
+      "id": "ZPROP-60656333",
+      "title": "Departamento 3 ambientes con dependencia original, ideal flipping, excelente ubicación 2 cuadras de Av Santa Fe subte D, estación Pueyrredón 2 cuadras Hospital Alemán, 3 de Las Heras Las descripciones, medidas, superficies y proporciones consignadas en esta ficha son aproximadas, solamente se indican de manera orientativa. Los importes de expensas, tasas e impuestos deben ser confirmados ya que dependen de la fecha en la que se obtuvo la información por parte del propietario, \"Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede. requerir a los propietarios será el equivalente al cuatro con quince centésimos por. ciento (4, 15%) del valor total del respectivo contrato. Se encuentra prohibido cobrar a",
+      "description": "Departamento 3 ambientes con dependencia original, ideal flipping, excelente ubicación 2 cuadras de Av Santa Fe subte D, estación Pueyrredón 2 cuadras Hospital Alemán, 3 de Las Heras Las descripciones, medidas, superficies y proporciones consignadas en esta ficha son aproximadas, solamente se indican de manera orientativa. Los importes de expensas, tasas e impuestos deben ser confirmados ya que dependen de la fecha en la que se obtuvo la información por parte del propietario, \"Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede. requerir a los propietarios será el equivalente al cuatro con quince centésimos por. ciento (4, 15%) del valor total del respectivo contrato. Se encuentra prohibido cobrar a",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 99.000",
+      "price_val": 99000,
+      "currency": "USD",
+      "expenses_raw": "$ 260.000 Expensas",
+      "expenses_val": 260000,
+      "user_views": 37,
+      "features_raw": "64 m² tot. | 3 amb. | 2 dorm. | 1 baño",
+      "m2_tot": 64,
+      "m2_cub": null,
+      "ambientes": 3,
+      "dormitorios": 2,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Recoleta, Capital Federal",
+      "address": "Laprida 1646",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/65/63/33/360x266/2090924647.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-ideal-flipping-60656333.html",
+      "is_development": false,
+      "barrio": "Recoleta",
+      "barrio_benchmark_m2": 2600,
+      "usd_m2": 1547,
+      "discount_pct": 40.5,
+      "opportunity_score": 78,
+      "user_views_formatted": "37",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 99.000",
+      "usd_m2_formatted": "USD 1.547/m²",
+      "benchmark_formatted": "USD 2.600/m²",
+      "first_seen_date": "2026-11-07",
+      "days_ago": 0,
+      "last_synced": "2026-11-07T14:00:15.334408"
+    },
+    "ZPROP-60656388": {
+      "id": "ZPROP-60656388",
+      "title": "Departamento en venta de 2 ambientes en Palermo Soho. La ubicación es uno de sus principales fuertes, estando a pocas cuadras de sitios claves del barrio, como Plaza Armenia, Av. Córdoba, Av. Scalabrini Ortiz y Plaza Serrano, que son puntos neurálgicos de la zona palermitana. Se trata de un departamento de dos ambientes con un patio amplio. Posee cocina independiente. Lavadero individual. Living Comedor con ventanal al patioHabitación con placard y también con ventana al patio. Baño completoTodo en muy buen estado. Apto Credito. Consultas y visitas: ¡No pierda esta oportunidad! Contáctenos para más información. ¡Los esperamos! ley 5859 solo aplicable a las propiedades ubicadas en la Juridiccion de la Ciudad Autonoma de Buenos Aires “se encuentra prohibido cobrar comisiones inmobiliarias y gastos de gestoría de informes a los inquilinos que sean personas físicas. Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede requerir a los propietarios será el equivalente al cuatro con quince centésimos por ciento (4, 15%) del valor total del respectivo contrato”. -",
+      "description": "Departamento en venta de 2 ambientes en Palermo Soho. La ubicación es uno de sus principales fuertes, estando a pocas cuadras de sitios claves del barrio, como Plaza Armenia, Av. Córdoba, Av. Scalabrini Ortiz y Plaza Serrano, que son puntos neurálgicos de la zona palermitana. Se trata de un departamento de dos ambientes con un patio amplio. Posee cocina independiente. Lavadero individual. Living Comedor con ventanal al patioHabitación con placard y también con ventana al patio. Baño completoTodo en muy buen estado. Apto Credito. Consultas y visitas: ¡No pierda esta oportunidad! Contáctenos para más información. ¡Los esperamos! ley 5859 solo aplicable a las propiedades ubicadas en la Juridiccion de la Ciudad Autonoma de Buenos Aires “se encuentra prohibido cobrar comisiones inmobiliarias y gastos de gestoría de informes a los inquilinos que sean personas físicas. Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede requerir a los propietarios será el equivalente al cuatro con quince centésimos por ciento (4, 15%) del valor total del respectivo contrato”. -",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 95.000",
+      "price_val": 95000,
+      "currency": "USD",
+      "expenses_raw": "$ 193.000 Expensas",
+      "expenses_val": 193000,
+      "user_views": 18,
+      "features_raw": "51 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 51,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Palermo, Capital Federal",
+      "address": "Cabrera al 4800",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/65/63/88/360x266/2090925804.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-en-palermo-60656388.html",
+      "is_development": false,
+      "barrio": "Palermo",
+      "barrio_benchmark_m2": 3000,
+      "usd_m2": 1863,
+      "discount_pct": 37.9,
+      "opportunity_score": 76,
+      "user_views_formatted": "18",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 95.000",
+      "usd_m2_formatted": "USD 1.863/m²",
+      "benchmark_formatted": "USD 3.000/m²",
+      "first_seen_date": "2026-11-07",
+      "days_ago": 0,
+      "last_synced": "2026-11-07T14:00:15.334408"
     }
   }
 }
