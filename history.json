@@ -7122,9 +7122,14 @@
       "first_seen": "2026-11-12",
       "last_price": 98000,
       "barrio": "Retiro"
+    },
+    "ZPROP-60688503": {
+      "first_seen": "2026-11-12",
+      "last_price": 98000,
+      "barrio": "Palermo"
     }
   },
-  "last_run": "2026-11-12T12:00:26.405556",
+  "last_run": "2026-11-12T16:00:22.814945",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -7810,13 +7815,13 @@
     },
     {
       "date": "2026-11-12",
-      "timestamp": "2026-11-12T12:00:26.456878",
-      "total_properties": 68,
-      "new_today": 68,
-      "avg_usd_m2": 1560,
+      "timestamp": "2026-11-12T16:00:22.868769",
+      "total_properties": 69,
+      "new_today": 69,
+      "avg_usd_m2": 1566,
       "min_price": 56000,
-      "median_price": 94250,
-      "super_deals_count": 28,
+      "median_price": 94500,
+      "super_deals_count": 29,
       "top_neighborhoods": []
     }
   ],
@@ -10525,7 +10530,7 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-12",
       "days_ago": 0,
-      "last_synced": "2026-11-12T12:00:26.405556"
+      "last_synced": "2026-11-12T16:00:22.814945"
     },
     "ZPROP-60686120": {
       "id": "ZPROP-60686120",
@@ -10566,7 +10571,7 @@
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-11-12",
       "days_ago": 0,
-      "last_synced": "2026-11-12T12:00:26.405556"
+      "last_synced": "2026-11-12T16:00:22.814945"
     },
     "ZPROP-60684484": {
       "id": "ZPROP-60684484",
@@ -10607,7 +10612,48 @@
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-11-12",
       "days_ago": 0,
-      "last_synced": "2026-11-12T12:00:26.405556"
+      "last_synced": "2026-11-12T16:00:22.814945"
+    },
+    "ZPROP-60688503": {
+      "id": "ZPROP-60688503",
+      "title": "Funcional departamento de 3 amb de 50 m2 totales. Ubicado en primer piso y de disposición interna, lo que lo hace muy tranquilo y silencioso. Esta unidad forma parte de un edificio clásico de pocas unidades, distribuidas en planta baja y tres pisos a los que se accede por escalera, lo que se traduce en un ambiente familiar y de bajas expensas. El departamento presenta un muy buen estado general. Está muy prolijo y cuenta con una renovación estética reciente que realza sus ambientes, destacando sus pisos de parquet hidrolaqueado que aportan calidez. Ubicado en una zona privilegiada de Palermo, en uno de los puntos más conectados de la ciudad, a pocos pasos de Av. Cabildo y Av. Federico Lacroze. Cuenta con una conectividad inmejorable gracias a su cercanía con la estación Olleros del Subte D, la estación Colegiales del tren Mitre y múltiples líneas de colectivo. Rodeado además de polos gastronómicos, comercios y espacios verdes. Comodidades de la unidad: Al ingresar, un hall de entrada nos conduce hacia la cocina independiente, que cuenta con lavadero incorporado y está equipada con artefacto de cocina y calefón a estrenar. A continuación, se encuentra un living comedor amplio y cómodo. Un hall distribuidor organiza el sector privado, comunicando con los dos dormitorios: uno dispone de su propio baño en suite, mientras que un segundo baño asiste al resto de la propiedad. El edificio ofrece además acceso a una terraza de uso común en el tercer piso, con una linda vista abierta del barrio. Sin acceso para personas con movilidad reducida. Consultas: Whatsapp en el Botón del Panel. Las Medidas Son Aproximadas y Solo a Título Informativo. Ana Clara Jiménez Inmobiliaria. Cmcpsi 6988 / cucicba 8766",
+      "description": "Funcional departamento de 3 amb de 50 m2 totales. Ubicado en primer piso y de disposición interna, lo que lo hace muy tranquilo y silencioso. Esta unidad forma parte de un edificio clásico de pocas unidades, distribuidas en planta baja y tres pisos a los que se accede por escalera, lo que se traduce en un ambiente familiar y de bajas expensas. El departamento presenta un muy buen estado general. Está muy prolijo y cuenta con una renovación estética reciente que realza sus ambientes, destacando sus pisos de parquet hidrolaqueado que aportan calidez. Ubicado en una zona privilegiada de Palermo, en uno de los puntos más conectados de la ciudad, a pocos pasos de Av. Cabildo y Av. Federico Lacroze. Cuenta con una conectividad inmejorable gracias a su cercanía con la estación Olleros del Subte D, la estación Colegiales del tren Mitre y múltiples líneas de colectivo. Rodeado además de polos gastronómicos, comercios y espacios verdes. Comodidades de la unidad: Al ingresar, un hall de entrada nos conduce hacia la cocina independiente, que cuenta con lavadero incorporado y está equipada con artefacto de cocina y calefón a estrenar. A continuación, se encuentra un living comedor amplio y cómodo. Un hall distribuidor organiza el sector privado, comunicando con los dos dormitorios: uno dispone de su propio baño en suite, mientras que un segundo baño asiste al resto de la propiedad. El edificio ofrece además acceso a una terraza de uso común en el tercer piso, con una linda vista abierta del barrio. Sin acceso para personas con movilidad reducida. Consultas: Whatsapp en el Botón del Panel. Las Medidas Son Aproximadas y Solo a Título Informativo. Ana Clara Jiménez Inmobiliaria. Cmcpsi 6988 / cucicba 8766",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 98.000",
+      "price_val": 98000,
+      "currency": "USD",
+      "expenses_raw": "$ 122.000 Expensas",
+      "expenses_val": 122000,
+      "user_views": 16,
+      "features_raw": "50 m² tot. | 3 amb. | 2 dorm. | 2 baños",
+      "m2_tot": 50,
+      "m2_cub": null,
+      "ambientes": 3,
+      "dormitorios": 2,
+      "banos": 2,
+      "cocheras": null,
+      "location": "Palermo, Capital Federal",
+      "address": "Ciudad de la Paz 300",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/68/85/03/360x266/2091712311.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin--oportunidad-en-palermo!-departamento-de-3-ambientes-60688503.html",
+      "is_development": false,
+      "barrio": "Palermo",
+      "barrio_benchmark_m2": 3000,
+      "usd_m2": 1960,
+      "discount_pct": 34.7,
+      "opportunity_score": 70,
+      "user_views_formatted": "16",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 98.000",
+      "usd_m2_formatted": "USD 1.960/m²",
+      "benchmark_formatted": "USD 3.000/m²",
+      "first_seen_date": "2026-11-12",
+      "days_ago": 0,
+      "last_synced": "2026-11-12T16:00:22.814945"
     }
   }
 }
