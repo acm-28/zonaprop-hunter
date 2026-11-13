@@ -7187,9 +7187,14 @@
       "first_seen": "2026-11-13",
       "last_price": 93000,
       "barrio": "Almagro"
+    },
+    "ZPROP-60703815": {
+      "first_seen": "2026-11-13",
+      "last_price": 89000,
+      "barrio": "Recoleta"
     }
   },
-  "last_run": "2026-11-13T16:00:37.799904",
+  "last_run": "2026-11-13T19:30:20.694427",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -7886,13 +7891,13 @@
     },
     {
       "date": "2026-11-13",
-      "timestamp": "2026-11-13T16:00:37.847072",
-      "total_properties": 68,
-      "new_today": 68,
-      "avg_usd_m2": 1573,
+      "timestamp": "2026-11-13T19:30:20.741191",
+      "total_properties": 69,
+      "new_today": 69,
+      "avg_usd_m2": 1575,
       "min_price": 56000,
       "median_price": 95000,
-      "super_deals_count": 27,
+      "super_deals_count": 28,
       "top_neighborhoods": []
     }
   ],
@@ -10560,7 +10565,7 @@
       "benchmark_formatted": "USD 2.650/m²",
       "first_seen_date": "2026-11-13",
       "days_ago": 0,
-      "last_synced": "2026-11-13T16:00:37.799904"
+      "last_synced": "2026-11-13T19:30:20.694427"
     },
     "ZPROP-60699234": {
       "id": "ZPROP-60699234",
@@ -10601,7 +10606,7 @@
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-13",
       "days_ago": 0,
-      "last_synced": "2026-11-13T16:00:37.799904"
+      "last_synced": "2026-11-13T19:30:20.694427"
     },
     "ZPROP-60698962": {
       "id": "ZPROP-60698962",
@@ -10642,7 +10647,7 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-13",
       "days_ago": 0,
-      "last_synced": "2026-11-13T16:00:37.799904"
+      "last_synced": "2026-11-13T19:30:20.694427"
     },
     "ZPROP-60701004": {
       "id": "ZPROP-60701004",
@@ -10683,7 +10688,48 @@
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-13",
       "days_ago": 0,
-      "last_synced": "2026-11-13T16:00:37.799904"
+      "last_synced": "2026-11-13T19:30:20.694427"
+    },
+    "ZPROP-60703815": {
+      "id": "ZPROP-60703815",
+      "title": "Departamento Apto Profesional y Vivienda | 2 Ambientes con Patio Av. Santa Fe 2500 - Recoleta. ¡Ideal consultorio, oficina, vivienda o estudiantes! Ubicación verdaderamente estratégica sobre Av. Santa Fe y a solo media cuadra de Av. Pueyrredón, estaciones de subte D y H, en el corazón comercial, médico y universitario de Recoleta / Barrio Norte. La unidad se encuentra en un primer piso al contra-frente, lo que garantiza máxima tranquilidad, silencio y excelente ventilación natural, lejos del ruido de la avenida para poder descansar, estudiar o trabajar con total comodidad. Distribución y Características: Amplio living / recepción con gran ventanal y salida directa al patio. Patio descubierto, ideal como espacio al aire libre, área de descanso o lavadero. Dormitorio espacioso / despacho con placard completo y gran ventanal orientado al patio. Cocina independiente completa, con ventilación natural y acceso directo al patio. Baño completo en excelente estado. Detalles de confort: Pisos de parquet en muy buen estado, muy buena luminosidad en todos los ambientes y múltiples espacios de guardado. El Edificio y Costos: Apto profesional habilitado (y excelente para uso residencial). Expensas: $240. 000 (valor correspondiente a la última liquidación). Cuenta con encargado permanente. 3 ascensores en perfecto estado. Acceso con rampa para personas con movilidad reducida. Entorno y Conectividad: Transporte inmejorable: A pasos de la combinación de Subte Líneas D y H (Estación Pueyrredón / Santa Fe) y decenas de líneas de colectivos hacia toda la ciudad. Polo universitario, médico y comercial: A minutos de las principales facultades (uba Medicina, Económicas, Odontología, Farmacia y Bioquímica, Barceló, up), reconocidos centros de salud (Hospital Alemán, Sanatorio Anchorena, Swiss Medical) y rodeado de comercios, cafés, gimnasios y bancos. ¡Una oportunidad súper versátil en una ubicación privilegiada, lista para mudarte, estudiar o instalar tu actividad profesional! Todas las medidas indicadas son aproximadas y pueden llegar a diferir de aquellas expresadas en la documentación de la propiedad. Cada Oficina de la Red de servicios para Inmobiliarias Mudafy es de gestión independiente y autónoma. Todas las propiedades publicadas en el perfil de Mudafy Platino se encuentran a cargo del corredor inmobiliario responsable de la oficina Julio Lopez Figueroa (caba) Matrícula: cucicba 514. Toda intermediación y conclusión de las operaciones serán realizadas exclusivamente por el Corredor Inmobiliario Responsable de la oficina.",
+      "description": "Departamento Apto Profesional y Vivienda | 2 Ambientes con Patio Av. Santa Fe 2500 - Recoleta. ¡Ideal consultorio, oficina, vivienda o estudiantes! Ubicación verdaderamente estratégica sobre Av. Santa Fe y a solo media cuadra de Av. Pueyrredón, estaciones de subte D y H, en el corazón comercial, médico y universitario de Recoleta / Barrio Norte. La unidad se encuentra en un primer piso al contra-frente, lo que garantiza máxima tranquilidad, silencio y excelente ventilación natural, lejos del ruido de la avenida para poder descansar, estudiar o trabajar con total comodidad. Distribución y Características: Amplio living / recepción con gran ventanal y salida directa al patio. Patio descubierto, ideal como espacio al aire libre, área de descanso o lavadero. Dormitorio espacioso / despacho con placard completo y gran ventanal orientado al patio. Cocina independiente completa, con ventilación natural y acceso directo al patio. Baño completo en excelente estado. Detalles de confort: Pisos de parquet en muy buen estado, muy buena luminosidad en todos los ambientes y múltiples espacios de guardado. El Edificio y Costos: Apto profesional habilitado (y excelente para uso residencial). Expensas: $240. 000 (valor correspondiente a la última liquidación). Cuenta con encargado permanente. 3 ascensores en perfecto estado. Acceso con rampa para personas con movilidad reducida. Entorno y Conectividad: Transporte inmejorable: A pasos de la combinación de Subte Líneas D y H (Estación Pueyrredón / Santa Fe) y decenas de líneas de colectivos hacia toda la ciudad. Polo universitario, médico y comercial: A minutos de las principales facultades (uba Medicina, Económicas, Odontología, Farmacia y Bioquímica, Barceló, up), reconocidos centros de salud (Hospital Alemán, Sanatorio Anchorena, Swiss Medical) y rodeado de comercios, cafés, gimnasios y bancos. ¡Una oportunidad súper versátil en una ubicación privilegiada, lista para mudarte, estudiar o instalar tu actividad profesional! Todas las medidas indicadas son aproximadas y pueden llegar a diferir de aquellas expresadas en la documentación de la propiedad. Cada Oficina de la Red de servicios para Inmobiliarias Mudafy es de gestión independiente y autónoma. Todas las propiedades publicadas en el perfil de Mudafy Platino se encuentran a cargo del corredor inmobiliario responsable de la oficina Julio Lopez Figueroa (caba) Matrícula: cucicba 514. Toda intermediación y conclusión de las operaciones serán realizadas exclusivamente por el Corredor Inmobiliario Responsable de la oficina.",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 89.000",
+      "price_val": 89000,
+      "currency": "USD",
+      "expenses_raw": "$ 240.000 Expensas",
+      "expenses_val": 240000,
+      "user_views": 55,
+      "features_raw": "52 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 52,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Recoleta, Capital Federal",
+      "address": "Avenida Santa Fe 2500",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/70/38/15/360x266/2092202766.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-departamento-2-ambientes-recoleta-apto-60703815.html",
+      "is_development": false,
+      "barrio": "Recoleta",
+      "barrio_benchmark_m2": 2600,
+      "usd_m2": 1712,
+      "discount_pct": 34.2,
+      "opportunity_score": 72,
+      "user_views_formatted": "55",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 89.000",
+      "usd_m2_formatted": "USD 1.712/m²",
+      "benchmark_formatted": "USD 2.600/m²",
+      "first_seen_date": "2026-11-13",
+      "days_ago": 0,
+      "last_synced": "2026-11-13T19:30:20.694427"
     }
   }
 }
