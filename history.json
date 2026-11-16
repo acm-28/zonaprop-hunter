@@ -7202,9 +7202,14 @@
       "first_seen": "2026-11-16",
       "last_price": 84000,
       "barrio": "Almagro"
+    },
+    "ZPROP-60717748": {
+      "first_seen": "2026-11-16",
+      "last_price": 108000,
+      "barrio": "Caballito"
     }
   },
-  "last_run": "2026-11-16T12:00:17.920692",
+  "last_run": "2026-11-16T16:00:20.821408",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -7923,10 +7928,10 @@
     },
     {
       "date": "2026-11-16",
-      "timestamp": "2026-11-16T12:00:17.979524",
-      "total_properties": 62,
-      "new_today": 62,
-      "avg_usd_m2": 1568,
+      "timestamp": "2026-11-16T16:00:20.882504",
+      "total_properties": 63,
+      "new_today": 63,
+      "avg_usd_m2": 1572,
       "min_price": 56000,
       "median_price": 94000,
       "super_deals_count": 28,
@@ -10433,7 +10438,7 @@
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-11-16",
       "days_ago": 0,
-      "last_synced": "2026-11-16T12:00:17.920692"
+      "last_synced": "2026-11-16T16:00:20.821408"
     },
     "ZPROP-60714480": {
       "id": "ZPROP-60714480",
@@ -10474,7 +10479,48 @@
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-16",
       "days_ago": 0,
-      "last_synced": "2026-11-16T12:00:17.920692"
+      "last_synced": "2026-11-16T16:00:20.821408"
+    },
+    "ZPROP-60717748": {
+      "id": "ZPROP-60717748",
+      "title": "Rojas al 300 – Caballito¡Listo para mudarte! Departamento de 59 m² ubicado en un primer piso contrafrente, ideal para quienes buscan comodidad y tranquilidad. Características destacadas: Baño, cocina y pisos a nuevo. Balcón y pequeño patio. Ubicación contrafrente, ideal para disfrutar de mayor tranquilidad. Expensas: $260. 000. Una excelente oportunidad para vivir o invertir en uno de los barrios más buscados de Buenos Aires. ¡Consultanos para más información y coordiná tu visita!",
+      "description": "Rojas al 300 – Caballito¡Listo para mudarte! Departamento de 59 m² ubicado en un primer piso contrafrente, ideal para quienes buscan comodidad y tranquilidad. Características destacadas: Baño, cocina y pisos a nuevo. Balcón y pequeño patio. Ubicación contrafrente, ideal para disfrutar de mayor tranquilidad. Expensas: $260. 000. Una excelente oportunidad para vivir o invertir en uno de los barrios más buscados de Buenos Aires. ¡Consultanos para más información y coordiná tu visita!",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 108.000",
+      "price_val": 108000,
+      "currency": "USD",
+      "expenses_raw": "$ 260.000 Expensas",
+      "expenses_val": 260000,
+      "user_views": 55,
+      "features_raw": "59 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 59,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Caballito, Capital Federal",
+      "address": "Rojas al 300",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/71/77/48/360x266/2092645277.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-oportunidad-en-caballito!-59-m-sup2--con-balcon-y-60717748.html",
+      "is_development": false,
+      "barrio": "Caballito",
+      "barrio_benchmark_m2": 2150,
+      "usd_m2": 1831,
+      "discount_pct": 14.8,
+      "opportunity_score": 39,
+      "user_views_formatted": "55",
+      "badge_text": "🏷️ Buen Precio",
+      "badge_class": "badge-good",
+      "price_usd_formatted": "USD 108.000",
+      "usd_m2_formatted": "USD 1.831/m²",
+      "benchmark_formatted": "USD 2.150/m²",
+      "first_seen_date": "2026-11-16",
+      "days_ago": 0,
+      "last_synced": "2026-11-16T16:00:20.821408"
     }
   }
 }
