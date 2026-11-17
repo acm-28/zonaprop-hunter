@@ -7229,7 +7229,7 @@
       "barrio": "Villa Urquiza"
     }
   },
-  "last_run": "2026-11-17T16:00:30.662611",
+  "last_run": "2026-11-17T19:30:19.912271",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -7959,7 +7959,7 @@
     },
     {
       "date": "2026-11-17",
-      "timestamp": "2026-11-17T16:00:30.706324",
+      "timestamp": "2026-11-17T19:30:19.952798",
       "total_properties": 60,
       "new_today": 60,
       "avg_usd_m2": 1589,
@@ -10305,7 +10305,7 @@
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-11-17",
       "days_ago": 0,
-      "last_synced": "2026-11-17T16:00:30.662611"
+      "last_synced": "2026-11-17T19:30:19.912271"
     },
     "ZPROP-60729149": {
       "id": "ZPROP-60729149",
@@ -10387,7 +10387,7 @@
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-17",
       "days_ago": 0,
-      "last_synced": "2026-11-17T16:00:30.662611"
+      "last_synced": "2026-11-17T19:30:19.912271"
     },
     "ZPROP-60726218": {
       "id": "ZPROP-60726218",
@@ -10428,7 +10428,7 @@
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-11-17",
       "days_ago": 0,
-      "last_synced": "2026-11-17T16:00:30.662611"
+      "last_synced": "2026-11-17T19:30:19.912271"
     }
   }
 }
