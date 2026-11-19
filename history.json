@@ -7262,9 +7262,14 @@
       "first_seen": "2026-11-19",
       "last_price": 100000,
       "barrio": "Caballito"
+    },
+    "ZPROP-60748373": {
+      "first_seen": "2026-11-19",
+      "last_price": 68000,
+      "barrio": "Parque Patricios"
     }
   },
-  "last_run": "2026-11-19T09:13:04.391884",
+  "last_run": "2026-11-19T12:00:22.113933",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -8016,13 +8021,13 @@
     },
     {
       "date": "2026-11-19",
-      "timestamp": "2026-11-19T09:13:04.437612",
-      "total_properties": 52,
-      "new_today": 52,
-      "avg_usd_m2": 1582,
+      "timestamp": "2026-11-19T12:00:22.158098",
+      "total_properties": 53,
+      "new_today": 53,
+      "avg_usd_m2": 1568,
       "min_price": 58000,
       "median_price": 95000,
-      "super_deals_count": 24,
+      "super_deals_count": 25,
       "top_neighborhoods": []
     }
   ],
@@ -10116,7 +10121,7 @@
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-11-19",
       "days_ago": 0,
-      "last_synced": "2026-11-19T09:13:04.391884"
+      "last_synced": "2026-11-19T12:00:22.113933"
     },
     "ZPROP-60747146": {
       "id": "ZPROP-60747146",
@@ -10157,7 +10162,48 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-19",
       "days_ago": 0,
-      "last_synced": "2026-11-19T09:13:04.391884"
+      "last_synced": "2026-11-19T12:00:22.113933"
+    },
+    "ZPROP-60748373": {
+      "id": "ZPROP-60748373",
+      "title": "Ph de 3 ambientes en dos plantas. Dos terrazas propias, muy luminoso, a refaccionar. Ubicado a metros de Av Juan de Garay, de Av. Chiclana, y de Av. Pavón. Con acceso a subte, medios de transporte y comercios. * ver video * Edificio antiguo con entrada por pasillo común. Pb: Living comedor, cocina, baño y un dormitorio. Pa: Dormitorio principal con salida a las dos terrazas. Cocina completa con conexión para lavarropas. Baño completo. Sin expensas. - Superficie: 82 m2 totales. 30 m2 superficie descubierta. se toma permuta por menor valor. - Esta propiedad posee autorización de venta, la documentación verificada e informe de dominio a disposición. - Las medidas de este inmueble son aproximadas. Las definitivas surgirán del título de propiedad. - Todas las operaciones son llevadas a cabo por el martillero y corredor inmobiliario Sebastián Dbsie, matricula cpi 7828. Coordinar visita! Vende. sd propiedades. mat 7828",
+      "description": "Ph de 3 ambientes en dos plantas. Dos terrazas propias, muy luminoso, a refaccionar. Ubicado a metros de Av Juan de Garay, de Av. Chiclana, y de Av. Pavón. Con acceso a subte, medios de transporte y comercios. * ver video * Edificio antiguo con entrada por pasillo común. Pb: Living comedor, cocina, baño y un dormitorio. Pa: Dormitorio principal con salida a las dos terrazas. Cocina completa con conexión para lavarropas. Baño completo. Sin expensas. - Superficie: 82 m2 totales. 30 m2 superficie descubierta. se toma permuta por menor valor. - Esta propiedad posee autorización de venta, la documentación verificada e informe de dominio a disposición. - Las medidas de este inmueble son aproximadas. Las definitivas surgirán del título de propiedad. - Todas las operaciones son llevadas a cabo por el martillero y corredor inmobiliario Sebastián Dbsie, matricula cpi 7828. Coordinar visita! Vende. sd propiedades. mat 7828",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 68.000",
+      "price_val": 68000,
+      "currency": "USD",
+      "expenses_raw": "",
+      "expenses_val": null,
+      "user_views": 16,
+      "features_raw": "82 m² tot. | 3 amb. | 2 dorm. | 1 baño",
+      "m2_tot": 82,
+      "m2_cub": null,
+      "ambientes": 3,
+      "dormitorios": 2,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Parque Patricios, Capital Federal",
+      "address": "Pasaje Oruro 1500",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/74/83/73/360x266/2093387980.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclphin-venta-parque-patricios-3-ambientes-ph-sin-60748373.html",
+      "is_development": false,
+      "barrio": "Parque Patricios",
+      "barrio_benchmark_m2": 1550,
+      "usd_m2": 829,
+      "discount_pct": 46.5,
+      "opportunity_score": 81,
+      "user_views_formatted": "16",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 68.000",
+      "usd_m2_formatted": "USD 829/m²",
+      "benchmark_formatted": "USD 1.550/m²",
+      "first_seen_date": "2026-11-19",
+      "days_ago": 0,
+      "last_synced": "2026-11-19T12:00:22.113933"
     }
   }
 }
