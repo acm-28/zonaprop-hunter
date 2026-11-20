@@ -7332,9 +7332,19 @@
       "first_seen": "2026-11-20",
       "last_price": 89000,
       "barrio": "Almagro"
+    },
+    "ZPROP-60761035": {
+      "first_seen": "2026-11-20",
+      "last_price": 75000,
+      "barrio": "Retiro"
+    },
+    "ZPROP-60759571": {
+      "first_seen": "2026-11-20",
+      "last_price": 99000,
+      "barrio": "Caballito"
     }
   },
-  "last_run": "2026-11-20T12:00:20.837423",
+  "last_run": "2026-11-20T16:00:24.288997",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -8097,13 +8107,13 @@
     },
     {
       "date": "2026-11-20",
-      "timestamp": "2026-11-20T12:00:20.881577",
-      "total_properties": 60,
-      "new_today": 60,
-      "avg_usd_m2": 1557,
+      "timestamp": "2026-11-20T16:00:24.340334",
+      "total_properties": 62,
+      "new_today": 62,
+      "avg_usd_m2": 1554,
       "min_price": 58000,
       "median_price": 95000,
-      "super_deals_count": 27,
+      "super_deals_count": 29,
       "top_neighborhoods": []
     }
   ],
@@ -10484,7 +10494,7 @@
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-20",
       "days_ago": 0,
-      "last_synced": "2026-11-20T12:00:20.837423"
+      "last_synced": "2026-11-20T16:00:24.288997"
     },
     "ZPROP-60759495": {
       "id": "ZPROP-60759495",
@@ -10525,7 +10535,7 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-20",
       "days_ago": 0,
-      "last_synced": "2026-11-20T12:00:20.837423"
+      "last_synced": "2026-11-20T16:00:24.288997"
     },
     "ZPROP-60757893": {
       "id": "ZPROP-60757893",
@@ -10566,7 +10576,89 @@
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-20",
       "days_ago": 0,
-      "last_synced": "2026-11-20T12:00:20.837423"
+      "last_synced": "2026-11-20T16:00:24.288997"
+    },
+    "ZPROP-60761035": {
+      "id": "ZPROP-60761035",
+      "title": "2 Ambientes con Patio Propio y Baulera en RetiroSuipacha al 900: Excelente oportunidad en una ubicación estratégica de la Ciudad de Buenos Aires, sobre la calle Suipacha entre Paraguay y Marcelo T. De Alvear, a metros de Av. Santa Fe, Av. Córdoba, Plaza San Martín y múltiples líneas de subte y colectivos. La propiedad se encuentra en planta baja interna, lo que garantiza un entorno tranquilo y silencioso, Luminoso, se destaca por contar con un amplio patio propio y baulera individual en subsuelo. Distribución Y características: • Living-comedor: Cómodo y funcional. • Dormitorio: De buenas dimensiones. • Cocina independiente: Separada del ambiente principal, con sector de lavadero integrado. • Baño completo. • Patio propio: De casi 12 m², ideal para disfrutar al aire libre, armar un espacio verde o sector de descanso. • Baulera: Unidad complementaria en planta sótano. Estado general: El departamento se encuentra en muy buen estado general de conservación y listo para habitar, con baño y cocina de época en funcionamiento (ideal tanto para entrar a vivir como para actualizar a gusto y sumar valor). superficies por escritura: • Superficie cubierta (depto): 36, 58 m²• Superficie descubierta (patio): 11, 99 m²• Superficie total del departamento: 48, 57 m²• Baulera (Unidad Complementaria): 2, 31 m²• Superficie total real: 50, 88 m² sobre el edificio: • Edificio de 10 pisos (aprox. 70 unidades). • Cuenta con encargado. • Terraza de uso común en el 3° piso. • Expensas aproximadas: $162. 000.",
+      "description": "2 Ambientes con Patio Propio y Baulera en RetiroSuipacha al 900: Excelente oportunidad en una ubicación estratégica de la Ciudad de Buenos Aires, sobre la calle Suipacha entre Paraguay y Marcelo T. De Alvear, a metros de Av. Santa Fe, Av. Córdoba, Plaza San Martín y múltiples líneas de subte y colectivos. La propiedad se encuentra en planta baja interna, lo que garantiza un entorno tranquilo y silencioso, Luminoso, se destaca por contar con un amplio patio propio y baulera individual en subsuelo. Distribución Y características: • Living-comedor: Cómodo y funcional. • Dormitorio: De buenas dimensiones. • Cocina independiente: Separada del ambiente principal, con sector de lavadero integrado. • Baño completo. • Patio propio: De casi 12 m², ideal para disfrutar al aire libre, armar un espacio verde o sector de descanso. • Baulera: Unidad complementaria en planta sótano. Estado general: El departamento se encuentra en muy buen estado general de conservación y listo para habitar, con baño y cocina de época en funcionamiento (ideal tanto para entrar a vivir como para actualizar a gusto y sumar valor). superficies por escritura: • Superficie cubierta (depto): 36, 58 m²• Superficie descubierta (patio): 11, 99 m²• Superficie total del departamento: 48, 57 m²• Baulera (Unidad Complementaria): 2, 31 m²• Superficie total real: 50, 88 m² sobre el edificio: • Edificio de 10 pisos (aprox. 70 unidades). • Cuenta con encargado. • Terraza de uso común en el 3° piso. • Expensas aproximadas: $162. 000.",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 75.000",
+      "price_val": 75000,
+      "currency": "USD",
+      "expenses_raw": "$ 162.000 Expensas",
+      "expenses_val": 162000,
+      "user_views": 32,
+      "features_raw": "48 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 48,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Retiro, Capital Federal",
+      "address": "Suipacha  al 900",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/76/10/35/360x266/2093727077.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-vende-2-ambientes-con-patio-en-retiro-60761035.html",
+      "is_development": false,
+      "barrio": "Retiro",
+      "barrio_benchmark_m2": 2300,
+      "usd_m2": 1562,
+      "discount_pct": 32.1,
+      "opportunity_score": 72,
+      "user_views_formatted": "32",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 75.000",
+      "usd_m2_formatted": "USD 1.562/m²",
+      "benchmark_formatted": "USD 2.300/m²",
+      "first_seen_date": "2026-11-20",
+      "days_ago": 0,
+      "last_synced": "2026-11-20T16:00:24.288997"
+    },
+    "ZPROP-60759571": {
+      "id": "ZPROP-60759571",
+      "title": "Super amplio departamento de 2 ambientes en Planta baja, con living de recibidor, cocina separada, patio, living comedor con pisos de parquet con salida al balcón, hall de distribución, baño completo con ventana, dormitorio super amplio (se puede hacer un vestidor) con pisos de parquet. En excelente ubicación a metros de Av. Rivadavia, en calle super tranquila, a 2 cuadras de valle y 3 de Pedro Goyena polo gastronómico.",
+      "description": "Super amplio departamento de 2 ambientes en Planta baja, con living de recibidor, cocina separada, patio, living comedor con pisos de parquet con salida al balcón, hall de distribución, baño completo con ventana, dormitorio super amplio (se puede hacer un vestidor) con pisos de parquet. En excelente ubicación a metros de Av. Rivadavia, en calle super tranquila, a 2 cuadras de valle y 3 de Pedro Goyena polo gastronómico.",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 99.000",
+      "price_val": 99000,
+      "currency": "USD",
+      "expenses_raw": "$ 220.000 Expensas",
+      "expenses_val": 220000,
+      "user_views": 55,
+      "features_raw": "73 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 73,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Caballito Sur, Caballito",
+      "address": "Chirimay 65",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/75/95/71/360x266/2093691844.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-super-amplio-2-ambientes-con-balcon-y-patio-al-60759571.html",
+      "is_development": false,
+      "barrio": "Caballito",
+      "barrio_benchmark_m2": 2150,
+      "usd_m2": 1356,
+      "discount_pct": 36.9,
+      "opportunity_score": 70,
+      "user_views_formatted": "55",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 99.000",
+      "usd_m2_formatted": "USD 1.356/m²",
+      "benchmark_formatted": "USD 2.150/m²",
+      "first_seen_date": "2026-11-20",
+      "days_ago": 0,
+      "last_synced": "2026-11-20T16:00:24.288997"
     }
   }
 }
