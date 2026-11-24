@@ -7344,7 +7344,7 @@
       "barrio": "Caballito"
     }
   },
-  "last_run": "2026-11-20T16:00:24.288997",
+  "last_run": "2026-11-24T12:00:42.360199",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -8115,173 +8115,20 @@
       "median_price": 95000,
       "super_deals_count": 29,
       "top_neighborhoods": []
+    },
+    {
+      "date": "2026-11-24",
+      "timestamp": "2026-11-24T12:00:42.404888",
+      "total_properties": 58,
+      "new_today": 58,
+      "avg_usd_m2": 1558,
+      "min_price": 58000,
+      "median_price": 95000,
+      "super_deals_count": 26,
+      "top_neighborhoods": []
     }
   ],
   "active_deals": {
-    "ZPROP-60656333": {
-      "id": "ZPROP-60656333",
-      "title": "Departamento 3 ambientes con dependencia original, ideal flipping, excelente ubicación 2 cuadras de Av Santa Fe subte D, estación Pueyrredón 2 cuadras Hospital Alemán, 3 de Las Heras Las descripciones, medidas, superficies y proporciones consignadas en esta ficha son aproximadas, solamente se indican de manera orientativa. Los importes de expensas, tasas e impuestos deben ser confirmados ya que dependen de la fecha en la que se obtuvo la información por parte del propietario, \"Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede. requerir a los propietarios será el equivalente al cuatro con quince centésimos por. ciento (4, 15%) del valor total del respectivo contrato. Se encuentra prohibido cobrar a",
-      "description": "Departamento 3 ambientes con dependencia original, ideal flipping, excelente ubicación 2 cuadras de Av Santa Fe subte D, estación Pueyrredón 2 cuadras Hospital Alemán, 3 de Las Heras Las descripciones, medidas, superficies y proporciones consignadas en esta ficha son aproximadas, solamente se indican de manera orientativa. Los importes de expensas, tasas e impuestos deben ser confirmados ya que dependen de la fecha en la que se obtuvo la información por parte del propietario, \"Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede. requerir a los propietarios será el equivalente al cuatro con quince centésimos por. ciento (4, 15%) del valor total del respectivo contrato. Se encuentra prohibido cobrar a",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 99.000",
-      "price_val": 99000,
-      "currency": "USD",
-      "expenses_raw": "$ 260.000 Expensas",
-      "expenses_val": 260000,
-      "user_views": 37,
-      "features_raw": "64 m² tot. | 3 amb. | 2 dorm. | 1 baño",
-      "m2_tot": 64,
-      "m2_cub": null,
-      "ambientes": 3,
-      "dormitorios": 2,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Recoleta, Capital Federal",
-      "address": "Laprida 1646",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/65/63/33/360x266/2090924647.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-ideal-flipping-60656333.html",
-      "is_development": false,
-      "barrio": "Recoleta",
-      "barrio_benchmark_m2": 2600,
-      "usd_m2": 1547,
-      "discount_pct": 40.5,
-      "opportunity_score": 78,
-      "user_views_formatted": "37",
-      "badge_text": "🔥 Super Oportunidad",
-      "badge_class": "badge-super",
-      "price_usd_formatted": "USD 99.000",
-      "usd_m2_formatted": "USD 1.547/m²",
-      "benchmark_formatted": "USD 2.600/m²",
-      "first_seen_date": "2026-11-07",
-      "days_ago": 13,
-      "last_synced": "2026-11-07T14:00:15.334408"
-    },
-    "ZPROP-60656388": {
-      "id": "ZPROP-60656388",
-      "title": "Departamento en venta de 2 ambientes en Palermo Soho. La ubicación es uno de sus principales fuertes, estando a pocas cuadras de sitios claves del barrio, como Plaza Armenia, Av. Córdoba, Av. Scalabrini Ortiz y Plaza Serrano, que son puntos neurálgicos de la zona palermitana. Se trata de un departamento de dos ambientes con un patio amplio. Posee cocina independiente. Lavadero individual. Living Comedor con ventanal al patioHabitación con placard y también con ventana al patio. Baño completoTodo en muy buen estado. Apto Credito. Consultas y visitas: ¡No pierda esta oportunidad! Contáctenos para más información. ¡Los esperamos! ley 5859 solo aplicable a las propiedades ubicadas en la Juridiccion de la Ciudad Autonoma de Buenos Aires “se encuentra prohibido cobrar comisiones inmobiliarias y gastos de gestoría de informes a los inquilinos que sean personas físicas. Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede requerir a los propietarios será el equivalente al cuatro con quince centésimos por ciento (4, 15%) del valor total del respectivo contrato”. -",
-      "description": "Departamento en venta de 2 ambientes en Palermo Soho. La ubicación es uno de sus principales fuertes, estando a pocas cuadras de sitios claves del barrio, como Plaza Armenia, Av. Córdoba, Av. Scalabrini Ortiz y Plaza Serrano, que son puntos neurálgicos de la zona palermitana. Se trata de un departamento de dos ambientes con un patio amplio. Posee cocina independiente. Lavadero individual. Living Comedor con ventanal al patioHabitación con placard y también con ventana al patio. Baño completoTodo en muy buen estado. Apto Credito. Consultas y visitas: ¡No pierda esta oportunidad! Contáctenos para más información. ¡Los esperamos! ley 5859 solo aplicable a las propiedades ubicadas en la Juridiccion de la Ciudad Autonoma de Buenos Aires “se encuentra prohibido cobrar comisiones inmobiliarias y gastos de gestoría de informes a los inquilinos que sean personas físicas. Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede requerir a los propietarios será el equivalente al cuatro con quince centésimos por ciento (4, 15%) del valor total del respectivo contrato”. -",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 95.000",
-      "price_val": 95000,
-      "currency": "USD",
-      "expenses_raw": "$ 193.000 Expensas",
-      "expenses_val": 193000,
-      "user_views": 18,
-      "features_raw": "51 m² tot. | 2 amb. | 1 dorm. | 1 baño",
-      "m2_tot": 51,
-      "m2_cub": null,
-      "ambientes": 2,
-      "dormitorios": 1,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Palermo, Capital Federal",
-      "address": "Cabrera al 4800",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/65/63/88/360x266/2090925804.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-en-palermo-60656388.html",
-      "is_development": false,
-      "barrio": "Palermo",
-      "barrio_benchmark_m2": 3000,
-      "usd_m2": 1863,
-      "discount_pct": 37.9,
-      "opportunity_score": 76,
-      "user_views_formatted": "18",
-      "badge_text": "🔥 Super Oportunidad",
-      "badge_class": "badge-super",
-      "price_usd_formatted": "USD 95.000",
-      "usd_m2_formatted": "USD 1.863/m²",
-      "benchmark_formatted": "USD 3.000/m²",
-      "first_seen_date": "2026-11-07",
-      "days_ago": 13,
-      "last_synced": "2026-11-07T14:00:15.334408"
-    },
-    "ZPROP-60670155": {
-      "id": "ZPROP-60670155",
-      "title": "Venta de Monoambiente en Recoleta – Amplio Patio – Contrafrente – Luminoso - Apto CreditoUbicado en la prestigiosa zona de Recoleta, este funcional monoambiente ofrece un diseño inteligente y una excelente distribución. Al ingresar, un hall nos conduce al baño completo y al espacio social, donde se encuentra la cocina integrada. La cocina está equipada con horno y anafe a gas, además de ofrecer amplios espacios de guardado en bajomesada y alacena. Una de las joyas de esta propiedad es su hermoso patio, que proporciona una ventilación excepcional y una gran luminosidad al departamento. El patio, con su generoso espacio, incluye una zona semicubierta que puede utilizarse para diversas actividades, permitiendo disfrutar del sol, el aire libre y un ambiente de tranquilidad. El edificio cuenta con dos ascensores y es accesible para personas con discapacidades físicas. Las superficies y medidas son orientativas y sujetas a verificación con la documentación oficial. Los servicios incluyen agua corriente, electricidad y encargado. No pierda la oportunidad de vivir en una de las áreas más codiciadas de Capital Federal, donde la comodidad y el confort se combinan con la tranquilidad de un espacio bien diseñado. Contáctenos para más información y para coordinar una visita. superficies: Superficie Cubierta: 31, 60m2Superficie Semicubierta 1, 92m2Superficie Descubierta: 18, 96m2superficie total: 52, 48m2legal: El presente inmueble es accesible para personas con discapacidades físicas. Las medidas son orientativas y las definitivas son las que surgen de la escritura. La descripción del inmueble, servicios y medidas pueden no ajustarse a sus características y medidas reales y/o actuales. Los datos pueden no estar actualizados a la hora de la visualización del aviso. Pueden existir inexactitudes, producto del paso del tiempo. Previo a cualquier operación, el interesado deberá verificar la veracidad de la información, requiriendo las copias necesarias de la documentación. Se encuentra prohibido cobrar comisiones inmobiliarias y gastos de gestoría de informes a los inquilinos que sean personas físicas. Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede requerir a los propietarios será el equivalente al cuatro con quince centésimos por ciento (4, 15%) del valor total del respectivo contrato. comercializa: bermejo edgardo carlos propiedades- corredor inmobiliario cucicba matrícula 7899",
-      "description": "Venta de Monoambiente en Recoleta – Amplio Patio – Contrafrente – Luminoso - Apto CreditoUbicado en la prestigiosa zona de Recoleta, este funcional monoambiente ofrece un diseño inteligente y una excelente distribución. Al ingresar, un hall nos conduce al baño completo y al espacio social, donde se encuentra la cocina integrada. La cocina está equipada con horno y anafe a gas, además de ofrecer amplios espacios de guardado en bajomesada y alacena. Una de las joyas de esta propiedad es su hermoso patio, que proporciona una ventilación excepcional y una gran luminosidad al departamento. El patio, con su generoso espacio, incluye una zona semicubierta que puede utilizarse para diversas actividades, permitiendo disfrutar del sol, el aire libre y un ambiente de tranquilidad. El edificio cuenta con dos ascensores y es accesible para personas con discapacidades físicas. Las superficies y medidas son orientativas y sujetas a verificación con la documentación oficial. Los servicios incluyen agua corriente, electricidad y encargado. No pierda la oportunidad de vivir en una de las áreas más codiciadas de Capital Federal, donde la comodidad y el confort se combinan con la tranquilidad de un espacio bien diseñado. Contáctenos para más información y para coordinar una visita. superficies: Superficie Cubierta: 31, 60m2Superficie Semicubierta 1, 92m2Superficie Descubierta: 18, 96m2superficie total: 52, 48m2legal: El presente inmueble es accesible para personas con discapacidades físicas. Las medidas son orientativas y las definitivas son las que surgen de la escritura. La descripción del inmueble, servicios y medidas pueden no ajustarse a sus características y medidas reales y/o actuales. Los datos pueden no estar actualizados a la hora de la visualización del aviso. Pueden existir inexactitudes, producto del paso del tiempo. Previo a cualquier operación, el interesado deberá verificar la veracidad de la información, requiriendo las copias necesarias de la documentación. Se encuentra prohibido cobrar comisiones inmobiliarias y gastos de gestoría de informes a los inquilinos que sean personas físicas. Para los casos de alquiler de vivienda, el monto máximo de comisión que se le puede requerir a los propietarios será el equivalente al cuatro con quince centésimos por ciento (4, 15%) del valor total del respectivo contrato. comercializa: bermejo edgardo carlos propiedades- corredor inmobiliario cucicba matrícula 7899",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 74.900",
-      "price_val": 74900,
-      "currency": "USD",
-      "expenses_raw": "",
-      "expenses_val": null,
-      "user_views": 19,
-      "features_raw": "52 m² tot. | 1 amb. | 1 baño",
-      "m2_tot": 52,
-      "m2_cub": null,
-      "ambientes": 1,
-      "dormitorios": null,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Recoleta, Capital Federal",
-      "address": "AV Cordoba  al 2600",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/67/01/55/360x266/2091252689.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-monoambiente-en-recoleta-con-patio-60670155.html",
-      "is_development": false,
-      "barrio": "Recoleta",
-      "barrio_benchmark_m2": 2600,
-      "usd_m2": 1440,
-      "discount_pct": 44.6,
-      "opportunity_score": 85,
-      "user_views_formatted": "19",
-      "badge_text": "🔥 Super Oportunidad",
-      "badge_class": "badge-super",
-      "price_usd_formatted": "USD 74.900",
-      "usd_m2_formatted": "USD 1.440/m²",
-      "benchmark_formatted": "USD 2.600/m²",
-      "first_seen_date": "2026-11-10",
-      "days_ago": 10,
-      "last_synced": "2026-11-10T19:30:16.097329"
-    },
-    "ZPROP-60669854": {
-      "id": "ZPROP-60669854",
-      "title": "Venta, Parque Patricios, Departamento tipo ph 2 ambientes con patio. Salcedo 2600 1º. siciliano¡Hacenos tu consulta, contanos sobre tu búsqueda! Coordiná una visita a esta propiedad. Mail: Ver datos/whatsapp: +Ver datosWeb: inmobiliariasicilianoCorredora inmobiliaria: Julieta M. SicilianoMat cucicba 8359descripcion de la unidad funcional: -Departamento tipo ph 2 ambientes con patio. -1° piso por escalera-Ingreso a living comedor-Cocina sectorizada-Hall de distribución-Baño completo-Dormitorio-Patiosuperficie segun títulosuperficie total: 53. 5 m2Superficie cubierta: 38. 46 m2Superficie descubierta: 15. 05 m2instalaciones: *Instalación eléctrica reciclada-Termotanque eléctrico. -Conexión de lavarropas. -Refrigeración individual por ambiente. *Instalación de agua*Instalación de gas: no posee. servicios valores: abl: $Aysa: Expensas: $88. 000 (con extraordinarias) Luz: $estado: Bueno. Buena luminosidad. orientacion: Este. edificio-Entre medianeras. -pb + 1 piso-9 unidades funcionales. -Escaleras, sin ascensor. accesos: - Colectivos: 4, 6, 31, 61, 62, 91, 95, 97, 101, 118, 129, 134, 143, 150, 188. - A media cuadra de Av. Jujuy. - A 1 cuadra de Av. Brasil. - A 1 cuadra y media de la estación Inclan de la línea de subte H. - A 2 cuadras de Av. Juan de Garay. - A 3 cuadras de Av. Pavon. - A 3 cuadras del Hospital Garrahan. - A 3 cuadras de Parque La Vuelta de Obligado. - A 4 cuadras de Av. Chiclana. - A 5 cuadras de 5 Av. Caseros. Nota: La unidad no cuenta con accesibilidad para personas con movilidad reducida (Ley 5115). Escaleras para ingresar a la misma (1º piso por escalera). Nota: Los valores otorgados de las facturas de los servicios y abl son aproximados y corresponden al mes en curso de publicación. Nota: Las imagenes de esta publicación son ilustrativas y no poseen carácter contractual. Nota: Las medidas y superficies de esta publicación son orientativas y no poseen carácter contractual. Las medidas reales surgirán del título correspondiente.",
-      "description": "Venta, Parque Patricios, Departamento tipo ph 2 ambientes con patio. Salcedo 2600 1º. siciliano¡Hacenos tu consulta, contanos sobre tu búsqueda! Coordiná una visita a esta propiedad. Mail: Ver datos/whatsapp: +Ver datosWeb: inmobiliariasicilianoCorredora inmobiliaria: Julieta M. SicilianoMat cucicba 8359descripcion de la unidad funcional: -Departamento tipo ph 2 ambientes con patio. -1° piso por escalera-Ingreso a living comedor-Cocina sectorizada-Hall de distribución-Baño completo-Dormitorio-Patiosuperficie segun títulosuperficie total: 53. 5 m2Superficie cubierta: 38. 46 m2Superficie descubierta: 15. 05 m2instalaciones: *Instalación eléctrica reciclada-Termotanque eléctrico. -Conexión de lavarropas. -Refrigeración individual por ambiente. *Instalación de agua*Instalación de gas: no posee. servicios valores: abl: $Aysa: Expensas: $88. 000 (con extraordinarias) Luz: $estado: Bueno. Buena luminosidad. orientacion: Este. edificio-Entre medianeras. -pb + 1 piso-9 unidades funcionales. -Escaleras, sin ascensor. accesos: - Colectivos: 4, 6, 31, 61, 62, 91, 95, 97, 101, 118, 129, 134, 143, 150, 188. - A media cuadra de Av. Jujuy. - A 1 cuadra de Av. Brasil. - A 1 cuadra y media de la estación Inclan de la línea de subte H. - A 2 cuadras de Av. Juan de Garay. - A 3 cuadras de Av. Pavon. - A 3 cuadras del Hospital Garrahan. - A 3 cuadras de Parque La Vuelta de Obligado. - A 4 cuadras de Av. Chiclana. - A 5 cuadras de 5 Av. Caseros. Nota: La unidad no cuenta con accesibilidad para personas con movilidad reducida (Ley 5115). Escaleras para ingresar a la misma (1º piso por escalera). Nota: Los valores otorgados de las facturas de los servicios y abl son aproximados y corresponden al mes en curso de publicación. Nota: Las imagenes de esta publicación son ilustrativas y no poseen carácter contractual. Nota: Las medidas y superficies de esta publicación son orientativas y no poseen carácter contractual. Las medidas reales surgirán del título correspondiente.",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 59.000",
-      "price_val": 59000,
-      "currency": "USD",
-      "expenses_raw": "$ 88.000 Expensas",
-      "expenses_val": 88000,
-      "user_views": 27,
-      "features_raw": "53 m² tot. | 2 amb. | 1 dorm. | 1 baño",
-      "m2_tot": 53,
-      "m2_cub": null,
-      "ambientes": 2,
-      "dormitorios": 1,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Parque Patricios, Capital Federal",
-      "address": "Salcedo  al 2600",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/66/98/54/360x266/2091245243.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclphin-ph-en-boedo-60669854.html",
-      "is_development": false,
-      "barrio": "Parque Patricios",
-      "barrio_benchmark_m2": 1550,
-      "usd_m2": 1113,
-      "discount_pct": 28.2,
-      "opportunity_score": 68,
-      "user_views_formatted": "27",
-      "badge_text": "💎 Gran Oportunidad",
-      "badge_class": "badge-great",
-      "price_usd_formatted": "USD 59.000",
-      "usd_m2_formatted": "USD 1.113/m²",
-      "benchmark_formatted": "USD 1.550/m²",
-      "first_seen_date": "2026-11-10",
-      "days_ago": 10,
-      "last_synced": "2026-11-10T19:30:16.097329"
-    },
     "ZPROP-60675747": {
       "id": "ZPROP-60675747",
       "title": "Venta Departamento de 4 ambientes a Reciclar al Frente con BalcónUbicado en la calle Marcelo T. Alvear entre Junin y Uriburu en el Barrio de Recoleta. En pleno corazón de las facultades de Ciencias Sociales, Medicina, Ecónomicas y Odontología. Ideal para inversor!! El departamento se encuentra en un 2do piso al Frente. Luminoso al frente y excelente Ventilación cruzada. * Amplio Living Comedor con pisos de parquet. * Hall de Ingreso con placard de recepción* Cocina comedor diario con mucho espacio de guardado. Revestimiento de Ceramicos y Pisos ceramicos. * Lavadero aparte. La Habitación principal cuenta con un amplio placard de pared a pared. Con mucha capacidad para guardado, cajones anchos y mucho espacio para colgar. Con vista al frente. * La segunda habitación cuenta también con un amplios placard y da al pulmón del edificio. * La tercer habitación cuenta no cuenta con placard y se la puede utilizar como escritorio tambien y da al contrafrente. Las 3 habitaciones cuentan con pisos de parquet plastificados. * Baño Completo* Balcón. * Calefacción Estufa de tiro balanceado en living comedor. * CalefónLa unidad es para reciclar tanto paredes, pisos, cocina y baño. Ya que posee humedad y revestimientos de época. La seguridad está garantizada con cámaras de vigilancia en el ingreso del edificio y la presencia de un encargado, El edificio, que se encuentra en buen estado, ha sido diseñado para brindar accesibilidad, contando con una entrada con rampa para discapacitados y un ascensor que asegura comodidad y practicidad. Características de la Zona: * Frente a la facultad de Medicina, y cerca de las facultades de Ciencias Sociales, Odontología y Económicas* a 2 Cuadras de Av Córdoba y a una cuadra de Av Santa Fé * a 2 Cuadras de la Estación de Subte D. Estación Falcultad de Medicina *a 2 Cuadras de la escuela Rodolfo Rivarola Nro 17, a 5 cuadras del Insituto Schiller y a 7 cuadras del Instituto Santisima Virgen Niña* a 1 cuadra de la Plaza Dr. Bernardo Houssay y a 2 cuadras del Hospital de Clínicas José de San Martin (uba) * Numerosas Línea de Colectivos como: 10, 12, 17, 29, 37, 39, 41, 57, 59, 60, 61, 62, 64, 68, 75, 95, 99, 101, 106, 108, 109, 111, 118, 124, 132, 140, 150, 152, 188, 194En cumplimiento de la Ley 5115, se informa que el inmueble es accesible para personas con movilidad reducida o discapacidad física. Corredor interviniente: Milagros Sarachaga cucicba 7799 Paolo Menghi cucicba 9171 cmcpdjlm 1005La tasación, intermediación y la conclusión de las operaciones sobre esta propiedad son actividades exclusivas de este corredor matriculado, conforme las previsiones de la ley 20. 266, la ley caba 2340, la ley provincial 10. 973 y sus modif. Y las normas reglamentarias dictadas por los colegios departamentales. Las medidas, superficies y expensas consignadas en la presente son aproximadas; y al solo efecto orientativo. Los datos definitivos son los que surgirán del título de la propiedad y de los comprobantes respaldatorios.",
@@ -8320,7 +8167,7 @@
       "usd_m2_formatted": "USD 1.541/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-11-11",
-      "days_ago": 9,
+      "days_ago": 13,
       "last_synced": "2026-11-11T19:30:26.504088"
     },
     "ZPROP-60676497": {
@@ -8361,7 +8208,7 @@
       "usd_m2_formatted": "USD 2.000/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-11-11",
-      "days_ago": 9,
+      "days_ago": 13,
       "last_synced": "2026-11-11T16:00:30.658542"
     },
     "ZPROP-60676552": {
@@ -8402,7 +8249,7 @@
       "usd_m2_formatted": "USD 1.923/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-11",
-      "days_ago": 9,
+      "days_ago": 13,
       "last_synced": "2026-11-11T19:30:26.504088"
     },
     "ZPROP-60679414": {
@@ -8443,7 +8290,7 @@
       "usd_m2_formatted": "USD 1.810/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-11-11",
-      "days_ago": 9,
+      "days_ago": 13,
       "last_synced": "2026-11-11T19:30:26.504088"
     },
     "ZPROP-60678474": {
@@ -8484,7 +8331,7 @@
       "usd_m2_formatted": "USD 1.246/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-11",
-      "days_ago": 9,
+      "days_ago": 13,
       "last_synced": "2026-11-11T16:00:30.658542"
     },
     "ZPROP-60677672": {
@@ -8525,7 +8372,7 @@
       "usd_m2_formatted": "USD 1.918/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-11-11",
-      "days_ago": 9,
+      "days_ago": 13,
       "last_synced": "2026-11-11T19:30:26.504088"
     },
     "ZPROP-60680167": {
@@ -8566,7 +8413,7 @@
       "usd_m2_formatted": "USD 1.113/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-11",
-      "days_ago": 9,
+      "days_ago": 13,
       "last_synced": "2026-11-11T19:30:26.504088"
     },
     "ZPROP-60677915": {
@@ -8607,7 +8454,7 @@
       "usd_m2_formatted": "USD 1.172/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-11",
-      "days_ago": 9,
+      "days_ago": 13,
       "last_synced": "2026-11-11T19:30:26.504088"
     },
     "ZPROP-60680557": {
@@ -8648,7 +8495,7 @@
       "usd_m2_formatted": "USD 1.539/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-11",
-      "days_ago": 9,
+      "days_ago": 13,
       "last_synced": "2026-11-11T19:30:26.504088"
     },
     "ZPROP-60680913": {
@@ -8689,7 +8536,7 @@
       "usd_m2_formatted": "USD 1.979/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-11-11",
-      "days_ago": 9,
+      "days_ago": 13,
       "last_synced": "2026-11-11T19:30:26.504088"
     },
     "ZPROP-60686673": {
@@ -8730,7 +8577,7 @@
       "usd_m2_formatted": "USD 1.547/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-11-12",
-      "days_ago": 8,
+      "days_ago": 12,
       "last_synced": "2026-11-12T12:00:26.405556"
     },
     "ZPROP-60686175": {
@@ -8771,7 +8618,7 @@
       "usd_m2_formatted": "USD 1.545/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-12",
-      "days_ago": 8,
+      "days_ago": 12,
       "last_synced": "2026-11-12T16:00:22.814945"
     },
     "ZPROP-60686120": {
@@ -8812,7 +8659,7 @@
       "usd_m2_formatted": "USD 1.840/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-11-12",
-      "days_ago": 8,
+      "days_ago": 12,
       "last_synced": "2026-11-12T16:00:22.814945"
     },
     "ZPROP-60684484": {
@@ -8853,7 +8700,7 @@
       "usd_m2_formatted": "USD 1.960/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-11-12",
-      "days_ago": 8,
+      "days_ago": 12,
       "last_synced": "2026-11-12T16:00:22.814945"
     },
     "ZPROP-60688503": {
@@ -8894,7 +8741,7 @@
       "usd_m2_formatted": "USD 1.960/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-11-12",
-      "days_ago": 8,
+      "days_ago": 12,
       "last_synced": "2026-11-12T16:00:22.814945"
     },
     "ZPROP-60696080": {
@@ -8935,7 +8782,7 @@
       "usd_m2_formatted": "USD 1.074/m²",
       "benchmark_formatted": "USD 2.050/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 7,
+      "days_ago": 11,
       "last_synced": "2026-11-13T12:00:27.891639"
     },
     "ZPROP-60695274": {
@@ -8976,7 +8823,7 @@
       "usd_m2_formatted": "USD 1.707/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 7,
+      "days_ago": 11,
       "last_synced": "2026-11-13T16:00:37.799904"
     },
     "ZPROP-60695452": {
@@ -9017,7 +8864,7 @@
       "usd_m2_formatted": "USD 2.062/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 7,
+      "days_ago": 11,
       "last_synced": "2026-11-13T12:00:27.891639"
     },
     "ZPROP-60695256": {
@@ -9058,7 +8905,7 @@
       "usd_m2_formatted": "USD 1.456/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 7,
+      "days_ago": 11,
       "last_synced": "2026-11-13T12:00:27.891639"
     },
     "ZPROP-60570327": {
@@ -9099,7 +8946,7 @@
       "usd_m2_formatted": "USD 1.759/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 7,
+      "days_ago": 11,
       "last_synced": "2026-11-13T12:00:27.891639"
     },
     "ZPROP-60695759": {
@@ -9140,7 +8987,7 @@
       "usd_m2_formatted": "USD 1.498/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 7,
+      "days_ago": 11,
       "last_synced": "2026-11-13T16:00:37.799904"
     },
     "ZPROP-60694795": {
@@ -9181,7 +9028,7 @@
       "usd_m2_formatted": "USD 1.868/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 7,
+      "days_ago": 11,
       "last_synced": "2026-11-13T16:00:37.799904"
     },
     "ZPROP-60700420": {
@@ -9222,7 +9069,7 @@
       "usd_m2_formatted": "USD 1.055/m²",
       "benchmark_formatted": "USD 2.050/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 7,
+      "days_ago": 11,
       "last_synced": "2026-11-13T16:00:37.799904"
     },
     "ZPROP-60697324": {
@@ -9263,7 +9110,7 @@
       "usd_m2_formatted": "USD 1.403/m²",
       "benchmark_formatted": "USD 2.650/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 7,
+      "days_ago": 11,
       "last_synced": "2026-11-13T19:30:20.694427"
     },
     "ZPROP-60699234": {
@@ -9304,7 +9151,7 @@
       "usd_m2_formatted": "USD 1.394/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 7,
+      "days_ago": 11,
       "last_synced": "2026-11-13T19:30:20.694427"
     },
     "ZPROP-60698962": {
@@ -9345,7 +9192,7 @@
       "usd_m2_formatted": "USD 1.678/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 7,
+      "days_ago": 11,
       "last_synced": "2026-11-13T19:30:20.694427"
     },
     "ZPROP-60701004": {
@@ -9386,7 +9233,7 @@
       "usd_m2_formatted": "USD 1.722/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 7,
+      "days_ago": 11,
       "last_synced": "2026-11-13T19:30:20.694427"
     },
     "ZPROP-60703815": {
@@ -9427,7 +9274,7 @@
       "usd_m2_formatted": "USD 1.712/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 7,
+      "days_ago": 11,
       "last_synced": "2026-11-13T19:30:20.694427"
     },
     "ZPROP-60320048": {
@@ -9468,7 +9315,7 @@
       "usd_m2_formatted": "USD 2.083/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-11-16",
-      "days_ago": 4,
+      "days_ago": 8,
       "last_synced": "2026-11-16T16:00:20.821408"
     },
     "ZPROP-60714480": {
@@ -9509,7 +9356,7 @@
       "usd_m2_formatted": "USD 1.500/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-16",
-      "days_ago": 4,
+      "days_ago": 8,
       "last_synced": "2026-11-16T16:00:20.821408"
     },
     "ZPROP-60717748": {
@@ -9550,7 +9397,7 @@
       "usd_m2_formatted": "USD 1.831/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-16",
-      "days_ago": 4,
+      "days_ago": 8,
       "last_synced": "2026-11-16T16:00:20.821408"
     },
     "ZPROP-60728993": {
@@ -9591,7 +9438,7 @@
       "usd_m2_formatted": "USD 1.537/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-11-17",
-      "days_ago": 3,
+      "days_ago": 7,
       "last_synced": "2026-11-17T19:30:19.912271"
     },
     "ZPROP-60729149": {
@@ -9632,7 +9479,7 @@
       "usd_m2_formatted": "USD 1.250/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-17",
-      "days_ago": 3,
+      "days_ago": 7,
       "last_synced": "2026-11-17T16:00:30.662611"
     },
     "ZPROP-60726911": {
@@ -9673,7 +9520,7 @@
       "usd_m2_formatted": "USD 1.418/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-17",
-      "days_ago": 3,
+      "days_ago": 7,
       "last_synced": "2026-11-17T19:30:19.912271"
     },
     "ZPROP-60726218": {
@@ -9714,7 +9561,7 @@
       "usd_m2_formatted": "USD 1.917/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-11-17",
-      "days_ago": 3,
+      "days_ago": 7,
       "last_synced": "2026-11-17T19:30:19.912271"
     },
     "ZPROP-60735229": {
@@ -9755,7 +9602,7 @@
       "usd_m2_formatted": "USD 1.203/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-18",
-      "days_ago": 2,
+      "days_ago": 6,
       "last_synced": "2026-11-18T16:00:26.542270"
     },
     "ZPROP-60734861": {
@@ -9796,7 +9643,7 @@
       "usd_m2_formatted": "USD 1.471/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-11-18",
-      "days_ago": 2,
+      "days_ago": 6,
       "last_synced": "2026-11-18T16:00:26.542270"
     },
     "ZPROP-60739353": {
@@ -9837,7 +9684,7 @@
       "usd_m2_formatted": "USD 1.417/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-11-18",
-      "days_ago": 2,
+      "days_ago": 6,
       "last_synced": "2026-11-18T16:00:26.542270"
     },
     "ZPROP-60738962": {
@@ -9878,7 +9725,7 @@
       "usd_m2_formatted": "USD 900/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-11-18",
-      "days_ago": 2,
+      "days_ago": 6,
       "last_synced": "2026-11-18T16:00:26.542270"
     },
     "ZPROP-60736718": {
@@ -9919,7 +9766,7 @@
       "usd_m2_formatted": "USD 1.445/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-11-18",
-      "days_ago": 2,
+      "days_ago": 6,
       "last_synced": "2026-11-18T16:00:26.542270"
     },
     "ZPROP-60748131": {
@@ -9960,7 +9807,7 @@
       "usd_m2_formatted": "USD 1.706/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 1,
+      "days_ago": 5,
       "last_synced": "2026-11-19T16:00:34.141651"
     },
     "ZPROP-60747146": {
@@ -10001,7 +9848,7 @@
       "usd_m2_formatted": "USD 1.852/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 1,
+      "days_ago": 5,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60748373": {
@@ -10042,7 +9889,7 @@
       "usd_m2_formatted": "USD 829/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 1,
+      "days_ago": 5,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60752877": {
@@ -10083,7 +9930,7 @@
       "usd_m2_formatted": "USD 1.667/m²",
       "benchmark_formatted": "USD 2.650/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 1,
+      "days_ago": 5,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60751426": {
@@ -10124,7 +9971,7 @@
       "usd_m2_formatted": "USD 1.636/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 1,
+      "days_ago": 5,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60752184": {
@@ -10165,7 +10012,7 @@
       "usd_m2_formatted": "USD 1.796/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 1,
+      "days_ago": 5,
       "last_synced": "2026-11-19T16:00:34.141651"
     },
     "ZPROP-60726567": {
@@ -10206,7 +10053,7 @@
       "usd_m2_formatted": "USD 1.580/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 1,
+      "days_ago": 5,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60750583": {
@@ -10247,7 +10094,7 @@
       "usd_m2_formatted": "USD 1.981/m²",
       "benchmark_formatted": "USD 2.650/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 1,
+      "days_ago": 5,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60752993": {
@@ -10288,7 +10135,7 @@
       "usd_m2_formatted": "USD 1.650/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 1,
+      "days_ago": 5,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60750993": {
@@ -10329,7 +10176,7 @@
       "usd_m2_formatted": "USD 1.551/m²",
       "benchmark_formatted": "USD 2.000/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 1,
+      "days_ago": 5,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60751738": {
@@ -10370,7 +10217,7 @@
       "usd_m2_formatted": "USD 1.250/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 1,
+      "days_ago": 5,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60755365": {
@@ -10411,7 +10258,7 @@
       "usd_m2_formatted": "USD 1.086/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 1,
+      "days_ago": 5,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60750316": {
@@ -10452,7 +10299,7 @@
       "usd_m2_formatted": "USD 1.418/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 1,
+      "days_ago": 5,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60758308": {
@@ -10462,7 +10309,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 97.000",
       "price_val": 97000,
       "currency": "USD",
@@ -10493,7 +10340,7 @@
       "usd_m2_formatted": "USD 808/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-20",
-      "days_ago": 0,
+      "days_ago": 4,
       "last_synced": "2026-11-20T16:00:24.288997"
     },
     "ZPROP-60759495": {
@@ -10503,7 +10350,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 84.000",
       "price_val": 84000,
       "currency": "USD",
@@ -10534,7 +10381,7 @@
       "usd_m2_formatted": "USD 1.714/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-20",
-      "days_ago": 0,
+      "days_ago": 4,
       "last_synced": "2026-11-20T16:00:24.288997"
     },
     "ZPROP-60757893": {
@@ -10544,7 +10391,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 89.000",
       "price_val": 89000,
       "currency": "USD",
@@ -10575,7 +10422,7 @@
       "usd_m2_formatted": "USD 1.483/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-20",
-      "days_ago": 0,
+      "days_ago": 4,
       "last_synced": "2026-11-20T16:00:24.288997"
     },
     "ZPROP-60761035": {
@@ -10585,7 +10432,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 75.000",
       "price_val": 75000,
       "currency": "USD",
@@ -10616,7 +10463,7 @@
       "usd_m2_formatted": "USD 1.562/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-11-20",
-      "days_ago": 0,
+      "days_ago": 4,
       "last_synced": "2026-11-20T16:00:24.288997"
     },
     "ZPROP-60759571": {
@@ -10626,7 +10473,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 99.000",
       "price_val": 99000,
       "currency": "USD",
@@ -10657,7 +10504,7 @@
       "usd_m2_formatted": "USD 1.356/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-20",
-      "days_ago": 0,
+      "days_ago": 4,
       "last_synced": "2026-11-20T16:00:24.288997"
     }
   }
