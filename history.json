@@ -7407,9 +7407,24 @@
       "first_seen": "2026-11-25",
       "last_price": 87000,
       "barrio": "Caballito"
+    },
+    "ZPROP-60797569": {
+      "first_seen": "2026-11-25",
+      "last_price": 55000,
+      "barrio": "Recoleta"
+    },
+    "ZPROP-60794633": {
+      "first_seen": "2026-11-25",
+      "last_price": 95000,
+      "barrio": "Caballito"
+    },
+    "ZPROP-60797332": {
+      "first_seen": "2026-11-25",
+      "last_price": 105000,
+      "barrio": "Caballito"
     }
   },
-  "last_run": "2026-11-25T16:00:28.077112",
+  "last_run": "2026-11-25T19:30:25.403037",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -8194,13 +8209,13 @@
     },
     {
       "date": "2026-11-25",
-      "timestamp": "2026-11-25T16:00:28.125701",
-      "total_properties": 61,
-      "new_today": 61,
-      "avg_usd_m2": 1544,
-      "min_price": 58000,
-      "median_price": 94000,
-      "super_deals_count": 28,
+      "timestamp": "2026-11-25T19:30:25.447858",
+      "total_properties": 64,
+      "new_today": 64,
+      "avg_usd_m2": 1540,
+      "min_price": 55000,
+      "median_price": 94500,
+      "super_deals_count": 30,
       "top_neighborhoods": []
     }
   ],
@@ -10417,7 +10432,7 @@
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-25",
       "days_ago": 0,
-      "last_synced": "2026-11-25T16:00:28.077112"
+      "last_synced": "2026-11-25T19:30:25.403037"
     },
     "ZPROP-60791778": {
       "id": "ZPROP-60791778",
@@ -10458,7 +10473,7 @@
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-25",
       "days_ago": 0,
-      "last_synced": "2026-11-25T12:00:46.505067"
+      "last_synced": "2026-11-25T19:30:25.403037"
     },
     "ZPROP-60791307": {
       "id": "ZPROP-60791307",
@@ -10499,7 +10514,7 @@
       "benchmark_formatted": "USD 2.000/m²",
       "first_seen_date": "2026-11-25",
       "days_ago": 0,
-      "last_synced": "2026-11-25T16:00:28.077112"
+      "last_synced": "2026-11-25T19:30:25.403037"
     },
     "ZPROP-60790885": {
       "id": "ZPROP-60790885",
@@ -10540,7 +10555,7 @@
       "benchmark_formatted": "USD 2.000/m²",
       "first_seen_date": "2026-11-25",
       "days_ago": 0,
-      "last_synced": "2026-11-25T16:00:28.077112"
+      "last_synced": "2026-11-25T19:30:25.403037"
     },
     "ZPROP-60792818": {
       "id": "ZPROP-60792818",
@@ -10581,7 +10596,7 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-25",
       "days_ago": 0,
-      "last_synced": "2026-11-25T16:00:28.077112"
+      "last_synced": "2026-11-25T19:30:25.403037"
     },
     "ZPROP-60794052": {
       "id": "ZPROP-60794052",
@@ -10622,7 +10637,7 @@
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-11-25",
       "days_ago": 0,
-      "last_synced": "2026-11-25T16:00:28.077112"
+      "last_synced": "2026-11-25T19:30:25.403037"
     },
     "ZPROP-60795176": {
       "id": "ZPROP-60795176",
@@ -10663,7 +10678,7 @@
       "benchmark_formatted": "USD 2.650/m²",
       "first_seen_date": "2026-11-25",
       "days_ago": 0,
-      "last_synced": "2026-11-25T16:00:28.077112"
+      "last_synced": "2026-11-25T19:30:25.403037"
     },
     "ZPROP-60792842": {
       "id": "ZPROP-60792842",
@@ -10704,7 +10719,130 @@
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-25",
       "days_ago": 0,
-      "last_synced": "2026-11-25T16:00:28.077112"
+      "last_synced": "2026-11-25T19:30:25.403037"
+    },
+    "ZPROP-60797569": {
+      "id": "ZPROP-60797569",
+      "title": "Departamento de 3 ambientes a reciclar en el prestigioso barrio de Recoleta. Esta unidad ofrece una superficie cubierta de 55 m2, distribuidos en un living comedor con salida al balcón, cocina independiente, 2 dormitorios y un baño. Ideal para quienes buscan personalizar su espacio en una ubicación privilegiada. Contáctanos para más información al Ver datos y coordina una visita.",
+      "description": "Departamento de 3 ambientes a reciclar en el prestigioso barrio de Recoleta. Esta unidad ofrece una superficie cubierta de 55 m2, distribuidos en un living comedor con salida al balcón, cocina independiente, 2 dormitorios y un baño. Ideal para quienes buscan personalizar su espacio en una ubicación privilegiada. Contáctanos para más información al Ver datos y coordina una visita.",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 55.000",
+      "price_val": 55000,
+      "currency": "USD",
+      "expenses_raw": "",
+      "expenses_val": null,
+      "user_views": 55,
+      "features_raw": "58 m² tot. | 3 amb. | 2 dorm. | 1 baño",
+      "m2_tot": 58,
+      "m2_cub": null,
+      "ambientes": 3,
+      "dormitorios": 2,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Recoleta, Capital Federal",
+      "address": "Chile al 1900",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/79/75/69/360x266/2094642869.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-en-venta-en-recoleta.-60797569.html",
+      "is_development": false,
+      "barrio": "Recoleta",
+      "barrio_benchmark_m2": 2600,
+      "usd_m2": 948,
+      "discount_pct": 63.5,
+      "opportunity_score": 91,
+      "user_views_formatted": "55",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 55.000",
+      "usd_m2_formatted": "USD 948/m²",
+      "benchmark_formatted": "USD 2.600/m²",
+      "first_seen_date": "2026-11-25",
+      "days_ago": 0,
+      "last_synced": "2026-11-25T19:30:25.403037"
+    },
+    "ZPROP-60794633": {
+      "id": "ZPROP-60794633",
+      "title": "Departamento de 3 ambientes- semipiso - al frente- A reciclar. La unidad cuenta con: -hall de entrada. -amplia cocina de 3. 10 X 3. 10, con posibilidad de hacer comedor diario. -lavadero incorporado en cocina, posibilidad de hacerlo independiente. - cocina A gas de 4 hornallas Y horno. Muebles altos Y bajos. -agua caliente individual por calefón. -amplio living comedor de 5. 25 X 4. 30. -baño completo con mueble empotrado para guardado. -2 amplios dormitorios (3 X 2. 85 Y 3. 45 X 3. 2), ambos con placard empotrado. -los pisos son en parqué, en estado A pulir. -calefacción individual por tiro balanceado. - la unidad es súper luminosa, con buena ventilación. El edificio cuenta con encargada permanente. A mts de Av. Rivadavia, subte linea \"A\", estación \"primera junta\", infinidad de medios de transporte, A 3 cuadras de tren sarmiento, estación \"caballito\". Zona comercial. Consúltenos. quintana servicios inmobiliarios. Cel. Ver datos",
+      "description": "Departamento de 3 ambientes- semipiso - al frente- A reciclar. La unidad cuenta con: -hall de entrada. -amplia cocina de 3. 10 X 3. 10, con posibilidad de hacer comedor diario. -lavadero incorporado en cocina, posibilidad de hacerlo independiente. - cocina A gas de 4 hornallas Y horno. Muebles altos Y bajos. -agua caliente individual por calefón. -amplio living comedor de 5. 25 X 4. 30. -baño completo con mueble empotrado para guardado. -2 amplios dormitorios (3 X 2. 85 Y 3. 45 X 3. 2), ambos con placard empotrado. -los pisos son en parqué, en estado A pulir. -calefacción individual por tiro balanceado. - la unidad es súper luminosa, con buena ventilación. El edificio cuenta con encargada permanente. A mts de Av. Rivadavia, subte linea \"A\", estación \"primera junta\", infinidad de medios de transporte, A 3 cuadras de tren sarmiento, estación \"caballito\". Zona comercial. Consúltenos. quintana servicios inmobiliarios. Cel. Ver datos",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 95.000",
+      "price_val": 95000,
+      "currency": "USD",
+      "expenses_raw": "$ 243.000 Expensas",
+      "expenses_val": 243000,
+      "user_views": 55,
+      "features_raw": "67 m² tot. | 3 amb. | 2 dorm. | 1 baño",
+      "m2_tot": 67,
+      "m2_cub": null,
+      "ambientes": 3,
+      "dormitorios": 2,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Primera Junta, Caballito",
+      "address": "Del Barco Centenera 100",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/79/46/33/360x266/2094572018.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-en-venta-3-ambientes-semipiso-al-60794633.html",
+      "is_development": false,
+      "barrio": "Caballito",
+      "barrio_benchmark_m2": 2150,
+      "usd_m2": 1418,
+      "discount_pct": 34.0,
+      "opportunity_score": 68,
+      "user_views_formatted": "55",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 95.000",
+      "usd_m2_formatted": "USD 1.418/m²",
+      "benchmark_formatted": "USD 2.150/m²",
+      "first_seen_date": "2026-11-25",
+      "days_ago": 0,
+      "last_synced": "2026-11-25T19:30:25.403037"
+    },
+    "ZPROP-60797332": {
+      "id": "ZPROP-60797332",
+      "title": "Exclusivo dos ambientes reciclado A nuevo | diseño, calidad Y sol todo el día | balcón corrido | caballitoubicado en Yerbal esquina Colpayo, en pleno corazón de Caballito, a pocos metros de Primera Junta, presentamos esta propiedad que sorprende por su espectacular remodelación, donde el diseño, el confort y la calidad de los materiales son verdaderos protagonistas. En uno de los puntos más estratégicos del barrio, con excelentes conexiones de transporte público y rodeado de una amplia propuesta comercial, gastronómica y de servicios, encontramos este departamento de dos ambientes que combina una ubicación privilegiada con interiores de categoría. La propiedad cuenta con 43 m² cubiertos y 9 m² de balcón corrido, con orientación noroeste, lo que garantiza una excelente luminosidad y sol durante gran parte del día. Su remodelación integral fue realizada por sus propietarios con un cuidado excepcional en cada detalle, incorporando materiales de primera calidad, equipamiento moderno y soluciones de diseño que optimizan cada espacio. Al ingresar, nos encontramos con un ambiente cálido, moderno y funcional, donde se destaca una cocina totalmente renovada, equipada con anafe y horno eléctrico Domec, materiales de excelente calidad y un diseño contemporáneo que combina estética y practicidad. Además, cuenta con un ingenioso espacio de lavadero oculto, uno de esos detalles que marcan la diferencia y aportan funcionalidad sin resignar diseño. El living comedor se conecta con un amplio balcón corrido, que aporta luz natural y una agradable expansión al espacio interior. Cuenta con persianas eléctricas, sumando comodidad y tecnología. El dormitorio es otro de los grandes protagonistas de esta propiedad: de generosas dimensiones, incorpora parte del balcón mediante un cerramiento especialmente diseñado, logrando un ambiente amplio, luminoso y confortable. Dispone de un gran placard con su interior completamente terminado. El baño merece una mención especial: diseñado con una estética moderna y materiales de primera línea, cuenta con pisos de porcelanato, mampara de vidrio, espejo retroiluminado con iluminación led e inodoro inteligente. Un espacio que combina tecnología, sofisticación y funcionalidad. Una propiedad realmente diferente, donde cada rincón fue pensado y diseñado para disfrutar. Ideal para quienes buscan un departamento moderno, completamente renovado y listo para habitar, en una ubicación estratégica de Caballito, sin necesidad de resignar calidad ni diseño. Una verdadera joyita para quienes saben valorar los detalles y buscan algo especial en el mercado.",
+      "description": "Exclusivo dos ambientes reciclado A nuevo | diseño, calidad Y sol todo el día | balcón corrido | caballitoubicado en Yerbal esquina Colpayo, en pleno corazón de Caballito, a pocos metros de Primera Junta, presentamos esta propiedad que sorprende por su espectacular remodelación, donde el diseño, el confort y la calidad de los materiales son verdaderos protagonistas. En uno de los puntos más estratégicos del barrio, con excelentes conexiones de transporte público y rodeado de una amplia propuesta comercial, gastronómica y de servicios, encontramos este departamento de dos ambientes que combina una ubicación privilegiada con interiores de categoría. La propiedad cuenta con 43 m² cubiertos y 9 m² de balcón corrido, con orientación noroeste, lo que garantiza una excelente luminosidad y sol durante gran parte del día. Su remodelación integral fue realizada por sus propietarios con un cuidado excepcional en cada detalle, incorporando materiales de primera calidad, equipamiento moderno y soluciones de diseño que optimizan cada espacio. Al ingresar, nos encontramos con un ambiente cálido, moderno y funcional, donde se destaca una cocina totalmente renovada, equipada con anafe y horno eléctrico Domec, materiales de excelente calidad y un diseño contemporáneo que combina estética y practicidad. Además, cuenta con un ingenioso espacio de lavadero oculto, uno de esos detalles que marcan la diferencia y aportan funcionalidad sin resignar diseño. El living comedor se conecta con un amplio balcón corrido, que aporta luz natural y una agradable expansión al espacio interior. Cuenta con persianas eléctricas, sumando comodidad y tecnología. El dormitorio es otro de los grandes protagonistas de esta propiedad: de generosas dimensiones, incorpora parte del balcón mediante un cerramiento especialmente diseñado, logrando un ambiente amplio, luminoso y confortable. Dispone de un gran placard con su interior completamente terminado. El baño merece una mención especial: diseñado con una estética moderna y materiales de primera línea, cuenta con pisos de porcelanato, mampara de vidrio, espejo retroiluminado con iluminación led e inodoro inteligente. Un espacio que combina tecnología, sofisticación y funcionalidad. Una propiedad realmente diferente, donde cada rincón fue pensado y diseñado para disfrutar. Ideal para quienes buscan un departamento moderno, completamente renovado y listo para habitar, en una ubicación estratégica de Caballito, sin necesidad de resignar calidad ni diseño. Una verdadera joyita para quienes saben valorar los detalles y buscan algo especial en el mercado.",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 105.000",
+      "price_val": 105000,
+      "currency": "USD",
+      "expenses_raw": "$ 438.000 Expensas",
+      "expenses_val": 438000,
+      "user_views": 55,
+      "features_raw": "52 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 52,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Caballito, Capital Federal",
+      "address": "Yerbal al 700",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/79/73/32/360x266/2094637627.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-departamento-2-ambientes-remodelado-a-nuevo-con-60797332.html",
+      "is_development": false,
+      "barrio": "Caballito",
+      "barrio_benchmark_m2": 2150,
+      "usd_m2": 2019,
+      "discount_pct": 6.1,
+      "opportunity_score": 30,
+      "user_views_formatted": "55",
+      "badge_text": "🏷️ Buen Precio",
+      "badge_class": "badge-good",
+      "price_usd_formatted": "USD 105.000",
+      "usd_m2_formatted": "USD 2.019/m²",
+      "benchmark_formatted": "USD 2.150/m²",
+      "first_seen_date": "2026-11-25",
+      "days_ago": 0,
+      "last_synced": "2026-11-25T19:30:25.403037"
     }
   }
 }
