@@ -7422,9 +7422,19 @@
       "first_seen": "2026-11-25",
       "last_price": 105000,
       "barrio": "Caballito"
+    },
+    "ZPROP-60803321": {
+      "first_seen": "2026-11-26",
+      "last_price": 68000,
+      "barrio": "Parque Patricios"
+    },
+    "ZPROP-60803820": {
+      "first_seen": "2026-11-26",
+      "last_price": 90000,
+      "barrio": "Caballito"
     }
   },
-  "last_run": "2026-11-25T19:30:25.403037",
+  "last_run": "2026-11-26T12:00:24.546335",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -8217,214 +8227,20 @@
       "median_price": 94500,
       "super_deals_count": 30,
       "top_neighborhoods": []
+    },
+    {
+      "date": "2026-11-26",
+      "timestamp": "2026-11-26T12:00:24.618753",
+      "total_properties": 61,
+      "new_today": 61,
+      "avg_usd_m2": 1512,
+      "min_price": 55000,
+      "median_price": 94000,
+      "super_deals_count": 29,
+      "top_neighborhoods": []
     }
   ],
   "active_deals": {
-    "ZPROP-60686673": {
-      "id": "ZPROP-60686673",
-      "title": "Oportunidad para reciclar 3 ambientes de estilo, techo altos y aberturas amplias con techos doble altura. Apto profesional(se uso siempre como consultorio kinesiologico). No tiene gas. Todo eléctrico. Excelente ubicación! 2 cuadras Hospital Aleman, 3 subte D (estación Pueyrredon, y Av Las Heras)",
-      "description": "Oportunidad para reciclar 3 ambientes de estilo, techo altos y aberturas amplias con techos doble altura. Apto profesional(se uso siempre como consultorio kinesiologico). No tiene gas. Todo eléctrico. Excelente ubicación! 2 cuadras Hospital Aleman, 3 subte D (estación Pueyrredon, y Av Las Heras)",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 99.000",
-      "price_val": 99000,
-      "currency": "USD",
-      "expenses_raw": "$ 260.000 Expensas",
-      "expenses_val": 260000,
-      "user_views": 55,
-      "features_raw": "64 m² tot. | 3 amb. | 2 dorm. | 1 baño",
-      "m2_tot": 64,
-      "m2_cub": null,
-      "ambientes": 3,
-      "dormitorios": 2,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Recoleta, Capital Federal",
-      "address": "Laprida 1646",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/68/66/73/360x266/2091672561.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-oportunidad-para-reciclar-3-amb-de-estilo-60686673.html",
-      "is_development": false,
-      "barrio": "Recoleta",
-      "barrio_benchmark_m2": 2600,
-      "usd_m2": 1547,
-      "discount_pct": 40.5,
-      "opportunity_score": 78,
-      "user_views_formatted": "55",
-      "badge_text": "🔥 Super Oportunidad",
-      "badge_class": "badge-super",
-      "price_usd_formatted": "USD 99.000",
-      "usd_m2_formatted": "USD 1.547/m²",
-      "benchmark_formatted": "USD 2.600/m²",
-      "first_seen_date": "2026-11-12",
-      "days_ago": 13,
-      "last_synced": "2026-11-12T12:00:26.405556"
-    },
-    "ZPROP-60686175": {
-      "id": "ZPROP-60686175",
-      "title": "Departamento de 2 Ambientes con Patios en Excelente Zona de Caballito: José María Moreno Esquina Formosa. Living Comedor con Salida a Patio Principal. Dormitorio con Placard Completo. Cocina Completa con Lavadero Integrado y Salida a Segundo Patio. Baño Completo. Inmejorable Ubicación a un Paso de Múltiples Líneas de Colectivo y a 3 Cuadras de Acoyte y Rivadavia -Corazón Comercial de Caballito- con Subte Línea A. Ley 5115: No Accesible. José María Alvarez Insúa Matrícula No 965 cucicba / José María Alvarez Insúa Matrícula No 966 cucicba / Juan Ignacio Alvarez Insúa Matrícula No 5171 cucicba. Aviso legal que conste: Que las descripciones -Medidas -Superficies Antiguedad -M2. -Valores de Impuestos Servicios Expensas indicados - &quot;Son aproximados y sujetos a verificación y/o ajuste sin previo aviso&quot; - Fotos Vídeos, planos de carácter no contractual -. Todos los datos fueron proporcionados por la parte propietaria y pueden no estar actualizados y/o tener inexactitudes y discordancias con títulos o reglamentos. La parte interesada debe realizar previas verificaciones antes del momento de realizar la operación, requiriendo por si o sus profesionales la verificación de la documentación que corresponda.",
-      "description": "Departamento de 2 Ambientes con Patios en Excelente Zona de Caballito: José María Moreno Esquina Formosa. Living Comedor con Salida a Patio Principal. Dormitorio con Placard Completo. Cocina Completa con Lavadero Integrado y Salida a Segundo Patio. Baño Completo. Inmejorable Ubicación a un Paso de Múltiples Líneas de Colectivo y a 3 Cuadras de Acoyte y Rivadavia -Corazón Comercial de Caballito- con Subte Línea A. Ley 5115: No Accesible. José María Alvarez Insúa Matrícula No 965 cucicba / José María Alvarez Insúa Matrícula No 966 cucicba / Juan Ignacio Alvarez Insúa Matrícula No 5171 cucicba. Aviso legal que conste: Que las descripciones -Medidas -Superficies Antiguedad -M2. -Valores de Impuestos Servicios Expensas indicados - &quot;Son aproximados y sujetos a verificación y/o ajuste sin previo aviso&quot; - Fotos Vídeos, planos de carácter no contractual -. Todos los datos fueron proporcionados por la parte propietaria y pueden no estar actualizados y/o tener inexactitudes y discordancias con títulos o reglamentos. La parte interesada debe realizar previas verificaciones antes del momento de realizar la operación, requiriendo por si o sus profesionales la verificación de la documentación que corresponda.",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 85.000",
-      "price_val": 85000,
-      "currency": "USD",
-      "expenses_raw": "$ 98.000 Expensas",
-      "expenses_val": 98000,
-      "user_views": 55,
-      "features_raw": "55 m² tot. | 2 amb. | 1 dorm. | 1 baño",
-      "m2_tot": 55,
-      "m2_cub": null,
-      "ambientes": 2,
-      "dormitorios": 1,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Caballito, Capital Federal",
-      "address": "José María Moreno al 300",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/68/61/75/360x266/2091655895.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-departamento-2-ambientes-patio-caballito-60686175.html",
-      "is_development": false,
-      "barrio": "Caballito",
-      "barrio_benchmark_m2": 2150,
-      "usd_m2": 1545,
-      "discount_pct": 28.1,
-      "opportunity_score": 63,
-      "user_views_formatted": "55",
-      "badge_text": "💎 Gran Oportunidad",
-      "badge_class": "badge-great",
-      "price_usd_formatted": "USD 85.000",
-      "usd_m2_formatted": "USD 1.545/m²",
-      "benchmark_formatted": "USD 2.150/m²",
-      "first_seen_date": "2026-11-12",
-      "days_ago": 13,
-      "last_synced": "2026-11-12T16:00:22.814945"
-    },
-    "ZPROP-60686120": {
-      "id": "ZPROP-60686120",
-      "title": "Excelente y Amplio 2 Ambientes al frente con balcón mts Paraguay y Mts Av. Cordoba y Av. Carlos Pellegrini y subte y Metrobus y muy cerca del Obelisco. apto compra con crédito hipotecario. - Gran Living Comedor de aprox 6 x 3 mts con pisos parquet- Cocina y comedor diario. - Gran Dormitorio con excepcionales placards hechos a nuevo, - Apto Profesional o vivienda. - Apto compra ocn Crédito hipotecario.",
-      "description": "Excelente y Amplio 2 Ambientes al frente con balcón mts Paraguay y Mts Av. Cordoba y Av. Carlos Pellegrini y subte y Metrobus y muy cerca del Obelisco. apto compra con crédito hipotecario. - Gran Living Comedor de aprox 6 x 3 mts con pisos parquet- Cocina y comedor diario. - Gran Dormitorio con excepcionales placards hechos a nuevo, - Apto Profesional o vivienda. - Apto compra ocn Crédito hipotecario.",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 92.000",
-      "price_val": 92000,
-      "currency": "USD",
-      "expenses_raw": "$ 300.000 Expensas",
-      "expenses_val": 300000,
-      "user_views": 32,
-      "features_raw": "50 m² tot. | 2 amb. | 1 dorm. | 1 baño",
-      "m2_tot": 50,
-      "m2_cub": null,
-      "ambientes": 2,
-      "dormitorios": 1,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Retiro, Capital Federal",
-      "address": "Suipacha al 800 Entre Paraguay y Av. Cordoba. Excepc 2 Amb  Fte C/bcon Apto Crédito",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/68/61/20/360x266/2091654407.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-excel-2-amb-fte-bcon-s-suipacha-entre-paraguay-y-av-60686120.html",
-      "is_development": false,
-      "barrio": "Retiro",
-      "barrio_benchmark_m2": 2300,
-      "usd_m2": 1840,
-      "discount_pct": 20.0,
-      "opportunity_score": 51,
-      "user_views_formatted": "32",
-      "badge_text": "💎 Gran Oportunidad",
-      "badge_class": "badge-great",
-      "price_usd_formatted": "USD 92.000",
-      "usd_m2_formatted": "USD 1.840/m²",
-      "benchmark_formatted": "USD 2.300/m²",
-      "first_seen_date": "2026-11-12",
-      "days_ago": 13,
-      "last_synced": "2026-11-12T16:00:22.814945"
-    },
-    "ZPROP-60684484": {
-      "id": "ZPROP-60684484",
-      "title": "Apto credito!! Espectacular departamento de 3 ambientes, ubicado en una de las calles más importantes de Microcentro, a pasos de Av. Santa Fe, rodeado de múltiples accesos de transporte. El departamento se encuentra en perfecto estado y está en una zona estratégica tanto gastronómica como turística. Mira el video!! Al ingresar, nos recibe un living comedor semi integrado, acompañado de una cocina independiente. La propiedad cuenta con dos dormitorios y un baño completo que también funciona como toilette. Excelente oportunidad para inversores. metros: Totales: 50m2Cubiertos: 50 m2",
-      "description": "Apto credito!! Espectacular departamento de 3 ambientes, ubicado en una de las calles más importantes de Microcentro, a pasos de Av. Santa Fe, rodeado de múltiples accesos de transporte. El departamento se encuentra en perfecto estado y está en una zona estratégica tanto gastronómica como turística. Mira el video!! Al ingresar, nos recibe un living comedor semi integrado, acompañado de una cocina independiente. La propiedad cuenta con dos dormitorios y un baño completo que también funciona como toilette. Excelente oportunidad para inversores. metros: Totales: 50m2Cubiertos: 50 m2",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 98.000",
-      "price_val": 98000,
-      "currency": "USD",
-      "expenses_raw": "$ 132.000 Expensas",
-      "expenses_val": 132000,
-      "user_views": 32,
-      "features_raw": "50 m² tot. | 3 amb. | 2 dorm. | 1 baño",
-      "m2_tot": 50,
-      "m2_cub": null,
-      "ambientes": 3,
-      "dormitorios": 2,
-      "banos": 1,
-      "cocheras": null,
-      "location": "Retiro, Capital Federal",
-      "address": "Esmeralda  al 900",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/68/44/84/360x266/2091615819.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-de-3-ambientes-en-venta-en-microcentro-60684484.html",
-      "is_development": false,
-      "barrio": "Retiro",
-      "barrio_benchmark_m2": 2300,
-      "usd_m2": 1960,
-      "discount_pct": 14.8,
-      "opportunity_score": 42,
-      "user_views_formatted": "32",
-      "badge_text": "🏷️ Buen Precio",
-      "badge_class": "badge-good",
-      "price_usd_formatted": "USD 98.000",
-      "usd_m2_formatted": "USD 1.960/m²",
-      "benchmark_formatted": "USD 2.300/m²",
-      "first_seen_date": "2026-11-12",
-      "days_ago": 13,
-      "last_synced": "2026-11-12T16:00:22.814945"
-    },
-    "ZPROP-60688503": {
-      "id": "ZPROP-60688503",
-      "title": "Funcional departamento de 3 amb de 50 m2 totales. Ubicado en primer piso y de disposición interna, lo que lo hace muy tranquilo y silencioso. Esta unidad forma parte de un edificio clásico de pocas unidades, distribuidas en planta baja y tres pisos a los que se accede por escalera, lo que se traduce en un ambiente familiar y de bajas expensas. El departamento presenta un muy buen estado general. Está muy prolijo y cuenta con una renovación estética reciente que realza sus ambientes, destacando sus pisos de parquet hidrolaqueado que aportan calidez. Ubicado en una zona privilegiada de Palermo, en uno de los puntos más conectados de la ciudad, a pocos pasos de Av. Cabildo y Av. Federico Lacroze. Cuenta con una conectividad inmejorable gracias a su cercanía con la estación Olleros del Subte D, la estación Colegiales del tren Mitre y múltiples líneas de colectivo. Rodeado además de polos gastronómicos, comercios y espacios verdes. Comodidades de la unidad: Al ingresar, un hall de entrada nos conduce hacia la cocina independiente, que cuenta con lavadero incorporado y está equipada con artefacto de cocina y calefón a estrenar. A continuación, se encuentra un living comedor amplio y cómodo. Un hall distribuidor organiza el sector privado, comunicando con los dos dormitorios: uno dispone de su propio baño en suite, mientras que un segundo baño asiste al resto de la propiedad. El edificio ofrece además acceso a una terraza de uso común en el tercer piso, con una linda vista abierta del barrio. Sin acceso para personas con movilidad reducida. Consultas: Whatsapp en el Botón del Panel. Las Medidas Son Aproximadas y Solo a Título Informativo. Ana Clara Jiménez Inmobiliaria. Cmcpsi 6988 / cucicba 8766",
-      "description": "Funcional departamento de 3 amb de 50 m2 totales. Ubicado en primer piso y de disposición interna, lo que lo hace muy tranquilo y silencioso. Esta unidad forma parte de un edificio clásico de pocas unidades, distribuidas en planta baja y tres pisos a los que se accede por escalera, lo que se traduce en un ambiente familiar y de bajas expensas. El departamento presenta un muy buen estado general. Está muy prolijo y cuenta con una renovación estética reciente que realza sus ambientes, destacando sus pisos de parquet hidrolaqueado que aportan calidez. Ubicado en una zona privilegiada de Palermo, en uno de los puntos más conectados de la ciudad, a pocos pasos de Av. Cabildo y Av. Federico Lacroze. Cuenta con una conectividad inmejorable gracias a su cercanía con la estación Olleros del Subte D, la estación Colegiales del tren Mitre y múltiples líneas de colectivo. Rodeado además de polos gastronómicos, comercios y espacios verdes. Comodidades de la unidad: Al ingresar, un hall de entrada nos conduce hacia la cocina independiente, que cuenta con lavadero incorporado y está equipada con artefacto de cocina y calefón a estrenar. A continuación, se encuentra un living comedor amplio y cómodo. Un hall distribuidor organiza el sector privado, comunicando con los dos dormitorios: uno dispone de su propio baño en suite, mientras que un segundo baño asiste al resto de la propiedad. El edificio ofrece además acceso a una terraza de uso común en el tercer piso, con una linda vista abierta del barrio. Sin acceso para personas con movilidad reducida. Consultas: Whatsapp en el Botón del Panel. Las Medidas Son Aproximadas y Solo a Título Informativo. Ana Clara Jiménez Inmobiliaria. Cmcpsi 6988 / cucicba 8766",
-      "source": "Zonaprop",
-      "source_badge": "🔵 Zonaprop",
-      "publication_date_text": "Publicado hoy",
-      "is_new": false,
-      "price_raw": "USD 98.000",
-      "price_val": 98000,
-      "currency": "USD",
-      "expenses_raw": "$ 122.000 Expensas",
-      "expenses_val": 122000,
-      "user_views": 16,
-      "features_raw": "50 m² tot. | 3 amb. | 2 dorm. | 2 baños",
-      "m2_tot": 50,
-      "m2_cub": null,
-      "ambientes": 3,
-      "dormitorios": 2,
-      "banos": 2,
-      "cocheras": null,
-      "location": "Palermo, Capital Federal",
-      "address": "Ciudad de la Paz 300",
-      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/68/85/03/360x266/2091712311.jpg?isFirstImage=true",
-      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin--oportunidad-en-palermo!-departamento-de-3-ambientes-60688503.html",
-      "is_development": false,
-      "barrio": "Palermo",
-      "barrio_benchmark_m2": 3000,
-      "usd_m2": 1960,
-      "discount_pct": 34.7,
-      "opportunity_score": 70,
-      "user_views_formatted": "16",
-      "badge_text": "🔥 Super Oportunidad",
-      "badge_class": "badge-super",
-      "price_usd_formatted": "USD 98.000",
-      "usd_m2_formatted": "USD 1.960/m²",
-      "benchmark_formatted": "USD 3.000/m²",
-      "first_seen_date": "2026-11-12",
-      "days_ago": 13,
-      "last_synced": "2026-11-12T16:00:22.814945"
-    },
     "ZPROP-60696080": {
       "id": "ZPROP-60696080",
       "title": "Cómodo 2 ambientes al frente c/ terraza propia. Es 3° piso por escalera de fácil acceso. Living comedor, súper luminoso! Moderna Cocina c/ barra desayunadora. Lavadero. Amplio Dormitorio c/ placard. Baño completo y equipado, con ventilación al exterior. El departamento es ideal para gente joven, y tiene una terraza c/ quincho y parrilla para disfrutar! Bajísimas expensas ($25. 000. -) diagonal norte propiedades. cucicba 6443",
@@ -8463,7 +8279,7 @@
       "usd_m2_formatted": "USD 1.074/m²",
       "benchmark_formatted": "USD 2.050/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 12,
+      "days_ago": 13,
       "last_synced": "2026-11-13T12:00:27.891639"
     },
     "ZPROP-60695274": {
@@ -8504,7 +8320,7 @@
       "usd_m2_formatted": "USD 1.707/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 12,
+      "days_ago": 13,
       "last_synced": "2026-11-13T16:00:37.799904"
     },
     "ZPROP-60695452": {
@@ -8545,7 +8361,7 @@
       "usd_m2_formatted": "USD 2.062/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 12,
+      "days_ago": 13,
       "last_synced": "2026-11-13T12:00:27.891639"
     },
     "ZPROP-60695256": {
@@ -8586,7 +8402,7 @@
       "usd_m2_formatted": "USD 1.456/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 12,
+      "days_ago": 13,
       "last_synced": "2026-11-13T12:00:27.891639"
     },
     "ZPROP-60570327": {
@@ -8627,7 +8443,7 @@
       "usd_m2_formatted": "USD 1.759/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 12,
+      "days_ago": 13,
       "last_synced": "2026-11-13T12:00:27.891639"
     },
     "ZPROP-60695759": {
@@ -8668,7 +8484,7 @@
       "usd_m2_formatted": "USD 1.498/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 12,
+      "days_ago": 13,
       "last_synced": "2026-11-13T16:00:37.799904"
     },
     "ZPROP-60694795": {
@@ -8709,7 +8525,7 @@
       "usd_m2_formatted": "USD 1.868/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 12,
+      "days_ago": 13,
       "last_synced": "2026-11-13T16:00:37.799904"
     },
     "ZPROP-60700420": {
@@ -8750,7 +8566,7 @@
       "usd_m2_formatted": "USD 1.055/m²",
       "benchmark_formatted": "USD 2.050/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 12,
+      "days_ago": 13,
       "last_synced": "2026-11-13T16:00:37.799904"
     },
     "ZPROP-60697324": {
@@ -8791,7 +8607,7 @@
       "usd_m2_formatted": "USD 1.403/m²",
       "benchmark_formatted": "USD 2.650/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 12,
+      "days_ago": 13,
       "last_synced": "2026-11-13T19:30:20.694427"
     },
     "ZPROP-60699234": {
@@ -8832,7 +8648,7 @@
       "usd_m2_formatted": "USD 1.394/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 12,
+      "days_ago": 13,
       "last_synced": "2026-11-13T19:30:20.694427"
     },
     "ZPROP-60698962": {
@@ -8873,7 +8689,7 @@
       "usd_m2_formatted": "USD 1.678/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 12,
+      "days_ago": 13,
       "last_synced": "2026-11-13T19:30:20.694427"
     },
     "ZPROP-60701004": {
@@ -8914,7 +8730,7 @@
       "usd_m2_formatted": "USD 1.722/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 12,
+      "days_ago": 13,
       "last_synced": "2026-11-13T19:30:20.694427"
     },
     "ZPROP-60703815": {
@@ -8955,7 +8771,7 @@
       "usd_m2_formatted": "USD 1.712/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-11-13",
-      "days_ago": 12,
+      "days_ago": 13,
       "last_synced": "2026-11-13T19:30:20.694427"
     },
     "ZPROP-60320048": {
@@ -8996,7 +8812,7 @@
       "usd_m2_formatted": "USD 2.083/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-11-16",
-      "days_ago": 9,
+      "days_ago": 10,
       "last_synced": "2026-11-16T16:00:20.821408"
     },
     "ZPROP-60714480": {
@@ -9037,7 +8853,7 @@
       "usd_m2_formatted": "USD 1.500/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-16",
-      "days_ago": 9,
+      "days_ago": 10,
       "last_synced": "2026-11-16T16:00:20.821408"
     },
     "ZPROP-60717748": {
@@ -9078,7 +8894,7 @@
       "usd_m2_formatted": "USD 1.831/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-16",
-      "days_ago": 9,
+      "days_ago": 10,
       "last_synced": "2026-11-16T16:00:20.821408"
     },
     "ZPROP-60728993": {
@@ -9119,7 +8935,7 @@
       "usd_m2_formatted": "USD 1.537/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-11-17",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-11-17T19:30:19.912271"
     },
     "ZPROP-60729149": {
@@ -9160,7 +8976,7 @@
       "usd_m2_formatted": "USD 1.250/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-17",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-11-17T16:00:30.662611"
     },
     "ZPROP-60726911": {
@@ -9201,7 +9017,7 @@
       "usd_m2_formatted": "USD 1.418/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-17",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-11-17T19:30:19.912271"
     },
     "ZPROP-60726218": {
@@ -9242,7 +9058,7 @@
       "usd_m2_formatted": "USD 1.917/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-11-17",
-      "days_ago": 8,
+      "days_ago": 9,
       "last_synced": "2026-11-17T19:30:19.912271"
     },
     "ZPROP-60735229": {
@@ -9283,7 +9099,7 @@
       "usd_m2_formatted": "USD 1.203/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-18",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-11-18T16:00:26.542270"
     },
     "ZPROP-60734861": {
@@ -9324,7 +9140,7 @@
       "usd_m2_formatted": "USD 1.471/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-11-18",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-11-18T16:00:26.542270"
     },
     "ZPROP-60739353": {
@@ -9365,7 +9181,7 @@
       "usd_m2_formatted": "USD 1.417/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-11-18",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-11-18T16:00:26.542270"
     },
     "ZPROP-60738962": {
@@ -9406,7 +9222,7 @@
       "usd_m2_formatted": "USD 900/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-11-18",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-11-18T16:00:26.542270"
     },
     "ZPROP-60736718": {
@@ -9447,7 +9263,7 @@
       "usd_m2_formatted": "USD 1.445/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-11-18",
-      "days_ago": 7,
+      "days_ago": 8,
       "last_synced": "2026-11-18T16:00:26.542270"
     },
     "ZPROP-60748131": {
@@ -9488,7 +9304,7 @@
       "usd_m2_formatted": "USD 1.706/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-11-19T16:00:34.141651"
     },
     "ZPROP-60747146": {
@@ -9529,7 +9345,7 @@
       "usd_m2_formatted": "USD 1.852/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60748373": {
@@ -9570,7 +9386,7 @@
       "usd_m2_formatted": "USD 829/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60752877": {
@@ -9611,7 +9427,7 @@
       "usd_m2_formatted": "USD 1.667/m²",
       "benchmark_formatted": "USD 2.650/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60751426": {
@@ -9652,7 +9468,7 @@
       "usd_m2_formatted": "USD 1.636/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60752184": {
@@ -9693,7 +9509,7 @@
       "usd_m2_formatted": "USD 1.796/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-11-19T16:00:34.141651"
     },
     "ZPROP-60726567": {
@@ -9734,7 +9550,7 @@
       "usd_m2_formatted": "USD 1.580/m²",
       "benchmark_formatted": "USD 2.100/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60750583": {
@@ -9775,7 +9591,7 @@
       "usd_m2_formatted": "USD 1.981/m²",
       "benchmark_formatted": "USD 2.650/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60752993": {
@@ -9816,7 +9632,7 @@
       "usd_m2_formatted": "USD 1.650/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60750993": {
@@ -9857,7 +9673,7 @@
       "usd_m2_formatted": "USD 1.551/m²",
       "benchmark_formatted": "USD 2.000/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60751738": {
@@ -9898,7 +9714,7 @@
       "usd_m2_formatted": "USD 1.250/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60755365": {
@@ -9939,7 +9755,7 @@
       "usd_m2_formatted": "USD 1.086/m²",
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60750316": {
@@ -9980,7 +9796,7 @@
       "usd_m2_formatted": "USD 1.418/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-19",
-      "days_ago": 6,
+      "days_ago": 7,
       "last_synced": "2026-11-19T19:30:23.878235"
     },
     "ZPROP-60758308": {
@@ -10021,7 +9837,7 @@
       "usd_m2_formatted": "USD 808/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-20",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-11-20T16:00:24.288997"
     },
     "ZPROP-60759495": {
@@ -10062,7 +9878,7 @@
       "usd_m2_formatted": "USD 1.714/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-20",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-11-20T16:00:24.288997"
     },
     "ZPROP-60757893": {
@@ -10103,7 +9919,7 @@
       "usd_m2_formatted": "USD 1.483/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-20",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-11-20T16:00:24.288997"
     },
     "ZPROP-60761035": {
@@ -10144,7 +9960,7 @@
       "usd_m2_formatted": "USD 1.562/m²",
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-11-20",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-11-20T16:00:24.288997"
     },
     "ZPROP-60759571": {
@@ -10185,7 +10001,7 @@
       "usd_m2_formatted": "USD 1.356/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-20",
-      "days_ago": 5,
+      "days_ago": 6,
       "last_synced": "2026-11-20T16:00:24.288997"
     },
     "ZPROP-60782056": {
@@ -10226,7 +10042,7 @@
       "usd_m2_formatted": "USD 1.667/m²",
       "benchmark_formatted": "USD 3.000/m²",
       "first_seen_date": "2026-11-24",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-11-24T16:00:27.743741"
     },
     "ZPROP-60786057": {
@@ -10267,7 +10083,7 @@
       "usd_m2_formatted": "USD 1.386/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-24",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-11-24T16:00:27.743741"
     },
     "ZPROP-60786054": {
@@ -10308,7 +10124,7 @@
       "usd_m2_formatted": "USD 1.568/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-24",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-11-24T16:00:27.743741"
     },
     "ZPROP-60785355": {
@@ -10349,7 +10165,7 @@
       "usd_m2_formatted": "USD 1.658/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-24",
-      "days_ago": 1,
+      "days_ago": 2,
       "last_synced": "2026-11-24T16:00:27.743741"
     },
     "ZPROP-60789930": {
@@ -10359,7 +10175,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 81.000",
       "price_val": 81000,
       "currency": "USD",
@@ -10390,7 +10206,7 @@
       "usd_m2_formatted": "USD 1.446/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-25",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-11-25T16:00:28.077112"
     },
     "ZPROP-60792382": {
@@ -10400,7 +10216,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 73.000",
       "price_val": 73000,
       "currency": "USD",
@@ -10431,7 +10247,7 @@
       "usd_m2_formatted": "USD 924/m²",
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-25",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-11-25T19:30:25.403037"
     },
     "ZPROP-60791778": {
@@ -10441,7 +10257,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 70.000",
       "price_val": 70000,
       "currency": "USD",
@@ -10472,7 +10288,7 @@
       "usd_m2_formatted": "USD 1.250/m²",
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-25",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-11-25T19:30:25.403037"
     },
     "ZPROP-60791307": {
@@ -10482,7 +10298,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 94.000",
       "price_val": 94000,
       "currency": "USD",
@@ -10513,7 +10329,7 @@
       "usd_m2_formatted": "USD 1.880/m²",
       "benchmark_formatted": "USD 2.000/m²",
       "first_seen_date": "2026-11-25",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-11-25T19:30:25.403037"
     },
     "ZPROP-60790885": {
@@ -10523,7 +10339,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 94.000",
       "price_val": 94000,
       "currency": "USD",
@@ -10554,7 +10370,7 @@
       "usd_m2_formatted": "USD 1.880/m²",
       "benchmark_formatted": "USD 2.000/m²",
       "first_seen_date": "2026-11-25",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-11-25T19:30:25.403037"
     },
     "ZPROP-60792818": {
@@ -10564,7 +10380,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 79.000",
       "price_val": 79000,
       "currency": "USD",
@@ -10595,7 +10411,7 @@
       "usd_m2_formatted": "USD 1.053/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-25",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-11-25T19:30:25.403037"
     },
     "ZPROP-60794052": {
@@ -10605,7 +10421,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 100.000",
       "price_val": 100000,
       "currency": "USD",
@@ -10636,7 +10452,7 @@
       "usd_m2_formatted": "USD 1.667/m²",
       "benchmark_formatted": "USD 2.350/m²",
       "first_seen_date": "2026-11-25",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-11-25T19:30:25.403037"
     },
     "ZPROP-60795176": {
@@ -10646,7 +10462,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 95.800",
       "price_val": 95800,
       "currency": "USD",
@@ -10677,7 +10493,7 @@
       "usd_m2_formatted": "USD 1.955/m²",
       "benchmark_formatted": "USD 2.650/m²",
       "first_seen_date": "2026-11-25",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-11-25T19:30:25.403037"
     },
     "ZPROP-60792842": {
@@ -10687,7 +10503,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 87.000",
       "price_val": 87000,
       "currency": "USD",
@@ -10718,7 +10534,7 @@
       "usd_m2_formatted": "USD 1.706/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-25",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-11-25T19:30:25.403037"
     },
     "ZPROP-60797569": {
@@ -10728,7 +10544,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 55.000",
       "price_val": 55000,
       "currency": "USD",
@@ -10759,7 +10575,7 @@
       "usd_m2_formatted": "USD 948/m²",
       "benchmark_formatted": "USD 2.600/m²",
       "first_seen_date": "2026-11-25",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-11-25T19:30:25.403037"
     },
     "ZPROP-60794633": {
@@ -10769,7 +10585,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 95.000",
       "price_val": 95000,
       "currency": "USD",
@@ -10800,7 +10616,7 @@
       "usd_m2_formatted": "USD 1.418/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-25",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-11-25T19:30:25.403037"
     },
     "ZPROP-60797332": {
@@ -10810,7 +10626,7 @@
       "source": "Zonaprop",
       "source_badge": "🔵 Zonaprop",
       "publication_date_text": "Publicado hoy",
-      "is_new": true,
+      "is_new": false,
       "price_raw": "USD 105.000",
       "price_val": 105000,
       "currency": "USD",
@@ -10841,8 +10657,90 @@
       "usd_m2_formatted": "USD 2.019/m²",
       "benchmark_formatted": "USD 2.150/m²",
       "first_seen_date": "2026-11-25",
-      "days_ago": 0,
+      "days_ago": 1,
       "last_synced": "2026-11-25T19:30:25.403037"
+    },
+    "ZPROP-60803321": {
+      "id": "ZPROP-60803321",
+      "title": "Ph de 3 ambientes en dos plantas. Dos terrazas propias, muy luminoso, a refaccionar. Ubicado a metros de Av Juan de Garay, de Av. Chiclana, y de Av. Pavón. Con acceso a subte, medios de transporte y comercios. * ver video * Edificio antiguo con entrada por pasillo común. Pb: Living comedor, cocina, baño y un dormitorio. Pa: Dormitorio principal con salida a las dos terrazas. Cocina completa con conexión para lavarropas. Baño completo. Sin expensas. - Superficie: 82 m2 totales. 30 m2 superficie descubierta. se toma permuta por menor valor. - Esta propiedad posee autorización de venta, la documentación verificada e informe de dominio a disposición. - Las medidas de este inmueble son aproximadas. Las definitivas surgirán del título de propiedad. - Todas las operaciones son llevadas a cabo por el martillero y corredor inmobiliario Sebastián Dbsie, matricula cpi 7828. Coordinar visita! Vende. sd propiedades. mat 7828",
+      "description": "Ph de 3 ambientes en dos plantas. Dos terrazas propias, muy luminoso, a refaccionar. Ubicado a metros de Av Juan de Garay, de Av. Chiclana, y de Av. Pavón. Con acceso a subte, medios de transporte y comercios. * ver video * Edificio antiguo con entrada por pasillo común. Pb: Living comedor, cocina, baño y un dormitorio. Pa: Dormitorio principal con salida a las dos terrazas. Cocina completa con conexión para lavarropas. Baño completo. Sin expensas. - Superficie: 82 m2 totales. 30 m2 superficie descubierta. se toma permuta por menor valor. - Esta propiedad posee autorización de venta, la documentación verificada e informe de dominio a disposición. - Las medidas de este inmueble son aproximadas. Las definitivas surgirán del título de propiedad. - Todas las operaciones son llevadas a cabo por el martillero y corredor inmobiliario Sebastián Dbsie, matricula cpi 7828. Coordinar visita! Vende. sd propiedades. mat 7828",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 68.000",
+      "price_val": 68000,
+      "currency": "USD",
+      "expenses_raw": "",
+      "expenses_val": null,
+      "user_views": 32,
+      "features_raw": "82 m² tot. | 3 amb. | 2 dorm. | 1 baño",
+      "m2_tot": 82,
+      "m2_cub": null,
+      "ambientes": 3,
+      "dormitorios": 2,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Parque Patricios, Capital Federal",
+      "address": "Pasaje Oruro 1500",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/80/33/21/360x266/2094783261.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclphin-venta-parque-patricios-3-ambientes-ph-sin-60803321.html",
+      "is_development": false,
+      "barrio": "Parque Patricios",
+      "barrio_benchmark_m2": 1550,
+      "usd_m2": 829,
+      "discount_pct": 46.5,
+      "opportunity_score": 81,
+      "user_views_formatted": "32",
+      "badge_text": "🔥 Super Oportunidad",
+      "badge_class": "badge-super",
+      "price_usd_formatted": "USD 68.000",
+      "usd_m2_formatted": "USD 829/m²",
+      "benchmark_formatted": "USD 1.550/m²",
+      "first_seen_date": "2026-11-26",
+      "days_ago": 0,
+      "last_synced": "2026-11-26T12:00:24.546335"
+    },
+    "ZPROP-60803820": {
+      "id": "ZPROP-60803820",
+      "title": "Departamento de tres ambientes ubicado en Caballito, 2do piso por escalera. Cuenta con dos dormitorios, uno con aire acondicionado frío/calor, y otro más chico con placard de estilo. El living-comedor es muy luminoso, con salida a balcón con vista a la calle y espacio para mesa de comedor, pisos de parquet en excelente estado en toda la unidad. Cocina independiente, calefón a gas, con lavadero independiente. Baño completo con bañera y bidet. Edificio sin ascensor. Muy buena ubicación dentro de Caballito, a metros de comercios, transporte público y vida de barrio. Todas las medidas indicadas son aproximadas y pueden llegar a diferir de aquellas expresadas en la documentación de la propiedad. Cada Oficina de la Red de servicios para Inmobiliarias Mudafy es de gestión independiente y autónoma. Todas las propiedades publicadas en el perfil de Nativa se encuentran a cargo del corredor inmobiliario responsable de la oficina Julio Lopez Figueroa (caba) Matrícula: cucicba 514. Toda intermediación y conclusión de las operaciones serán realizadas exclusivamente por el Corredor Inmobiliario Responsable de la oficina.",
+      "description": "Departamento de tres ambientes ubicado en Caballito, 2do piso por escalera. Cuenta con dos dormitorios, uno con aire acondicionado frío/calor, y otro más chico con placard de estilo. El living-comedor es muy luminoso, con salida a balcón con vista a la calle y espacio para mesa de comedor, pisos de parquet en excelente estado en toda la unidad. Cocina independiente, calefón a gas, con lavadero independiente. Baño completo con bañera y bidet. Edificio sin ascensor. Muy buena ubicación dentro de Caballito, a metros de comercios, transporte público y vida de barrio. Todas las medidas indicadas son aproximadas y pueden llegar a diferir de aquellas expresadas en la documentación de la propiedad. Cada Oficina de la Red de servicios para Inmobiliarias Mudafy es de gestión independiente y autónoma. Todas las propiedades publicadas en el perfil de Nativa se encuentran a cargo del corredor inmobiliario responsable de la oficina Julio Lopez Figueroa (caba) Matrícula: cucicba 514. Toda intermediación y conclusión de las operaciones serán realizadas exclusivamente por el Corredor Inmobiliario Responsable de la oficina.",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 90.000",
+      "price_val": 90000,
+      "currency": "USD",
+      "expenses_raw": "$ 90.000 Expensas",
+      "expenses_val": 90000,
+      "user_views": 55,
+      "features_raw": "54 m² tot. | 3 amb. | 2 dorm. | 1 baño",
+      "m2_tot": 54,
+      "m2_cub": null,
+      "ambientes": 3,
+      "dormitorios": 2,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Caballito, Capital Federal",
+      "address": "Coronel Apolinario Figueroa 1005",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/80/38/20/360x266/2094793895.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-venta-depto-3-amb-al-frente-balcon-en-caballito-60803820.html",
+      "is_development": false,
+      "barrio": "Caballito",
+      "barrio_benchmark_m2": 2150,
+      "usd_m2": 1667,
+      "discount_pct": 22.5,
+      "opportunity_score": 54,
+      "user_views_formatted": "55",
+      "badge_text": "💎 Gran Oportunidad",
+      "badge_class": "badge-great",
+      "price_usd_formatted": "USD 90.000",
+      "usd_m2_formatted": "USD 1.667/m²",
+      "benchmark_formatted": "USD 2.150/m²",
+      "first_seen_date": "2026-11-26",
+      "days_ago": 0,
+      "last_synced": "2026-11-26T12:00:24.546335"
     }
   }
 }
