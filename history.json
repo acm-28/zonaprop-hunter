@@ -7502,9 +7502,14 @@
       "first_seen": "2026-11-27",
       "last_price": 99000,
       "barrio": "Parque Chacabuco"
+    },
+    "ZPROP-60820248": {
+      "first_seen": "2026-11-27",
+      "last_price": 87900,
+      "barrio": "Villa Ortúzar"
     }
   },
-  "last_run": "2026-11-27T16:00:26.452675",
+  "last_run": "2026-11-27T19:30:21.065114",
   "daily_snapshots": [
     {
       "date": "2026-09-01",
@@ -8311,12 +8316,12 @@
     },
     {
       "date": "2026-11-27",
-      "timestamp": "2026-11-27T16:00:26.512650",
-      "total_properties": 62,
-      "new_today": 62,
-      "avg_usd_m2": 1505,
+      "timestamp": "2026-11-27T19:30:21.130985",
+      "total_properties": 63,
+      "new_today": 63,
+      "avg_usd_m2": 1510,
       "min_price": 55000,
-      "median_price": 93500,
+      "median_price": 93000,
       "super_deals_count": 28,
       "top_neighborhoods": []
     }
@@ -10616,7 +10621,7 @@
       "benchmark_formatted": "USD 2.400/m²",
       "first_seen_date": "2026-11-27",
       "days_ago": 0,
-      "last_synced": "2026-11-27T16:00:26.452675"
+      "last_synced": "2026-11-27T19:30:21.065114"
     },
     "ZPROP-60812574": {
       "id": "ZPROP-60812574",
@@ -10657,7 +10662,7 @@
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-27",
       "days_ago": 0,
-      "last_synced": "2026-11-27T16:00:26.452675"
+      "last_synced": "2026-11-27T19:30:21.065114"
     },
     "ZPROP-60814821": {
       "id": "ZPROP-60814821",
@@ -10739,7 +10744,7 @@
       "benchmark_formatted": "USD 1.550/m²",
       "first_seen_date": "2026-11-27",
       "days_ago": 0,
-      "last_synced": "2026-11-27T16:00:26.452675"
+      "last_synced": "2026-11-27T19:30:21.065114"
     },
     "ZPROP-60816819": {
       "id": "ZPROP-60816819",
@@ -10780,7 +10785,7 @@
       "benchmark_formatted": "USD 1.850/m²",
       "first_seen_date": "2026-11-27",
       "days_ago": 0,
-      "last_synced": "2026-11-27T16:00:26.452675"
+      "last_synced": "2026-11-27T19:30:21.065114"
     },
     "ZPROP-60816783": {
       "id": "ZPROP-60816783",
@@ -10821,7 +10826,7 @@
       "benchmark_formatted": "USD 2.300/m²",
       "first_seen_date": "2026-11-27",
       "days_ago": 0,
-      "last_synced": "2026-11-27T16:00:26.452675"
+      "last_synced": "2026-11-27T19:30:21.065114"
     },
     "ZPROP-60816790": {
       "id": "ZPROP-60816790",
@@ -10862,7 +10867,48 @@
       "benchmark_formatted": "USD 1.750/m²",
       "first_seen_date": "2026-11-27",
       "days_ago": 0,
-      "last_synced": "2026-11-27T16:00:26.452675"
+      "last_synced": "2026-11-27T19:30:21.065114"
+    },
+    "ZPROP-60820248": {
+      "id": "ZPROP-60820248",
+      "title": "Departamento de 2 ambientes en una muy buena zona! En una calle tranquila y un entorno de casas bajas y una zona residencial como es villa ortuzar y belgrano R se encuentra este dos ambientes ideal para vivir o inversion. El departamento se encuentra en el primer piso al contrafrente a pulmon de manzana, lo que le otorga muy buena luz natural, aireacion y tranquilidad. Al ingresar mediante un pasillo con gran placar se encuentra un comodo living comedor con balcon, Cocina completa con lavadero independiente y un dormitorio con placar y baño completo!. Un dos ambientes de 49 m2!",
+      "description": "Departamento de 2 ambientes en una muy buena zona! En una calle tranquila y un entorno de casas bajas y una zona residencial como es villa ortuzar y belgrano R se encuentra este dos ambientes ideal para vivir o inversion. El departamento se encuentra en el primer piso al contrafrente a pulmon de manzana, lo que le otorga muy buena luz natural, aireacion y tranquilidad. Al ingresar mediante un pasillo con gran placar se encuentra un comodo living comedor con balcon, Cocina completa con lavadero independiente y un dormitorio con placar y baño completo!. Un dos ambientes de 49 m2!",
+      "source": "Zonaprop",
+      "source_badge": "🔵 Zonaprop",
+      "publication_date_text": "Publicado hoy",
+      "is_new": true,
+      "price_raw": "USD 87.900",
+      "price_val": 87900,
+      "currency": "USD",
+      "expenses_raw": "",
+      "expenses_val": null,
+      "user_views": 32,
+      "features_raw": "49 m² tot. | 2 amb. | 1 dorm. | 1 baño",
+      "m2_tot": 49,
+      "m2_cub": null,
+      "ambientes": 2,
+      "dormitorios": 1,
+      "banos": 1,
+      "cocheras": null,
+      "location": "Villa Ortuzar, Capital Federal",
+      "address": "Estomba al 1400",
+      "image": "https://imgar.zonapropcdn.com/avisos/1/00/60/82/02/48/360x266/2095206107.jpg?isFirstImage=true",
+      "link": "https://www.zonaprop.com.ar/propiedades/clasificado/veclapin-departamento-en-villa-ortuzar-60820248.html",
+      "is_development": false,
+      "barrio": "Villa Ortúzar",
+      "barrio_benchmark_m2": 2100,
+      "usd_m2": 1794,
+      "discount_pct": 14.6,
+      "opportunity_score": 44,
+      "user_views_formatted": "32",
+      "badge_text": "🏷️ Buen Precio",
+      "badge_class": "badge-good",
+      "price_usd_formatted": "USD 87.900",
+      "usd_m2_formatted": "USD 1.794/m²",
+      "benchmark_formatted": "USD 2.100/m²",
+      "first_seen_date": "2026-11-27",
+      "days_ago": 0,
+      "last_synced": "2026-11-27T19:30:21.065114"
     }
   }
 }
